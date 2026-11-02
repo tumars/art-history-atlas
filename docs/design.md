@@ -177,7 +177,7 @@ src/
 ```
 
 - **构建**：Vite + TypeScript（strict），`base: "./"`，产物可部署在任意子路径。`npm run build` 先跑类型检查和内容校验。
-- **部署**：推到 `main` 后 GitHub Actions 构建并发布到 GitHub Pages。
+- **部署**：推到或合入 `main` 后，GitHub Actions 校验并构建一次，同一份产物发布到 GitHub Pages，并用专用 deploy key 提交到 `tumars/ferecord/main` 的 `sites/main/public/art-history-atlas/`，由主站 EdgeOne Makers 发布。同步只替换该目录（包括清理旧哈希资源），保留其他主站文件；`source-version.txt` 记录源码 SHA。构建失败不会发布，主站并发提交先 rebase，冲突直接失败；手动运行 `deploy.yml` 可重试。密钥存放在 Actions secret `FERECORD_DEPLOY_KEY`，权限范围为 ferecord 仓库，不复用个人令牌。
 - **记忆**：localStorage 记住上次的展厅和体系，读写失败不影响页面。
 - **字体**：Noto Serif SC / Noto Sans SC / JetBrains Mono（Google Fonts），加载不到时回退系统字体。
 

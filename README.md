@@ -46,7 +46,9 @@ content/
 
 ## 部署
 
-推送到 `main` 后，“构建并部署到 GitHub Pages”工作流会自动发布。首次使用需在仓库 **Settings → Pages** 里把 **Source** 设为 **GitHub Actions**。
+推送或合入 `main` 后，“构建并发布到 GitHub Pages 与 ferecord”工作流先完成类型检查、内容校验与构建，再同时发布 GitHub Pages，并将同一份产物提交到 `tumars/ferecord` 的 `sites/main/public/art-history-atlas/`。主站入口为 <https://www.ferecord.com/art-history-atlas/>，由主站的 EdgeOne Makers Git 集成发布。
+
+同步使用本仓库 Actions secret `FERECORD_DEPLOY_KEY`，对应 ferecord 仓库的专用可写 deploy key。工作流只同步图谱产物目录，但密钥的权限边界是整个 ferecord 仓库，应只在受信任的 `main` 工作流中使用。构建失败不会同步，`source-version.txt` 记录线上源码提交；失败后可在 Actions 手动重跑 `deploy.yml`。取图工作流也通过该工作流同步图片。GitHub Pages 首次使用需在 **Settings → Pages** 将 **Source** 设为 **GitHub Actions**。
 
 ## 推荐阅读
 

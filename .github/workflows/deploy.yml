@@ -1,4 +1,4 @@
-name: 构建并部署到 GitHub Pages
+name: 构建并发布到 GitHub Pages 与 ferecord
 
 on:
   push:
@@ -25,6 +25,13 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build # 包含类型检查和内容校验
+      - name: 记录源码版本
+        run: printf '%s\n' "$GITHUB_SHA" > dist/source-version.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ferecord-dist
+          path: dist
+          retention-days: 3
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -38,3 +45,38 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  sync-ferecord:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ferecord-dist
+          path: dist
+      - name: 检出主站
+        uses: actions/checkout@v4
+        with:
+          repository: tumars/ferecord
+          ref: main
+          path: ferecord
+          ssh-key: ${{ secrets.FERECORD_DEPLOY_KEY }}
+      - name: 同步图谱产物
+        run: |
+          mkdir -p ferecord/sites/main/public/art-history-atlas
+          rsync -a --delete dist/ ferecord/sites/main/public/art-history-atlas/
+          cd ferecord
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sites/main/public/art-history-atlas
+          if git diff --cached --quiet; then
+            echo "产物未变，无需提交"
+            exit 0
+          fi
+          git commit -m "chore(atlas): sync tumars/art-history-atlas@$GITHUB_SHA"
+          # 主站同时有其他提交时，先 rebase；冲突直接失败，不覆盖他人修改。
+          git pull --rebase origin main
+          git push origin HEAD:main
