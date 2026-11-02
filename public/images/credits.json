@@ -196,10 +196,9 @@
     "file": "images/works/justinian-mosaic.jpg",
     "thumb": "images/works/justinian-mosaic.thumb.jpg",
     "title": "查士丁尼皇帝与随从",
-    "author": "Petar Milošević",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_(Ravenna).jpg"
+    "author": "Meister von San Vitale in Ravenna",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Meister_von_San_Vitale_in_Ravenna_003.jpg"
   },
   "la-grande-jatte": {
     "file": "images/works/la-grande-jatte.jpg",
@@ -403,10 +402,10 @@
     "file": "images/works/seated-scribe.jpg",
     "thumb": "images/works/seated-scribe.thumb.jpg",
     "title": "书记官坐像",
-    "author": "Rama",
-    "license": "CC BY-SA 3.0 fr",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Seated_scribe-E_3023-p1020377-gradient.jpg"
+    "author": "Shonagon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg"
   },
   "sistine-ceiling": {
     "file": "images/works/sistine-ceiling.jpg",

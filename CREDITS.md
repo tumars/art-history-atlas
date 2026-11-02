@@ -27,7 +27,7 @@
 | 圣索菲亚大教堂 | Arild Vågen | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | [Commons](https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg) |
 | 雪中猎人 | Pieter Brueghel the Elder | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg) |
 | 日出·印象 | Claude Monet | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg) |
-| 查士丁尼皇帝与随从 | Petar Milošević | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_(Ravenna).jpg) |
+| 查士丁尼皇帝与随从 | Meister von San Vitale in Ravenna | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Meister_von_San_Vitale_in_Ravenna_003.jpg) |
 | 大碗岛的星期天下午 | Georges Seurat | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg) |
 | 拉奥孔 | Wilfredor | [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) | [Commons](https://commons.wikimedia.org/wiki/File:Laoco%C3%B6n_and_his_sons_group.jpg) |
 | 宫娥 | Diego Velázquez | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Las_Meninas,_by_Diego_Vel%C3%A1zquez,_from_Prado_in_Google_Earth.jpg) |
@@ -52,7 +52,7 @@
 | 梅杜萨之筏 | Théodore Géricault | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_(Museo_del_Louvre,_1818-19).jpg) |
 | 圣丹尼修道院教堂 | Thomas Clouet | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Saint-Denis_-_Fa%C3%A7ade.jpg) |
 | 雅典学院 | Raphael | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg) |
-| 书记官坐像 | Rama | [CC BY-SA 3.0 fr](https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en) | [Commons](https://commons.wikimedia.org/wiki/File:Seated_scribe-E_3023-p1020377-gradient.jpg) |
+| 书记官坐像 | Shonagon | [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) | [Commons](https://commons.wikimedia.org/wiki/File:Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg) |
 | 西斯廷礼拜堂天顶画 | Michelangelo | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Michelangelo_-_Creation_of_Adam_(cropped).jpg) |
 | 星月夜 | Vincent van Gogh | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg) |
 | 巨石阵 | garethwiscombe | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [Commons](https://commons.wikimedia.org/wiki/File:Stonehenge2007_07_30.jpg) |
