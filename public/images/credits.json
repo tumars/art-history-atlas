@@ -1,0 +1,544 @@
+{
+  "abu-simbel": {
+    "file": "images/works/abu-simbel.jpg",
+    "thumb": "images/works/abu-simbel.thumb.jpg",
+    "title": "阿布辛贝神庙",
+    "author": "Than217 at English Wikipedia",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Abu_Simbel_Temple_May_30_2007.jpg"
+  },
+  "altamira": {
+    "file": "images/works/altamira.jpg",
+    "thumb": "images/works/altamira.thumb.jpg",
+    "title": "阿尔塔米拉洞窟壁画",
+    "author": "Museo de Altamira y D. Rodríguez",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:9_Bisonte_Magdaleniense_pol%C3%ADcromo.jpg"
+  },
+  "arch-of-constantine": {
+    "file": "images/works/arch-of-constantine.jpg",
+    "thumb": "images/works/arch-of-constantine.thumb.jpg",
+    "title": "君士坦丁凯旋门",
+    "author": "NikonZ7II (Paris Orlando)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arch_of_Constantine_(Rome)_-_South_side,_from_Via_triumphalis.jpg"
+  },
+  "arnolfini-portrait": {
+    "file": "images/works/arnolfini-portrait.jpg",
+    "thumb": "images/works/arnolfini-portrait.thumb.jpg",
+    "title": "阿尔诺芬尼夫妇像",
+    "author": "Jan van Eyck",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Arnolfini_portrait_(1434).jpg"
+  },
+  "birth-of-venus": {
+    "file": "images/works/birth-of-venus.jpg",
+    "thumb": "images/works/birth-of-venus.thumb.jpg",
+    "title": "维纳斯的诞生",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"
+  },
+  "burial-at-ornans": {
+    "file": "images/works/burial-at-ornans.jpg",
+    "thumb": "images/works/burial-at-ornans.thumb.jpg",
+    "title": "奥尔南的葬礼",
+    "author": "Gustave Courbet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg"
+  },
+  "calling-of-saint-matthew": {
+    "file": "images/works/calling-of-saint-matthew.jpg",
+    "thumb": "images/works/calling-of-saint-matthew.thumb.jpg",
+    "title": "圣马太蒙召",
+    "author": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Calling_of_Saint_Matthew-Caravaggo_(1599-1600).jpg"
+  },
+  "chartres": {
+    "file": "images/works/chartres.jpg",
+    "thumb": "images/works/chartres.thumb.jpg",
+    "title": "沙特尔大教堂",
+    "author": "Robin Poitou",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Facade_cathedral.jpg"
+  },
+  "colosseum": {
+    "file": "images/works/colosseum.jpg",
+    "thumb": "images/works/colosseum.thumb.jpg",
+    "title": "罗马斗兽场",
+    "author": "FeaturedPics",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
+  },
+  "death-of-marat": {
+    "file": "images/works/death-of-marat.jpg",
+    "thumb": "images/works/death-of-marat.thumb.jpg",
+    "title": "马拉之死",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Death_of_Marat_by_David.jpg"
+  },
+  "discobolus": {
+    "file": "images/works/discobolus.jpg",
+    "thumb": "images/works/discobolus.thumb.jpg",
+    "title": "掷铁饼者",
+    "author": "Carole Raddato from FRANKFURT, Germany",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Discobolus_Lancellotti,_Roman_copy_of_a_5th_century_BC_Greek_original_by_Myron,_Hadrianic_period,_Palazzo_Massimo_alle_Terme_(11398129933).jpg"
+  },
+  "durer-self-portrait-1500": {
+    "file": "images/works/durer-self-portrait-1500.jpg",
+    "thumb": "images/works/durer-self-portrait-1500.thumb.jpg",
+    "title": "二十八岁自画像",
+    "author": "Albrecht Dürer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_1500_self-portrait_(High_resolution_and_detail).jpg"
+  },
+  "ecstasy-of-saint-teresa": {
+    "file": "images/works/ecstasy-of-saint-teresa.jpg",
+    "thumb": "images/works/ecstasy-of-saint-teresa.thumb.jpg",
+    "title": "圣特雷莎的狂喜",
+    "author": "Gian Lorenzo Bernini",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ecstasy_of_Saint_Teresa_September_2015-2a.jpg"
+  },
+  "florence-dome": {
+    "file": "images/works/florence-dome.jpg",
+    "thumb": "images/works/florence-dome.thumb.jpg",
+    "title": "佛罗伦萨大教堂穹顶",
+    "author": "Petar Milošević",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Florence_Duomo_from_Michelangelo_hill.jpg"
+  },
+  "fountain": {
+    "file": "images/works/fountain.jpg",
+    "thumb": "images/works/fountain.thumb.jpg",
+    "title": "泉",
+    "author": "Marcel Duchamp / Alfred Stieglitz",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg"
+  },
+  "garden-of-earthly-delights": {
+    "file": "images/works/garden-of-earthly-delights.jpg",
+    "thumb": "images/works/garden-of-earthly-delights.thumb.jpg",
+    "title": "人间乐园",
+    "author": "Hieronymus Bosch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Garden_of_earthly_delights.jpg"
+  },
+  "giotto-lamentation": {
+    "file": "images/works/giotto-lamentation.jpg",
+    "thumb": "images/works/giotto-lamentation.thumb.jpg",
+    "title": "哀悼基督",
+    "author": "Giotto",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-36-_-_Lamentation_(The_Mourning_of_Christ)_adj.jpg"
+  },
+  "girl-with-a-pearl-earring": {
+    "file": "images/works/girl-with-a-pearl-earring.jpg",
+    "thumb": "images/works/girl-with-a-pearl-earring.thumb.jpg",
+    "title": "戴珍珠耳环的少女",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:1665_Girl_with_a_Pearl_Earring.jpg"
+  },
+  "giza-pyramids": {
+    "file": "images/works/giza-pyramids.jpg",
+    "thumb": "images/works/giza-pyramids.thumb.jpg",
+    "title": "吉萨金字塔群",
+    "author": "KennyOMG",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg"
+  },
+  "grande-odalisque": {
+    "file": "images/works/grande-odalisque.jpg",
+    "thumb": "images/works/grande-odalisque.thumb.jpg",
+    "title": "大宫女",
+    "author": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean_Auguste_Dominique_Ingres,_La_Grande_Odalisque,_1814.jpg"
+  },
+  "hagia-sophia": {
+    "file": "images/works/hagia-sophia.jpg",
+    "thumb": "images/works/hagia-sophia.thumb.jpg",
+    "title": "圣索菲亚大教堂",
+    "author": "Arild Vågen",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg"
+  },
+  "hunters-in-the-snow": {
+    "file": "images/works/hunters-in-the-snow.jpg",
+    "thumb": "images/works/hunters-in-the-snow.thumb.jpg",
+    "title": "雪中猎人",
+    "author": "Pieter Brueghel the Elder",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg"
+  },
+  "impression-sunrise": {
+    "file": "images/works/impression-sunrise.jpg",
+    "thumb": "images/works/impression-sunrise.thumb.jpg",
+    "title": "日出·印象",
+    "author": "Claude Monet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg"
+  },
+  "justinian-mosaic": {
+    "file": "images/works/justinian-mosaic.jpg",
+    "thumb": "images/works/justinian-mosaic.thumb.jpg",
+    "title": "查士丁尼皇帝与随从",
+    "author": "Petar Milošević",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_(Ravenna).jpg"
+  },
+  "la-grande-jatte": {
+    "file": "images/works/la-grande-jatte.jpg",
+    "thumb": "images/works/la-grande-jatte.thumb.jpg",
+    "title": "大碗岛的星期天下午",
+    "author": "Georges Seurat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg"
+  },
+  "laocoon": {
+    "file": "images/works/laocoon.jpg",
+    "thumb": "images/works/laocoon.thumb.jpg",
+    "title": "拉奥孔",
+    "author": "Wilfredor",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Laoco%C3%B6n_and_his_sons_group.jpg"
+  },
+  "las-meninas": {
+    "file": "images/works/las-meninas.jpg",
+    "thumb": "images/works/las-meninas.thumb.jpg",
+    "title": "宫娥",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Las_Meninas,_by_Diego_Vel%C3%A1zquez,_from_Prado_in_Google_Earth.jpg"
+  },
+  "lascaux": {
+    "file": "images/works/lascaux.jpg",
+    "thumb": "images/works/lascaux.thumb.jpg",
+    "title": "拉斯科洞窟壁画",
+    "author": "EU",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lascaux_painting.jpg"
+  },
+  "last-supper": {
+    "file": "images/works/last-supper.jpg",
+    "thumb": "images/works/last-supper.thumb.jpg",
+    "title": "最后的晚餐",
+    "author": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%C3%9Altima_Cena_-_Da_Vinci_5.jpg"
+  },
+  "liberty-leading-the-people": {
+    "file": "images/works/liberty-leading-the-people.jpg",
+    "thumb": "images/works/liberty-leading-the-people.thumb.jpg",
+    "title": "自由引导人民",
+    "author": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg"
+  },
+  "luncheon-on-the-grass": {
+    "file": "images/works/luncheon-on-the-grass.jpg",
+    "thumb": "images/works/luncheon-on-the-grass.thumb.jpg",
+    "title": "草地上的午餐",
+    "author": "Édouard Manet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg"
+  },
+  "masaccio-trinity": {
+    "file": "images/works/masaccio-trinity.jpg",
+    "thumb": "images/works/masaccio-trinity.thumb.jpg",
+    "title": "圣三位一体",
+    "author": "Masaccio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Masaccio,_trinit%C3%A0.jpg"
+  },
+  "matisse-dance": {
+    "file": "images/works/matisse-dance.jpg",
+    "thumb": "images/works/matisse-dance.thumb.jpg",
+    "title": "舞蹈",
+    "author": "Henri Matisse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Matissedance.jpg"
+  },
+  "michelangelo-david": {
+    "file": "images/works/michelangelo-david.jpg",
+    "thumb": "images/works/michelangelo-david.thumb.jpg",
+    "title": "大卫",
+    "author": "Commonists",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_David_-_right_view_2.jpg"
+  },
+  "mona-lisa": {
+    "file": "images/works/mona-lisa.jpg",
+    "thumb": "images/works/mona-lisa.thumb.jpg",
+    "title": "蒙娜丽莎",
+    "author": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
+  },
+  "mont-sainte-victoire": {
+    "file": "images/works/mont-sainte-victoire.jpg",
+    "thumb": "images/works/mont-sainte-victoire.thumb.jpg",
+    "title": "圣维克多山",
+    "author": "Paul Cézanne",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_C%C3%A9zanne_-_Montagne_Saint-victoire_-_Google_Art_Project.jpg"
+  },
+  "moulin-de-la-galette": {
+    "file": "images/works/moulin-de-la-galette.jpg",
+    "thumb": "images/works/moulin-de-la-galette.thumb.jpg",
+    "title": "煎饼磨坊的舞会",
+    "author": "Pierre-Auguste Renoir",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d%27Orsay_RF_2739_(derivative_work_-_AutoContrast_edit_in_LCH_space).jpg"
+  },
+  "napoleon-crossing-the-alps": {
+    "file": "images/works/napoleon-crossing-the-alps.jpg",
+    "thumb": "images/works/napoleon-crossing-the-alps.thumb.jpg",
+    "title": "拿破仑翻越阿尔卑斯山",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:David_-_Napoleon_crossing_the_Alps_-_Malmaison1.jpg"
+  },
+  "night-watch": {
+    "file": "images/works/night-watch.jpg",
+    "thumb": "images/works/night-watch.thumb.jpg",
+    "title": "夜巡",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Night_Watch_-_HD.jpg"
+  },
+  "notre-dame-paris": {
+    "file": "images/works/notre-dame-paris.jpg",
+    "thumb": "images/works/notre-dame-paris.thumb.jpg",
+    "title": "巴黎圣母院",
+    "author": "Ali Sabbagh",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris,_4_October_2017.jpg"
+  },
+  "oath-of-the-horatii": {
+    "file": "images/works/oath-of-the-horatii.jpg",
+    "thumb": "images/works/oath-of-the-horatii.thumb.jpg",
+    "title": "荷拉斯兄弟之誓",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David,_Le_Serment_des_Horaces.jpg"
+  },
+  "olympia": {
+    "file": "images/works/olympia.jpg",
+    "thumb": "images/works/olympia.thumb.jpg",
+    "title": "奥林匹亚",
+    "author": "Édouard Manet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Olympia_-_Google_Art_ProjectFXD.jpg"
+  },
+  "pantheon": {
+    "file": "images/works/pantheon.jpg",
+    "thumb": "images/works/pantheon.thumb.jpg",
+    "title": "万神殿",
+    "author": "Rabax63",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pantheon_Rom_1_cropped.jpg"
+  },
+  "parthenon": {
+    "file": "images/works/parthenon.jpg",
+    "thumb": "images/works/parthenon.thumb.jpg",
+    "title": "帕特农神庙",
+    "author": "Steve Swayne",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg"
+  },
+  "pilgrimage-to-cythera": {
+    "file": "images/works/pilgrimage-to-cythera.jpg",
+    "thumb": "images/works/pilgrimage-to-cythera.thumb.jpg",
+    "title": "舟发西苔岛",
+    "author": "Jean-Antoine Watteau",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:L%27Embarquement_pour_Cyth%C3%A8re,_by_Antoine_Watteau,_from_C2RMF_retouched.jpg"
+  },
+  "raft-of-the-medusa": {
+    "file": "images/works/raft-of-the-medusa.jpg",
+    "thumb": "images/works/raft-of-the-medusa.thumb.jpg",
+    "title": "梅杜萨之筏",
+    "author": "Théodore Géricault",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_(Museo_del_Louvre,_1818-19).jpg"
+  },
+  "saint-denis": {
+    "file": "images/works/saint-denis.jpg",
+    "thumb": "images/works/saint-denis.thumb.jpg",
+    "title": "圣丹尼修道院教堂",
+    "author": "Thomas Clouet",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint-Denis_-_Fa%C3%A7ade.jpg"
+  },
+  "school-of-athens": {
+    "file": "images/works/school-of-athens.jpg",
+    "thumb": "images/works/school-of-athens.thumb.jpg",
+    "title": "雅典学院",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg"
+  },
+  "seated-scribe": {
+    "file": "images/works/seated-scribe.jpg",
+    "thumb": "images/works/seated-scribe.thumb.jpg",
+    "title": "书记官坐像",
+    "author": "Rama",
+    "license": "CC BY-SA 3.0 fr",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Seated_scribe-E_3023-p1020377-gradient.jpg"
+  },
+  "sistine-ceiling": {
+    "file": "images/works/sistine-ceiling.jpg",
+    "thumb": "images/works/sistine-ceiling.thumb.jpg",
+    "title": "西斯廷礼拜堂天顶画",
+    "author": "Michelangelo",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Creation_of_Adam_(cropped).jpg"
+  },
+  "starry-night": {
+    "file": "images/works/starry-night.jpg",
+    "thumb": "images/works/starry-night.thumb.jpg",
+    "title": "星月夜",
+    "author": "Vincent van Gogh",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+  },
+  "stonehenge": {
+    "file": "images/works/stonehenge.jpg",
+    "thumb": "images/works/stonehenge.thumb.jpg",
+    "title": "巨石阵",
+    "author": "garethwiscombe",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stonehenge2007_07_30.jpg"
+  },
+  "the-ambassadors": {
+    "file": "images/works/the-ambassadors.jpg",
+    "thumb": "images/works/the-ambassadors.thumb.jpg",
+    "title": "大使",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg"
+  },
+  "the-dance-class": {
+    "file": "images/works/the-dance-class.jpg",
+    "thumb": "images/works/the-dance-class.thumb.jpg",
+    "title": "舞蹈课",
+    "author": "Edgar Degas",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_La_Classe_de_danse.jpg"
+  },
+  "the-gleaners": {
+    "file": "images/works/the-gleaners.jpg",
+    "thumb": "images/works/the-gleaners.thumb.jpg",
+    "title": "拾穗者",
+    "author": "Jean-François Millet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg"
+  },
+  "the-scream": {
+    "file": "images/works/the-scream.jpg",
+    "thumb": "images/works/the-scream.thumb.jpg",
+    "title": "呐喊",
+    "author": "Edvard Munch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edvard_Munch,_1893,_The_Scream,_oil,_tempera_and_pastel_on_cardboard,_91_x_73_cm,_National_Gallery_of_Norway.jpg"
+  },
+  "the-swing": {
+    "file": "images/works/the-swing.jpg",
+    "thumb": "images/works/the-swing.thumb.jpg",
+    "title": "秋千",
+    "author": "Philafrenzy",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fragonard,_The_Swing,_Wallace_Collection.jpg"
+  },
+  "the-tempest": {
+    "file": "images/works/the-tempest.jpg",
+    "thumb": "images/works/the-tempest.thumb.jpg",
+    "title": "暴风雨",
+    "author": "Giorgione",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giorgione_-_Das_Gewitter.jpg"
+  },
+  "third-of-may-1808": {
+    "file": "images/works/third-of-may-1808.jpg",
+    "thumb": "images/works/third-of-may-1808.thumb.jpg",
+    "title": "1808年5月3日",
+    "author": "El_Tres_de_Mayo,_by_Francisco_de_Goya,_from_Prado_in_Google_Earth.jpg : Francisco de Goya derivative work: Papa Lima Whiskey 2",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Tres_de_Mayo,_by_Francisco_de_Goya,_from_Prado_thin_black_margin.jpg"
+  },
+  "trajans-column": {
+    "file": "images/works/trajans-column.jpg",
+    "thumb": "images/works/trajans-column.thumb.jpg",
+    "title": "图拉真纪功柱",
+    "author": "Livioandronico2013",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Trajan%27s_Column_HD.jpg"
+  },
+  "venus-de-milo": {
+    "file": "images/works/venus-de-milo.jpg",
+    "thumb": "images/works/venus-de-milo.thumb.jpg",
+    "title": "米洛的维纳斯",
+    "author": "Shonagon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:V%C3%A9nus_de_Milo_-_Mus%C3%A9e_du_Louvre_AGER_LL_299_;_N_527_;_Ma_399.jpg"
+  },
+  "venus-of-urbino": {
+    "file": "images/works/venus-of-urbino.jpg",
+    "thumb": "images/works/venus-of-urbino.thumb.jpg",
+    "title": "乌尔比诺的维纳斯",
+    "author": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg"
+  },
+  "venus-of-willendorf": {
+    "file": "images/works/venus-of-willendorf.jpg",
+    "thumb": "images/works/venus-of-willendorf.thumb.jpg",
+    "title": "维伦多夫的维纳斯",
+    "author": "User:MatthiasKabel",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Venus_von_Willendorf_01.jpg"
+  },
+  "wanderer-above-the-sea-of-fog": {
+    "file": "images/works/wanderer-above-the-sea-of-fog.jpg",
+    "thumb": "images/works/wanderer-above-the-sea-of-fog.thumb.jpg",
+    "title": "雾海上的旅人",
+    "author": "Caspar David Friedrich",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg"
+  },
+  "where-do-we-come-from": {
+    "file": "images/works/where-do-we-come-from.jpg",
+    "thumb": "images/works/where-do-we-come-from.thumb.jpg",
+    "title": "我们从哪里来？我们是谁？我们往哪里去？",
+    "author": "Paul Gauguin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_D%27ou_venons-nous.jpg"
+  }
+}
