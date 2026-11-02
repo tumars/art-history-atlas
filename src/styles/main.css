@@ -378,7 +378,7 @@ figure.big img{max-width:100%;max-height:100%;object-fit:contain;display:block;b
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 /* ---------- III 人物 ---------- */
-.life{min-width:900px;width:100%;height:auto;display:block;touch-action:pan-x pan-y}
+svg.dg.life{min-width:900px;touch-action:pan-x pan-y}
 .life .grid{stroke:var(--rule);stroke-width:1}
 .life .brk{fill:none;stroke:var(--muted);stroke-width:1}
 .life .life-p{cursor:pointer;transition:opacity .2s}

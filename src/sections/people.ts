@@ -197,6 +197,13 @@ function showCard() {
   box.innerHTML = sel.kind === "person" ? personCard(personById(sel.id)!) : encCard(t.encounters[sel.i]);
   if (!prefersReducedMotion()) { box.classList.remove("enter"); void box.offsetWidth; box.classList.add("enter"); }
   paint();
+  // 窄屏上图表横向滚动：把选中的人或相遇滚到可见范围中间
+  const wrap = $("#life-svg").parentElement!;
+  if (wrap.scrollWidth > wrap.clientWidth) {
+    const yr = sel.kind === "person" ? (personById(sel.id)!.born + personById(sel.id)!.died) / 2 : t.encounters[sel.i].year;
+    const px = (X(yr) / VW) * $("#life-svg").clientWidth;
+    wrap.scrollTo({ left: px - wrap.clientWidth / 2, behavior: "auto" });
+  }
 }
 
 export function showPerson(id: string, scroll = true) {
@@ -227,6 +234,7 @@ export function initPeople() {
     return unX(p.x);
   };
   svg.onpointermove = (e) => scrubTo(yearAt(e));
+  svg.onpointerdown = (e) => scrubTo(yearAt(e));
   svg.onpointerleave = () => scrubTo(null);
   const pick = (el: Element) => {
     const g = el.closest<SVGGElement>(".life-p,.enc");
