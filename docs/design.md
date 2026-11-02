@@ -181,6 +181,8 @@ src/
 - **记忆**：localStorage 记住上次的展厅和体系，读写失败不影响页面。
 - **字体**：Noto Serif SC / Noto Sans SC / JetBrains Mono（Google Fonts），加载不到时回退系统字体。
 
+发布工作流按路径过滤 push：源码、内容、公开资源、构建输入或发布工作流变化才自动构建；纯 README/设计文档修改不触发同步，以节省主站构建额度。手动运行可强制发布。
+
 ## 8. 扩展到其他体系
 
 1. 在 `content/traditions/<id>/` 建 `tradition.json`、`periods.json`、`works.json`（其余可选），在 `site.json` 的 `traditions` 里登记。

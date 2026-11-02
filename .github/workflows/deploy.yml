@@ -3,6 +3,17 @@ name: 构建并发布到 GitHub Pages 与 ferecord
 on:
   push:
     branches: [main]
+    paths:
+      - src/**
+      - content/**
+      - public/**
+      - scripts/**
+      - index.html
+      - package.json
+      - package-lock.json
+      - vite.config.*
+      - tsconfig*.json
+      - .github/workflows/deploy.yml
   workflow_dispatch:
 
 permissions:

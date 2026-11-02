@@ -50,6 +50,8 @@ content/
 
 同步使用本仓库 Actions secret `FERECORD_DEPLOY_KEY`，对应 ferecord 仓库的专用可写 deploy key。工作流只同步图谱产物目录，但密钥的权限边界是整个 ferecord 仓库，应只在受信任的 `main` 工作流中使用。构建失败不会同步，`source-version.txt` 记录线上源码提交；失败后可在 Actions 手动重跑 `deploy.yml`。取图工作流也通过该工作流同步图片。GitHub Pages 首次使用需在 **Settings → Pages** 将 **Source** 设为 **GitHub Actions**。
 
+push 触发仅匹配源码、内容、公开资源、构建输入和发布工作流；纯 README/设计文档修改不构建或同步。Actions 手动运行不受路径过滤影响。
+
 ## 推荐阅读
 
 - 贡布里希《艺术的故事》
