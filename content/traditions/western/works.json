@@ -66,7 +66,7 @@
     "year": -2560,
     "medium": "石灰岩",
     "location": "埃及吉萨",
-    "summary": "法老的永恒居所，体现埃及人对几何秩序和来世的执念。",
+    "summary": "法老的陵墓，方正的几何形里是埃及人对来世的执念。",
     "period": "egypt",
     "image": {
       "commons": "Pyramids_of_the_Giza_Necropolis.jpg"
@@ -110,7 +110,7 @@
     "year": -450,
     "medium": "原作青铜，今存罗马大理石复制品",
     "location": "罗马国立博物馆",
-    "summary": "捕捉动作转换的一瞬，身体紧张而面部平静，正是古典的理想。",
+    "summary": "抓住掷饼前蓄力的一瞬，身体绷紧，脸却很平静。",
     "period": "greece",
     "image": {
       "commons": "The_Discobolus_Lancellotti,_Roman_copy_of_a_5th_century_BC_Greek_original_by_Myron,_Hadrianic_period,_Palazzo_Massimo_alle_Terme_(11398129933).jpg"
@@ -155,7 +155,7 @@
     "year": -130,
     "medium": "大理石",
     "location": "巴黎卢浮宫",
-    "summary": "断臂反而成就了它，是“理想美”最出名的符号。",
+    "summary": "断了双臂，反倒成了“理想美”最出名的代表。",
     "period": "greece",
     "image": {
       "commons": "Vénus_de_Milo_-_Musée_du_Louvre_AGER_LL_299_;_N_527_;_Ma_399.jpg"
@@ -332,7 +332,7 @@
     "year": 1420,
     "medium": "砖、石",
     "location": "佛罗伦萨",
-    "summary": "不搭满堂脚手架造出的巨型穹顶，工程奇迹。",
+    "summary": "布鲁内莱斯基没搭满堂脚手架，就把这座巨大的穹顶合拢了。",
     "period": "early-ren",
     "image": {
       "commons": "Florence_Duomo_from_Michelangelo_hill.jpg"
@@ -346,7 +346,7 @@
     "year": 1485,
     "medium": "蛋彩、画布",
     "location": "佛罗伦萨乌菲兹美术馆",
-    "summary": "异教女神重回画面，线条优美，是人文主义的宣言。",
+    "summary": "异教女神重新回到画上，线条柔美，人文主义的代表作。",
     "period": "early-ren",
     "image": {
       "commons": "Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"
@@ -361,7 +361,7 @@
     "year": 1503,
     "medium": "油彩、杨木板",
     "location": "巴黎卢浮宫",
-    "summary": "晕涂法与空气透视的集大成，神秘的微笑来自嘴角与眼角的模糊处理。",
+    "summary": "晕涂法和空气透视用到了极致，那点说不清的微笑，来自嘴角和眼角的模糊处理。",
     "period": "high-ren",
     "image": {
       "commons": "Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
@@ -494,7 +494,7 @@
     "year": 1500,
     "medium": "油彩、木板",
     "location": "慕尼黑老绘画陈列馆",
-    "summary": "正面、对称，几乎把自己画成基督，艺术家自我意识的觉醒。",
+    "summary": "正面、对称，几乎把自己画成了基督。画家不再甘心只做工匠。",
     "period": "north-ren",
     "image": {
       "commons": "Albrecht_Dürer_-_1500_self-portrait_(High_resolution_and_detail).jpg"
@@ -522,7 +522,7 @@
     "year": 1565,
     "medium": "油彩、木板",
     "location": "维也纳艺术史博物馆",
-    "summary": "农民日常成为正式题材，开风俗画先河。",
+    "summary": "农民的冬日成了正经题材，风俗画由此兴起。",
     "period": "north-ren",
     "image": {
       "commons": "Pieter Bruegel the Elder - Hunters in the Snow (Winter) - Google Art Project.jpg"
@@ -596,7 +596,7 @@
     "year": 1665,
     "medium": "油彩、画布",
     "location": "海牙莫瑞泰斯皇家美术馆",
-    "summary": "安静的回眸与一点高光，是荷兰黄金时代的代表。",
+    "summary": "安静的回眸，耳坠上一点高光。",
     "period": "baroque",
     "image": {
       "commons": "1665 Girl with a Pearl Earring.jpg"
@@ -611,7 +611,7 @@
     "year": 1767,
     "medium": "油彩、画布",
     "location": "伦敦华莱士收藏馆",
-    "summary": "飞起的鞋、藏在花丛里的情人，洛可可调情氛围的代名词。",
+    "summary": "飞出去的鞋、藏在花丛里的情人，洛可可最典型的一幅。",
     "period": "rococo",
     "image": {
       "commons": "Fragonard, The Swing, Wallace Collection.jpg"
@@ -857,7 +857,7 @@
     "year": 1889,
     "medium": "油彩、画布",
     "location": "纽约现代艺术博物馆",
-    "summary": "在圣雷米疗养院窗外所见，旋涡状的天空就是画家的情绪。",
+    "summary": "画的是圣雷米疗养院窗外的夜空，天上的旋涡更像画家心里的翻腾。",
     "period": "post-impression",
     "image": {
       "commons": "Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"

@@ -1,6 +1,6 @@
 {
   "name": "art-history-atlas",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "description": "可交互的艺术史图谱：时间全景、时期展厅、交互图解，内容与代码分离",
   "license": "MIT",

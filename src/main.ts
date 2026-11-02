@@ -54,11 +54,11 @@ function renderChrome() {
   $("#footer").innerHTML = `<div class="foot-in">
     <div><div class="foot-brand">${esc(SITE.title)}<em>${esc(SITE.titleEn)}</em></div>
       <p style="margin-top:12px">${esc(t.meta.description)}</p>
-      <p>年代多为约数；展厅里的图解是示意图，不是原作画面。</p></div>
+      <p>年代多为约数。图解是示意，不是原作。</p></div>
     <div><h4>关于图片</h4>
-      <p>作品图片来自维基共享资源，只收公有领域与 CC 授权的文件；点开大图可看作者与协议。仍在版权期的作品只给维基百科链接。${missing ? `目前还有 ${missing} 件尚未配图。` : ""}</p></div>
+      <p>图片来自维基共享资源，只用公有领域和 CC 授权的文件，作者与协议写在每张图下面。还在版权期的作品不放图。${missing ? `另有 ${missing} 件暂缺。` : ""}</p></div>
     <div><h4>开源</h4>
-      <p>代码 MIT，文字 CC BY-SA 4.0。发现错误或想补一个展厅，欢迎<a href="${SITE.repo}" target="_blank" rel="noopener">到 GitHub 提交</a>。</p>
+      <p>代码 MIT，文字 CC BY-SA 4.0。有错误或想补一间展厅，<a href="${SITE.repo}" target="_blank" rel="noopener">来 GitHub</a>。</p>
       <h4 style="margin-top:14px">延伸阅读</h4><p>${reading}</p></div>
   </div>`;
 }

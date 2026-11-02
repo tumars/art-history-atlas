@@ -102,7 +102,7 @@ export function renderTimeline() {
   bands.forEach((b, bi) => {
     const th = bandTheme(b), y = bandY(bi) + 15;
     s += b.intro
-      ? `<g class="band-intro" data-b="${bi}" tabindex="0" role="button" aria-label="${esc(b.label)}导读"><title>点击：${esc(b.intro.title)}</title><text x="4" y="${y}" class="t-s t-b" style="fill:${th.ink};text-decoration:underline dotted">${esc(b.label)}</text></g>`
+      ? `<g class="band-intro" data-b="${bi}" tabindex="0" role="button" aria-label="${esc(b.label)}导读"><title>${esc(b.intro.title)}</title><text x="4" y="${y}" class="t-s t-b" style="fill:${th.ink};text-decoration:underline dotted">${esc(b.label)}</text></g>`
       : `<text x="4" y="${y}" class="t-s t-b" style="fill:${th.ink}">${esc(b.label)}</text>`;
   });
   s += `<text x="4" y="${evTop + 4}" class="t-s t-b">历史大事</text><text x="4" y="${wkTop + TS / 2 + 4}" class="t-s t-b">代表作品</text><text x="4" y="${top + 9}" class="t-s t-b">艺术时期</text>`;
@@ -153,7 +153,7 @@ export function renderTimeline() {
   const pre = Math.round(((first.end - first.start) / (state.site.axis.end - state.site.axis.start)) * 100);
   $("#tl-note").textContent = mode === "real"
     ? `按真实比例，${first.name}就占了整条时间线的约 ${pre}%，其余时期和几乎所有历史大事都挤在最右边的一小段里。`
-    : "展开比例：越往后时间放得越大。切换“真实比例”看看史前有多长。";
+    : "越往后，时间刻度放得越大。";
 }
 
 function renderEventCard() {
@@ -163,7 +163,7 @@ function renderEventCard() {
   next.disabled = evSel === t.events.length - 1;
   if (!e) {
     $("#ev-count").textContent = `共 ${t.events.length} 件历史大事`;
-    next.textContent = "从第一件开始 →";
+    next.textContent = "从第一件看起 →";
     card.hidden = true;
     card.innerHTML = "";
     return;

@@ -53,13 +53,13 @@ function renderPeriod() {
     <p class="thesis">${esc(p.thesis)}</p>
     <div class="tags">${p.keywords.map((k) => `<span>${esc(k)}</span>`).join("")}</div>
     <ul class="points">${p.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-    ${hist.length ? `<div class="hist"><span class="label-sm">历史背景 · 点击在年表中查看</span><ol>${hist.map(({ v, i }) => `<li><button data-ev="${i}"><span class="y">${esc(v.yearText)}</span><span><b>${esc(v.name)}</b>：${esc(v.art)}</span></button></li>`).join("")}</ol></div>` : ""}`;
+    ${hist.length ? `<div class="hist"><span class="label-sm">历史背景</span><ol>${hist.map(({ v, i }) => `<li><button data-ev="${i}"><span class="y">${esc(v.yearText)}</span><span><b>${esc(v.name)}</b>：${esc(v.art)}</span></button></li>`).join("")}</ol></div>` : ""}`;
   renderFeature();
   const box = $("#diagram"), d = p.diagram ? diagramFor(t.meta.id, p.diagram.id) : undefined;
   box.hidden = !d;
   if (d && p.diagram) {
     const ctx = diagramContext();
-    box.innerHTML = `<div class="dhead"><span class="label-sm">一图看懂</span><h3>${esc(p.diagram.title)}</h3></div><div id="dg-body">${d.html(ctx)}</div><p class="dcap">${esc(p.diagram.caption)}</p>`;
+    box.innerHTML = `<div class="dhead"><span class="label-sm">图解</span><h3>${esc(p.diagram.title)}</h3></div><div id="dg-body">${d.html(ctx)}</div><p class="dcap">${esc(p.diagram.caption)}</p>`;
     d.init($("#dg-body"), ctx);
   } else box.innerHTML = "";
   const next = t.periods[state.cur + 1];

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>三万年长廊 · The Long Gallery</title>
-  <meta name="description" content="一部可以走进去的艺术史：三维长廊、年表、十八间展厅与交互图解。开源，欢迎补充。">
+  <meta name="description" content="从史前洞窟到二十世纪，十八个时期的西方艺术史。">
   <meta name="theme-color" content="#0E1118">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F35A8'/%3E%3Cpath d='M9 25V12a7 7 0 0 1 14 0v13' fill='none' stroke='%23D9B66A' stroke-width='2.4'/%3E%3Cpath d='M13 25v-9a3 3 0 0 1 6 0v9' fill='none' stroke='%23F3EEDF' stroke-width='1.6'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,6 @@
       <p class="kicker" id="hero-kicker"></p>
       <h1 class="hero-title" id="hero-title"></h1>
       <p class="hero-lead" id="hero-lead"></p>
-      <p class="hero-hint" id="hero-hint">拖动画面或按 ← → 在长廊里行走，点画框细看。</p>
     </div>
     <div class="hero-now" aria-live="polite">
       <span class="now-year" id="now-year"></span>
@@ -80,7 +79,6 @@
 
     <section class="block" id="hall">
       <header class="block-head" data-section="hall">
-        <div class="block-tools"><span class="hint">← → 切换展厅</span></div>
       </header>
       <nav class="era-nav" aria-label="展厅索引"><ol id="era-nav"></ol></nav>
       <div class="hall-body" id="hall-body">
@@ -116,7 +114,7 @@
     </section>
 
     <section class="block" id="collection">
-      <header class="block-head" data-section="collection"><div class="block-tools"><span class="hint">← → 换一件</span></div></header>
+      <header class="block-head" data-section="collection"></header>
       <div class="lt">
         <div class="lt-view" id="lt-view" aria-live="polite"></div>
         <div class="lt-map" id="lt-map" role="group" aria-label="跳到某个时期"></div>

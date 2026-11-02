@@ -63,7 +63,6 @@ function fallbackStrip() {
     if (i >= 0) setNow(i);
   }, { passive: true });
   $(".hero-controls").hidden = true;
-  $("#hero-hint").textContent = "左右滑动浏览，点作品细看。";
 }
 
 export async function initHero() {

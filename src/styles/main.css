@@ -88,7 +88,6 @@ a{color:var(--accent);text-underline-offset:3px}
 .kicker{margin:0 0 10px;font-family:var(--f-latin);font-style:italic;font-size:20px;color:var(--hero-gold);letter-spacing:.02em}
 .hero-title{font-size:clamp(44px,8vw,96px);line-height:1.02;letter-spacing:.06em;font-weight:900;color:var(--hero-fg);text-shadow:0 2px 30px rgba(0,0,0,.5)}
 .hero-lead{margin:16px 0 0;font-family:var(--f-display);font-weight:500;font-size:clamp(16px,1.6vw,19px);line-height:1.8;color:var(--hero-fg);max-width:30em;text-shadow:0 1px 16px rgba(0,0,0,.6)}
-.hero-hint{margin:14px 0 0;font-size:13px;color:var(--hero-muted)}
 .hero-now{position:absolute;z-index:2;right:max(24px,calc((100% - 1200px)/2 + 24px));top:clamp(28px,7vh,72px);text-align:right;pointer-events:none}
 .now-year{display:block;font-family:var(--f-latin);font-weight:600;font-size:clamp(40px,6vw,76px);line-height:1;color:var(--hero-gold);font-variant-numeric:lining-nums tabular-nums}
 .now-period{display:block;margin-top:6px;font-family:var(--f-display);font-size:15px;letter-spacing:.2em;color:var(--hero-fg)}
