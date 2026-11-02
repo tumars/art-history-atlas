@@ -1,0 +1,23 @@
+docs/design.md
+  s_547e4a09912c7b::t_12ec33f5762d13 180
+.github/workflows/deploy.yml
+  s_547e4a09912c7b::t_12ec33f5762d13 1,28-34,48-82
+README.md
+  s_547e4a09912c7b::t_12ec33f5762d13 49-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "eb8c622310354a359aa826d075ae803bb78e8ae8",
+  "prompts": {},
+  "sessions": {
+    "s_547e4a09912c7b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19bca-58c4-70c0-b87a-7aca877d792a",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
