@@ -10,7 +10,7 @@
  * 输出：
  *   public/images/works/<id>.<ext>        大图（宽 1280）
  *   public/images/works/<id>.thumb.<ext>  缩略图（宽 320）
- *   public/images/people/<id>.<ext>       人物肖像（宽 480，经维基数据 P18 取得）
+ *   public/images/people/<id>.<ext>       人物肖像（宽 480，经维基数据 P18 取得），另有宽 120 的 .thumb
  *   public/images/credits.json            页面读取的署名清单（人物的键为 person:<id>）
  *   CREDITS.md                            人看的署名清单
  * 只接受公有领域、CC0 和 CC BY / CC BY-SA 授权的文件，其余跳过并报告。
@@ -159,6 +159,7 @@ if (ptodo.length) {
   const found = want.filter((x) => x.file);
   want.filter((x) => !x.file).forEach(({ p }) => failed.push(`人物 ${p.id}：维基数据上没有找到图像（${p.wiki}）`));
   const info = await lookup(found.map((x) => x.file), PORTRAIT);
+  const tinfo = await lookup(found.map((x) => x.file), 120); // 关系图节点用的小图
   for (const { p, file } of found) {
     const ii = info[titleOf(file)];
     if (!ii) { failed.push(`人物 ${p.id}：Commons 上找不到 ${file}`); continue; }
@@ -166,11 +167,14 @@ if (ptodo.length) {
     const short = m.LicenseShortName?.value ?? "", lic = m.License?.value ?? "";
     if (!okLicense(short, lic)) { failed.push(`人物 ${p.id}：授权不符合要求（${short || lic || "未知"}）`); continue; }
     const ext = ii.mime === "image/png" ? "png" : "jpg";
-    const out = `images/people/${p.id}.${ext}`;
-    try { await download(ii.thumburl ?? ii.url, join(root, "public", out)); await sleep(200); }
-    catch (e) { failed.push(`人物 ${p.id}：${e.message}`); continue; }
+    const out = `images/people/${p.id}.${ext}`, tout = `images/people/${p.id}.thumb.${ext}`;
+    const small = tinfo[titleOf(file)];
+    try {
+      await download(ii.thumburl ?? ii.url, join(root, "public", out)); await sleep(200);
+      await download(small?.thumburl ?? ii.thumburl ?? ii.url, join(root, "public", tout)); await sleep(200);
+    } catch (e) { failed.push(`人物 ${p.id}：${e.message}`); continue; }
     credits["person:" + p.id] = {
-      file: out, thumb: out, title: `${p.name}（肖像）`,
+      file: out, thumb: tout, title: `${p.name}（肖像）`,
       author: stripHtml(m.Artist?.value).slice(0, 160) || "佚名",
       license: short || lic, licenseUrl: m.LicenseUrl?.value || undefined, source: ii.descriptionurl,
     };

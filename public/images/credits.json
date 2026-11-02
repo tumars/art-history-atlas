@@ -367,7 +367,7 @@
   },
   "person:bellini": {
     "file": "images/people/bellini.jpg",
-    "thumb": "images/people/bellini.jpg",
+    "thumb": "images/people/bellini.thumb.jpg",
     "title": "乔凡尼·贝利尼（肖像）",
     "author": "Titian",
     "license": "Public domain",
@@ -375,7 +375,7 @@
   },
   "person:bernini": {
     "file": "images/people/bernini.jpg",
-    "thumb": "images/people/bernini.jpg",
+    "thumb": "images/people/bernini.thumb.jpg",
     "title": "贝尼尼（肖像）",
     "author": "Gian Lorenzo Bernini",
     "license": "Public domain",
@@ -383,7 +383,7 @@
   },
   "person:bosch": {
     "file": "images/people/bosch.jpg",
-    "thumb": "images/people/bosch.jpg",
+    "thumb": "images/people/bosch.thumb.jpg",
     "title": "博斯（肖像）",
     "author": "Attributed to Jacques Le Boucq",
     "license": "Public domain",
@@ -391,7 +391,7 @@
   },
   "person:botticelli": {
     "file": "images/people/botticelli.jpg",
-    "thumb": "images/people/botticelli.jpg",
+    "thumb": "images/people/botticelli.thumb.jpg",
     "title": "波提切利（肖像）",
     "author": "Sandro Botticelli",
     "license": "Public domain",
@@ -399,7 +399,7 @@
   },
   "person:bruegel": {
     "file": "images/people/bruegel.jpg",
-    "thumb": "images/people/bruegel.jpg",
+    "thumb": "images/people/bruegel.thumb.jpg",
     "title": "老彼得·勃鲁盖尔（肖像）",
     "author": "Pieter Brueghel the Elder",
     "license": "Public domain",
@@ -407,7 +407,7 @@
   },
   "person:brunelleschi": {
     "file": "images/people/brunelleschi.jpg",
-    "thumb": "images/people/brunelleschi.jpg",
+    "thumb": "images/people/brunelleschi.thumb.jpg",
     "title": "布鲁内莱斯基（肖像）",
     "author": "see filename or category",
     "license": "Public domain",
@@ -415,7 +415,7 @@
   },
   "person:caravaggio": {
     "file": "images/people/caravaggio.jpg",
-    "thumb": "images/people/caravaggio.jpg",
+    "thumb": "images/people/caravaggio.thumb.jpg",
     "title": "卡拉瓦乔（肖像）",
     "author": "Ottavio Leoni",
     "license": "Public domain",
@@ -423,7 +423,7 @@
   },
   "person:cezanne": {
     "file": "images/people/cezanne.jpg",
-    "thumb": "images/people/cezanne.jpg",
+    "thumb": "images/people/cezanne.thumb.jpg",
     "title": "塞尚（肖像）",
     "author": "Unknown; Cézanne was born in 1839 and died in 1906",
     "license": "Public domain",
@@ -431,7 +431,7 @@
   },
   "person:cosimo-medici": {
     "file": "images/people/cosimo-medici.jpg",
-    "thumb": "images/people/cosimo-medici.jpg",
+    "thumb": "images/people/cosimo-medici.thumb.jpg",
     "title": "科西莫·德·美第奇（肖像）",
     "author": "Pontormo",
     "license": "Public domain",
@@ -439,7 +439,7 @@
   },
   "person:courbet": {
     "file": "images/people/courbet.jpg",
-    "thumb": "images/people/courbet.jpg",
+    "thumb": "images/people/courbet.thumb.jpg",
     "title": "库尔贝（肖像）",
     "author": "Nadar",
     "license": "Public domain",
@@ -447,7 +447,7 @@
   },
   "person:dali": {
     "file": "images/people/dali.jpg",
-    "thumb": "images/people/dali.jpg",
+    "thumb": "images/people/dali.thumb.jpg",
     "title": "达利（肖像）",
     "author": "Van Vechten, Carl, 1880-1964.",
     "license": "Public domain",
@@ -455,7 +455,7 @@
   },
   "person:david": {
     "file": "images/people/david.jpg",
-    "thumb": "images/people/david.jpg",
+    "thumb": "images/people/david.thumb.jpg",
     "title": "雅克-路易·大卫（肖像）",
     "author": "Jacques-Louis David",
     "license": "Public domain",
@@ -463,7 +463,7 @@
   },
   "person:degas": {
     "file": "images/people/degas.jpg",
-    "thumb": "images/people/degas.jpg",
+    "thumb": "images/people/degas.thumb.jpg",
     "title": "德加（肖像）",
     "author": "Edgar Degas",
     "license": "Public domain",
@@ -471,7 +471,7 @@
   },
   "person:delacroix": {
     "file": "images/people/delacroix.jpg",
-    "thumb": "images/people/delacroix.jpg",
+    "thumb": "images/people/delacroix.thumb.jpg",
     "title": "德拉克洛瓦（肖像）",
     "author": "Eugène Delacroix",
     "license": "Public domain",
@@ -479,7 +479,7 @@
   },
   "person:duchamp": {
     "file": "images/people/duchamp.jpg",
-    "thumb": "images/people/duchamp.jpg",
+    "thumb": "images/people/duchamp.thumb.jpg",
     "title": "杜尚（肖像）",
     "author": "Unknown author Unknown author",
     "license": "Public domain",
@@ -487,7 +487,7 @@
   },
   "person:durer": {
     "file": "images/people/durer.jpg",
-    "thumb": "images/people/durer.jpg",
+    "thumb": "images/people/durer.thumb.jpg",
     "title": "丢勒（肖像）",
     "author": "Albrecht Dürer",
     "license": "Public domain",
@@ -495,7 +495,7 @@
   },
   "person:fragonard": {
     "file": "images/people/fragonard.jpg",
-    "thumb": "images/people/fragonard.jpg",
+    "thumb": "images/people/fragonard.thumb.jpg",
     "title": "弗拉戈纳尔（肖像）",
     "author": "Jean-Honoré Fragonard",
     "license": "Public domain",
@@ -503,7 +503,7 @@
   },
   "person:friedrich": {
     "file": "images/people/friedrich.jpg",
-    "thumb": "images/people/friedrich.jpg",
+    "thumb": "images/people/friedrich.thumb.jpg",
     "title": "弗里德里希（肖像）",
     "author": "Johann Karl Bähr",
     "license": "Public domain",
@@ -511,7 +511,7 @@
   },
   "person:gauguin": {
     "file": "images/people/gauguin.png",
-    "thumb": "images/people/gauguin.png",
+    "thumb": "images/people/gauguin.thumb.jpg",
     "title": "高更（肖像）",
     "author": "Louis-Maurice Boutet de Monvel",
     "license": "Public domain",
@@ -519,7 +519,7 @@
   },
   "person:gericault": {
     "file": "images/people/gericault.jpg",
-    "thumb": "images/people/gericault.jpg",
+    "thumb": "images/people/gericault.thumb.jpg",
     "title": "籍里柯（肖像）",
     "author": "Horace Vernet",
     "license": "CC0",
@@ -528,7 +528,7 @@
   },
   "person:ghirlandaio": {
     "file": "images/people/ghirlandaio.jpg",
-    "thumb": "images/people/ghirlandaio.jpg",
+    "thumb": "images/people/ghirlandaio.thumb.jpg",
     "title": "吉兰达约（肖像）",
     "author": "Domenico Ghirlandaio",
     "license": "Public domain",
@@ -536,7 +536,7 @@
   },
   "person:giorgione": {
     "file": "images/people/giorgione.jpg",
-    "thumb": "images/people/giorgione.jpg",
+    "thumb": "images/people/giorgione.thumb.jpg",
     "title": "乔尔乔内（肖像）",
     "author": "Giorgione",
     "license": "Public domain",
@@ -544,7 +544,7 @@
   },
   "person:giotto": {
     "file": "images/people/giotto.jpg",
-    "thumb": "images/people/giotto.jpg",
+    "thumb": "images/people/giotto.thumb.jpg",
     "title": "乔托（肖像）",
     "author": "Original uploader was Frieda at it.wikipedia",
     "license": "CC BY-SA 3.0",
@@ -553,7 +553,7 @@
   },
   "person:goya": {
     "file": "images/people/goya.jpg",
-    "thumb": "images/people/goya.jpg",
+    "thumb": "images/people/goya.thumb.jpg",
     "title": "戈雅（肖像）",
     "author": "Vicente López Portaña",
     "license": "Public domain",
@@ -561,7 +561,7 @@
   },
   "person:guggenheim": {
     "file": "images/people/guggenheim.jpg",
-    "thumb": "images/people/guggenheim.jpg",
+    "thumb": "images/people/guggenheim.thumb.jpg",
     "title": "佩吉·古根海姆（肖像）",
     "author": "archives familiales",
     "license": "CC BY-SA 4.0",
@@ -570,7 +570,7 @@
   },
   "person:holbein": {
     "file": "images/people/holbein.jpg",
-    "thumb": "images/people/holbein.jpg",
+    "thumb": "images/people/holbein.thumb.jpg",
     "title": "小汉斯·荷尔拜因（肖像）",
     "author": "Hans Holbein the Younger",
     "license": "Public domain",
@@ -578,7 +578,7 @@
   },
   "person:ingres": {
     "file": "images/people/ingres.jpg",
-    "thumb": "images/people/ingres.jpg",
+    "thumb": "images/people/ingres.thumb.jpg",
     "title": "安格尔（肖像）",
     "author": "Jean-Auguste-Dominique Ingres",
     "license": "Public domain",
@@ -586,7 +586,7 @@
   },
   "person:julius-ii": {
     "file": "images/people/julius-ii.jpg",
-    "thumb": "images/people/julius-ii.jpg",
+    "thumb": "images/people/julius-ii.thumb.jpg",
     "title": "尤利乌斯二世（肖像）",
     "author": "Raphael",
     "license": "Public domain",
@@ -594,7 +594,7 @@
   },
   "person:kandinsky": {
     "file": "images/people/kandinsky.jpg",
-    "thumb": "images/people/kandinsky.jpg",
+    "thumb": "images/people/kandinsky.thumb.jpg",
     "title": "康定斯基（肖像）",
     "author": "未知上傳者",
     "license": "Public domain",
@@ -602,7 +602,7 @@
   },
   "person:leonardo": {
     "file": "images/people/leonardo.png",
-    "thumb": "images/people/leonardo.png",
+    "thumb": "images/people/leonardo.thumb.jpg",
     "title": "达·芬奇（肖像）",
     "author": "Attributed to Francesco Melzi",
     "license": "Public domain",
@@ -610,7 +610,7 @@
   },
   "person:lorenzo-medici": {
     "file": "images/people/lorenzo-medici.jpg",
-    "thumb": "images/people/lorenzo-medici.jpg",
+    "thumb": "images/people/lorenzo-medici.thumb.jpg",
     "title": "洛伦佐·德·美第奇（肖像）",
     "author": "Workshop of Bronzino",
     "license": "Public domain",
@@ -618,7 +618,7 @@
   },
   "person:manet": {
     "file": "images/people/manet.jpg",
-    "thumb": "images/people/manet.jpg",
+    "thumb": "images/people/manet.thumb.jpg",
     "title": "马奈（肖像）",
     "author": "Nadar / Adam Cuerden",
     "license": "Public domain",
@@ -626,7 +626,7 @@
   },
   "person:masaccio": {
     "file": "images/people/masaccio.jpg",
-    "thumb": "images/people/masaccio.jpg",
+    "thumb": "images/people/masaccio.thumb.jpg",
     "title": "马萨乔（肖像）",
     "author": "Masaccio",
     "license": "Public domain",
@@ -634,7 +634,7 @@
   },
   "person:matisse": {
     "file": "images/people/matisse.jpg",
-    "thumb": "images/people/matisse.jpg",
+    "thumb": "images/people/matisse.thumb.jpg",
     "title": "马蒂斯（肖像）",
     "author": "Carl Van Vechten",
     "license": "Public domain",
@@ -642,7 +642,7 @@
   },
   "person:michelangelo": {
     "file": "images/people/michelangelo.jpg",
-    "thumb": "images/people/michelangelo.jpg",
+    "thumb": "images/people/michelangelo.thumb.jpg",
     "title": "米开朗基罗（肖像）",
     "author": "Attributed to Daniele da Volterra",
     "license": "Public domain",
@@ -650,7 +650,7 @@
   },
   "person:millet": {
     "file": "images/people/millet.jpg",
-    "thumb": "images/people/millet.jpg",
+    "thumb": "images/people/millet.thumb.jpg",
     "title": "米勒（肖像）",
     "author": "Nadar",
     "license": "Public domain",
@@ -658,7 +658,7 @@
   },
   "person:monet": {
     "file": "images/people/monet.jpg",
-    "thumb": "images/people/monet.jpg",
+    "thumb": "images/people/monet.thumb.jpg",
     "title": "莫奈（肖像）",
     "author": "Nadar",
     "license": "Public domain",
@@ -666,7 +666,7 @@
   },
   "person:munch": {
     "file": "images/people/munch.jpg",
-    "thumb": "images/people/munch.jpg",
+    "thumb": "images/people/munch.thumb.jpg",
     "title": "蒙克（肖像）",
     "author": "Anders Beer Wilse",
     "license": "Public domain",
@@ -674,7 +674,7 @@
   },
   "person:napoleon": {
     "file": "images/people/napoleon.jpg",
-    "thumb": "images/people/napoleon.jpg",
+    "thumb": "images/people/napoleon.thumb.jpg",
     "title": "拿破仑（肖像）",
     "author": "Jacques-Louis David",
     "license": "Public domain",
@@ -682,7 +682,7 @@
   },
   "person:perugino": {
     "file": "images/people/perugino.jpg",
-    "thumb": "images/people/perugino.jpg",
+    "thumb": "images/people/perugino.thumb.jpg",
     "title": "佩鲁吉诺（肖像）",
     "author": "Pietro Perugino",
     "license": "Public domain",
@@ -690,7 +690,7 @@
   },
   "person:picasso": {
     "file": "images/people/picasso.jpg",
-    "thumb": "images/people/picasso.jpg",
+    "thumb": "images/people/picasso.thumb.jpg",
     "title": "毕加索（肖像）",
     "author": "Argentina . Revista Vea y Lea",
     "license": "Public domain",
@@ -698,7 +698,7 @@
   },
   "person:pissarro": {
     "file": "images/people/pissarro.jpg",
-    "thumb": "images/people/pissarro.jpg",
+    "thumb": "images/people/pissarro.thumb.jpg",
     "title": "毕沙罗（肖像）",
     "author": "Unknown author Unknown author",
     "license": "Public domain",
@@ -706,7 +706,7 @@
   },
   "person:pollock": {
     "file": "images/people/pollock.jpg",
-    "thumb": "images/people/pollock.jpg",
+    "thumb": "images/people/pollock.thumb.jpg",
     "title": "波洛克（肖像）",
     "author": "Hans Namuth",
     "license": "Public domain",
@@ -714,7 +714,7 @@
   },
   "person:raphael": {
     "file": "images/people/raphael.jpg",
-    "thumb": "images/people/raphael.jpg",
+    "thumb": "images/people/raphael.thumb.jpg",
     "title": "拉斐尔（肖像）",
     "author": "Raphael",
     "license": "Public domain",
@@ -722,7 +722,7 @@
   },
   "person:rembrandt": {
     "file": "images/people/rembrandt.jpg",
-    "thumb": "images/people/rembrandt.jpg",
+    "thumb": "images/people/rembrandt.thumb.jpg",
     "title": "伦勃朗（肖像）",
     "author": "Rembrandt",
     "license": "Public domain",
@@ -730,7 +730,7 @@
   },
   "person:renoir": {
     "file": "images/people/renoir.jpg",
-    "thumb": "images/people/renoir.jpg",
+    "thumb": "images/people/renoir.thumb.jpg",
     "title": "雷诺阿（肖像）",
     "author": "Unknown Unknown Musée d'Orsay, Dist. RMN-Grand Palais / Patrice Schmidt",
     "license": "Public domain",
@@ -738,7 +738,7 @@
   },
   "person:rubens": {
     "file": "images/people/rubens.jpg",
-    "thumb": "images/people/rubens.jpg",
+    "thumb": "images/people/rubens.thumb.jpg",
     "title": "鲁本斯（肖像）",
     "author": "Peter Paul Rubens",
     "license": "Public domain",
@@ -746,7 +746,7 @@
   },
   "person:seurat": {
     "file": "images/people/seurat.jpg",
-    "thumb": "images/people/seurat.jpg",
+    "thumb": "images/people/seurat.thumb.jpg",
     "title": "修拉（肖像）",
     "author": "Unidentified photographer",
     "license": "Public domain",
@@ -754,7 +754,7 @@
   },
   "person:suger": {
     "file": "images/people/suger.jpg",
-    "thumb": "images/people/suger.jpg",
+    "thumb": "images/people/suger.thumb.jpg",
     "title": "叙热（肖像）",
     "author": "佚名",
     "license": "CC BY 3.0",
@@ -763,7 +763,7 @@
   },
   "person:titian": {
     "file": "images/people/titian.jpg",
-    "thumb": "images/people/titian.jpg",
+    "thumb": "images/people/titian.thumb.jpg",
     "title": "提香（肖像）",
     "author": "Titian",
     "license": "Public domain",
@@ -771,7 +771,7 @@
   },
   "person:urban-viii": {
     "file": "images/people/urban-viii.jpg",
-    "thumb": "images/people/urban-viii.jpg",
+    "thumb": "images/people/urban-viii.thumb.jpg",
     "title": "乌尔班八世（肖像）",
     "author": "Pietro da Cortona",
     "license": "Public domain",
@@ -779,7 +779,7 @@
   },
   "person:van-eyck": {
     "file": "images/people/van-eyck.jpg",
-    "thumb": "images/people/van-eyck.jpg",
+    "thumb": "images/people/van-eyck.thumb.jpg",
     "title": "扬·凡·艾克（肖像）",
     "author": "Jan van Eyck",
     "license": "Public domain",
@@ -787,7 +787,7 @@
   },
   "person:van-gogh": {
     "file": "images/people/van-gogh.jpg",
-    "thumb": "images/people/van-gogh.jpg",
+    "thumb": "images/people/van-gogh.thumb.jpg",
     "title": "梵高（肖像）",
     "author": "Vincent van Gogh",
     "license": "CC BY-SA 4.0",
@@ -796,7 +796,7 @@
   },
   "person:vasari": {
     "file": "images/people/vasari.jpg",
-    "thumb": "images/people/vasari.jpg",
+    "thumb": "images/people/vasari.thumb.jpg",
     "title": "瓦萨里（肖像）",
     "author": "Attributed to Jacopo Zucchi",
     "license": "Public domain",
@@ -804,7 +804,7 @@
   },
   "person:velazquez": {
     "file": "images/people/velazquez.jpg",
-    "thumb": "images/people/velazquez.jpg",
+    "thumb": "images/people/velazquez.thumb.jpg",
     "title": "委拉斯开兹（肖像）",
     "author": "Diego Velázquez",
     "license": "Public domain",
@@ -812,7 +812,7 @@
   },
   "person:vermeer": {
     "file": "images/people/vermeer.jpg",
-    "thumb": "images/people/vermeer.jpg",
+    "thumb": "images/people/vermeer.thumb.jpg",
     "title": "维米尔（肖像）",
     "author": "Johannes Vermeer",
     "license": "Public domain",
@@ -820,7 +820,7 @@
   },
   "person:verrocchio": {
     "file": "images/people/verrocchio.jpg",
-    "thumb": "images/people/verrocchio.jpg",
+    "thumb": "images/people/verrocchio.thumb.jpg",
     "title": "韦罗基奥（肖像）",
     "author": "Nicolas de Larmessin",
     "license": "Public domain",
@@ -828,7 +828,7 @@
   },
   "person:warhol": {
     "file": "images/people/warhol.jpg",
-    "thumb": "images/people/warhol.jpg",
+    "thumb": "images/people/warhol.thumb.jpg",
     "title": "沃霍尔（肖像）",
     "author": "Bernard Gotfryd",
     "license": "Public domain",
@@ -836,7 +836,7 @@
   },
   "person:watteau": {
     "file": "images/people/watteau.jpg",
-    "thumb": "images/people/watteau.jpg",
+    "thumb": "images/people/watteau.thumb.jpg",
     "title": "华托（肖像）",
     "author": "Rosalba Carriera",
     "license": "CC BY-SA 4.0",

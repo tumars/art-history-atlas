@@ -1,26 +1,14 @@
-import { $, esc, wikiSearch, prefersReducedMotion } from "../lib/dom";
+import { $, esc, wikiSearch, prefersReducedMotion, store } from "../lib/dom";
 import { fmtYear } from "../lib/format";
 import { state, actions, personById, worksBy, portraitSrc, periodVar, periodOf, periodIndex, imgSrc, hasImage } from "../state";
 import type { Encounter, Person, Year } from "../types";
+import { VW, X, unX, AXIS_TICKS } from "./people-axis";
+import { renderGraph, highlightGraph } from "./people-graph";
 
 /* III 人物：生命线图 + 扫描线 + 相遇点 + 人物卡片 */
 
-const VW = 1000; // viewBox 宽
-const PAD = 12;
 const ROW = 28;
 const TOP = 34;
-// 人物几乎都在 1250 年以后，古代压缩在左侧
-const SEGS: [Year, Year, number, number][] = [[-500, 1250, 0, 0.12], [1250, 1990, 0.12, 1]];
-const pos = (y: Year) => {
-  for (const [a, b, p, q] of SEGS) if (y <= b) return p + ((Math.max(y, a) - a) / (b - a)) * (q - p);
-  return 1;
-};
-const X = (y: Year) => PAD + pos(y) * (VW - PAD * 2);
-const unX = (x: number): Year => {
-  const p = (x - PAD) / (VW - PAD * 2);
-  for (const [a, b, s, e] of SEGS) if (p <= e) return Math.round(a + ((Math.max(p, s) - s) / (e - s)) * (b - a));
-  return 1990;
-};
 
 let lane = new Map<string, number>();
 let sel: { kind: "person"; id: string } | { kind: "enc"; i: number } = { kind: "person", id: "michelangelo" };
@@ -53,8 +41,7 @@ function render() {
   svg.setAttribute("viewBox", `0 0 ${VW} ${svgH}`);
   let s = "";
   // 刻度
-  const ticks = [-500, 500, 1300, 1400, 1500, 1600, 1700, 1800, 1900];
-  for (const y of ticks) {
+  for (const y of AXIS_TICKS) {
     const x = X(y);
     s += `<line x1="${x}" x2="${x}" y1="${TOP - 12}" y2="${svgH}" class="grid"/><text x="${x + 3}" y="${TOP - 16}" class="t-s t-m">${fmtYear(y)}</text>`;
   }
@@ -197,6 +184,7 @@ function showCard() {
   box.innerHTML = sel.kind === "person" ? personCard(personById(sel.id)!) : encCard(t.encounters[sel.i]);
   if (!prefersReducedMotion()) { box.classList.remove("enter"); void box.offsetWidth; box.classList.add("enter"); }
   paint();
+  highlightGraph(sel.kind === "person" ? { kind: "person", id: sel.id } : { kind: "enc", people: t.encounters[sel.i].people });
   // 窄屏上图表横向滚动：把选中的人或相遇滚到可见范围中间
   const wrap = $("#life-svg").parentElement!;
   if (wrap.scrollWidth > wrap.clientWidth) {
@@ -219,6 +207,15 @@ function showEncounter(i: number) {
   showCard();
 }
 
+const VIEW_KEY = "aha.peopleView";
+function setView(v: "life" | "graph") {
+  store.set(VIEW_KEY, v);
+  $("#pv-life").setAttribute("aria-pressed", String(v === "life"));
+  $("#pv-graph").setAttribute("aria-pressed", String(v === "graph"));
+  $("#pv-life-box").hidden = v !== "life";
+  $("#pv-graph-box").hidden = v !== "graph";
+}
+
 let bound = false;
 export function initPeople() {
   const t = state.t;
@@ -226,6 +223,10 @@ export function initPeople() {
   if (!t.people.length) return;
   if (!personById(sel.kind === "person" ? sel.id : "")) sel = { kind: "person", id: t.people[0].id };
   render();
+  renderGraph((id) => showPerson(id, false));
+  setView(store.get<"life" | "graph">(VIEW_KEY, "life") === "graph" ? "graph" : "life");
+  $("#pv-life").onclick = () => setView("life");
+  $("#pv-graph").onclick = () => setView("graph");
   const svg = $("#life-svg") as unknown as SVGSVGElement;
   const yearAt = (e: PointerEvent) => {
     const pt = svg.createSVGPoint();
