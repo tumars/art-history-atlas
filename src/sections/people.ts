@@ -165,7 +165,7 @@ function tabWorks(p: Person) {
   const listed = p.works ?? [];
   const extra = worksBy(p.id).filter((w) => !listed.some((x) => x.work === w.id));
   const rows = [
-    ...listed.map((x) => `<li>${x.work ? thumbBtn(x.work) : `<span class="wk-none"></span>`}<div><b>${esc(x.title)}</b><span>${esc(x.year)}${x.where ? ` · ${esc(x.where)}` : ""}</span></div></li>`),
+    ...listed.map((x) => `<li${x.work ? "" : ` class="nothumb"`}>${x.work ? thumbBtn(x.work) : ""}<div><b>${esc(x.title)}</b><span>${esc(x.year)}${x.where ? ` · ${esc(x.where)}` : ""}</span></div></li>`),
     ...extra.map((w) => `<li>${thumbBtn(w.id)}<div><b>${esc(w.title)}</b><span>${esc(w.yearText)} · ${esc(w.location)}</span></div></li>`),
   ];
   return rows.length ? `<ol class="wc-wlist">${rows.join("")}</ol>` : `<p class="none">暂无作品资料。</p>`;
