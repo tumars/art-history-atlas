@@ -123,48 +123,102 @@ function relRow(label: string, ids: string[]) {
   }).join("")}</span></div>`;
 }
 
-function personCard(p: Person) {
+type Tab = "overview" | "life" | "works" | "rel";
+const TABS: [Tab, string][] = [["overview", "概览"], ["life", "生平"], ["works", "作品"], ["rel", "关系"]];
+let tab: Tab = "overview";
+
+const thumbBtn = (id: string) => {
+  const w = state.t.works.find((x) => x.id === id);
+  if (!w) return "";
+  return `<button class="wk-thumb" data-w="${w.id}" aria-label="看大图《${esc(w.title)}》">${hasImage(w) ? `<img src="${imgSrc(w, "thumb")}" alt="" loading="lazy">` : `<span>${esc(w.title[0])}</span>`}</button>`;
+};
+
+function tabOverview(p: Person) {
+  const per = periodOf(p.period);
+  const c = state.credits[`person:${p.id}`];
+  return `${p.legacy ? `<div class="wc-legacy"><span class="lb">评价</span><p>${esc(p.legacy)}</p></div>` : ""}
+    ${p.quote ? `<blockquote class="wc-quote"><p>${esc(p.quote.text)}</p><footer>${esc(p.quote.by)}${p.quote.source ? `，${esc(p.quote.source)}` : ""}</footer></blockquote>` : ""}
+    ${p.points.length ? `<div class="wc-pts"><span class="lb">看点</span><ul>${p.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+    <div class="wc-act">
+      <button class="btn" data-go="${per.id}">去${esc(per.short)}展厅</button>
+      <a class="btn" href="${wikiSearch(p.name)}" target="_blank" rel="noopener">维基百科 ↗</a>
+    </div>
+    ${c ? `<div class="credit-line">肖像：${esc(c.author)} · ${c.licenseUrl ? `<a href="${c.licenseUrl}" target="_blank" rel="noopener">${esc(c.license)}</a>` : esc(c.license)} · <a href="${c.source}" target="_blank" rel="noopener">维基共享资源</a></div>` : ""}`;
+}
+
+function tabLife(p: Person) {
+  const t = state.t;
+  type Row = { year: Year; html: string };
+  const rows: Row[] = (p.life ?? []).map((l) => ({
+    year: l.year,
+    html: `<li><span class="y">${esc(l.yearText ?? fmtYear(l.year))}</span><span class="age">${l.year >= p.born && l.year > p.born ? `${l.year - p.born} 岁` : ""}</span><span class="tx">${esc(l.text)}</span></li>`,
+  }));
+  t.encounters.forEach((e, i) => {
+    if (!e.people.includes(p.id)) return;
+    rows.push({ year: e.year + 0.5, html: `<li class="met"><span class="y">${esc(e.yearText ?? String(e.year))}</span><span class="age">相遇</span><button class="tx" data-e="${i}">${esc(e.title)}<small>${esc(e.place)}，${e.people.filter((x) => x !== p.id).map((x) => esc(personById(x)!.name)).join("、")}</small></button></li>` });
+  });
+  rows.sort((a, b) => a.year - b.year);
+  return rows.length ? `<ol class="wc-life">${rows.map((r) => r.html).join("")}</ol>` : `<p class="none">暂无生平资料。</p>`;
+}
+
+function tabWorks(p: Person) {
+  const listed = p.works ?? [];
+  const extra = worksBy(p.id).filter((w) => !listed.some((x) => x.work === w.id));
+  const rows = [
+    ...listed.map((x) => `<li>${x.work ? thumbBtn(x.work) : `<span class="wk-none"></span>`}<div><b>${esc(x.title)}</b><span>${esc(x.year)}${x.where ? ` · ${esc(x.where)}` : ""}</span></div></li>`),
+    ...extra.map((w) => `<li>${thumbBtn(w.id)}<div><b>${esc(w.title)}</b><span>${esc(w.yearText)} · ${esc(w.location)}</span></div></li>`),
+  ];
+  return rows.length ? `<ol class="wc-wlist">${rows.join("")}</ol>` : `<p class="none">暂无作品资料。</p>`;
+}
+
+function tabRel(p: Person) {
   const t = state.t;
   const inv = (k: keyof Person["rel"]) => t.people.filter((q) => q.rel[k]?.includes(p.id)).map((q) => q.id);
-  const src = portraitSrc(p);
-  const c = state.credits[`person:${p.id}`];
-  const ws = worksBy(p.id);
-  const encs = t.encounters.map((e, i) => ({ e, i })).filter(({ e }) => e.people.includes(p.id));
-  const per = periodOf(p.period);
   const from = [...(p.rel.teachers ?? []), ...(p.rel.influences ?? [])];
   const to = [...inv("teachers"), ...inv("influences")];
+  const encs = t.encounters.map((e, i) => ({ e, i })).filter(({ e }) => e.people.includes(p.id));
+  const empty = (l: string) => `<div class="wr-row"><span class="lb">${l}</span><span class="none">—</span></div>`;
+  return `<div class="wc-chain">
+      <div class="ch-col">${from.length ? relRow("师承与来源", from) : empty("师承与来源")}</div>
+      <div class="ch-me"><span>${esc(p.name)}</span></div>
+      <div class="ch-col">${to.length ? relRow("学生与后来者", to) : empty("学生与后来者")}</div>
+    </div>
+    ${relRow("对手", p.rel.rivals ?? [])}
+    ${relRow("赞助人", p.rel.patrons ?? [])}
+    ${relRow("资助过", inv("patrons"))}
+    ${encs.length ? `<div class="wc-enc"><span class="lb">相遇</span><ol>${encs.map(({ e, i }) => `<li><button data-e="${i}"><span class="y">${esc(e.yearText ?? String(e.year))}</span>${esc(e.title)}</button></li>`).join("")}</ol></div>` : ""}`;
+}
+
+const TAB_HTML: Record<Tab, (p: Person) => string> = { overview: tabOverview, life: tabLife, works: tabWorks, rel: tabRel };
+
+function personCard(p: Person) {
+  const src = portraitSrc(p);
   return `<div class="wc" style="--g:${periodVar(p.period)}">
-    <div class="wc-main">
-      <div class="wc-head">
-        <div class="wc-face">${src ? `<img src="${src}" alt="${esc(p.name)}的肖像" decoding="async">` : `<span>${esc(p.name[0])}</span>`}</div>
-        <div>
-          <div class="wc-roles">${p.roles.map(esc).join(" · ")}</div>
-          <h3>${esc(p.name)}</h3>
-          <div class="wc-en">${esc(p.en)}</div>
-          <div class="wc-meta"><span>${lifeText(p)}</span><span>${ageText(p)}</span><span>${p.cities.map(esc).join("、")}</span></div>
-        </div>
+    <div class="wc-head">
+      <div class="wc-face">${src ? `<img src="${src}" alt="${esc(p.name)}的肖像" decoding="async">` : `<span>${esc(p.name[0])}</span>`}</div>
+      <div class="wc-id">
+        <div class="wc-roles">${p.roles.map(esc).join(" · ")}</div>
+        <h3>${esc(p.name)}</h3>
+        <div class="wc-en">${esc(p.en)}</div>
+        <div class="wc-meta"><span>${lifeText(p)}</span><span>${ageText(p)}</span><span>${p.cities.map(esc).join("、")}</span></div>
+        ${p.movement?.length ? `<div class="wc-mv">${p.movement.map((m) => `<span>${esc(m)}</span>`).join("")}</div>` : ""}
       </div>
       <p class="wc-line">${esc(p.line)}</p>
-      <ul class="wc-points">${p.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-      ${ws.length ? `<div class="wc-works">${ws.map((w) => `<button data-w="${w.id}" title="${esc(w.title)}" aria-label="《${esc(w.title)}》">${hasImage(w) ? `<img src="${imgSrc(w, "thumb")}" alt="" loading="lazy">` : `<span>${esc(w.title[0])}</span>`}<small>${esc(w.title)}</small></button>`).join("")}</div>` : ""}
-      ${c ? `<div class="credit-line">肖像：${esc(c.author)} · ${c.licenseUrl ? `<a href="${c.licenseUrl}" target="_blank" rel="noopener">${esc(c.license)}</a>` : esc(c.license)} · <a href="${c.source}" target="_blank" rel="noopener">维基共享资源</a></div>` : ""}
     </div>
-    <div class="wc-side">
-      <div class="wc-chain">
-        <div class="ch-col">${from.length ? relRow("师承与来源", from) : `<div class="wr-row"><span class="lb">师承与来源</span><span class="none">—</span></div>`}</div>
-        <div class="ch-me"><span>${esc(p.name)}</span></div>
-        <div class="ch-col">${to.length ? relRow("学生与后来者", to) : `<div class="wr-row"><span class="lb">学生与后来者</span><span class="none">—</span></div>`}</div>
-      </div>
-      ${relRow("对手", p.rel.rivals ?? [])}
-      ${relRow("赞助人", p.rel.patrons ?? [])}
-      ${relRow("资助过", inv("patrons"))}
-      ${encs.length ? `<div class="wc-enc"><span class="lb">相遇</span><ol>${encs.map(({ e, i }) => `<li><button data-e="${i}"><span class="y">${esc(e.yearText ?? String(e.year))}</span>${esc(e.title)}</button></li>`).join("")}</ol></div>` : ""}
-      <div class="wc-act">
-        <button class="btn" data-go="${per.id}">去${esc(per.short)}展厅</button>
-        <a class="btn" href="${wikiSearch(p.name)}" target="_blank" rel="noopener">维基百科 ↗</a>
-      </div>
-    </div>
+    <div class="wc-tabs" role="tablist" aria-label="人物资料">${TABS.map(([k, l]) => `<button role="tab" data-tab="${k}" aria-selected="${k === tab}">${l}</button>`).join("")}</div>
+    <div class="wc-pane" role="tabpanel">${TAB_HTML[tab](p)}</div>
   </div>`;
+}
+
+/** 生命线上标出选中人物的生平节点 */
+function markLife() {
+  document.querySelectorAll("#life-svg .lev").forEach((n) => n.remove());
+  if (sel.kind !== "person") return;
+  const p = personById(sel.id)!;
+  const g = document.querySelector<SVGGElement>(`#life-svg .life-p[data-p="${p.id}"]`);
+  if (!g || !p.life?.length) return;
+  const y = laneY(p.id) + 17;
+  g.insertAdjacentHTML("beforeend", `<g class="lev">${p.life.filter((l) => l.year >= p.born && l.year <= p.died).map((l) => `<circle cx="${X(l.year)}" cy="${y}" r="2.4"><title>${esc(l.yearText ?? fmtYear(l.year))}：${esc(l.text)}</title></circle>`).join("")}</g>`);
 }
 
 function encCard(e: Encounter) {
@@ -184,6 +238,7 @@ function showCard() {
   box.innerHTML = sel.kind === "person" ? personCard(personById(sel.id)!) : encCard(t.encounters[sel.i]);
   if (!prefersReducedMotion()) { box.classList.remove("enter"); void box.offsetWidth; box.classList.add("enter"); }
   paint();
+  markLife();
   highlightGraph(sel.kind === "person" ? { kind: "person", id: sel.id } : { kind: "enc", people: t.encounters[sel.i].people });
   // 窄屏上图表横向滚动：把选中的人或相遇滚到可见范围中间
   const wrap = $("#life-svg").parentElement!;
@@ -248,6 +303,14 @@ export function initPeople() {
   svg.onkeydown = (e) => { if ((e.key === "Enter" || e.key === " ") && pick(e.target as Element)) e.preventDefault(); };
   $("#who-card").onclick = (e) => {
     const el = e.target as Element;
+    const tb = el.closest<HTMLElement>("[data-tab]");
+    if (tb && sel.kind === "person") {
+      tab = tb.dataset.tab as Tab;
+      const p = personById(sel.id)!;
+      document.querySelectorAll("#who-card [data-tab]").forEach((b) => b.setAttribute("aria-selected", String((b as HTMLElement).dataset.tab === tab)));
+      $("#who-card .wc-pane").innerHTML = TAB_HTML[tab](p);
+      return;
+    }
     const w = el.closest<HTMLElement>("[data-w]");
     if (w && sel.kind === "person") return actions.openWork(w.dataset.w!, true, worksBy(sel.id).map((x) => x.id));
     const en = el.closest<HTMLElement>("[data-e]");

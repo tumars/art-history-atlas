@@ -94,6 +94,16 @@ export interface Person {
   line: string;
   points: string[];
   rel: { teachers?: string[]; influences?: string[]; rivals?: string[]; patrons?: string[] };
+  /** 流派、画派或圈子 */
+  movement?: string[];
+  /** 生平节点，按年份排序 */
+  life?: { year: Year; yearText?: string; text: string }[];
+  /** 主要作品；work 指向本站作品 id */
+  works?: { title: string; year: string; where?: string; work?: string }[];
+  /** 评价：同代人与后世怎么看他 */
+  legacy?: string;
+  /** 有可靠出处的名言 */
+  quote?: { text: string; by: string; source?: string };
   /** 英文维基百科条目名，取肖像用 */
   wiki: string;
   portrait?: false;

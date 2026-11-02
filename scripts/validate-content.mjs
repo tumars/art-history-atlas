@@ -82,6 +82,16 @@ for (const t of site.traditions) {
     hids.add(p.id);
     if (!pids.has(p.period)) err(`${dir}/people.json ${p.id}: period ${p.period} 不存在`);
     if (!(isYear(p.born) && isYear(p.died) && p.born < p.died)) err(`${dir}/people.json ${p.id}: 生卒年有误`);
+    (p.life ?? []).forEach((l, k, a) => {
+      if (!isYear(l.year) || !l.text) err(`${dir}/people.json ${p.id}: 生平第 ${k + 1} 条缺年份或内容`);
+      if (k && l.year < a[k - 1].year) err(`${dir}/people.json ${p.id}: 生平应按年份排序（${l.year}）`);
+    });
+    (p.works ?? []).forEach((x) => {
+      if (!x.title || !x.year) err(`${dir}/people.json ${p.id}: 作品缺名称或年代`);
+      if (x.work && !wids.has(x.work)) err(`${dir}/people.json ${p.id}: 作品 ${x.work} 不在 works.json`);
+      else if (x.work && !(works.find((w) => w.id === x.work).by ?? []).includes(p.id)) err(`${dir}/people.json ${p.id}: 作品 ${x.work} 的 by 里没有此人`);
+    });
+    if (p.quote && (!p.quote.text || !p.quote.by)) err(`${dir}/people.json ${p.id}: 名言缺内容或出处人`);
   });
   pp.people.forEach((p) => Object.entries(p.rel ?? {}).forEach(([k, v]) => v.forEach((x) => !hids.has(x) && err(`${dir}/people.json ${p.id}: ${k} 里的 ${x} 不存在`))));
   pp.encounters.forEach((e, i) => {
