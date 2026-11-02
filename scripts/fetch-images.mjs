@@ -10,7 +10,8 @@
  * 输出：
  *   public/images/works/<id>.<ext>        大图（宽 1280）
  *   public/images/works/<id>.thumb.<ext>  缩略图（宽 320）
- *   public/images/credits.json            页面读取的署名清单
+ *   public/images/people/<id>.<ext>       人物肖像（宽 480，经维基数据 P18 取得）
+ *   public/images/credits.json            页面读取的署名清单（人物的键为 person:<id>）
  *   CREDITS.md                            人看的署名清单
  * 只接受公有领域、CC0 和 CC BY / CC BY-SA 授权的文件，其余跳过并报告。
  * 需要 Node 18+（内置 fetch）。
@@ -42,6 +43,15 @@ for (const t of readdirSync(join(root, "content/traditions"))) {
   if (!existsSync(p)) continue;
   for (const w of JSON.parse(readFileSync(p, "utf8"))) works.push({ ...w, tradition: t });
 }
+
+// 收集人物（people.json 的 wiki 字段是英文维基百科条目名）
+const people = [];
+for (const t of readdirSync(join(root, "content/traditions"))) {
+  const p = join(root, "content/traditions", t, "people.json");
+  if (!existsSync(p)) continue;
+  for (const x of JSON.parse(readFileSync(p, "utf8")).people ?? []) people.push(x);
+}
+const PORTRAIT = 480;
 
 const credits = existsSync(CREDITS) ? JSON.parse(readFileSync(CREDITS, "utf8")) : {};
 const todo = works.filter((w) => w.image?.commons && !w.copyright && (!only || only.has(w.id)) && (force || !credits[w.id]));
@@ -120,8 +130,56 @@ for (const w of todo) {
   console.log(`✓ ${w.id}  ${short}`);
 }
 
-// 删掉已不存在的作品
-const ids = new Set(works.map((w) => w.id));
+// ---------- 人物肖像 ----------
+const ptodo = people.filter((p) => p.wiki && p.portrait !== false && (!only || only.has(p.id)) && (force || !credits["person:" + p.id]));
+console.log(`\n人物 ${people.length} 位，本次需要取肖像 ${ptodo.length} 位`);
+if (ptodo.length) {
+  mkdirSync(join(root, "public/images/people"), { recursive: true });
+  // 英文条目名 → 维基数据 P18（图像）
+  const p18 = {};
+  for (let i = 0; i < ptodo.length; i += 40) {
+    const batch = ptodo.slice(i, i + 40);
+    const url = "https://www.wikidata.org/w/api.php?" + new URLSearchParams({
+      action: "wbgetentities", sites: "enwiki", titles: batch.map((p) => p.wiki).join("|"),
+      props: "claims|sitelinks", sitefilter: "enwiki", format: "json", origin: "*", redirects: "yes",
+    });
+    let j = null;
+    for (let k = 0; k < 4 && !j; k++) {
+      const r = await fetch(url, { headers: { "User-Agent": UA } });
+      if (r.ok) j = await r.json(); else await sleep(1500 * (k + 1));
+    }
+    for (const e of Object.values(j?.entities ?? {})) {
+      const title = e.sitelinks?.enwiki?.title;
+      const file = e.claims?.P18?.[0]?.mainsnak?.datavalue?.value;
+      if (title && file) p18[title.replace(/ /g, "_")] = file;
+    }
+    await sleep(300);
+  }
+  const want = ptodo.map((p) => ({ p, file: p18[p.wiki.replace(/ /g, "_")] }));
+  const found = want.filter((x) => x.file);
+  want.filter((x) => !x.file).forEach(({ p }) => failed.push(`人物 ${p.id}：维基数据上没有找到图像（${p.wiki}）`));
+  const info = await lookup(found.map((x) => x.file), PORTRAIT);
+  for (const { p, file } of found) {
+    const ii = info[titleOf(file)];
+    if (!ii) { failed.push(`人物 ${p.id}：Commons 上找不到 ${file}`); continue; }
+    const m = ii.extmetadata ?? {};
+    const short = m.LicenseShortName?.value ?? "", lic = m.License?.value ?? "";
+    if (!okLicense(short, lic)) { failed.push(`人物 ${p.id}：授权不符合要求（${short || lic || "未知"}）`); continue; }
+    const ext = ii.mime === "image/png" ? "png" : "jpg";
+    const out = `images/people/${p.id}.${ext}`;
+    try { await download(ii.thumburl ?? ii.url, join(root, "public", out)); await sleep(200); }
+    catch (e) { failed.push(`人物 ${p.id}：${e.message}`); continue; }
+    credits["person:" + p.id] = {
+      file: out, thumb: out, title: `${p.name}（肖像）`,
+      author: stripHtml(m.Artist?.value).slice(0, 160) || "佚名",
+      license: short || lic, licenseUrl: m.LicenseUrl?.value || undefined, source: ii.descriptionurl,
+    };
+    console.log(`✓ 人物 ${p.id}  ${short}`);
+  }
+}
+
+// 删掉已不存在的作品和人物
+const ids = new Set([...works.map((w) => w.id), ...people.map((p) => "person:" + p.id)]);
 for (const k of Object.keys(credits)) if (!ids.has(k)) delete credits[k];
 
 const sorted = Object.fromEntries(Object.entries(credits).sort(([a], [b]) => a.localeCompare(b)));

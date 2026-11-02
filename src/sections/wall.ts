@@ -1,5 +1,6 @@
 import { $, esc, wikiSearch, prefersReducedMotion } from "../lib/dom";
 import { fmtYear } from "../lib/format";
+import { whoHtml } from "../state";
 import { state, actions, allWorksOrdered, periodVar, periodOf, periodIndex, imgSrc, hasImage } from "../state";
 import { creditLine } from "./hall";
 import type { Work } from "../types";
@@ -37,7 +38,7 @@ function show(i: number, scrollReel = true) {
       : `<div class="lt-none"><b>${esc(w.title[0])}</b><span>${w.copyright ? "仍在版权期，这里不放图片。" : "暂无授权图片。"}</span><a href="${wikiSearch(w.title)}" target="_blank" rel="noopener">到维基百科看图 ↗</a></div>`}</figure>
     <div class="lt-card">
       <button class="lt-period" data-p="${p.id}"><i></i>${esc(p.name)} · ${fmtYear(p.start)} 起</button>
-      <div class="who">${esc(w.artist)}</div>
+      <div class="who">${whoHtml(w)}</div>
       <h3>《${esc(w.title)}》</h3>
       <div class="meta"><span>${esc(w.yearText)}</span><span>${esc(w.medium)}</span><span>${esc(w.location)}</span></div>
       <p class="why">${esc(w.summary)}</p>

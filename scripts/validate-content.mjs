@@ -71,6 +71,26 @@ for (const t of site.traditions) {
   });
   comparisons.forEach((c) => [c.a, c.b].forEach((w) => !wids.has(w) && err(`${dir}/comparisons.json ${c.id}: 作品 ${w} 不存在`)));
   sizes.forEach((s) => !wids.has(s.work) && err(`${dir}/sizes.json: 作品 ${s.work} 不存在`));
+
+  // 人物与相遇
+  const pp = opt("people") ?? { people: [], encounters: [] };
+  const hids = new Set();
+  pp.people.forEach((p, i) => {
+    need(p, ["id", "name", "en", "born", "died", "roles", "period", "line", "wiki"], `${dir}/people.json people[${i}]`);
+    if (!/^[a-z0-9-]+$/.test(p.id)) err(`${dir}/people.json ${p.id}: id 只能用小写字母、数字和连字符`);
+    if (hids.has(p.id)) err(`${dir}/people.json: 人物 id 重复 ${p.id}`);
+    hids.add(p.id);
+    if (!pids.has(p.period)) err(`${dir}/people.json ${p.id}: period ${p.period} 不存在`);
+    if (!(isYear(p.born) && isYear(p.died) && p.born < p.died)) err(`${dir}/people.json ${p.id}: 生卒年有误`);
+  });
+  pp.people.forEach((p) => Object.entries(p.rel ?? {}).forEach(([k, v]) => v.forEach((x) => !hids.has(x) && err(`${dir}/people.json ${p.id}: ${k} 里的 ${x} 不存在`))));
+  pp.encounters.forEach((e, i) => {
+    need(e, ["year", "place", "people", "title", "text"], `${dir}/people.json encounters[${i}]`);
+    e.people.forEach((x) => !hids.has(x) && err(`${dir}/people.json 相遇 ${e.title}: 人物 ${x} 不存在`));
+    const out = e.people.filter((x) => { const p = pp.people.find((q) => q.id === x); return p && (e.year < p.born || e.year > p.died); });
+    if (out.length) err(`${dir}/people.json 相遇 ${e.title}: ${out.join("、")} 当年不在世`);
+  });
+  works.forEach((w) => (w.by ?? []).forEach((x) => !hids.has(x) && err(`${dir}/works.json ${w.id}: 作者 ${x} 不在 people.json`)));
 }
 
 if (errors.length) {

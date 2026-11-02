@@ -1,4 +1,4 @@
-import type { ContextBand, Credit, Site, Tradition, TraditionMeta } from "./types";
+import type { ContextBand, Credit, Encounter, Person, Site, Tradition, TraditionMeta } from "./types";
 import siteJson from "../content/site.json";
 
 /**
@@ -31,6 +31,8 @@ export function loadTradition(id: string): Tradition {
     comparisons: file(id, "comparisons", true) ?? [],
     sizes: file(id, "sizes", true) ?? [],
     movements: file(id, "movements", true),
+    people: file<{ people: Person[] } | undefined>(id, "people", true)?.people ?? [],
+    encounters: file<{ encounters: Encounter[] } | undefined>(id, "people", true)?.encounters ?? [],
     bands,
   };
 }

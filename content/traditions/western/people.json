@@ -1,0 +1,1801 @@
+{
+  "people": [
+    {
+      "id": "phidias",
+      "name": "菲迪亚斯",
+      "en": "Phidias",
+      "born": -480,
+      "died": -430,
+      "approx": true,
+      "roles": [
+        "雕塑家"
+      ],
+      "period": "greece",
+      "cities": [
+        "雅典"
+      ],
+      "line": "主持帕特农神庙的雕刻，古典时期名气最大的雕塑家。",
+      "points": [
+        "他做的雅典娜巨像和奥林匹亚宙斯像都已不存，只能从古人的记述和小型仿制品里想象。",
+        "帕特农神庙的浮雕由他统筹，许多工匠分头完成。"
+      ],
+      "rel": {},
+      "wiki": "Phidias",
+      "portrait": false
+    },
+    {
+      "id": "myron",
+      "name": "米隆",
+      "en": "Myron",
+      "born": -480,
+      "died": -440,
+      "approx": true,
+      "roles": [
+        "雕塑家"
+      ],
+      "period": "greece",
+      "cities": [
+        "雅典"
+      ],
+      "line": "《掷铁饼者》的作者，擅长抓住运动中的一瞬。",
+      "points": [
+        "原作是青铜，早已失传，今天看到的都是罗马时代的大理石仿制品。"
+      ],
+      "rel": {},
+      "wiki": "Myron",
+      "portrait": false
+    },
+    {
+      "id": "suger",
+      "name": "叙热",
+      "en": "Abbot Suger",
+      "born": 1081,
+      "died": 1151,
+      "roles": [
+        "修道院长",
+        "赞助人"
+      ],
+      "period": "gothic",
+      "cities": [
+        "巴黎",
+        "圣德尼"
+      ],
+      "line": "圣德尼修道院长，主持重建修道院教堂，哥特式建筑由此开头。",
+      "points": [
+        "他相信光能把人引向上帝，所以要墙上多开窗、装彩色玻璃。",
+        "他写下了重建的经过，这在中世纪很少见。"
+      ],
+      "rel": {},
+      "wiki": "Suger"
+    },
+    {
+      "id": "giotto",
+      "name": "乔托",
+      "en": "Giotto di Bondone",
+      "born": 1267,
+      "died": 1337,
+      "approx": true,
+      "roles": [
+        "画家",
+        "建筑师"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佛罗伦萨",
+        "帕多瓦"
+      ],
+      "line": "让圣经人物有了重量和表情，文艺复兴从他这里开了头。",
+      "points": [
+        "帕多瓦斯克罗韦尼礼拜堂的整套壁画是他的代表作。",
+        "晚年主持设计佛罗伦萨大教堂的钟楼。"
+      ],
+      "rel": {},
+      "wiki": "Giotto"
+    },
+    {
+      "id": "cosimo-medici",
+      "name": "科西莫·德·美第奇",
+      "en": "Cosimo de' Medici",
+      "born": 1389,
+      "died": 1464,
+      "roles": [
+        "银行家",
+        "赞助人"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佛罗伦萨"
+      ],
+      "line": "美第奇银行的掌门人，佛罗伦萨实际上的统治者，出钱养着一批建筑师和艺术家。",
+      "points": [
+        "他资助重建了圣马可修道院，修士画家弗拉·安杰利科在里面画了壁画。",
+        "布鲁内莱斯基设计的圣洛伦佐教堂也由美第奇家族出资。"
+      ],
+      "rel": {},
+      "wiki": "Cosimo_de'_Medici"
+    },
+    {
+      "id": "brunelleschi",
+      "name": "布鲁内莱斯基",
+      "en": "Filippo Brunelleschi",
+      "born": 1377,
+      "died": 1446,
+      "roles": [
+        "建筑师"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佛罗伦萨"
+      ],
+      "line": "做出了线性透视的实验，又造起了佛罗伦萨大教堂的穹顶。",
+      "points": [
+        "1401 年他和吉贝尔蒂竞争洗礼堂铜门，输了以后转向建筑。",
+        "造穹顶时没有搭满堂脚手架，他为此专门设计了起重机械。"
+      ],
+      "rel": {
+        "patrons": [
+          "cosimo-medici"
+        ]
+      },
+      "wiki": "Filippo_Brunelleschi"
+    },
+    {
+      "id": "masaccio",
+      "name": "马萨乔",
+      "en": "Masaccio",
+      "born": 1401,
+      "died": 1428,
+      "roles": [
+        "画家"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佛罗伦萨",
+        "罗马"
+      ],
+      "line": "第一个在画里完整用上线性透视的人，只活了 26 岁。",
+      "points": [
+        "《圣三位一体》让教堂墙面看起来像凿开了一个礼拜堂。",
+        "布兰卡奇礼拜堂的壁画后来成了米开朗基罗等人临摹的范本。"
+      ],
+      "rel": {
+        "influences": [
+          "giotto",
+          "brunelleschi"
+        ]
+      },
+      "wiki": "Masaccio"
+    },
+    {
+      "id": "verrocchio",
+      "name": "韦罗基奥",
+      "en": "Andrea del Verrocchio",
+      "born": 1435,
+      "died": 1488,
+      "approx": true,
+      "roles": [
+        "雕塑家",
+        "画家"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佛罗伦萨",
+        "威尼斯"
+      ],
+      "line": "佛罗伦萨最大的作坊主之一，达·芬奇年轻时在他的作坊里当学徒。",
+      "points": [
+        "据瓦萨里说，《基督受洗》里有一个天使是少年达·芬奇画的，老师看了以后就不再画画。这个故事未必可信。"
+      ],
+      "rel": {
+        "patrons": [
+          "lorenzo-medici"
+        ]
+      },
+      "wiki": "Andrea_del_Verrocchio"
+    },
+    {
+      "id": "ghirlandaio",
+      "name": "吉兰达约",
+      "en": "Domenico Ghirlandaio",
+      "born": 1448,
+      "died": 1494,
+      "roles": [
+        "画家"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佛罗伦萨"
+      ],
+      "line": "以叙事壁画出名的佛罗伦萨画家，少年米开朗基罗在他的作坊学过艺。",
+      "points": [
+        "新圣母大殿托尔纳博尼礼拜堂的壁画里，画了许多当时佛罗伦萨人的面孔。"
+      ],
+      "rel": {},
+      "wiki": "Domenico_Ghirlandaio"
+    },
+    {
+      "id": "lorenzo-medici",
+      "name": "洛伦佐·德·美第奇",
+      "en": "Lorenzo de' Medici",
+      "born": 1449,
+      "died": 1492,
+      "roles": [
+        "赞助人",
+        "诗人"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佛罗伦萨"
+      ],
+      "line": "人称“伟大的洛伦佐”，科西莫的孙子，把少年米开朗基罗接进家里同住。",
+      "points": [
+        "波提切利的许多作品出自美第奇家族圈子的订单。",
+        "身边聚着一群人文学者和诗人，自己也写诗。"
+      ],
+      "rel": {},
+      "wiki": "Lorenzo_de'_Medici"
+    },
+    {
+      "id": "botticelli",
+      "name": "波提切利",
+      "en": "Sandro Botticelli",
+      "born": 1445,
+      "died": 1510,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佛罗伦萨",
+        "罗马"
+      ],
+      "line": "用柔美的线条把异教女神请回画面。",
+      "points": [
+        "1481 年被召到罗马，参与画西斯廷礼拜堂的墙面壁画。",
+        "晚年受修士萨伏那洛拉布道的影响，画风变得沉重。"
+      ],
+      "rel": {
+        "patrons": [
+          "lorenzo-medici"
+        ]
+      },
+      "wiki": "Sandro_Botticelli"
+    },
+    {
+      "id": "perugino",
+      "name": "佩鲁吉诺",
+      "en": "Pietro Perugino",
+      "born": 1446,
+      "died": 1523,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "early-ren",
+      "cities": [
+        "佩鲁贾",
+        "佛罗伦萨",
+        "罗马"
+      ],
+      "line": "画面安静、空间开阔，拉斐尔早年的画几乎和他一模一样。",
+      "points": [
+        "也参与了西斯廷礼拜堂的墙面壁画，代表作是《交付钥匙》。"
+      ],
+      "rel": {},
+      "wiki": "Pietro_Perugino"
+    },
+    {
+      "id": "leonardo",
+      "name": "达·芬奇",
+      "en": "Leonardo da Vinci",
+      "born": 1452,
+      "died": 1519,
+      "roles": [
+        "画家",
+        "工程师"
+      ],
+      "period": "high-ren",
+      "cities": [
+        "佛罗伦萨",
+        "米兰",
+        "罗马",
+        "昂布瓦斯"
+      ],
+      "line": "画家、工程师、解剖学家，用晕涂法让人物的轮廓像烟一样化开。",
+      "points": [
+        "在米兰为斯福尔扎家族工作近二十年，《最后的晚餐》就画在那里。",
+        "留下几千页笔记，写到解剖、飞行、水流和机械。",
+        "晚年应法王弗朗索瓦一世之邀去了法国，死在那里。"
+      ],
+      "rel": {
+        "teachers": [
+          "verrocchio"
+        ],
+        "rivals": [
+          "michelangelo"
+        ]
+      },
+      "wiki": "Leonardo_da_Vinci"
+    },
+    {
+      "id": "julius-ii",
+      "name": "尤利乌斯二世",
+      "en": "Pope Julius II",
+      "born": 1443,
+      "died": 1513,
+      "roles": [
+        "教皇",
+        "赞助人"
+      ],
+      "period": "high-ren",
+      "cities": [
+        "罗马"
+      ],
+      "line": "好战的教皇，下令重建圣彼得大教堂，把米开朗基罗和拉斐尔同时请到梵蒂冈。",
+      "points": [
+        "他本想让米开朗基罗给自己造一座巨大的陵墓，这项工程拖了四十年，最后大大缩水。",
+        "1506 年为新圣彼得大教堂奠基。"
+      ],
+      "rel": {},
+      "wiki": "Pope_Julius_II"
+    },
+    {
+      "id": "michelangelo",
+      "name": "米开朗基罗",
+      "en": "Michelangelo Buonarroti",
+      "born": 1475,
+      "died": 1564,
+      "roles": [
+        "雕塑家",
+        "画家",
+        "建筑师"
+      ],
+      "period": "high-ren",
+      "cities": [
+        "佛罗伦萨",
+        "罗马"
+      ],
+      "line": "自认是雕塑家，却画了西斯廷礼拜堂的天顶，晚年又主持圣彼得大教堂的设计。",
+      "points": [
+        "26 岁开始雕《大卫》，用的是一块被人放弃多年的大理石。",
+        "1508 年到 1512 年几乎独自画完天顶，二十多年后又画了祭坛墙上的《最后的审判》。",
+        "活到 88 岁，生前就有两部传记。"
+      ],
+      "rel": {
+        "teachers": [
+          "ghirlandaio"
+        ],
+        "patrons": [
+          "lorenzo-medici",
+          "julius-ii"
+        ],
+        "rivals": [
+          "leonardo",
+          "raphael"
+        ]
+      },
+      "wiki": "Michelangelo"
+    },
+    {
+      "id": "raphael",
+      "name": "拉斐尔",
+      "en": "Raphael",
+      "born": 1483,
+      "died": 1520,
+      "roles": [
+        "画家",
+        "建筑师"
+      ],
+      "period": "high-ren",
+      "cities": [
+        "乌尔比诺",
+        "佛罗伦萨",
+        "罗马"
+      ],
+      "line": "把达·芬奇和米开朗基罗的长处揉成一种平和的画风，37 岁就去世了。",
+      "points": [
+        "在佛罗伦萨的四年里画了一系列圣母像。",
+        "1508 年被召到罗马，为教皇装饰梵蒂冈的几个房间，《雅典学院》就在其中。"
+      ],
+      "rel": {
+        "teachers": [
+          "perugino"
+        ],
+        "influences": [
+          "leonardo",
+          "michelangelo"
+        ],
+        "patrons": [
+          "julius-ii"
+        ]
+      },
+      "wiki": "Raphael"
+    },
+    {
+      "id": "vasari",
+      "name": "瓦萨里",
+      "en": "Giorgio Vasari",
+      "born": 1511,
+      "died": 1574,
+      "roles": [
+        "画家",
+        "建筑师",
+        "作家"
+      ],
+      "period": "high-ren",
+      "cities": [
+        "阿雷佐",
+        "佛罗伦萨",
+        "罗马"
+      ],
+      "line": "写了《艺苑名人传》，后人对文艺复兴艺术家的许多印象都来自这本书。",
+      "points": [
+        "“文艺复兴”这个说法的雏形就出自他的书。",
+        "书里不少逸事带着传说色彩，今天的研究常要逐条核对。",
+        "乌菲齐宫原本是他设计的办公楼。"
+      ],
+      "rel": {
+        "influences": [
+          "michelangelo"
+        ],
+        "patrons": [
+          "cosimo-medici"
+        ]
+      },
+      "wiki": "Giorgio_Vasari"
+    },
+    {
+      "id": "bellini",
+      "name": "乔凡尼·贝利尼",
+      "en": "Giovanni Bellini",
+      "born": 1430,
+      "died": 1516,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "venice",
+      "cities": [
+        "威尼斯"
+      ],
+      "line": "威尼斯画派的奠基人，较早用油彩画出柔和的光和空气。",
+      "points": [
+        "乔尔乔内和提香都在他的作坊里学过画。"
+      ],
+      "rel": {},
+      "wiki": "Giovanni_Bellini"
+    },
+    {
+      "id": "giorgione",
+      "name": "乔尔乔内",
+      "en": "Giorgione",
+      "born": 1477,
+      "died": 1510,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "venice",
+      "cities": [
+        "威尼斯"
+      ],
+      "line": "画作很少、生平几乎不详，却让风景和气氛成了画的主角。",
+      "points": [
+        "三十出头死于瘟疫，有几幅画是提香替他画完的。"
+      ],
+      "rel": {
+        "teachers": [
+          "bellini"
+        ]
+      },
+      "wiki": "Giorgione"
+    },
+    {
+      "id": "titian",
+      "name": "提香",
+      "en": "Titian",
+      "born": 1488,
+      "died": 1576,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "venice",
+      "cities": [
+        "威尼斯"
+      ],
+      "line": "威尼斯色彩派的代表，晚年笔触越来越松，近看几乎是一团团颜色。",
+      "points": [
+        "给教皇、皇帝查理五世和西班牙国王腓力二世都画过像。",
+        "西班牙王室收了他大量作品，后来鲁本斯和委拉斯开兹都在马德里临摹过。"
+      ],
+      "rel": {
+        "teachers": [
+          "bellini"
+        ],
+        "influences": [
+          "giorgione"
+        ]
+      },
+      "wiki": "Titian"
+    },
+    {
+      "id": "van-eyck",
+      "name": "扬·凡·艾克",
+      "en": "Jan van Eyck",
+      "born": 1390,
+      "died": 1441,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "north-ren",
+      "cities": [
+        "布鲁日"
+      ],
+      "line": "把油画技法推到极细，一根发丝、一点反光都画得出来。",
+      "points": [
+        "长年做勃艮第公爵“好人菲利普”的宫廷画家，还替他出过外交差事。",
+        "画框上常写“尽我所能”，算是他的签名口号。"
+      ],
+      "rel": {},
+      "wiki": "Jan_van_Eyck"
+    },
+    {
+      "id": "bosch",
+      "name": "博斯",
+      "en": "Hieronymus Bosch",
+      "born": 1450,
+      "died": 1516,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "north-ren",
+      "cities": [
+        "斯海尔托亨博斯"
+      ],
+      "line": "画满怪物、地狱和奇想，几百年后被超现实主义者认作前辈。",
+      "points": [
+        "几乎一辈子没离开家乡小城，流传下来的画只有二十多幅。"
+      ],
+      "rel": {},
+      "wiki": "Hieronymus_Bosch"
+    },
+    {
+      "id": "durer",
+      "name": "丢勒",
+      "en": "Albrecht Dürer",
+      "born": 1471,
+      "died": 1528,
+      "roles": [
+        "画家",
+        "版画家"
+      ],
+      "period": "north-ren",
+      "cities": [
+        "纽伦堡",
+        "威尼斯"
+      ],
+      "line": "靠版画名满欧洲的德意志画家，两次去意大利，把文艺复兴带回北方。",
+      "points": [
+        "13 岁就画了一张自画像，一生画了许多张。",
+        "木刻和铜版画能大量印刷，他是最早靠版画出名、赚钱的艺术家之一。"
+      ],
+      "rel": {
+        "influences": [
+          "bellini"
+        ]
+      },
+      "wiki": "Albrecht_Dürer"
+    },
+    {
+      "id": "holbein",
+      "name": "小汉斯·荷尔拜因",
+      "en": "Hans Holbein the Younger",
+      "born": 1497,
+      "died": 1543,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "north-ren",
+      "cities": [
+        "巴塞尔",
+        "伦敦"
+      ],
+      "line": "英王亨利八世的宫廷画家，今天对都铎王朝人物的印象多来自他的肖像。",
+      "points": [
+        "和人文学者伊拉斯谟交好，带着他的推荐信去了英国。"
+      ],
+      "rel": {},
+      "wiki": "Hans_Holbein_the_Younger"
+    },
+    {
+      "id": "bruegel",
+      "name": "老彼得·勃鲁盖尔",
+      "en": "Pieter Bruegel the Elder",
+      "born": 1525,
+      "died": 1569,
+      "approx": true,
+      "roles": [
+        "画家"
+      ],
+      "period": "north-ren",
+      "cities": [
+        "安特卫普",
+        "布鲁塞尔"
+      ],
+      "line": "画农民的婚礼、舞会和冬天，把日常生活画成了正经的大画。",
+      "points": [
+        "早年以模仿博斯风格的版画设计出名。",
+        "两个儿子也成了画家，小儿子扬·勃鲁盖尔以花卉画出名。"
+      ],
+      "rel": {
+        "influences": [
+          "bosch"
+        ]
+      },
+      "wiki": "Pieter_Bruegel_the_Elder"
+    },
+    {
+      "id": "caravaggio",
+      "name": "卡拉瓦乔",
+      "en": "Caravaggio",
+      "born": 1571,
+      "died": 1610,
+      "roles": [
+        "画家"
+      ],
+      "period": "baroque",
+      "cities": [
+        "米兰",
+        "罗马",
+        "那不勒斯",
+        "马耳他"
+      ],
+      "line": "黑背景里打一束强光，让圣徒长着街头普通人的脸。",
+      "points": [
+        "脾气暴烈，1606 年在罗马的一场斗殴中杀了人，此后一路逃亡。",
+        "死时 38 岁，学他画法的“卡拉瓦乔派”遍布欧洲。"
+      ],
+      "rel": {},
+      "wiki": "Caravaggio"
+    },
+    {
+      "id": "rubens",
+      "name": "鲁本斯",
+      "en": "Peter Paul Rubens",
+      "born": 1577,
+      "died": 1640,
+      "roles": [
+        "画家",
+        "外交官"
+      ],
+      "period": "baroque",
+      "cities": [
+        "安特卫普",
+        "罗马",
+        "马德里"
+      ],
+      "line": "北方巴洛克的领袖，画面丰满、动感十足，还兼做外交使节。",
+      "points": [
+        "在安特卫普开大作坊，助手众多，产量惊人。",
+        "出使马德里时结识了年轻的委拉斯开兹。"
+      ],
+      "rel": {
+        "influences": [
+          "titian",
+          "caravaggio",
+          "michelangelo"
+        ]
+      },
+      "wiki": "Peter_Paul_Rubens"
+    },
+    {
+      "id": "urban-viii",
+      "name": "乌尔班八世",
+      "en": "Pope Urban VIII",
+      "born": 1568,
+      "died": 1644,
+      "roles": [
+        "教皇",
+        "赞助人"
+      ],
+      "period": "baroque",
+      "cities": [
+        "罗马"
+      ],
+      "line": "巴贝里尼家族出身的教皇，贝尼尼的头号赞助人。",
+      "points": [
+        "在他任上，贝尼尼造了圣彼得大教堂祭坛上方的青铜华盖。"
+      ],
+      "rel": {},
+      "wiki": "Pope_Urban_VIII"
+    },
+    {
+      "id": "bernini",
+      "name": "贝尼尼",
+      "en": "Gian Lorenzo Bernini",
+      "born": 1598,
+      "died": 1680,
+      "roles": [
+        "雕塑家",
+        "建筑师"
+      ],
+      "period": "baroque",
+      "cities": [
+        "罗马",
+        "巴黎"
+      ],
+      "line": "让大理石看起来像皮肤和布料，罗马城的巴洛克面貌大半出自他手。",
+      "points": [
+        "圣彼得广场的柱廊是他设计的，像两只手臂把信众揽进来。",
+        "1665 年被路易十四请到巴黎设计卢浮宫东立面，方案最后没被采用。"
+      ],
+      "rel": {
+        "influences": [
+          "michelangelo"
+        ],
+        "patrons": [
+          "urban-viii"
+        ]
+      },
+      "wiki": "Gian_Lorenzo_Bernini"
+    },
+    {
+      "id": "velazquez",
+      "name": "委拉斯开兹",
+      "en": "Diego Velázquez",
+      "born": 1599,
+      "died": 1660,
+      "roles": [
+        "画家"
+      ],
+      "period": "baroque",
+      "cities": [
+        "塞维利亚",
+        "马德里",
+        "罗马"
+      ],
+      "line": "西班牙国王腓力四世的宫廷画家，笔触松快，近看是色块，远看极真实。",
+      "points": [
+        "24 岁进宫，此后近四十年主要为国王一家作画。",
+        "两次去意大利，第二次为教皇英诺森十世画了像。"
+      ],
+      "rel": {
+        "influences": [
+          "caravaggio",
+          "titian",
+          "rubens"
+        ]
+      },
+      "wiki": "Diego_Velázquez"
+    },
+    {
+      "id": "rembrandt",
+      "name": "伦勃朗",
+      "en": "Rembrandt van Rijn",
+      "born": 1606,
+      "died": 1669,
+      "roles": [
+        "画家",
+        "版画家"
+      ],
+      "period": "baroque",
+      "cities": [
+        "莱顿",
+        "阿姆斯特丹"
+      ],
+      "line": "荷兰黄金时代最重要的画家，一生画了近百幅自画像，从得意画到潦倒。",
+      "points": [
+        "《夜巡》之后订单渐少，1656 年宣告破产。",
+        "从没去过意大利，卡拉瓦乔的明暗是经由乌得勒支的画家传给他的。"
+      ],
+      "rel": {
+        "influences": [
+          "caravaggio"
+        ]
+      },
+      "wiki": "Rembrandt"
+    },
+    {
+      "id": "vermeer",
+      "name": "维米尔",
+      "en": "Johannes Vermeer",
+      "born": 1632,
+      "died": 1675,
+      "roles": [
+        "画家"
+      ],
+      "period": "baroque",
+      "cities": [
+        "代尔夫特"
+      ],
+      "line": "一辈子在代尔夫特画了三十多幅小画，光总是从左边的窗户照进来。",
+      "points": [
+        "去世后很快被遗忘，19 世纪中叶才被一位法国评论家重新发现。"
+      ],
+      "rel": {},
+      "wiki": "Johannes_Vermeer"
+    },
+    {
+      "id": "watteau",
+      "name": "华托",
+      "en": "Antoine Watteau",
+      "born": 1684,
+      "died": 1721,
+      "roles": [
+        "画家"
+      ],
+      "period": "rococo",
+      "cities": [
+        "巴黎"
+      ],
+      "line": "开创了“游乐画”，画里的贵族在林中谈情，带着一点说不出的伤感。",
+      "points": [
+        "1717 年凭《发舟西苔岛》进入法国皇家绘画与雕塑学院，学院为此新设了一个画种。",
+        "37 岁死于肺结核。"
+      ],
+      "rel": {
+        "influences": [
+          "rubens"
+        ]
+      },
+      "wiki": "Antoine_Watteau"
+    },
+    {
+      "id": "fragonard",
+      "name": "弗拉戈纳尔",
+      "en": "Jean-Honoré Fragonard",
+      "born": 1732,
+      "died": 1806,
+      "roles": [
+        "画家"
+      ],
+      "period": "rococo",
+      "cities": [
+        "巴黎",
+        "格拉斯"
+      ],
+      "line": "洛可可最后的高手，《秋千》画得轻快又暧昧。",
+      "points": [
+        "大革命后贵族顾客散尽，他晚年在冷落中去世。"
+      ],
+      "rel": {
+        "influences": [
+          "watteau"
+        ]
+      },
+      "wiki": "Jean-Honoré_Fragonard"
+    },
+    {
+      "id": "goya",
+      "name": "戈雅",
+      "en": "Francisco Goya",
+      "born": 1746,
+      "died": 1828,
+      "roles": [
+        "画家",
+        "版画家"
+      ],
+      "period": "romantic",
+      "cities": [
+        "萨拉戈萨",
+        "马德里",
+        "波尔多"
+      ],
+      "line": "西班牙宫廷画家，晚年画尽战争的残酷和人心的黑暗。",
+      "points": [
+        "1793 年前后一场大病后几乎全聋。",
+        "晚年在自家墙上画了十四幅“黑色绘画”，后来被剥下来移到画布上。",
+        "死在法国波尔多。"
+      ],
+      "rel": {
+        "influences": [
+          "velazquez"
+        ]
+      },
+      "wiki": "Francisco_Goya"
+    },
+    {
+      "id": "david",
+      "name": "雅克-路易·大卫",
+      "en": "Jacques-Louis David",
+      "born": 1748,
+      "died": 1825,
+      "roles": [
+        "画家"
+      ],
+      "period": "neoclassic",
+      "cities": [
+        "巴黎",
+        "罗马",
+        "布鲁塞尔"
+      ],
+      "line": "新古典主义的领袖，先为大革命作画，后来成了拿破仑的首席画家。",
+      "points": [
+        "大革命时期投票赞成处死路易十六，罗伯斯庇尔倒台后坐过牢。",
+        "拿破仑失败后流亡布鲁塞尔，死在那里。",
+        "学生众多，安格尔是其中最有名的一个。"
+      ],
+      "rel": {
+        "patrons": [
+          "napoleon"
+        ]
+      },
+      "wiki": "Jacques-Louis_David"
+    },
+    {
+      "id": "napoleon",
+      "name": "拿破仑",
+      "en": "Napoleon Bonaparte",
+      "born": 1769,
+      "died": 1821,
+      "roles": [
+        "皇帝",
+        "赞助人"
+      ],
+      "period": "neoclassic",
+      "cities": [
+        "巴黎"
+      ],
+      "line": "很懂得用画像塑造自己，大卫、安格尔、格罗都为他画过。",
+      "points": [
+        "远征埃及时带了一百多名学者，后来出版的《埃及记述》掀起一阵埃及热。",
+        "把从各地掠来的艺术品集中到卢浮宫，他失败后大部分被追回。"
+      ],
+      "rel": {},
+      "wiki": "Napoleon"
+    },
+    {
+      "id": "friedrich",
+      "name": "弗里德里希",
+      "en": "Caspar David Friedrich",
+      "born": 1774,
+      "died": 1840,
+      "roles": [
+        "画家"
+      ],
+      "period": "romantic",
+      "cities": [
+        "德累斯顿"
+      ],
+      "line": "德国浪漫主义风景画家，画里的人常背对观众，面对大海、雾和山。",
+      "points": [
+        "生前名气不大，20 世纪才重新受到重视。"
+      ],
+      "rel": {},
+      "wiki": "Caspar_David_Friedrich"
+    },
+    {
+      "id": "ingres",
+      "name": "安格尔",
+      "en": "Jean-Auguste-Dominique Ingres",
+      "born": 1780,
+      "died": 1867,
+      "roles": [
+        "画家"
+      ],
+      "period": "neoclassic",
+      "cities": [
+        "巴黎",
+        "罗马"
+      ],
+      "line": "大卫的学生，坚信线条至上，为了线条之美可以把人体拉长。",
+      "points": [
+        "在罗马前后住了近二十年，晚年当过法兰西学院罗马分院的院长。",
+        "业余爱拉小提琴，法语里“安格尔的小提琴”后来就成了“业余爱好”的意思。"
+      ],
+      "rel": {
+        "teachers": [
+          "david"
+        ],
+        "influences": [
+          "raphael"
+        ],
+        "rivals": [
+          "delacroix"
+        ],
+        "patrons": [
+          "napoleon"
+        ]
+      },
+      "wiki": "Jean-Auguste-Dominique_Ingres"
+    },
+    {
+      "id": "gericault",
+      "name": "籍里柯",
+      "en": "Théodore Géricault",
+      "born": 1791,
+      "died": 1824,
+      "roles": [
+        "画家"
+      ],
+      "period": "romantic",
+      "cities": [
+        "巴黎"
+      ],
+      "line": "用《梅杜萨之筏》把一桩海难丑闻画成了巨幅历史画。",
+      "points": [
+        "为了画准尸体，去医院和停尸间写生。",
+        "爱马，32 岁死于坠马受伤后的病痛。"
+      ],
+      "rel": {
+        "influences": [
+          "michelangelo",
+          "rubens"
+        ]
+      },
+      "wiki": "Théodore_Géricault"
+    },
+    {
+      "id": "delacroix",
+      "name": "德拉克洛瓦",
+      "en": "Eugène Delacroix",
+      "born": 1798,
+      "died": 1863,
+      "roles": [
+        "画家"
+      ],
+      "period": "romantic",
+      "cities": [
+        "巴黎"
+      ],
+      "line": "浪漫主义的领袖，用色彩和动势压过轮廓。",
+      "points": [
+        "1832 年随外交使团去了摩洛哥，北非的光和色改变了他的调色板。",
+        "他对互补色的研究，后来被印象派和修拉接着推进。"
+      ],
+      "rel": {
+        "influences": [
+          "gericault",
+          "rubens"
+        ],
+        "rivals": [
+          "ingres"
+        ]
+      },
+      "wiki": "Eugène_Delacroix"
+    },
+    {
+      "id": "millet",
+      "name": "米勒",
+      "en": "Jean-François Millet",
+      "born": 1814,
+      "died": 1875,
+      "roles": [
+        "画家"
+      ],
+      "period": "realism",
+      "cities": [
+        "巴比松"
+      ],
+      "line": "巴比松画派的一员，专画田里弯腰干活的农民。",
+      "points": [
+        "梵高临摹过他几十幅画。"
+      ],
+      "rel": {},
+      "wiki": "Jean-François_Millet"
+    },
+    {
+      "id": "courbet",
+      "name": "库尔贝",
+      "en": "Gustave Courbet",
+      "born": 1819,
+      "died": 1877,
+      "roles": [
+        "画家"
+      ],
+      "period": "realism",
+      "cities": [
+        "奥尔南",
+        "巴黎"
+      ],
+      "line": "现实主义的旗手，说自己画不了天使，因为没见过。",
+      "points": [
+        "1855 年作品被世博会拒收，就在会场旁自搭展棚，挂上“现实主义”的牌子。",
+        "参加巴黎公社，被控推倒旺多姆圆柱，流亡瑞士直到去世。"
+      ],
+      "rel": {},
+      "wiki": "Gustave_Courbet"
+    },
+    {
+      "id": "pissarro",
+      "name": "毕沙罗",
+      "en": "Camille Pissarro",
+      "born": 1830,
+      "died": 1903,
+      "roles": [
+        "画家"
+      ],
+      "period": "impression",
+      "cities": [
+        "蓬图瓦兹",
+        "埃拉尼",
+        "巴黎"
+      ],
+      "line": "印象派里年纪最大、性子最温和的一位，八次印象派展览一次不落。",
+      "points": [
+        "塞尚和高更都把他当老师。",
+        "晚年有几年改用修拉的点彩画法。"
+      ],
+      "rel": {
+        "influences": [
+          "seurat"
+        ]
+      },
+      "wiki": "Camille_Pissarro"
+    },
+    {
+      "id": "manet",
+      "name": "马奈",
+      "en": "Édouard Manet",
+      "born": 1832,
+      "died": 1883,
+      "roles": [
+        "画家"
+      ],
+      "period": "realism",
+      "cities": [
+        "巴黎"
+      ],
+      "line": "用平涂和直视观众的目光惹怒沙龙，被看作现代绘画的起点。",
+      "points": [
+        "一直想在官方沙龙获得认可，从没参加过印象派的展览。",
+        "年轻画家们常在他爱去的盖尔波瓦咖啡馆聚会。"
+      ],
+      "rel": {
+        "influences": [
+          "velazquez",
+          "goya",
+          "titian",
+          "courbet"
+        ]
+      },
+      "wiki": "Édouard_Manet"
+    },
+    {
+      "id": "degas",
+      "name": "德加",
+      "en": "Edgar Degas",
+      "born": 1834,
+      "died": 1917,
+      "roles": [
+        "画家",
+        "雕塑家"
+      ],
+      "period": "impression",
+      "cities": [
+        "巴黎"
+      ],
+      "line": "画芭蕾舞者和赛马，在意的是人工光和偏斜的构图。",
+      "points": [
+        "年轻时见过安格尔，得到一句忠告：多画线条。",
+        "不喜欢“印象派”这个名字，宁愿叫自己现实主义者。",
+        "晚年视力衰退，越来越多用粉彩和雕塑。"
+      ],
+      "rel": {
+        "influences": [
+          "ingres"
+        ]
+      },
+      "wiki": "Edgar_Degas"
+    },
+    {
+      "id": "cezanne",
+      "name": "塞尚",
+      "en": "Paul Cézanne",
+      "born": 1839,
+      "died": 1906,
+      "roles": [
+        "画家"
+      ],
+      "period": "post-impression",
+      "cities": [
+        "艾克斯",
+        "巴黎"
+      ],
+      "line": "想用色块搭出画面的结构，被毕加索和马蒂斯称作“我们所有人的父亲”。",
+      "points": [
+        "和作家左拉是童年好友，后来因左拉的一部小说翻脸。",
+        "圣维克多山画了几十遍。"
+      ],
+      "rel": {
+        "teachers": [
+          "pissarro"
+        ]
+      },
+      "wiki": "Paul_Cézanne"
+    },
+    {
+      "id": "monet",
+      "name": "莫奈",
+      "en": "Claude Monet",
+      "born": 1840,
+      "died": 1926,
+      "roles": [
+        "画家"
+      ],
+      "period": "impression",
+      "cities": [
+        "勒阿弗尔",
+        "巴黎",
+        "吉维尼"
+      ],
+      "line": "印象派的核心人物，同一个对象在不同时刻画上几十遍。",
+      "points": [
+        "《日出·印象》给了这个画派名字。",
+        "晚年在吉维尼的花园里画睡莲，一画二十多年。"
+      ],
+      "rel": {
+        "influences": [
+          "manet"
+        ]
+      },
+      "wiki": "Claude_Monet"
+    },
+    {
+      "id": "renoir",
+      "name": "雷诺阿",
+      "en": "Pierre-Auguste Renoir",
+      "born": 1841,
+      "died": 1919,
+      "roles": [
+        "画家"
+      ],
+      "period": "impression",
+      "cities": [
+        "巴黎",
+        "卡涅"
+      ],
+      "line": "画巴黎人的舞会、聚餐和阳光下的皮肤，是印象派里最明快的一位。",
+      "points": [
+        "少年时在瓷器厂画瓷器。",
+        "晚年手被关节炎扭曲，把画笔绑在手上接着画。"
+      ],
+      "rel": {},
+      "wiki": "Pierre-Auguste_Renoir"
+    },
+    {
+      "id": "gauguin",
+      "name": "高更",
+      "en": "Paul Gauguin",
+      "born": 1848,
+      "died": 1903,
+      "roles": [
+        "画家"
+      ],
+      "period": "post-impression",
+      "cities": [
+        "巴黎",
+        "阿旺桥",
+        "塔希提"
+      ],
+      "line": "当过证券经纪人，后来去了塔希提，用平涂色块和象征寻找“原始”。",
+      "points": [
+        "1888 年在阿尔和梵高同住两个多月，不欢而散。",
+        "死在南太平洋的马克萨斯群岛。"
+      ],
+      "rel": {
+        "teachers": [
+          "pissarro"
+        ],
+        "influences": [
+          "cezanne"
+        ]
+      },
+      "wiki": "Paul_Gauguin"
+    },
+    {
+      "id": "van-gogh",
+      "name": "梵高",
+      "en": "Vincent van Gogh",
+      "born": 1853,
+      "died": 1890,
+      "roles": [
+        "画家"
+      ],
+      "period": "post-impression",
+      "cities": [
+        "荷兰",
+        "巴黎",
+        "阿尔",
+        "圣雷米",
+        "奥维尔"
+      ],
+      "line": "画画只有十年左右，留下两千多件作品，笔触就是他的情绪。",
+      "points": [
+        "弟弟提奥一直在经济上支持他，两人几百封通信留存至今。",
+        "生前几乎卖不出画，37 岁死在奥维尔。"
+      ],
+      "rel": {
+        "influences": [
+          "millet",
+          "delacroix",
+          "monet"
+        ]
+      },
+      "wiki": "Vincent_van_Gogh"
+    },
+    {
+      "id": "seurat",
+      "name": "修拉",
+      "en": "Georges Seurat",
+      "born": 1859,
+      "died": 1891,
+      "roles": [
+        "画家"
+      ],
+      "period": "post-impression",
+      "cities": [
+        "巴黎"
+      ],
+      "line": "用无数纯色小点作画，想把光学理论用到绘画里。",
+      "points": [
+        "《大碗岛的星期天下午》画了两年。",
+        "31 岁病逝。"
+      ],
+      "rel": {
+        "influences": [
+          "delacroix"
+        ]
+      },
+      "wiki": "Georges_Seurat"
+    },
+    {
+      "id": "munch",
+      "name": "蒙克",
+      "en": "Edvard Munch",
+      "born": 1863,
+      "died": 1944,
+      "roles": [
+        "画家",
+        "版画家"
+      ],
+      "period": "modern",
+      "cities": [
+        "奥斯陆",
+        "柏林"
+      ],
+      "line": "挪威画家，把焦虑、疾病和死亡直接画出来，表现主义的先声。",
+      "points": [
+        "《呐喊》画了好几个版本，有油画、粉彩，也有版画。"
+      ],
+      "rel": {
+        "influences": [
+          "van-gogh",
+          "gauguin"
+        ]
+      },
+      "wiki": "Edvard_Munch"
+    },
+    {
+      "id": "kandinsky",
+      "name": "康定斯基",
+      "en": "Wassily Kandinsky",
+      "born": 1866,
+      "died": 1944,
+      "roles": [
+        "画家"
+      ],
+      "period": "modern",
+      "cities": [
+        "莫斯科",
+        "慕尼黑",
+        "魏玛",
+        "巴黎"
+      ],
+      "line": "最早画纯抽象画的人之一，相信颜色和形状能像音乐一样打动人。",
+      "points": [
+        "本来学法律，看到莫奈的《干草堆》后决定改学画。",
+        "写了《论艺术里的精神》，后来在包豪斯教书。"
+      ],
+      "rel": {
+        "influences": [
+          "monet"
+        ]
+      },
+      "wiki": "Wassily_Kandinsky"
+    },
+    {
+      "id": "matisse",
+      "name": "马蒂斯",
+      "en": "Henri Matisse",
+      "born": 1869,
+      "died": 1954,
+      "roles": [
+        "画家"
+      ],
+      "period": "modern",
+      "cities": [
+        "巴黎",
+        "尼斯"
+      ],
+      "line": "野兽派的领袖，让颜色脱离物体本来的样子。",
+      "points": [
+        "晚年卧病，用剪刀剪彩纸作画。",
+        "旺斯的玫瑰经礼拜堂从建筑到彩色玻璃都是他设计的。"
+      ],
+      "rel": {
+        "influences": [
+          "cezanne",
+          "gauguin"
+        ],
+        "rivals": [
+          "picasso"
+        ]
+      },
+      "wiki": "Henri_Matisse"
+    },
+    {
+      "id": "picasso",
+      "name": "毕加索",
+      "en": "Pablo Picasso",
+      "born": 1881,
+      "died": 1973,
+      "roles": [
+        "画家",
+        "雕塑家"
+      ],
+      "period": "modern",
+      "cities": [
+        "巴塞罗那",
+        "巴黎",
+        "法国南部"
+      ],
+      "line": "和布拉克一起发明了立体主义，一生风格变了很多次。",
+      "points": [
+        "《亚维农少女》画成后，连朋友们都看不懂。",
+        "1937 年为西班牙内战中被轰炸的小城格尔尼卡画了同名巨作。"
+      ],
+      "rel": {
+        "influences": [
+          "cezanne",
+          "gauguin"
+        ],
+        "rivals": [
+          "matisse"
+        ]
+      },
+      "wiki": "Pablo_Picasso"
+    },
+    {
+      "id": "duchamp",
+      "name": "杜尚",
+      "en": "Marcel Duchamp",
+      "born": 1887,
+      "died": 1968,
+      "roles": [
+        "艺术家"
+      ],
+      "period": "modern",
+      "cities": [
+        "巴黎",
+        "纽约"
+      ],
+      "line": "把一个小便池签上名送去展览，“什么是艺术”从此成了艺术本身的问题。",
+      "points": [
+        "《下楼梯的裸女》在 1913 年纽约军械库展上引起轰动。",
+        "后来很长时间宣称不再做艺术，把精力放在国际象棋上。"
+      ],
+      "rel": {
+        "influences": [
+          "cezanne"
+        ]
+      },
+      "wiki": "Marcel_Duchamp"
+    },
+    {
+      "id": "guggenheim",
+      "name": "佩吉·古根海姆",
+      "en": "Peggy Guggenheim",
+      "born": 1898,
+      "died": 1979,
+      "roles": [
+        "收藏家",
+        "赞助人"
+      ],
+      "period": "modern",
+      "cities": [
+        "巴黎",
+        "纽约",
+        "威尼斯"
+      ],
+      "line": "美国收藏家，二战时把大批欧洲现代艺术运到纽约，又捧出了波洛克。",
+      "points": [
+        "她在纽约开的“本世纪艺术”画廊给了许多年轻美国画家第一次个展。",
+        "晚年住在威尼斯，故居现在是她的美术馆。"
+      ],
+      "rel": {},
+      "wiki": "Peggy_Guggenheim"
+    },
+    {
+      "id": "dali",
+      "name": "达利",
+      "en": "Salvador Dalí",
+      "born": 1904,
+      "died": 1989,
+      "roles": [
+        "画家"
+      ],
+      "period": "modern",
+      "cities": [
+        "菲格雷斯",
+        "巴黎",
+        "美国"
+      ],
+      "line": "超现实主义最出名的画家，把梦画得像照片一样清楚。",
+      "points": [
+        "1938 年在伦敦见到了他崇拜的弗洛伊德。",
+        "翘起的小胡子和种种噱头，让他本人比画还出名。"
+      ],
+      "rel": {
+        "influences": [
+          "picasso",
+          "bosch"
+        ]
+      },
+      "wiki": "Salvador_Dalí"
+    },
+    {
+      "id": "pollock",
+      "name": "波洛克",
+      "en": "Jackson Pollock",
+      "born": 1912,
+      "died": 1956,
+      "roles": [
+        "画家"
+      ],
+      "period": "modern",
+      "cities": [
+        "纽约",
+        "东汉普顿"
+      ],
+      "line": "把画布铺在地上滴洒颜料，抽象表现主义的代表。",
+      "points": [
+        "1949 年《生活》杂志问：他是不是美国在世最伟大的画家？",
+        "44 岁死于车祸。"
+      ],
+      "rel": {
+        "influences": [
+          "picasso"
+        ],
+        "patrons": [
+          "guggenheim"
+        ]
+      },
+      "wiki": "Jackson_Pollock"
+    },
+    {
+      "id": "warhol",
+      "name": "沃霍尔",
+      "en": "Andy Warhol",
+      "born": 1928,
+      "died": 1987,
+      "roles": [
+        "艺术家"
+      ],
+      "period": "modern",
+      "cities": [
+        "匹兹堡",
+        "纽约"
+      ],
+      "line": "把汤罐头和明星头像像商品一样丝网印刷，波普艺术的代表。",
+      "points": [
+        "出道前是很成功的商业插画师。",
+        "工作室叫“工厂”，作品像流水线一样生产。"
+      ],
+      "rel": {
+        "influences": [
+          "duchamp"
+        ]
+      },
+      "wiki": "Andy_Warhol"
+    }
+  ],
+  "encounters": [
+    {
+      "year": 1490,
+      "yearText": "约 1490",
+      "place": "佛罗伦萨",
+      "people": [
+        "michelangelo",
+        "lorenzo-medici"
+      ],
+      "title": "美第奇宫里的少年",
+      "text": "十五岁上下的米开朗基罗在美第奇家的雕塑花园里学艺，被洛伦佐看中，接进美第奇宫同住，和他的孩子们同桌吃饭。"
+    },
+    {
+      "year": 1504,
+      "place": "佛罗伦萨",
+      "people": [
+        "leonardo",
+        "michelangelo",
+        "raphael"
+      ],
+      "title": "同一间大厅，两面墙",
+      "text": "佛罗伦萨市政厅请达·芬奇和米开朗基罗在会议大厅的墙上各画一场战役。两幅都没画完，只留下草图和后人的摹本。同一年，21 岁的拉斐尔来到佛罗伦萨，仔细研究了两人的画。"
+    },
+    {
+      "year": 1506,
+      "place": "威尼斯",
+      "people": [
+        "durer",
+        "bellini"
+      ],
+      "title": "“他很老了，仍是最好的画家”",
+      "text": "丢勒第二次来到威尼斯，在家信里这样写年迈的乔凡尼·贝利尼。贝利尼也很看重这个德意志年轻人。"
+    },
+    {
+      "year": 1508,
+      "place": "罗马",
+      "people": [
+        "julius-ii",
+        "michelangelo",
+        "raphael"
+      ],
+      "title": "隔着几道墙",
+      "text": "尤利乌斯二世同时请来了两个人。米开朗基罗在西斯廷礼拜堂的天顶下仰头作画，拉斐尔在不远处的教皇居室里画《雅典学院》。"
+    },
+    {
+      "year": 1550,
+      "place": "佛罗伦萨",
+      "people": [
+        "vasari",
+        "michelangelo"
+      ],
+      "title": "传记里唯一的活人",
+      "text": "瓦萨里出版《艺苑名人传》。书里写的艺术家都已去世，只有米开朗基罗一个还活着。"
+    },
+    {
+      "year": 1623,
+      "place": "罗马",
+      "people": [
+        "urban-viii",
+        "bernini"
+      ],
+      "title": "教皇与雕塑家",
+      "text": "巴贝里尼当选教皇，就是乌尔班八世。据说他对贝尼尼说：你能看到巴贝里尼当上教皇是你的福气，而我任内有贝尼尼，是我们更大的福气。"
+    },
+    {
+      "year": 1628,
+      "place": "马德里",
+      "people": [
+        "rubens",
+        "velazquez"
+      ],
+      "title": "一起看提香",
+      "text": "鲁本斯以外交使节的身份在马德里住了大半年，常和年轻的委拉斯开兹一起看王室收藏的提香。第二年，委拉斯开兹第一次去了意大利。"
+    },
+    {
+      "year": 1801,
+      "place": "巴黎",
+      "people": [
+        "napoleon",
+        "david"
+      ],
+      "title": "不肯坐下的模特",
+      "text": "拿破仑请大卫画他翻越阿尔卑斯山，却不肯为此坐着当模特。大卫只好让别人穿上他的军装摆姿势。"
+    },
+    {
+      "year": 1818,
+      "yearText": "1818–1819",
+      "place": "巴黎",
+      "people": [
+        "gericault",
+        "delacroix"
+      ],
+      "title": "筏子上的模特",
+      "text": "籍里柯在工作室里画《梅杜萨之筏》，比他小七岁的德拉克洛瓦来当模特，画中一个趴着的人据说就是他。"
+    },
+    {
+      "year": 1855,
+      "place": "巴黎",
+      "people": [
+        "ingres",
+        "delacroix",
+        "courbet"
+      ],
+      "title": "世博会上的三个人",
+      "text": "巴黎世博会给安格尔和德拉克洛瓦各开了一间回顾展厅，两位老对手在同一个屋檐下比高低。作品被拒的库尔贝就在会场旁搭了个棚子，自办“现实主义”展。"
+    },
+    {
+      "year": 1862,
+      "yearText": "约 1862",
+      "place": "巴黎",
+      "people": [
+        "manet",
+        "degas"
+      ],
+      "title": "卢浮宫里的相识",
+      "text": "据说马奈在卢浮宫看见德加直接在铜版上临摹委拉斯开兹的一幅肖像，忍不住上前说这样太大胆了，两人由此相识。"
+    },
+    {
+      "year": 1863,
+      "place": "巴黎",
+      "people": [
+        "manet",
+        "pissarro",
+        "cezanne"
+      ],
+      "title": "落选者沙龙",
+      "text": "官方沙龙拒收了几千件作品，拿破仑三世下令另开一场“落选者沙龙”。马奈的《草地上的午餐》招来一片嘲笑，毕沙罗和塞尚的画也挂在这里。"
+    },
+    {
+      "year": 1869,
+      "place": "巴黎近郊",
+      "people": [
+        "monet",
+        "renoir"
+      ],
+      "title": "同一片水",
+      "text": "莫奈和雷诺阿在塞纳河边的浴场拉格勒努耶尔并排支起画架，对着同一片水画了好几幅。水面上的碎光，后来成了印象派的标志。"
+    },
+    {
+      "year": 1872,
+      "yearText": "1872–1874",
+      "place": "蓬图瓦兹",
+      "people": [
+        "pissarro",
+        "cezanne"
+      ],
+      "title": "跟着毕沙罗写生",
+      "text": "塞尚搬到蓬图瓦兹一带，跟着毕沙罗在户外写生，他的调色板一下子亮了起来。"
+    },
+    {
+      "year": 1874,
+      "place": "巴黎",
+      "people": [
+        "monet",
+        "renoir",
+        "degas",
+        "pissarro",
+        "cezanne"
+      ],
+      "title": "第一次印象派展览",
+      "text": "他们在摄影师纳达尔的旧工作室自办展览。一位评论家拿莫奈的《日出·印象》开涮，称他们为“印象派”。"
+    },
+    {
+      "year": 1888,
+      "place": "阿尔",
+      "people": [
+        "van-gogh",
+        "gauguin"
+      ],
+      "title": "黄房子里的九个星期",
+      "text": "高更来到阿尔，和梵高同住黄房子，一起画画约九个星期。12 月的一场争吵后，梵高割伤了自己的耳朵，高更随即离开，两人再没见过面。"
+    },
+    {
+      "year": 1896,
+      "place": "莫斯科",
+      "people": [
+        "kandinsky",
+        "monet"
+      ],
+      "title": "没认出画的是什么",
+      "text": "康定斯基在一场法国画展上看到莫奈的《干草堆》，起初没认出画的是什么，却被颜色打动。不久他放弃了大学的法学教职，去慕尼黑学画。"
+    },
+    {
+      "year": 1906,
+      "place": "巴黎",
+      "people": [
+        "picasso",
+        "matisse"
+      ],
+      "title": "斯泰因家的客厅",
+      "text": "在美国作家格特鲁德·斯泰因家里，毕加索和马蒂斯第一次见面。此后几十年，他们是彼此最在意的对手。"
+    },
+    {
+      "year": 1943,
+      "place": "纽约",
+      "people": [
+        "guggenheim",
+        "pollock"
+      ],
+      "title": "按月发工资",
+      "text": "古根海姆和波洛克签约，按月付他钱，又请他为自家门厅画一幅大壁画。这一年，波洛克在她的画廊办了第一次个展。"
+    }
+  ]
+}

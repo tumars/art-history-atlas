@@ -10,6 +10,7 @@ import { initSizes } from "./sections/sizes";
 import { initWall } from "./sections/wall";
 import { initLightbox, openWork } from "./sections/lightbox";
 import { initHero } from "./sections/hero";
+import { initPeople, showPerson } from "./sections/people";
 import { cnNum } from "./lib/format";
 import type { SectionId } from "./types";
 
@@ -29,7 +30,7 @@ function applyGroupColors() {
   el.textContent = `:root{${light}}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){${dark}}}:root[data-theme="dark"]{${dark}}`;
 }
 
-const SECTION_IDS: SectionId[] = ["chronology", "hall", "pendulum", "pairs", "sizes", "collection"];
+const SECTION_IDS: SectionId[] = ["chronology", "hall", "people", "pendulum", "pairs", "sizes", "collection"];
 
 function renderChrome() {
   const t = state.t;
@@ -121,6 +122,7 @@ function boot(traditionId: string) {
   initComparisons();
   initSizes();
   initWall();
+  initPeople();
   initHero();
 }
 
@@ -129,6 +131,7 @@ async function main() {
   actions.showWork = showWork;
   actions.selectEvent = selectEvent;
   actions.openWork = openWork;
+  actions.showPerson = showPerson;
   actions.refreshPendulum = renderPendulum;
   state.site = SITE;
   initLightbox();

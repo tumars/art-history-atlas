@@ -1,4 +1,5 @@
-import type { Credit, Period, Site, Tradition, Work } from "./types";
+import type { Credit, Period, Person, Site, Tradition, Work } from "./types";
+import { esc } from "./lib/dom";
 
 /**
  * 全局状态与跨模块的动作。各分区在启动时把自己的动作挂到 actions 上，
@@ -20,6 +21,8 @@ export const actions = {
   selectEvent: (_i: number, _scroll?: boolean) => {},
   openWork: (_workId: string, _canGo: boolean, _ids?: string[]) => {},
   refreshPendulum: () => {},
+  /** 打开人物卡片并滚到人物区 */
+  showPerson: (_id: string, _scroll?: boolean) => {},
 };
 
 /** 长廊顺序：按时期顺序，同一时期内按年份 */
@@ -45,4 +48,18 @@ export const imgSrc = (w: Work, size: "full" | "thumb") => {
   const c = state.credits[w.id];
   if (!c || w.copyright) return null;
   return import.meta.env.BASE_URL + (size === "thumb" ? c.thumb : c.file);
+};
+
+export const personById = (id: string): Person | undefined => state.t.people.find((p) => p.id === id);
+export const worksBy = (personId: string) => allWorksOrdered().filter((w) => w.by?.includes(personId));
+export const portraitSrc = (p: Person) => {
+  const c = state.credits[`person:${p.id}`];
+  return c ? import.meta.env.BASE_URL + c.file : null;
+};
+/** 作者名：挂了人物的作品显示为可点的链接，点了打开人物卡片 */
+export const whoHtml = (w: Work) => {
+  const id = w.by?.[0];
+  return id && personById(id)
+    ? `<button class="who-link" data-person="${id}" title="看${esc(personById(id)!.name)}的人物卡片">${esc(w.artist)}</button>`
+    : esc(w.artist);
 };

@@ -1,4 +1,5 @@
 import { $, esc, wikiSearch, prefersReducedMotion } from "../lib/dom";
+import { whoHtml } from "../state";
 import { state, actions, workById, periodOf, imgSrc, hasImage } from "../state";
 
 /* 大图：左图右文；在当前列表里前后切换；点图在“适应屏幕 / 原始大小”之间切换 */
@@ -27,7 +28,7 @@ function show() {
   }
   const c = state.credits[w.id];
   const credit = ok && c ? `<span class="lb-credit">图片：${esc(c.author)} · ${c.licenseUrl ? `<a href="${c.licenseUrl}" target="_blank" rel="noopener">${esc(c.license)}</a>` : esc(c.license)} · <a href="${c.source}" target="_blank" rel="noopener">维基共享资源</a></span>` : "";
-  $("#lb-cap").innerHTML = `<div class="who">${esc(w.artist)}</div><h3>《${esc(w.title)}》</h3>
+  $("#lb-cap").innerHTML = `<div class="who">${whoHtml(w)}</div><h3>《${esc(w.title)}》</h3>
     <div class="meta"><span>${esc(w.yearText)}</span><span>${esc(w.medium)}</span><span>${esc(w.location)}</span></div>
     <p>${esc(w.summary)}</p>${credit}`;
   const multi = list.length > 1;

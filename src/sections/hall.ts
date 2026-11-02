@@ -1,5 +1,6 @@
 import { $, esc, clamp, store, wikiSearch, prefersReducedMotion } from "../lib/dom";
 import { fmtYear, roman } from "../lib/format";
+import { whoHtml } from "../state";
 import { state, actions, worksOf, periodVar, imgSrc, hasImage } from "../state";
 import { diagramFor, diagramContext } from "../diagrams";
 import type { Work } from "../types";
@@ -31,7 +32,7 @@ function renderFeature() {
   $("#feature").innerHTML = `
     ${img ? `<button class="zoom" data-w="${w.id}" aria-label="放大查看《${esc(w.title)}》"><figure class="big"><img src="${imgSrc(w, "full")}" alt="《${esc(w.title)}》" decoding="async"></figure></button>` : ""}
     <div class="placard">
-      <div class="who">${esc(w.artist)}</div>
+      <div class="who">${whoHtml(w)}</div>
       <h3>《${esc(w.title)}》</h3>
       <div class="meta"><span>${esc(w.yearText)}</span><span>${esc(w.medium)}</span><span>${esc(w.location)}</span></div>
       <p class="why">${esc(w.summary)}</p>

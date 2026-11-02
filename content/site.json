@@ -58,23 +58,28 @@
       "title": "展厅",
       "deck": "每间一个问题，配一张能动手的图。"
     },
-    "pendulum": {
+    "people": {
       "numeral": "III",
+      "title": "人物",
+      "deck": "谁和谁活在同一个年代，又在哪里碰过面。"
+    },
+    "pendulum": {
+      "numeral": "IV",
       "title": "理性与激情",
       "deck": "新风格常常是对上一代的反叛，几百年里来来回回。"
     },
     "pairs": {
-      "numeral": "IV",
+      "numeral": "V",
       "title": "并置",
       "deck": "隔着几十年或几万年的两件作品，摆在一起看。"
     },
     "sizes": {
-      "numeral": "V",
+      "numeral": "VI",
       "title": "尺度",
       "deck": "画册里一样大的画，挂到墙上可能差出几十倍。"
     },
     "collection": {
-      "numeral": "VI",
+      "numeral": "VII",
       "title": "藏品",
       "deck": "全部作品，按年代排开。"
     }

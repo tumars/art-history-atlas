@@ -18,7 +18,7 @@ export interface Site {
   repo: string;
 }
 
-export type SectionId = "chronology" | "hall" | "pendulum" | "pairs" | "sizes" | "collection";
+export type SectionId = "chronology" | "hall" | "people" | "pendulum" | "pairs" | "sizes" | "collection";
 
 /** 大阶段（如“文艺复兴”），决定时期和作品的颜色 */
 export interface Group {
@@ -76,6 +76,36 @@ export interface Work {
   copyright?: string;
   /** 是否出现在时间全景的“代表作品”行 */
   timeline?: boolean;
+  /** 作者（人物 id）；佚名或团队作品可不填 */
+  by?: string[];
+}
+
+export interface Person {
+  id: string;
+  name: string;
+  en: string;
+  born: Year;
+  died: Year;
+  /** 生卒年为约数 */
+  approx?: boolean;
+  roles: string[];
+  period: string;
+  cities: string[];
+  line: string;
+  points: string[];
+  rel: { teachers?: string[]; influences?: string[]; rivals?: string[]; patrons?: string[] };
+  /** 英文维基百科条目名，取肖像用 */
+  wiki: string;
+  portrait?: false;
+}
+
+export interface Encounter {
+  year: Year;
+  yearText?: string;
+  place: string;
+  people: string[];
+  title: string;
+  text: string;
 }
 
 export interface HistoryEvent {
@@ -137,6 +167,8 @@ export interface Tradition {
   comparisons: Comparison[];
   sizes: SizeEntry[];
   movements?: Movements;
+  people: Person[];
+  encounters: Encounter[];
   bands: ContextBand[];
 }
 

@@ -115,7 +115,10 @@
     "image": {
       "commons": "The_Discobolus_Lancellotti,_Roman_copy_of_a_5th_century_BC_Greek_original_by_Myron,_Hadrianic_period,_Palazzo_Massimo_alle_Terme_(11398129933).jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "myron"
+    ]
   },
   {
     "id": "parthenon",
@@ -130,7 +133,10 @@
     "image": {
       "commons": "The_Parthenon_in_Athens.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "phidias"
+    ]
   },
   {
     "id": "laocoon",
@@ -262,7 +268,10 @@
     "period": "gothic",
     "image": {
       "commons": "Saint-Denis_-_Façade.jpg"
-    }
+    },
+    "by": [
+      "suger"
+    ]
   },
   {
     "id": "chartres",
@@ -307,7 +316,10 @@
     "image": {
       "commons": "Giotto_-_Scrovegni_-_-36-_-_Lamentation_(The_Mourning_of_Christ)_adj.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "giotto"
+    ]
   },
   {
     "id": "masaccio-trinity",
@@ -322,7 +334,10 @@
     "image": {
       "commons": "Masaccio,_trinità.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "masaccio"
+    ]
   },
   {
     "id": "florence-dome",
@@ -336,7 +351,10 @@
     "period": "early-ren",
     "image": {
       "commons": "Florence_Duomo_from_Michelangelo_hill.jpg"
-    }
+    },
+    "by": [
+      "brunelleschi"
+    ]
   },
   {
     "id": "birth-of-venus",
@@ -351,7 +369,10 @@
     "image": {
       "commons": "Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "botticelli"
+    ]
   },
   {
     "id": "mona-lisa",
@@ -366,7 +387,10 @@
     "image": {
       "commons": "Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "leonardo"
+    ]
   },
   {
     "id": "last-supper",
@@ -381,7 +405,10 @@
     "image": {
       "commons": "Última_Cena_-_Da_Vinci_5.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "leonardo"
+    ]
   },
   {
     "id": "michelangelo-david",
@@ -396,7 +423,10 @@
     "image": {
       "commons": "Michelangelo's_David_-_right_view_2.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "michelangelo"
+    ]
   },
   {
     "id": "sistine-ceiling",
@@ -411,7 +441,10 @@
     "image": {
       "commons": "Michelangelo_-_Creation_of_Adam_(cropped).jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "michelangelo"
+    ]
   },
   {
     "id": "school-of-athens",
@@ -426,7 +459,10 @@
     "image": {
       "commons": "\"The_School_of_Athens\"_by_Raffaello_Sanzio_da_Urbino.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "raphael"
+    ]
   },
   {
     "id": "venus-of-urbino",
@@ -441,7 +477,10 @@
     "image": {
       "commons": "Tiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "titian"
+    ]
   },
   {
     "id": "the-tempest",
@@ -455,7 +494,10 @@
     "period": "venice",
     "image": {
       "commons": "Giorgione_019.jpg"
-    }
+    },
+    "by": [
+      "giorgione"
+    ]
   },
   {
     "id": "arnolfini-portrait",
@@ -470,7 +512,10 @@
     "image": {
       "commons": "The_Arnolfini_portrait_(1434).jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "van-eyck"
+    ]
   },
   {
     "id": "garden-of-earthly-delights",
@@ -484,7 +529,10 @@
     "period": "north-ren",
     "image": {
       "commons": "The_Garden_of_earthly_delights.jpg"
-    }
+    },
+    "by": [
+      "bosch"
+    ]
   },
   {
     "id": "durer-self-portrait-1500",
@@ -498,7 +546,10 @@
     "period": "north-ren",
     "image": {
       "commons": "Albrecht_Dürer_-_1500_self-portrait_(High_resolution_and_detail).jpg"
-    }
+    },
+    "by": [
+      "durer"
+    ]
   },
   {
     "id": "the-ambassadors",
@@ -512,7 +563,10 @@
     "period": "north-ren",
     "image": {
       "commons": "Hans Holbein the Younger - The Ambassadors - Google Art Project.jpg"
-    }
+    },
+    "by": [
+      "holbein"
+    ]
   },
   {
     "id": "hunters-in-the-snow",
@@ -527,7 +581,10 @@
     "image": {
       "commons": "Pieter Bruegel the Elder - Hunters in the Snow (Winter) - Google Art Project.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "bruegel"
+    ]
   },
   {
     "id": "calling-of-saint-matthew",
@@ -542,7 +599,10 @@
     "image": {
       "commons": "The Calling of Saint Matthew-Caravaggo (1599-1600).jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "caravaggio"
+    ]
   },
   {
     "id": "ecstasy-of-saint-teresa",
@@ -556,7 +616,10 @@
     "period": "baroque",
     "image": {
       "commons": "Ecstasy of Saint Teresa September 2015-2a.jpg"
-    }
+    },
+    "by": [
+      "bernini"
+    ]
   },
   {
     "id": "night-watch",
@@ -571,7 +634,10 @@
     "image": {
       "commons": "The Night Watch - HD.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "rembrandt"
+    ]
   },
   {
     "id": "las-meninas",
@@ -586,7 +652,10 @@
     "image": {
       "commons": "Las Meninas, by Diego Velázquez, from Prado in Google Earth.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "velazquez"
+    ]
   },
   {
     "id": "girl-with-a-pearl-earring",
@@ -601,7 +670,10 @@
     "image": {
       "commons": "1665 Girl with a Pearl Earring.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "vermeer"
+    ]
   },
   {
     "id": "the-swing",
@@ -616,7 +688,10 @@
     "image": {
       "commons": "Fragonard, The Swing, Wallace Collection.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "fragonard"
+    ]
   },
   {
     "id": "pilgrimage-to-cythera",
@@ -630,7 +705,10 @@
     "period": "rococo",
     "image": {
       "commons": "L'Embarquement pour Cythère, by Antoine Watteau, from C2RMF retouched.jpg"
-    }
+    },
+    "by": [
+      "watteau"
+    ]
   },
   {
     "id": "oath-of-the-horatii",
@@ -645,7 +723,10 @@
     "image": {
       "commons": "Jacques-Louis David, Le Serment des Horaces.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "david"
+    ]
   },
   {
     "id": "death-of-marat",
@@ -660,7 +741,10 @@
     "image": {
       "commons": "Death of Marat by David.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "david"
+    ]
   },
   {
     "id": "napoleon-crossing-the-alps",
@@ -674,7 +758,10 @@
     "period": "neoclassic",
     "image": {
       "commons": "David - Napoleon crossing the Alps - Malmaison1.jpg"
-    }
+    },
+    "by": [
+      "david"
+    ]
   },
   {
     "id": "grande-odalisque",
@@ -688,7 +775,10 @@
     "period": "neoclassic",
     "image": {
       "commons": "Jean Auguste Dominique Ingres, La Grande Odalisque, 1814.jpg"
-    }
+    },
+    "by": [
+      "ingres"
+    ]
   },
   {
     "id": "raft-of-the-medusa",
@@ -703,7 +793,10 @@
     "image": {
       "commons": "JEAN LOUIS THÉODORE GÉRICAULT - La Balsa de la Medusa (Museo del Louvre, 1818-19).jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "gericault"
+    ]
   },
   {
     "id": "third-of-may-1808",
@@ -717,7 +810,10 @@
     "period": "romantic",
     "image": {
       "commons": "El Tres de Mayo, by Francisco de Goya, from Prado thin black margin.jpg"
-    }
+    },
+    "by": [
+      "goya"
+    ]
   },
   {
     "id": "liberty-leading-the-people",
@@ -732,7 +828,10 @@
     "image": {
       "commons": "Eugène Delacroix - Le 28 Juillet. La Liberté guidant le peuple.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "delacroix"
+    ]
   },
   {
     "id": "wanderer-above-the-sea-of-fog",
@@ -746,7 +845,10 @@
     "period": "romantic",
     "image": {
       "commons": "Caspar David Friedrich - Wanderer above the sea of fog.jpg"
-    }
+    },
+    "by": [
+      "friedrich"
+    ]
   },
   {
     "id": "burial-at-ornans",
@@ -760,7 +862,10 @@
     "period": "realism",
     "image": {
       "commons": "Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg"
-    }
+    },
+    "by": [
+      "courbet"
+    ]
   },
   {
     "id": "the-gleaners",
@@ -775,7 +880,10 @@
     "image": {
       "commons": "Jean-François_Millet_-_Gleaners_-_Google_Art_Project_2.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "millet"
+    ]
   },
   {
     "id": "luncheon-on-the-grass",
@@ -790,7 +898,10 @@
     "image": {
       "commons": "Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "manet"
+    ]
   },
   {
     "id": "olympia",
@@ -804,7 +915,10 @@
     "period": "realism",
     "image": {
       "commons": "Edouard_Manet_-_Olympia_-_Google_Art_ProjectFXD.jpg"
-    }
+    },
+    "by": [
+      "manet"
+    ]
   },
   {
     "id": "impression-sunrise",
@@ -819,7 +933,10 @@
     "image": {
       "commons": "Monet_-_Impression,_Sunrise.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "monet"
+    ]
   },
   {
     "id": "moulin-de-la-galette",
@@ -833,7 +950,10 @@
     "period": "impression",
     "image": {
       "commons": "Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Musée_d'Orsay_RF_2739_(derivative_work_-_AutoContrast_edit_in_LCH_space).jpg"
-    }
+    },
+    "by": [
+      "renoir"
+    ]
   },
   {
     "id": "the-dance-class",
@@ -847,7 +967,10 @@
     "period": "impression",
     "image": {
       "commons": "Edgar_Degas_-_La_Classe_de_danse.jpg"
-    }
+    },
+    "by": [
+      "degas"
+    ]
   },
   {
     "id": "starry-night",
@@ -862,7 +985,10 @@
     "image": {
       "commons": "Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "van-gogh"
+    ]
   },
   {
     "id": "mont-sainte-victoire",
@@ -876,7 +1002,10 @@
     "period": "post-impression",
     "image": {
       "commons": "Paul_Cézanne_-_Montagne_Saint-victoire_-_Google_Art_Project.jpg"
-    }
+    },
+    "by": [
+      "cezanne"
+    ]
   },
   {
     "id": "where-do-we-come-from",
@@ -890,7 +1019,10 @@
     "period": "post-impression",
     "image": {
       "commons": "Paul_Gauguin_-_D'ou_venons-nous.jpg"
-    }
+    },
+    "by": [
+      "gauguin"
+    ]
   },
   {
     "id": "la-grande-jatte",
@@ -904,7 +1036,10 @@
     "period": "post-impression",
     "image": {
       "commons": "A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg"
-    }
+    },
+    "by": [
+      "seurat"
+    ]
   },
   {
     "id": "the-scream",
@@ -919,7 +1054,10 @@
     "image": {
       "commons": "Edvard_Munch,_1893,_The_Scream,_oil,_tempera_and_pastel_on_cardboard,_91_x_73_cm,_National_Gallery_of_Norway.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "munch"
+    ]
   },
   {
     "id": "les-demoiselles-d-avignon",
@@ -932,7 +1070,10 @@
     "summary": "人体被切成棱角块面，受非洲面具启发，通向立体主义。",
     "period": "modern",
     "copyright": "毕加索（1973 年去世）的作品仍在版权期",
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "picasso"
+    ]
   },
   {
     "id": "matisse-dance",
@@ -947,7 +1088,10 @@
     "image": {
       "commons": "Matissedance.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "matisse"
+    ]
   },
   {
     "id": "fountain",
@@ -962,7 +1106,10 @@
     "image": {
       "commons": "Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg"
     },
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "duchamp"
+    ]
   },
   {
     "id": "persistence-of-memory",
@@ -975,7 +1122,10 @@
     "summary": "融化的钟表，超现实主义最出名的梦境图像。",
     "period": "modern",
     "copyright": "达利（1989 年去世）的作品仍在版权期",
-    "timeline": true
+    "timeline": true,
+    "by": [
+      "dali"
+    ]
   },
   {
     "id": "marilyn-diptych",
@@ -987,6 +1137,9 @@
     "location": "伦敦泰特现代美术馆",
     "summary": "像商品一样重复明星头像，艺术与大众消费合流。",
     "period": "modern",
-    "copyright": "沃霍尔（1987 年去世）的作品仍在版权期"
+    "copyright": "沃霍尔（1987 年去世）的作品仍在版权期",
+    "by": [
+      "warhol"
+    ]
   }
 ]
