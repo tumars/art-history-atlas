@@ -13,7 +13,12 @@ export interface Site {
   traditions: string[];
   defaultTradition: string;
   recommendedReading: { title: string; author: string }[];
+  /** 各分区的编号、标题与导语 */
+  sections: Record<SectionId, { numeral: string; title: string; deck: string }>;
+  repo: string;
 }
+
+export type SectionId = "chronology" | "hall" | "pendulum" | "pairs" | "sizes" | "collection";
 
 /** 大阶段（如“文艺复兴”），决定时期和作品的颜色 */
 export interface Group {

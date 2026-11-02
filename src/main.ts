@@ -9,6 +9,9 @@ import { initComparisons } from "./sections/comparisons";
 import { initSizes } from "./sections/sizes";
 import { initWall } from "./sections/wall";
 import { initLightbox, openWork } from "./sections/lightbox";
+import { initHero } from "./sections/hero";
+import { cnNum } from "./lib/format";
+import type { SectionId } from "./types";
 
 const TRAD_KEY = "aha.tradition";
 
@@ -26,21 +29,86 @@ function applyGroupColors() {
   el.textContent = `:root{${light}}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){${dark}}}:root[data-theme="dark"]{${dark}}`;
 }
 
+const SECTION_IDS: SectionId[] = ["chronology", "hall", "pendulum", "pairs", "sizes", "collection"];
+
 function renderChrome() {
   const t = state.t;
-  document.title = `${SITE.title} · ${t.meta.name}`;
-  $("#site-eyebrow").textContent = `${SITE.title} · ${SITE.titleEn} · ${t.meta.name}`;
-  $("#site-tagline").textContent = SITE.tagline;
-  $("#site-intro").textContent = `${t.meta.description}${SITE.intro}`;
+  document.title = `${SITE.title} · ${SITE.titleEn}`;
+  $("#mark-zh").textContent = SITE.title;
+  $("#mark-en").textContent = SITE.titleEn;
+  $<HTMLAnchorElement>("#repo-link").href = SITE.repo;
+  $("#index").innerHTML = SECTION_IDS.map((id) => `<a href="#${id}" data-sec="${id}"><i>${SITE.sections[id].numeral}</i><span>${esc(SITE.sections[id].title)}</span></a>`).join("");
+  for (const id of SECTION_IDS) {
+    const head = document.querySelector<HTMLElement>(`.block-head[data-section="${id}"]`);
+    if (!head) continue;
+    const sec = SITE.sections[id];
+    const title = id === "hall" ? `${cnNum(t.periods.length)}间展厅` : sec.title;
+    head.querySelectorAll(".num,.bh-t").forEach((n) => n.remove());
+    head.insertAdjacentHTML("afterbegin", `<span class="num">${sec.numeral}</span><div class="bh-t"><h2>${esc(title)}</h2><p class="deck">${esc(sec.deck)}</p></div>`);
+  }
   const sw = $<HTMLSelectElement>("#trad-switch");
   sw.hidden = SITE.traditions.length < 2;
   sw.innerHTML = SITE.traditions.map((id) => `<option value="${id}" ${id === t.meta.id ? "selected" : ""}>${esc(loadTradition(id).meta.name)}</option>`).join("");
   const reading = SITE.recommendedReading.map((b) => `${esc(b.title)}（${esc(b.author)}）`).join("、");
   const missing = t.works.filter((w) => !w.copyright && !state.credits[w.id]).length;
-  $("#footer").innerHTML = `<p>内容按通行的艺术史知识整理，年代多为约数；图解均为示意图，不是原作画面。</p>
-    <p>作品图片来自维基共享资源，按各自的授权协议使用，点开大图可看作者与协议。仍在版权期的作品不放图片，只给维基百科链接。${missing ? `目前还有 ${missing} 件作品尚未取到图片。` : ""}</p>
-    <p>推荐延伸阅读：${reading}。</p>
-    <p>代码 MIT，文字内容 CC BY-SA 4.0。<a href="https://github.com/tumars/art-history-atlas" target="_blank" rel="noopener">在 GitHub 上查看源码、提出修改</a>。</p>`;
+  $("#footer").innerHTML = `<div class="foot-in">
+    <div><div class="foot-brand">${esc(SITE.title)}<em>${esc(SITE.titleEn)}</em></div>
+      <p style="margin-top:12px">${esc(t.meta.description)}</p>
+      <p>年代多为约数；展厅里的图解是示意图，不是原作画面。</p></div>
+    <div><h4>关于图片</h4>
+      <p>作品图片来自维基共享资源，只收公有领域与 CC 授权的文件；点开大图可看作者与协议。仍在版权期的作品只给维基百科链接。${missing ? `目前还有 ${missing} 件尚未配图。` : ""}</p></div>
+    <div><h4>开源</h4>
+      <p>代码 MIT，文字 CC BY-SA 4.0。发现错误或想补一个展厅，欢迎<a href="${SITE.repo}" target="_blank" rel="noopener">到 GitHub 提交</a>。</p>
+      <h4 style="margin-top:14px">延伸阅读</h4><p>${reading}</p></div>
+  </div>`;
+}
+
+/** 主题：跟随系统 → 浅色 → 深色 */
+const THEME_KEY = "aha.theme";
+const THEMES = ["system", "light", "dark"] as const;
+const THEME_ICON = { system: "◐", light: "☀", dark: "☾" };
+const THEME_LABEL = { system: "主题：跟随系统", light: "主题：浅色", dark: "主题：深色" };
+function initTheme() {
+  const btn = $("#theme-btn");
+  let cur = store.get<(typeof THEMES)[number]>(THEME_KEY, "system");
+  const apply = () => {
+    if (cur === "system") delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = cur;
+    btn.textContent = THEME_ICON[cur];
+    btn.setAttribute("aria-label", THEME_LABEL[cur]);
+    btn.title = THEME_LABEL[cur];
+  };
+  btn.onclick = () => {
+    cur = THEMES[(THEMES.indexOf(cur) + 1) % THEMES.length];
+    store.set(THEME_KEY, cur);
+    apply();
+    initHero(); // 画框光晕颜色随主题
+  };
+  apply();
+}
+
+/** 顶栏：阅读进度 + 当前分区高亮 */
+function initScrollChrome() {
+  const bar = $("#progress");
+  const top = $("#topbar");
+  let raf = 0;
+  const onScroll = () => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const h = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`;
+      top.classList.toggle("solid", scrollY > innerHeight * 0.6);
+    });
+  };
+  addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  const io = new IntersectionObserver((ents) => {
+    for (const e of ents) {
+      if (!e.isIntersecting) continue;
+      document.querySelectorAll("#index a").forEach((a) => a.setAttribute("aria-current", String((a as HTMLElement).dataset.sec === e.target.id)));
+    }
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  ["hero", ...SECTION_IDS].forEach((id) => { const el = document.getElementById(id); if (el) io.observe(el); });
 }
 
 function boot(traditionId: string) {
@@ -53,6 +121,7 @@ function boot(traditionId: string) {
   initComparisons();
   initSizes();
   initWall();
+  initHero();
 }
 
 async function main() {
@@ -63,6 +132,8 @@ async function main() {
   actions.refreshPendulum = renderPendulum;
   state.site = SITE;
   initLightbox();
+  initTheme();
+  initScrollChrome();
   const saved = store.get<string>(TRAD_KEY, SITE.defaultTradition);
   const id = SITE.traditions.includes(saved) ? saved : SITE.defaultTradition;
   boot(id);

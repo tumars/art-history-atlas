@@ -1,8 +1,8 @@
 {
-  "title": "艺术史图谱",
-  "titleEn": "Art History Atlas",
-  "tagline": "从洞穴到小便池",
-  "intro": "一部可以动手玩的艺术史：先看时间全景，再逐厅细看。每个时期一张交互图解，配上代表作。",
+  "title": "三万年长廊",
+  "titleEn": "The Long Gallery",
+  "tagline": "从拉斯科洞窟里的野牛，到纽约展厅里的小便池。",
+  "intro": "沿着一条长廊，走完三万年艺术史：先在年表里看清时代，再一间一间走进展厅。",
   "axis": {
     "start": -30000,
     "end": 1970,
@@ -46,5 +46,38 @@
       "title": "《大话西方艺术史》",
       "author": "意公子"
     }
-  ]
+  ],
+  "sections": {
+    "chronology": {
+      "numeral": "I",
+      "title": "年表",
+      "deck": "把艺术放回历史里。欧洲、中国与教会的时间并排展开；选一件大事，看它在哪些时期留下了痕迹。"
+    },
+    "hall": {
+      "numeral": "II",
+      "title": "展厅",
+      "deck": "每间展厅一个核心问题，配一张可以动手的图。"
+    },
+    "pendulum": {
+      "numeral": "III",
+      "title": "理性与激情",
+      "deck": "新风格常常是对上一代的反叛，钟摆就这样来回摆了几百年。"
+    },
+    "pairs": {
+      "numeral": "IV",
+      "title": "并置",
+      "deck": "两件作品放在一起，差别自己会说话。"
+    },
+    "sizes": {
+      "numeral": "V",
+      "title": "尺度",
+      "deck": "画册里一样大的画，挂到墙上可能差出几十倍。"
+    },
+    "collection": {
+      "numeral": "VI",
+      "title": "藏品",
+      "deck": "全部作品，按阶段筛选，点开细看。"
+    }
+  },
+  "repo": "https://github.com/tumars/art-history-atlas"
 }

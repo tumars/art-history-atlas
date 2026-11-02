@@ -15,11 +15,16 @@ export const state = {
 
 export const actions = {
   goPeriod: (_i: number, _scroll?: boolean) => {},
+  /** 打开大图；ids 为可前后切换的作品列表 */
   showWork: (_workId: string) => {},
   selectEvent: (_i: number, _scroll?: boolean) => {},
-  openWork: (_workId: string, _canGo: boolean) => {},
+  openWork: (_workId: string, _canGo: boolean, _ids?: string[]) => {},
   refreshPendulum: () => {},
 };
+
+/** 长廊顺序：按时期顺序，同一时期内按年份 */
+export const periodsOrderedWorks = () =>
+  state.t.periods.flatMap((p) => state.t.works.filter((w) => w.period === p.id).sort((a, b) => a.year - b.year));
 
 export const periodIndex = (id: string) => state.t.periods.findIndex((p) => p.id === id);
 export const periodOf = (id: string): Period => state.t.periods[periodIndex(id)];

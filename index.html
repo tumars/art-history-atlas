@@ -3,94 +3,145 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>艺术史图谱 · Art History Atlas</title>
-  <meta name="description" content="可交互的艺术史图谱：时间全景、时期展厅、交互图解，内容与代码分离，欢迎补充。">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232337B5'/%3E%3Cpath d='M8 24 16 7l8 17' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
+  <title>三万年长廊 · The Long Gallery</title>
+  <meta name="description" content="一部可以走进去的艺术史：三维长廊、年表、十八间展厅与交互图解。开源，欢迎补充。">
+  <meta name="theme-color" content="#0E1118">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F35A8'/%3E%3Cpath d='M9 25V12a7 7 0 0 1 14 0v13' fill='none' stroke='%23D9B66A' stroke-width='2.4'/%3E%3Cpath d='M13 25v-9a3 3 0 0 1 6 0v9' fill='none' stroke='%23F3EEDF' stroke-width='1.6'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700;900&display=swap">
+  <script>
+    // 尽早应用用户选过的主题，避免闪烁
+    try { var t = localStorage.getItem("aha.theme"); if (t === '"light"' || t === '"dark"') document.documentElement.dataset.theme = JSON.parse(t); } catch (e) {}
+  </script>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <div class="brand">
-      <div class="eyebrow" id="site-eyebrow"></div>
-      <h1 id="site-tagline"></h1>
-      <p id="site-intro"></p>
-    </div>
-    <nav class="sections" aria-label="页面分区">
-      <a href="#panorama">时间全景</a><a href="#hall">展厅</a><a href="#pendulum">钟摆</a><a href="#pairs">对照组</a><a href="#sizes">画有多大</a><a href="#wall">作品墙</a>
+<a class="skip" href="#chronology">跳到正文</a>
+
+<header class="topbar" id="topbar">
+  <div class="topbar-in">
+    <a class="mark" href="#top" aria-label="回到顶部"><span class="mark-zh" id="mark-zh"></span><span class="mark-en" id="mark-en"></span></a>
+    <nav class="index" id="index" aria-label="分区"></nav>
+    <div class="tools">
       <select class="trad-switch" id="trad-switch" aria-label="切换艺术史体系" hidden></select>
-    </nav>
-  </header>
+      <button class="icon-btn" id="theme-btn" aria-label="切换主题"></button>
+      <a class="icon-btn" id="repo-link" target="_blank" rel="noopener" aria-label="在 GitHub 上查看源码">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
 
-  <section class="block" id="panorama" style="margin-top:0">
-    <div class="block-head">
-      <h2>时间全景</h2>
-      <div class="seg" role="group" aria-label="时间比例">
-        <button id="tl-exp" aria-pressed="true">展开比例</button>
-        <button id="tl-real" aria-pressed="false">真实比例</button>
+<main id="top">
+  <!-- 序厅：三维长廊 -->
+  <section class="hero" id="hero" aria-label="序厅：长廊">
+    <div class="hero-stage" id="hero-stage"></div>
+    <div class="hero-copy">
+      <p class="kicker" id="hero-kicker"></p>
+      <h1 class="hero-title" id="hero-title"></h1>
+      <p class="hero-lead" id="hero-lead"></p>
+      <p class="hero-hint" id="hero-hint">拖动画面或按 ← → 在长廊里行走，点画框细看。</p>
+    </div>
+    <div class="hero-now" aria-live="polite">
+      <span class="now-year" id="now-year"></span>
+      <span class="now-period" id="now-period"></span>
+    </div>
+    <div class="hero-controls">
+      <button class="ctrl" id="walk-back" aria-label="往回走">←</button>
+      <button class="ctrl" id="walk-play" aria-label="暂停漫步">❚❚</button>
+      <button class="ctrl" id="walk-fwd" aria-label="往前走">→</button>
+    </div>
+    <div class="hero-ruler" id="hero-ruler" aria-label="长廊位置"></div>
+  </section>
+
+  <div class="wrap">
+    <section class="block" id="chronology">
+      <header class="block-head" data-section="chronology">
+        <div class="block-tools">
+          <div class="seg" role="group" aria-label="时间比例">
+            <button id="tl-exp" aria-pressed="true">展开比例</button>
+            <button id="tl-real" aria-pressed="false">真实比例</button>
+          </div>
+        </div>
+      </header>
+      <div class="panel">
+        <div class="dg-wrap"><svg class="dg" id="tl-svg" role="img" aria-label="年表：背景历史、历史大事、代表作品与艺术时期"></svg></div>
+        <div class="ev-card band-note" id="band-note" hidden aria-live="polite"></div>
+        <div class="ev-nav"><button class="btn" id="ev-prev">← 上一件</button><button class="btn" id="ev-next">下一件 →</button><span id="ev-count"></span></div>
+        <div class="ev-card" id="ev-card" aria-live="polite" hidden></div>
+        <p class="tl-note" id="tl-note"></p>
+        <div class="relay-wrap">
+          <div class="label-sm">艺术中心的接力</div>
+          <div class="relay" id="relay"></div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="dg-wrap"><svg class="dg" id="tl-svg" role="img" aria-label="时间全景：背景历史、历史大事、代表作品与艺术时期"></svg></div>
-      <div class="ev-card band-note" id="band-note" hidden aria-live="polite"></div>
-      <div class="ev-nav"><button class="btn" id="ev-prev">← 上一件</button><button class="btn" id="ev-next">下一件 →</button><span id="ev-count"></span></div>
-      <div class="ev-card" id="ev-card" aria-live="polite" hidden></div>
-      <p class="tl-note" id="tl-note"></p>
-      <div class="eyebrow" style="margin-top:14px">艺术中心接力：主角城市一路迁移</div>
-      <div class="relay" id="relay"></div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block" id="hall">
-    <div class="block-head"><h2>展厅</h2><p>左右方向键也可以切换展厅。</p></div>
-    <nav class="era-nav" aria-label="时期"><ol id="era-nav"></ol></nav>
-    <div class="hall">
-      <div class="intro" id="intro"></div>
-      <div class="feature" id="feature"></div>
-    </div>
-    <div class="diagram card" id="diagram"></div>
-    <div class="bridge-row">
-      <p class="bridge" id="bridge"></p>
-      <div class="nav-btns"><button class="btn" id="prev">上一展厅</button><button class="btn" id="next">下一展厅</button></div>
-    </div>
-  </section>
+    <section class="block" id="hall">
+      <header class="block-head" data-section="hall">
+        <div class="block-tools"><span class="hint">← → 切换展厅</span></div>
+      </header>
+      <nav class="era-nav" aria-label="展厅索引"><ol id="era-nav"></ol></nav>
+      <div class="hall-body" id="hall-body">
+        <div class="hall">
+          <div class="intro" id="intro"></div>
+          <div class="feature" id="feature"></div>
+        </div>
+        <div class="diagram panel" id="diagram"></div>
+        <div class="bridge-row">
+          <p class="bridge" id="bridge"></p>
+          <div class="nav-btns"><button class="btn" id="prev">← 上一间</button><button class="btn" id="next">下一间 →</button></div>
+        </div>
+      </div>
+    </section>
 
-  <section class="block" id="pendulum">
-    <div class="block-head"><h2 id="pend-title"></h2><p id="pend-note"></p></div>
-    <div class="card"><div class="chart-scroll"><svg class="dg" id="pend" viewBox="0 0 900 250" role="img" aria-label="各时期风格倾向的摆动"></svg></div></div>
-  </section>
+    <section class="block" id="pendulum">
+      <header class="block-head" data-section="pendulum"></header>
+      <div class="panel"><div class="chart-scroll"><svg class="dg" id="pend" viewBox="0 0 900 250" role="img" aria-label="各时期风格倾向的摆动"></svg></div><p class="tl-note" id="pend-note"></p></div>
+    </section>
 
-  <section class="block" id="pairs">
-    <div class="block-head"><h2>对照组</h2><p>把两件作品并排放，差异一眼就能记住。</p></div>
-    <div class="pair-tabs" id="pair-tabs" role="group" aria-label="选择对照组"></div>
-    <div class="card" id="pair-body"></div>
-  </section>
+    <section class="block" id="pairs">
+      <header class="block-head" data-section="pairs"></header>
+      <div class="pair-tabs" id="pair-tabs" role="group" aria-label="选择一组作品"></div>
+      <div class="panel" id="pair-body"></div>
+    </section>
 
-  <section class="block" id="sizes">
-    <div class="block-head"><h2>画有多大</h2><p>同一比例尺下，和一个 1.7 米高的人站在一起。点选作品添加或移除。</p></div>
-    <div class="card">
-      <div class="size-chips" id="size-chips"></div>
-      <div class="dg-wrap"><svg class="dg" id="size-svg" viewBox="0 0 620 330" role="img" aria-label="作品尺寸与人体比例对比"></svg></div>
-    </div>
-  </section>
+    <section class="block" id="sizes">
+      <header class="block-head" data-section="sizes"></header>
+      <div class="panel">
+        <div class="size-chips" id="size-chips"></div>
+        <div class="dg-wrap"><svg class="dg" id="size-svg" viewBox="0 0 620 330" role="img" aria-label="作品尺寸与人体比例对比"></svg></div>
+      </div>
+    </section>
 
-  <section class="block" id="wall">
-    <div class="block-head"><h2>作品墙</h2><p>全部作品按时间排列，色条代表所属阶段。点开看大图，也能跳回展厅。</p></div>
-    <div class="wall-legend" id="wall-legend"></div>
-    <div class="wall" id="wall-grid"></div>
-  </section>
+    <section class="block" id="collection">
+      <header class="block-head" data-section="collection"></header>
+      <div class="filters" id="wall-filters" role="group" aria-label="按阶段筛选"></div>
+      <div class="masonry" id="wall-grid"></div>
+    </section>
+  </div>
+</main>
 
-  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="作品大图">
-    <button class="btn lb-top" id="lb-close">关闭</button>
+<footer class="site-foot" id="footer"></footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="作品大图">
+  <div class="lb-stage" id="lb-stage">
     <img id="lb-img" alt="">
     <div class="lb-none" id="lb-none" hidden></div>
-    <div class="lb-cap" id="lb-cap"></div>
-    <div class="lb-actions"><button class="btn" id="lb-go">去这个展厅</button></div>
   </div>
-
-  <footer class="note" id="footer"></footer>
+  <aside class="lb-side">
+    <div class="lb-cap" id="lb-cap"></div>
+    <div class="lb-actions">
+      <button class="btn btn-dark" id="lb-prev" aria-label="上一件">←</button>
+      <span class="lb-count" id="lb-count"></span>
+      <button class="btn btn-dark" id="lb-next" aria-label="下一件">→</button>
+      <button class="btn btn-dark" id="lb-go">去这个展厅</button>
+    </div>
+  </aside>
+  <button class="lb-close" id="lb-close" aria-label="关闭">×</button>
 </div>
+
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

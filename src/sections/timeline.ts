@@ -214,7 +214,7 @@ function pickBand(band: number, item: number) {
 export function selectEvent(i: number, scroll?: boolean) {
   evSel = clamp(i, -1, state.t.events.length - 1);
   renderTimeline();
-  if (scroll) $("#panorama").scrollIntoView({ block: "start" });
+  if (scroll) $("#chronology").scrollIntoView({ block: "start" });
 }
 
 function animateTo(to: number) {
@@ -235,7 +235,7 @@ function handle(target: Element): boolean {
   const b = target.closest<SVGGElement>(".band");
   if (b) { pickBand(+b.dataset.b!, +b.dataset.i!); return true; }
   const k = target.closest<SVGGElement>(".wk");
-  if (k) { actions.openWork(k.dataset.w!, true); return true; }
+  if (k) { actions.openWork(k.dataset.w!, true, state.t.works.filter((w) => w.timeline).sort((a, b) => a.year - b.year).map((w) => w.id)); return true; }
   const v = target.closest<SVGGElement>(".ev");
   if (v) { selectEvent(+v.dataset.e! === evSel ? -1 : +v.dataset.e!); return true; }
   const bar = target.closest<SVGGElement>(".bar");

@@ -1,6 +1,6 @@
 {
   "name": "art-history-atlas",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "可交互的艺术史图谱：时间全景、时期展厅、交互图解，内容与代码分离",
   "license": "MIT",
@@ -14,7 +14,11 @@
     "fetch-images": "node scripts/fetch-images.mjs"
   },
   "devDependencies": {
+    "@types/three": "^0.179.0",
     "typescript": "^5.6.3",
     "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "three": "^0.179.1"
   }
 }

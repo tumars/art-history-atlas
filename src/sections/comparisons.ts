@@ -31,7 +31,7 @@ export function initComparisons() {
   };
   $("#pair-body").onclick = (e) => {
     const z = (e.target as Element).closest<HTMLButtonElement>(".zoom");
-    if (z) actions.openWork(z.dataset.w!, true);
+    if (z) actions.openWork(z.dataset.w!, true, [state.t.comparisons[cur].a, state.t.comparisons[cur].b]);
   };
   render();
 }

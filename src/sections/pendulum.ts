@@ -25,7 +25,6 @@ export function initPendulum() {
   const cfg = state.t.meta.pendulum;
   $("#pendulum").hidden = !cfg;
   if (cfg) {
-    $("#pend-title").textContent = cfg.title;
     $("#pend-note").textContent = cfg.note + " 点圆点跳到对应展厅。";
   }
   const svg = $("#pend");
