@@ -365,6 +365,484 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg"
   },
+  "person:bellini": {
+    "file": "images/people/bellini.jpg",
+    "thumb": "images/people/bellini.jpg",
+    "title": "乔凡尼·贝利尼（肖像）",
+    "author": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portr%C3%A6t_af_den_venezianske_maler_Giovanni_Bellini.jpg"
+  },
+  "person:bernini": {
+    "file": "images/people/bernini.jpg",
+    "thumb": "images/people/bernini.jpg",
+    "title": "贝尼尼（肖像）",
+    "author": "Gian Lorenzo Bernini",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gian_Lorenzo_Bernini,_self-portrait,_c1623.jpg"
+  },
+  "person:bosch": {
+    "file": "images/people/bosch.jpg",
+    "thumb": "images/people/bosch.jpg",
+    "title": "博斯（肖像）",
+    "author": "Attributed to Jacques Le Boucq",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_(cropped).jpg"
+  },
+  "person:botticelli": {
+    "file": "images/people/botticelli.jpg",
+    "thumb": "images/people/botticelli.jpg",
+    "title": "波提切利（肖像）",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_Self-portrait_ca_1475.jpg"
+  },
+  "person:bruegel": {
+    "file": "images/people/bruegel.jpg",
+    "thumb": "images/people/bruegel.jpg",
+    "title": "老彼得·勃鲁盖尔（肖像）",
+    "author": "Pieter Brueghel the Elder",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer,_ca._1566_-_Google_Art_Project.jpg"
+  },
+  "person:brunelleschi": {
+    "file": "images/people/brunelleschi.jpg",
+    "thumb": "images/people/brunelleschi.jpg",
+    "title": "布鲁内莱斯基（肖像）",
+    "author": "see filename or category",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Masaccio,_cappella_brancacci,_san_pietro_in_cattedra._ritratto_di_filippo_brunelleschi.jpg"
+  },
+  "person:caravaggio": {
+    "file": "images/people/caravaggio.jpg",
+    "thumb": "images/people/caravaggio.jpg",
+    "title": "卡拉瓦乔（肖像）",
+    "author": "Ottavio Leoni",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bild-Ottavio_Leoni,_Caravaggio.jpg"
+  },
+  "person:cezanne": {
+    "file": "images/people/cezanne.jpg",
+    "thumb": "images/people/cezanne.jpg",
+    "title": "塞尚（肖像）",
+    "author": "Unknown; Cézanne was born in 1839 and died in 1906",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul-Cezanne.jpg"
+  },
+  "person:cosimo-medici": {
+    "file": "images/people/cosimo-medici.jpg",
+    "thumb": "images/people/cosimo-medici.jpg",
+    "title": "科西莫·德·美第奇（肖像）",
+    "author": "Pontormo",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pontormo_-_Ritratto_di_Cosimo_il_Vecchio_-_Google_Art_Project.jpg"
+  },
+  "person:courbet": {
+    "file": "images/people/courbet.jpg",
+    "thumb": "images/people/courbet.jpg",
+    "title": "库尔贝（肖像）",
+    "author": "Nadar",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet,_photograph_Atelier_Nadar,_c._1860s.jpg"
+  },
+  "person:dali": {
+    "file": "images/people/dali.jpg",
+    "thumb": "images/people/dali.jpg",
+    "title": "达利（肖像）",
+    "author": "Van Vechten, Carl, 1880-1964.",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Salvador_Dal%C3%AD_1939.jpg"
+  },
+  "person:david": {
+    "file": "images/people/david.jpg",
+    "thumb": "images/people/david.jpg",
+    "title": "雅克-路易·大卫（肖像）",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:David_Self_Portrait.jpg"
+  },
+  "person:degas": {
+    "file": "images/people/degas.jpg",
+    "thumb": "images/people/degas.jpg",
+    "title": "德加（肖像）",
+    "author": "Edgar Degas",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_self_portrait_1855FXD.jpg"
+  },
+  "person:delacroix": {
+    "file": "images/people/delacroix.jpg",
+    "thumb": "images/people/delacroix.jpg",
+    "title": "德拉克洛瓦（肖像）",
+    "author": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Autoportrait_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_25.jpg"
+  },
+  "person:duchamp": {
+    "file": "images/people/duchamp.jpg",
+    "thumb": "images/people/duchamp.jpg",
+    "title": "杜尚（肖像）",
+    "author": "Unknown author Unknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marcel_Duchamp_01.jpg"
+  },
+  "person:durer": {
+    "file": "images/people/durer.jpg",
+    "thumb": "images/people/durer.jpg",
+    "title": "丢勒（肖像）",
+    "author": "Albrecht Dürer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:D%C3%BCrer_Alte_Pinakothek.jpg"
+  },
+  "person:fragonard": {
+    "file": "images/people/fragonard.jpg",
+    "thumb": "images/people/fragonard.jpg",
+    "title": "弗拉戈纳尔（肖像）",
+    "author": "Jean-Honoré Fragonard",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Honor%C3%A9_Fragonard_self-portrait.jpg"
+  },
+  "person:friedrich": {
+    "file": "images/people/friedrich.jpg",
+    "thumb": "images/people/friedrich.jpg",
+    "title": "弗里德里希（肖像）",
+    "author": "Johann Karl Bähr",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Carl_Johann_Baehr_-_Bildnis_des_Malers_Caspar_David_Friedrich.jpg"
+  },
+  "person:gauguin": {
+    "file": "images/people/gauguin.png",
+    "thumb": "images/people/gauguin.png",
+    "title": "高更（肖像）",
+    "author": "Louis-Maurice Boutet de Monvel",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_1891.png"
+  },
+  "person:gericault": {
+    "file": "images/people/gericault.jpg",
+    "thumb": "images/people/gericault.jpg",
+    "title": "籍里柯（肖像）",
+    "author": "Horace Vernet",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Horace_Vernet,_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault,_probably_1822_or_1823,_1998.84,_MET.jpg"
+  },
+  "person:ghirlandaio": {
+    "file": "images/people/ghirlandaio.jpg",
+    "thumb": "images/people/ghirlandaio.jpg",
+    "title": "吉兰达约（肖像）",
+    "author": "Domenico Ghirlandaio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pala_degli_innocenti,_ghirlandaio,_autoritratto,_dettaglio.jpg"
+  },
+  "person:giorgione": {
+    "file": "images/people/giorgione.jpg",
+    "thumb": "images/people/giorgione.jpg",
+    "title": "乔尔乔内（肖像）",
+    "author": "Giorgione",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giorgione_059.jpg"
+  },
+  "person:giotto": {
+    "file": "images/people/giotto.jpg",
+    "thumb": "images/people/giotto.jpg",
+    "title": "乔托（肖像）",
+    "author": "Original uploader was Frieda at it.wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Uffizi_Giotto.jpg"
+  },
+  "person:goya": {
+    "file": "images/people/goya.jpg",
+    "thumb": "images/people/goya.jpg",
+    "title": "戈雅（肖像）",
+    "author": "Vicente López Portaña",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg"
+  },
+  "person:guggenheim": {
+    "file": "images/people/guggenheim.jpg",
+    "thumb": "images/people/guggenheim.jpg",
+    "title": "佩吉·古根海姆（肖像）",
+    "author": "archives familiales",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Peggy,_Marseille37.JPG"
+  },
+  "person:holbein": {
+    "file": "images/people/holbein.jpg",
+    "thumb": "images/people/holbein.jpg",
+    "title": "小汉斯·荷尔拜因（肖像）",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger,_self-portrait.jpg"
+  },
+  "person:ingres": {
+    "file": "images/people/ingres.jpg",
+    "thumb": "images/people/ingres.jpg",
+    "title": "安格尔（肖像）",
+    "author": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ingres,_Self-portrait.jpg"
+  },
+  "person:julius-ii": {
+    "file": "images/people/julius-ii.jpg",
+    "thumb": "images/people/julius-ii.jpg",
+    "title": "尤利乌斯二世（肖像）",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pope_Julius_II.jpg"
+  },
+  "person:kandinsky": {
+    "file": "images/people/kandinsky.jpg",
+    "thumb": "images/people/kandinsky.jpg",
+    "title": "康定斯基（肖像）",
+    "author": "未知上傳者",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wassily_kandinsky.jpg"
+  },
+  "person:leonardo": {
+    "file": "images/people/leonardo.png",
+    "thumb": "images/people/leonardo.png",
+    "title": "达·芬奇（肖像）",
+    "author": "Attributed to Francesco Melzi",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Francesco_Melzi_-_Portrait_of_Leonardo.png"
+  },
+  "person:lorenzo-medici": {
+    "file": "images/people/lorenzo-medici.jpg",
+    "thumb": "images/people/lorenzo-medici.jpg",
+    "title": "洛伦佐·德·美第奇（肖像）",
+    "author": "Workshop of Bronzino",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bottega_di_Agnolo_di_Cosimo,_detto_il_Bronzino_(Firenze_1503-1572)_-_Ritratto_di_Lorenzo_il_Magnifico_-_865_-_Uffizi_Gallery_(cropped).jpg"
+  },
+  "person:manet": {
+    "file": "images/people/manet.jpg",
+    "thumb": "images/people/manet.jpg",
+    "title": "马奈（肖像）",
+    "author": "Nadar / Adam Cuerden",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Manet,_en_buste,_de_face_-_Nadar.jpg"
+  },
+  "person:masaccio": {
+    "file": "images/people/masaccio.jpg",
+    "thumb": "images/people/masaccio.jpg",
+    "title": "马萨乔（肖像）",
+    "author": "Masaccio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Masaccio_Self_Portrait.jpg"
+  },
+  "person:matisse": {
+    "file": "images/people/matisse.jpg",
+    "thumb": "images/people/matisse.jpg",
+    "title": "马蒂斯（肖像）",
+    "author": "Carl Van Vechten",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_Henri_Matisse_1933_May_20.jpg"
+  },
+  "person:michelangelo": {
+    "file": "images/people/michelangelo.jpg",
+    "thumb": "images/people/michelangelo.jpg",
+    "title": "米开朗基罗（肖像）",
+    "author": "Attributed to Daniele da Volterra",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo_Daniele_da_Volterra_(dettaglio).jpg"
+  },
+  "person:millet": {
+    "file": "images/people/millet.jpg",
+    "thumb": "images/people/millet.jpg",
+    "title": "米勒（肖像）",
+    "author": "Nadar",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-FrancoisMillet(Nadar).jpg"
+  },
+  "person:monet": {
+    "file": "images/people/monet.jpg",
+    "thumb": "images/people/monet.jpg",
+    "title": "莫奈（肖像）",
+    "author": "Nadar",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar_crop.jpg"
+  },
+  "person:munch": {
+    "file": "images/people/munch.jpg",
+    "thumb": "images/people/munch.jpg",
+    "title": "蒙克（肖像）",
+    "author": "Anders Beer Wilse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_1933-2.jpg"
+  },
+  "person:napoleon": {
+    "file": "images/people/napoleon.jpg",
+    "thumb": "images/people/napoleon.jpg",
+    "title": "拿破仑（肖像）",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"
+  },
+  "person:perugino": {
+    "file": "images/people/perugino.jpg",
+    "thumb": "images/people/perugino.jpg",
+    "title": "佩鲁吉诺（肖像）",
+    "author": "Pietro Perugino",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pietro_Perugino_031.jpg"
+  },
+  "person:picasso": {
+    "file": "images/people/picasso.jpg",
+    "thumb": "images/people/picasso.jpg",
+    "title": "毕加索（肖像）",
+    "author": "Argentina . Revista Vea y Lea",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pablo_picasso_1.jpg"
+  },
+  "person:pissarro": {
+    "file": "images/people/pissarro.jpg",
+    "thumb": "images/people/pissarro.jpg",
+    "title": "毕沙罗（肖像）",
+    "author": "Unknown author Unknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pissarro-portrait-c1900.jpg"
+  },
+  "person:pollock": {
+    "file": "images/people/pollock.jpg",
+    "thumb": "images/people/pollock.jpg",
+    "title": "波洛克（肖像）",
+    "author": "Hans Namuth",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jackson_Pollock_by_Hans_Namuth.jpg"
+  },
+  "person:raphael": {
+    "file": "images/people/raphael.jpg",
+    "thumb": "images/people/raphael.jpg",
+    "title": "拉斐尔（肖像）",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio.jpg"
+  },
+  "person:rembrandt": {
+    "file": "images/people/rembrandt.jpg",
+    "thumb": "images/people/rembrandt.jpg",
+    "title": "伦勃朗（肖像）",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg"
+  },
+  "person:renoir": {
+    "file": "images/people/renoir.jpg",
+    "thumb": "images/people/renoir.jpg",
+    "title": "雷诺阿（肖像）",
+    "author": "Unknown Unknown Musée d'Orsay, Dist. RMN-Grand Palais / Patrice Schmidt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pierre_Auguste_Renoir,_uncropped_image.jpg"
+  },
+  "person:rubens": {
+    "file": "images/people/rubens.jpg",
+    "thumb": "images/people/rubens.jpg",
+    "title": "鲁本斯（肖像）",
+    "author": "Peter Paul Rubens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sir_Peter_Paul_Rubens_-_Portrait_of_the_Artist_-_Google_Art_Project.jpg"
+  },
+  "person:seurat": {
+    "file": "images/people/seurat.jpg",
+    "thumb": "images/people/seurat.jpg",
+    "title": "修拉（肖像）",
+    "author": "Unidentified photographer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_1888_(cropped).jpg"
+  },
+  "person:suger": {
+    "file": "images/people/suger.jpg",
+    "thumb": "images/people/suger.jpg",
+    "title": "叙热（肖像）",
+    "author": "佚名",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Suger_cour_Napoleon_Louvre.jpg"
+  },
+  "person:titian": {
+    "file": "images/people/titian.jpg",
+    "thumb": "images/people/titian.jpg",
+    "title": "提香（肖像）",
+    "author": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg"
+  },
+  "person:urban-viii": {
+    "file": "images/people/urban-viii.jpg",
+    "thumb": "images/people/urban-viii.jpg",
+    "title": "乌尔班八世（肖像）",
+    "author": "Pietro da Cortona",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pietro_da_Cortona_-_Portrait_of_Urban_VIII_(ca._1624-1627)_-_Google_Art_Project_-_edited.jpg"
+  },
+  "person:van-eyck": {
+    "file": "images/people/van-eyck.jpg",
+    "thumb": "images/people/van-eyck.jpg",
+    "title": "扬·凡·艾克（肖像）",
+    "author": "Jan van Eyck",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_Portrait_of_a_Man_(Self_Portrait%3F)_1433.jpg"
+  },
+  "person:van-gogh": {
+    "file": "images/people/van-gogh.jpg",
+    "thumb": "images/people/van-gogh.jpg",
+    "title": "梵高（肖像）",
+    "author": "Vincent van Gogh",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Self-portrait_-_Vincent_van_Gogh.jpg"
+  },
+  "person:vasari": {
+    "file": "images/people/vasari.jpg",
+    "thumb": "images/people/vasari.jpg",
+    "title": "瓦萨里（肖像）",
+    "author": "Attributed to Jacopo Zucchi",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Zucchi,_Jacopo_-_Vasari,_Giorgio_-_Uffizi_ICCD.jpg"
+  },
+  "person:velazquez": {
+    "file": "images/people/velazquez.jpg",
+    "thumb": "images/people/velazquez.jpg",
+    "title": "委拉斯开兹（肖像）",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg"
+  },
+  "person:vermeer": {
+    "file": "images/people/vermeer.jpg",
+    "thumb": "images/people/vermeer.jpg",
+    "title": "维米尔（肖像）",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg"
+  },
+  "person:verrocchio": {
+    "file": "images/people/verrocchio.jpg",
+    "thumb": "images/people/verrocchio.jpg",
+    "title": "韦罗基奥（肖像）",
+    "author": "Nicolas de Larmessin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Andr%C3%A9_Verrochio.jpg"
+  },
+  "person:warhol": {
+    "file": "images/people/warhol.jpg",
+    "thumb": "images/people/warhol.jpg",
+    "title": "沃霍尔（肖像）",
+    "author": "Bernard Gotfryd",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Andy_Warhol_at_the_Jewish_Museum_(by_Bernard_Gotfryd)_%E2%80%93_LOC.jpg"
+  },
+  "person:watteau": {
+    "file": "images/people/watteau.jpg",
+    "thumb": "images/people/watteau.jpg",
+    "title": "华托（肖像）",
+    "author": "Rosalba Carriera",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:(Treviso)_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg"
+  },
   "pilgrimage-to-cythera": {
     "file": "images/works/pilgrimage-to-cythera.jpg",
     "thumb": "images/works/pilgrimage-to-cythera.thumb.jpg",

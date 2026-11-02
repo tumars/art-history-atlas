@@ -48,6 +48,65 @@
 | 奥林匹亚 | Édouard Manet | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Olympia_-_Google_Art_ProjectFXD.jpg) |
 | 万神殿 | Rabax63 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Pantheon_Rom_1_cropped.jpg) |
 | 帕特农神庙 | Steve Swayne | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [Commons](https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg) |
+| 乔凡尼·贝利尼（肖像） | Titian | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Portr%C3%A6t_af_den_venezianske_maler_Giovanni_Bellini.jpg) |
+| 贝尼尼（肖像） | Gian Lorenzo Bernini | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gian_Lorenzo_Bernini,_self-portrait,_c1623.jpg) |
+| 博斯（肖像） | Attributed to Jacques Le Boucq | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_(cropped).jpg) |
+| 波提切利（肖像） | Sandro Botticelli | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_Self-portrait_ca_1475.jpg) |
+| 老彼得·勃鲁盖尔（肖像） | Pieter Brueghel the Elder | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer,_ca._1566_-_Google_Art_Project.jpg) |
+| 布鲁内莱斯基（肖像） | see filename or category | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Masaccio,_cappella_brancacci,_san_pietro_in_cattedra._ritratto_di_filippo_brunelleschi.jpg) |
+| 卡拉瓦乔（肖像） | Ottavio Leoni | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Bild-Ottavio_Leoni,_Caravaggio.jpg) |
+| 塞尚（肖像） | Unknown; Cézanne was born in 1839 and died in 1906 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Paul-Cezanne.jpg) |
+| 科西莫·德·美第奇（肖像） | Pontormo | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pontormo_-_Ritratto_di_Cosimo_il_Vecchio_-_Google_Art_Project.jpg) |
+| 库尔贝（肖像） | Nadar | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Gustave_Courbet,_photograph_Atelier_Nadar,_c._1860s.jpg) |
+| 达利（肖像） | Van Vechten, Carl, 1880-1964. | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Salvador_Dal%C3%AD_1939.jpg) |
+| 雅克-路易·大卫（肖像） | Jacques-Louis David | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:David_Self_Portrait.jpg) |
+| 德加（肖像） | Edgar Degas | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Edgar_Degas_self_portrait_1855FXD.jpg) |
+| 德拉克洛瓦（肖像） | Eugène Delacroix | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Autoportrait_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_25.jpg) |
+| 杜尚（肖像） | Unknown author Unknown author | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Marcel_Duchamp_01.jpg) |
+| 丢勒（肖像） | Albrecht Dürer | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:D%C3%BCrer_Alte_Pinakothek.jpg) |
+| 弗拉戈纳尔（肖像） | Jean-Honoré Fragonard | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Jean-Honor%C3%A9_Fragonard_self-portrait.jpg) |
+| 弗里德里希（肖像） | Johann Karl Bähr | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Carl_Johann_Baehr_-_Bildnis_des_Malers_Caspar_David_Friedrich.jpg) |
+| 高更（肖像） | Louis-Maurice Boutet de Monvel | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Paul_Gauguin_1891.png) |
+| 籍里柯（肖像） | Horace Vernet | [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) | [Commons](https://commons.wikimedia.org/wiki/File:Horace_Vernet,_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault,_probably_1822_or_1823,_1998.84,_MET.jpg) |
+| 吉兰达约（肖像） | Domenico Ghirlandaio | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pala_degli_innocenti,_ghirlandaio,_autoritratto,_dettaglio.jpg) |
+| 乔尔乔内（肖像） | Giorgione | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Giorgione_059.jpg) |
+| 乔托（肖像） | Original uploader was Frieda at it.wikipedia | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) | [Commons](https://commons.wikimedia.org/wiki/File:Uffizi_Giotto.jpg) |
+| 戈雅（肖像） | Vicente López Portaña | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg) |
+| 佩吉·古根海姆（肖像） | archives familiales | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Peggy,_Marseille37.JPG) |
+| 小汉斯·荷尔拜因（肖像） | Hans Holbein the Younger | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger,_self-portrait.jpg) |
+| 安格尔（肖像） | Jean-Auguste-Dominique Ingres | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Ingres,_Self-portrait.jpg) |
+| 尤利乌斯二世（肖像） | Raphael | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pope_Julius_II.jpg) |
+| 康定斯基（肖像） | 未知上傳者 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Wassily_kandinsky.jpg) |
+| 达·芬奇（肖像） | Attributed to Francesco Melzi | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Francesco_Melzi_-_Portrait_of_Leonardo.png) |
+| 洛伦佐·德·美第奇（肖像） | Workshop of Bronzino | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Bottega_di_Agnolo_di_Cosimo,_detto_il_Bronzino_(Firenze_1503-1572)_-_Ritratto_di_Lorenzo_il_Magnifico_-_865_-_Uffizi_Gallery_(cropped).jpg) |
+| 马奈（肖像） | Nadar / Adam Cuerden | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:%C3%89douard_Manet,_en_buste,_de_face_-_Nadar.jpg) |
+| 马萨乔（肖像） | Masaccio | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Masaccio_Self_Portrait.jpg) |
+| 马蒂斯（肖像） | Carl Van Vechten | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Portrait_of_Henri_Matisse_1933_May_20.jpg) |
+| 米开朗基罗（肖像） | Attributed to Daniele da Volterra | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Michelangelo_Daniele_da_Volterra_(dettaglio).jpg) |
+| 米勒（肖像） | Nadar | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Jean-FrancoisMillet(Nadar).jpg) |
+| 莫奈（肖像） | Nadar | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar_crop.jpg) |
+| 蒙克（肖像） | Anders Beer Wilse | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Edvard_Munch_1933-2.jpg) |
+| 拿破仑（肖像） | Jacques-Louis David | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg) |
+| 佩鲁吉诺（肖像） | Pietro Perugino | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pietro_Perugino_031.jpg) |
+| 毕加索（肖像） | Argentina . Revista Vea y Lea | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pablo_picasso_1.jpg) |
+| 毕沙罗（肖像） | Unknown author Unknown author | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pissarro-portrait-c1900.jpg) |
+| 波洛克（肖像） | Hans Namuth | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Jackson_Pollock_by_Hans_Namuth.jpg) |
+| 拉斐尔（肖像） | Raphael | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio.jpg) |
+| 伦勃朗（肖像） | Rembrandt | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg) |
+| 雷诺阿（肖像） | Unknown Unknown Musée d'Orsay, Dist. RMN-Grand Palais / Patrice Schmidt | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pierre_Auguste_Renoir,_uncropped_image.jpg) |
+| 鲁本斯（肖像） | Peter Paul Rubens | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Sir_Peter_Paul_Rubens_-_Portrait_of_the_Artist_-_Google_Art_Project.jpg) |
+| 修拉（肖像） | Unidentified photographer | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Georges_Seurat_1888_(cropped).jpg) |
+| 叙热（肖像） | 佚名 | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) | [Commons](https://commons.wikimedia.org/wiki/File:Suger_cour_Napoleon_Louvre.jpg) |
+| 提香（肖像） | Titian | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg) |
+| 乌尔班八世（肖像） | Pietro da Cortona | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Pietro_da_Cortona_-_Portrait_of_Urban_VIII_(ca._1624-1627)_-_Google_Art_Project_-_edited.jpg) |
+| 扬·凡·艾克（肖像） | Jan van Eyck | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_Portrait_of_a_Man_(Self_Portrait%3F)_1433.jpg) |
+| 梵高（肖像） | Vincent van Gogh | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Self-portrait_-_Vincent_van_Gogh.jpg) |
+| 瓦萨里（肖像） | Attributed to Jacopo Zucchi | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Zucchi,_Jacopo_-_Vasari,_Giorgio_-_Uffizi_ICCD.jpg) |
+| 委拉斯开兹（肖像） | Diego Velázquez | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg) |
+| 维米尔（肖像） | Johannes Vermeer | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg) |
+| 韦罗基奥（肖像） | Nicolas de Larmessin | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Andr%C3%A9_Verrochio.jpg) |
+| 沃霍尔（肖像） | Bernard Gotfryd | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Andy_Warhol_at_the_Jewish_Museum_(by_Bernard_Gotfryd)_%E2%80%93_LOC.jpg) |
+| 华托（肖像） | Rosalba Carriera | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:(Treviso)_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg) |
 | 舟发西苔岛 | Jean-Antoine Watteau | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:L%27Embarquement_pour_Cyth%C3%A8re,_by_Antoine_Watteau,_from_C2RMF_retouched.jpg) |
 | 梅杜萨之筏 | Théodore Géricault | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_(Museo_del_Louvre,_1818-19).jpg) |
 | 圣丹尼修道院教堂 | Thomas Clouet | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Saint-Denis_-_Fa%C3%A7ade.jpg) |
