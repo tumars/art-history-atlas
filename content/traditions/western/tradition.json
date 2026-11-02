@@ -1,0 +1,116 @@
+{
+  "id": "western",
+  "name": "西方艺术史",
+  "description": "从史前洞窟到 20 世纪现代艺术，18 个时期。",
+  "groups": [
+    {
+      "id": "ancient",
+      "name": "远古",
+      "light": "#9C5A22",
+      "dark": "#E0A060"
+    },
+    {
+      "id": "classical",
+      "name": "古典",
+      "light": "#4F6E8A",
+      "dark": "#8FB3D4"
+    },
+    {
+      "id": "medieval",
+      "name": "中世纪",
+      "light": "#9A7414",
+      "dark": "#D9B45A"
+    },
+    {
+      "id": "renaissance",
+      "name": "文艺复兴",
+      "light": "#2B3FB8",
+      "dark": "#8C9BFF"
+    },
+    {
+      "id": "early-modern",
+      "name": "17–18世纪",
+      "light": "#A3283C",
+      "dark": "#F07F92"
+    },
+    {
+      "id": "nineteenth",
+      "name": "19世纪",
+      "light": "#6B47A8",
+      "dark": "#B79CF2"
+    },
+    {
+      "id": "twentieth",
+      "name": "20世纪",
+      "light": "#12806B",
+      "dark": "#4FCBAE"
+    }
+  ],
+  "relay": [
+    {
+      "period": "prehistory",
+      "place": "法国、西班牙的洞穴"
+    },
+    {
+      "period": "egypt",
+      "place": "尼罗河"
+    },
+    {
+      "period": "greece",
+      "place": "雅典"
+    },
+    {
+      "period": "rome",
+      "place": "罗马"
+    },
+    {
+      "period": "byzantine",
+      "place": "君士坦丁堡"
+    },
+    {
+      "period": "gothic",
+      "place": "巴黎与法国北部"
+    },
+    {
+      "period": "early-ren",
+      "place": "佛罗伦萨"
+    },
+    {
+      "period": "high-ren",
+      "place": "罗马"
+    },
+    {
+      "period": "north-ren",
+      "place": "威尼斯、尼德兰"
+    },
+    {
+      "period": "baroque",
+      "place": "罗马、马德里、阿姆斯特丹"
+    },
+    {
+      "period": "neoclassic",
+      "place": "巴黎（直到19世纪末）"
+    },
+    {
+      "period": "modern",
+      "place": "二战后转向纽约"
+    }
+  ],
+  "contextBands": [
+    "europe-periods",
+    "china-dynasties",
+    "church-history"
+  ],
+  "pendulum": {
+    "title": "理性与激情的钟摆",
+    "low": [
+      "理性",
+      "秩序"
+    ],
+    "high": [
+      "情感",
+      "激情"
+    ],
+    "note": "把每个时期放在“秩序/理性”与“情感/激情”之间，会看到新风格往往是对上一代的反动。这是本站的整理框架，不是定论。"
+  }
+}

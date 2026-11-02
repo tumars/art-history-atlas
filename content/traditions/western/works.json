@@ -1,0 +1,992 @@
+[
+  {
+    "id": "venus-of-willendorf",
+    "title": "维伦多夫的维纳斯",
+    "artist": "佚名",
+    "yearText": "约公元前25000年",
+    "year": -25000,
+    "medium": "石灰岩，高约11厘米",
+    "location": "维也纳自然史博物馆",
+    "summary": "夸张的乳房、腹部和臀部，没有五官，代表的是生育力本身，而不是某个具体女人。",
+    "period": "prehistory",
+    "image": {
+      "commons": "Venus_von_Willendorf_01.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "lascaux",
+    "title": "拉斯科洞窟壁画",
+    "artist": "佚名",
+    "yearText": "约公元前17000年",
+    "year": -17000,
+    "medium": "矿物颜料",
+    "location": "法国多尔多涅",
+    "summary": "野牛、马、鹿层层叠叠，利用岩壁起伏表现体积，是旧石器时代绘画的高峰。",
+    "period": "prehistory",
+    "image": {
+      "commons": "Lascaux_painting.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "altamira",
+    "title": "阿尔塔米拉洞窟壁画",
+    "artist": "佚名",
+    "yearText": "约公元前15000年",
+    "year": -15000,
+    "medium": "赭石、木炭",
+    "location": "西班牙坎塔布里亚",
+    "summary": "150 多幅动物形象，站立、奔跑、蜷伏，姿态生动。",
+    "period": "prehistory",
+    "image": {
+      "commons": "9_Bisonte_Magdaleniense_polícromo.jpg"
+    }
+  },
+  {
+    "id": "stonehenge",
+    "title": "巨石阵",
+    "artist": "佚名",
+    "yearText": "约公元前3000 – 前2000年",
+    "year": -2500,
+    "medium": "巨石",
+    "location": "英国索尔兹伯里",
+    "summary": "巨石排列与夏至日出方向对齐，可能兼具祭祀与历法功能。",
+    "period": "prehistory",
+    "image": {
+      "commons": "Stonehenge2007_07_30.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "giza-pyramids",
+    "title": "吉萨金字塔群",
+    "artist": "佚名",
+    "yearText": "约公元前2560年",
+    "year": -2560,
+    "medium": "石灰岩",
+    "location": "埃及吉萨",
+    "summary": "法老的永恒居所，体现埃及人对几何秩序和来世的执念。",
+    "period": "egypt",
+    "image": {
+      "commons": "Pyramids_of_the_Giza_Necropolis.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "seated-scribe",
+    "title": "书记官坐像",
+    "artist": "佚名",
+    "yearText": "约公元前2600 – 前2350年",
+    "year": -2600,
+    "medium": "彩绘石灰岩",
+    "location": "巴黎卢浮宫",
+    "summary": "少见的写实之作，眼神专注，表现的是有身份的官员而非神化的法老。",
+    "period": "egypt",
+    "image": {
+      "commons": "Seated_scribe-E_3023-p1020377-gradient.jpg"
+    }
+  },
+  {
+    "id": "abu-simbel",
+    "title": "阿布辛贝神庙",
+    "artist": "拉美西斯二世下令建造",
+    "yearText": "约公元前1264年",
+    "year": -1264,
+    "medium": "凿山而建",
+    "location": "埃及努比亚",
+    "summary": "门口四尊巨像高约 20 米，把王权的威慑力放到极致。",
+    "period": "egypt",
+    "image": {
+      "commons": "Abu_Simbel_Temple_May_30_2007.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "discobolus",
+    "title": "掷铁饼者",
+    "artist": "米隆",
+    "yearText": "约公元前450年",
+    "year": -450,
+    "medium": "原作青铜，今存罗马大理石复制品",
+    "location": "罗马国立博物馆",
+    "summary": "捕捉动作转换的一瞬，身体紧张而面部平静，正是古典的理想。",
+    "period": "greece",
+    "image": {
+      "commons": "The_Discobolus_Lancellotti,_Roman_copy_of_a_5th_century_BC_Greek_original_by_Myron,_Hadrianic_period,_Palazzo_Massimo_alle_Terme_(11398129933).jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "parthenon",
+    "title": "帕特农神庙",
+    "artist": "伊克提诺斯、卡利克拉特，菲迪亚斯主持雕刻",
+    "yearText": "公元前447 – 前432年",
+    "year": -440,
+    "medium": "大理石",
+    "location": "雅典卫城",
+    "summary": "多立克柱式的典范，柱子微微内倾、中间略鼓，用视觉矫正追求完美。",
+    "period": "greece",
+    "image": {
+      "commons": "The_Parthenon_in_Athens.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "laocoon",
+    "title": "拉奥孔",
+    "artist": "罗德岛三位雕塑家",
+    "yearText": "约公元前1世纪",
+    "year": -40,
+    "medium": "大理石",
+    "location": "梵蒂冈博物馆",
+    "summary": "父子被巨蛇缠绕的痛苦扭曲，代表希腊化时期的戏剧性。",
+    "period": "greece",
+    "image": {
+      "commons": "Laocoön_and_his_sons_group.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "venus-de-milo",
+    "title": "米洛的维纳斯",
+    "artist": "传为亚历山德罗斯",
+    "yearText": "约公元前150 – 前125年",
+    "year": -130,
+    "medium": "大理石",
+    "location": "巴黎卢浮宫",
+    "summary": "断臂反而成就了它，是“理想美”最出名的符号。",
+    "period": "greece",
+    "image": {
+      "commons": "Vénus_de_Milo_-_Musée_du_Louvre_AGER_LL_299_;_N_527_;_Ma_399.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "pantheon",
+    "title": "万神殿",
+    "artist": "哈德良时期重建",
+    "yearText": "约公元118 – 128年",
+    "year": 125,
+    "medium": "混凝土、砖",
+    "location": "罗马",
+    "summary": "直径约 43 米的穹顶，顶部开一个圆洞采光，近两千年后仍是世界最大的无钢筋混凝土穹顶。",
+    "period": "rome",
+    "image": {
+      "commons": "Pantheon_Rom_1_cropped.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "colosseum",
+    "title": "罗马斗兽场",
+    "artist": "韦帕芗、提图斯时期",
+    "yearText": "公元70 – 80年",
+    "year": 80,
+    "medium": "石灰华、混凝土",
+    "location": "罗马",
+    "summary": "多层拱券叠加，可容纳约五万人，是帝国娱乐与统治的机器。",
+    "period": "rome",
+    "image": {
+      "commons": "Colosseo_2020.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "trajans-column",
+    "title": "图拉真纪功柱",
+    "artist": "佚名",
+    "yearText": "公元113年",
+    "year": 113,
+    "medium": "大理石",
+    "location": "罗马",
+    "summary": "螺旋浮雕像一卷连环画，记录图拉真征服达契亚。",
+    "period": "rome",
+    "image": {
+      "commons": "Trajan's_Column_HD.jpg"
+    }
+  },
+  {
+    "id": "arch-of-constantine",
+    "title": "君士坦丁凯旋门",
+    "artist": "佚名",
+    "yearText": "公元315年",
+    "year": 315,
+    "medium": "大理石",
+    "location": "罗马",
+    "summary": "拼用了早期纪念碑上的浮雕，也看得出古典技艺在衰退。",
+    "period": "rome",
+    "image": {
+      "commons": "Arch_of_Constantine_(Rome)_-_South_side,_from_Via_triumphalis.jpg"
+    }
+  },
+  {
+    "id": "hagia-sophia",
+    "title": "圣索菲亚大教堂",
+    "artist": "安提缪斯、伊西多尔",
+    "yearText": "公元532 – 537年",
+    "year": 537,
+    "medium": "砖石",
+    "location": "伊斯坦布尔",
+    "summary": "巨大穹顶下一圈窗户，让穹顶仿佛漂浮在光上。",
+    "period": "byzantine",
+    "image": {
+      "commons": "Hagia_Sophia_Mars_2013.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "justinian-mosaic",
+    "title": "查士丁尼皇帝与随从",
+    "artist": "佚名",
+    "yearText": "约公元547年",
+    "year": 547,
+    "medium": "玻璃马赛克",
+    "location": "拉文纳圣维塔莱教堂",
+    "summary": "皇帝头顶光环，政教合一，人物正面排开，几乎没有空间深度。",
+    "period": "byzantine",
+    "image": {
+      "commons": "Mosaic_of_Justinianus_I_-_Basilica_San_Vitale_(Ravenna).jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "saint-denis",
+    "title": "圣丹尼修道院教堂",
+    "artist": "修道院长叙热主持",
+    "yearText": "1140年代",
+    "year": 1140,
+    "medium": "石材",
+    "location": "巴黎近郊",
+    "summary": "被视为第一座哥特式教堂，叙热认为光能把人引向神。",
+    "period": "gothic",
+    "image": {
+      "commons": "Saint-Denis_-_Façade.jpg"
+    }
+  },
+  {
+    "id": "chartres",
+    "title": "沙特尔大教堂",
+    "artist": "佚名",
+    "yearText": "约1194 – 1220年",
+    "year": 1210,
+    "medium": "石材、彩色玻璃",
+    "location": "法国沙特尔",
+    "summary": "保存最完整的中世纪彩色玻璃，“沙特尔蓝”非常有名。",
+    "period": "gothic",
+    "image": {
+      "commons": "Facade_cathedral.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "notre-dame-paris",
+    "title": "巴黎圣母院",
+    "artist": "佚名",
+    "yearText": "1163 – 约1345年",
+    "year": 1163,
+    "medium": "石材",
+    "location": "巴黎",
+    "summary": "玫瑰窗与飞扶壁的代表作，2019 年失火后重建，2024 年底重新开放。",
+    "period": "gothic",
+    "image": {
+      "commons": "Notre-Dame_de_Paris,_4_October_2017.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "giotto-lamentation",
+    "title": "哀悼基督",
+    "artist": "乔托",
+    "yearText": "约1305年",
+    "year": 1305,
+    "medium": "湿壁画",
+    "location": "帕多瓦斯克罗威尼礼拜堂",
+    "summary": "人物背对观众、俯身痛哭，情感真实，空间有了深度。",
+    "period": "early-ren",
+    "image": {
+      "commons": "Giotto_-_Scrovegni_-_-36-_-_Lamentation_(The_Mourning_of_Christ)_adj.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "masaccio-trinity",
+    "title": "圣三位一体",
+    "artist": "马萨乔",
+    "yearText": "约1427年",
+    "year": 1427,
+    "medium": "湿壁画",
+    "location": "佛罗伦萨新圣母大殿",
+    "summary": "最早严格使用线性透视的画作之一，墙面像被凿开一个礼拜堂。",
+    "period": "early-ren",
+    "image": {
+      "commons": "Masaccio,_trinità.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "florence-dome",
+    "title": "佛罗伦萨大教堂穹顶",
+    "artist": "布鲁内莱斯基",
+    "yearText": "1420 – 1436年",
+    "year": 1420,
+    "medium": "砖、石",
+    "location": "佛罗伦萨",
+    "summary": "不搭满堂脚手架造出的巨型穹顶，工程奇迹。",
+    "period": "early-ren",
+    "image": {
+      "commons": "Florence_Duomo_from_Michelangelo_hill.jpg"
+    }
+  },
+  {
+    "id": "birth-of-venus",
+    "title": "维纳斯的诞生",
+    "artist": "波提切利",
+    "yearText": "约1485年",
+    "year": 1485,
+    "medium": "蛋彩、画布",
+    "location": "佛罗伦萨乌菲兹美术馆",
+    "summary": "异教女神重回画面，线条优美，是人文主义的宣言。",
+    "period": "early-ren",
+    "image": {
+      "commons": "Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "mona-lisa",
+    "title": "蒙娜丽莎",
+    "artist": "列奥纳多·达·芬奇",
+    "yearText": "约1503 – 1519年",
+    "year": 1503,
+    "medium": "油彩、杨木板",
+    "location": "巴黎卢浮宫",
+    "summary": "晕涂法与空气透视的集大成，神秘的微笑来自嘴角与眼角的模糊处理。",
+    "period": "high-ren",
+    "image": {
+      "commons": "Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "last-supper",
+    "title": "最后的晚餐",
+    "artist": "列奥纳多·达·芬奇",
+    "yearText": "约1495 – 1498年",
+    "year": 1497,
+    "medium": "蛋彩、油彩于墙面",
+    "location": "米兰恩宠圣母修道院",
+    "summary": "透视线全部汇聚到耶稣头部，捕捉“你们中有一人要出卖我”后门徒的反应。",
+    "period": "high-ren",
+    "image": {
+      "commons": "Última_Cena_-_Da_Vinci_5.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "michelangelo-david",
+    "title": "大卫",
+    "artist": "米开朗基罗",
+    "yearText": "1501 – 1504年",
+    "year": 1504,
+    "medium": "大理石，高约5.2米",
+    "location": "佛罗伦萨学院美术馆",
+    "summary": "选择战斗前凝神的一刻，是佛罗伦萨共和国自由的象征。",
+    "period": "high-ren",
+    "image": {
+      "commons": "Michelangelo's_David_-_right_view_2.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "sistine-ceiling",
+    "title": "西斯廷礼拜堂天顶画",
+    "artist": "米开朗基罗",
+    "yearText": "1508 – 1512年",
+    "year": 1512,
+    "medium": "湿壁画",
+    "location": "梵蒂冈",
+    "summary": "《创造亚当》中两根手指将触未触，是西方艺术最著名的瞬间之一。",
+    "period": "high-ren",
+    "image": {
+      "commons": "Michelangelo_-_Creation_of_Adam_(cropped).jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "school-of-athens",
+    "title": "雅典学院",
+    "artist": "拉斐尔",
+    "yearText": "1509 – 1511年",
+    "year": 1510,
+    "medium": "湿壁画",
+    "location": "梵蒂冈签字厅",
+    "summary": "柏拉图与亚里士多德居中，汇集古代哲人，据说柏拉图以达·芬奇为原型。",
+    "period": "high-ren",
+    "image": {
+      "commons": "\"The_School_of_Athens\"_by_Raffaello_Sanzio_da_Urbino.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "venus-of-urbino",
+    "title": "乌尔比诺的维纳斯",
+    "artist": "提香",
+    "yearText": "1538年",
+    "year": 1538,
+    "medium": "油彩、画布",
+    "location": "佛罗伦萨乌菲兹美术馆",
+    "summary": "女神走进了卧室，后来马奈的《奥林匹亚》就是在回应它。",
+    "period": "venice",
+    "image": {
+      "commons": "Tiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "the-tempest",
+    "title": "暴风雨",
+    "artist": "乔尔乔内",
+    "yearText": "约1508年",
+    "year": 1508,
+    "medium": "油彩、画布",
+    "location": "威尼斯学院美术馆",
+    "summary": "风景成了主角之一，主题至今说不清，开创“诗意画”。",
+    "period": "venice",
+    "image": {
+      "commons": "Giorgione_019.jpg"
+    }
+  },
+  {
+    "id": "arnolfini-portrait",
+    "title": "阿尔诺芬尼夫妇像",
+    "artist": "扬·凡·艾克",
+    "yearText": "1434年",
+    "year": 1434,
+    "medium": "油彩、橡木板",
+    "location": "伦敦国家美术馆",
+    "summary": "墙上凸面镜里反射出整个房间和两位来客，镜上方写着“扬·凡·艾克在此”。",
+    "period": "north-ren",
+    "image": {
+      "commons": "The_Arnolfini_portrait_(1434).jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "garden-of-earthly-delights",
+    "title": "人间乐园",
+    "artist": "希罗尼穆斯·博斯",
+    "yearText": "约1490 – 1510年",
+    "year": 1490,
+    "medium": "油彩、木板三联画",
+    "location": "马德里普拉多博物馆",
+    "summary": "天堂、尘世、地狱三联，怪诞想象被视为超现实主义的远祖。",
+    "period": "north-ren",
+    "image": {
+      "commons": "The_Garden_of_earthly_delights.jpg"
+    }
+  },
+  {
+    "id": "durer-self-portrait-1500",
+    "title": "二十八岁自画像",
+    "artist": "阿尔布雷希特·丢勒",
+    "yearText": "1500年",
+    "year": 1500,
+    "medium": "油彩、木板",
+    "location": "慕尼黑老绘画陈列馆",
+    "summary": "正面、对称，几乎把自己画成基督，艺术家自我意识的觉醒。",
+    "period": "north-ren",
+    "image": {
+      "commons": "Albrecht_Dürer_-_1500_self-portrait_(High_resolution_and_detail).jpg"
+    }
+  },
+  {
+    "id": "the-ambassadors",
+    "title": "大使",
+    "artist": "小汉斯·荷尔拜因",
+    "yearText": "1533年",
+    "year": 1533,
+    "medium": "油彩、橡木板",
+    "location": "伦敦国家美术馆",
+    "summary": "地上一块变形的骷髅，只有从侧面斜看才能认出，提醒“人终有一死”。",
+    "period": "north-ren",
+    "image": {
+      "commons": "Hans Holbein the Younger - The Ambassadors - Google Art Project.jpg"
+    }
+  },
+  {
+    "id": "hunters-in-the-snow",
+    "title": "雪中猎人",
+    "artist": "老彼得·勃鲁盖尔",
+    "yearText": "1565年",
+    "year": 1565,
+    "medium": "油彩、木板",
+    "location": "维也纳艺术史博物馆",
+    "summary": "农民日常成为正式题材，开风俗画先河。",
+    "period": "north-ren",
+    "image": {
+      "commons": "Pieter Bruegel the Elder - Hunters in the Snow (Winter) - Google Art Project.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "calling-of-saint-matthew",
+    "title": "圣马太蒙召",
+    "artist": "卡拉瓦乔",
+    "yearText": "1599 – 1600年",
+    "year": 1600,
+    "medium": "油彩、画布",
+    "location": "罗马圣王路易堂",
+    "summary": "一道斜光从耶稣指向马太，神圣时刻发生在昏暗的小酒馆里。",
+    "period": "baroque",
+    "image": {
+      "commons": "The Calling of Saint Matthew-Caravaggo (1599-1600).jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "ecstasy-of-saint-teresa",
+    "title": "圣特雷莎的狂喜",
+    "artist": "贝尼尼",
+    "yearText": "1647 – 1652年",
+    "year": 1647,
+    "medium": "大理石、镀金青铜",
+    "location": "罗马胜利之后圣母堂",
+    "summary": "雕塑、建筑、光线合为一个舞台，大理石做出了布料的翻涌。",
+    "period": "baroque",
+    "image": {
+      "commons": "Ecstasy of Saint Teresa September 2015-2a.jpg"
+    }
+  },
+  {
+    "id": "night-watch",
+    "title": "夜巡",
+    "artist": "伦勃朗",
+    "yearText": "1642年",
+    "year": 1642,
+    "medium": "油彩、画布",
+    "location": "阿姆斯特丹国立博物馆",
+    "summary": "把民兵团体像画成行进中的戏剧场面，光打在关键人物身上。",
+    "period": "baroque",
+    "image": {
+      "commons": "The Night Watch - HD.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "las-meninas",
+    "title": "宫娥",
+    "artist": "委拉斯开兹",
+    "yearText": "1656年",
+    "year": 1656,
+    "medium": "油彩、画布",
+    "location": "马德里普拉多博物馆",
+    "summary": "画家把自己画进去，国王夫妇只出现在镜子里，谁在看谁成了谜。",
+    "period": "baroque",
+    "image": {
+      "commons": "Las Meninas, by Diego Velázquez, from Prado in Google Earth.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "girl-with-a-pearl-earring",
+    "title": "戴珍珠耳环的少女",
+    "artist": "维米尔",
+    "yearText": "约1665年",
+    "year": 1665,
+    "medium": "油彩、画布",
+    "location": "海牙莫瑞泰斯皇家美术馆",
+    "summary": "安静的回眸与一点高光，是荷兰黄金时代的代表。",
+    "period": "baroque",
+    "image": {
+      "commons": "1665 Girl with a Pearl Earring.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "the-swing",
+    "title": "秋千",
+    "artist": "弗拉戈纳尔",
+    "yearText": "约1767年",
+    "year": 1767,
+    "medium": "油彩、画布",
+    "location": "伦敦华莱士收藏馆",
+    "summary": "飞起的鞋、藏在花丛里的情人，洛可可调情氛围的代名词。",
+    "period": "rococo",
+    "image": {
+      "commons": "Fragonard, The Swing, Wallace Collection.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "pilgrimage-to-cythera",
+    "title": "舟发西苔岛",
+    "artist": "华托",
+    "yearText": "1717年",
+    "year": 1717,
+    "medium": "油彩、画布",
+    "location": "巴黎卢浮宫",
+    "summary": "情侣们前往（或离开）爱神之岛，开创“游乐画”类型。",
+    "period": "rococo",
+    "image": {
+      "commons": "L'Embarquement pour Cythère, by Antoine Watteau, from C2RMF retouched.jpg"
+    }
+  },
+  {
+    "id": "oath-of-the-horatii",
+    "title": "荷拉斯兄弟之誓",
+    "artist": "雅克-路易·大卫",
+    "yearText": "1784年",
+    "year": 1784,
+    "medium": "油彩、画布",
+    "location": "巴黎卢浮宫",
+    "summary": "三兄弟举臂宣誓为国而战，刚直线条对比右侧哭泣的女人，宣扬为国牺牲。",
+    "period": "neoclassic",
+    "image": {
+      "commons": "Jacques-Louis David, Le Serment des Horaces.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "death-of-marat",
+    "title": "马拉之死",
+    "artist": "雅克-路易·大卫",
+    "yearText": "1793年",
+    "year": 1793,
+    "medium": "油彩、画布",
+    "location": "布鲁塞尔比利时皇家美术馆",
+    "summary": "把遇刺的革命者画成殉道圣徒，是政治宣传画的经典。",
+    "period": "neoclassic",
+    "image": {
+      "commons": "Death of Marat by David.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "napoleon-crossing-the-alps",
+    "title": "拿破仑翻越阿尔卑斯山",
+    "artist": "雅克-路易·大卫",
+    "yearText": "1801 – 1805年",
+    "year": 1801,
+    "medium": "油彩、画布",
+    "location": "多版本，其一藏于马尔迈松城堡",
+    "summary": "实际拿破仑骑的是骡子，画里是扬蹄的骏马，形象被刻意塑造。",
+    "period": "neoclassic",
+    "image": {
+      "commons": "David - Napoleon crossing the Alps - Malmaison1.jpg"
+    }
+  },
+  {
+    "id": "grande-odalisque",
+    "title": "大宫女",
+    "artist": "安格尔",
+    "yearText": "1814年",
+    "year": 1814,
+    "medium": "油彩、画布",
+    "location": "巴黎卢浮宫",
+    "summary": "为了线条之美，腰背被拉长了几节，“理性”里已经藏着主观。",
+    "period": "neoclassic",
+    "image": {
+      "commons": "Jean Auguste Dominique Ingres, La Grande Odalisque, 1814.jpg"
+    }
+  },
+  {
+    "id": "raft-of-the-medusa",
+    "title": "梅杜萨之筏",
+    "artist": "籍里柯",
+    "yearText": "1818 – 1819年",
+    "year": 1819,
+    "medium": "油彩、画布",
+    "location": "巴黎卢浮宫",
+    "summary": "取材真实海难丑闻，金字塔构图从尸体堆向远处挥舞的希望。",
+    "period": "romantic",
+    "image": {
+      "commons": "JEAN LOUIS THÉODORE GÉRICAULT - La Balsa de la Medusa (Museo del Louvre, 1818-19).jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "third-of-may-1808",
+    "title": "1808年5月3日",
+    "artist": "戈雅",
+    "yearText": "1814年",
+    "year": 1814,
+    "medium": "油彩、画布",
+    "location": "马德里普拉多博物馆",
+    "summary": "无面目的行刑队对着张开双臂的白衣平民，现代反战画的起点。",
+    "period": "romantic",
+    "image": {
+      "commons": "El Tres de Mayo, by Francisco de Goya, from Prado thin black margin.jpg"
+    }
+  },
+  {
+    "id": "liberty-leading-the-people",
+    "title": "自由引导人民",
+    "artist": "德拉克洛瓦",
+    "yearText": "1830年",
+    "year": 1830,
+    "medium": "油彩、画布",
+    "location": "巴黎卢浮宫",
+    "summary": "自由女神举着三色旗跨过街垒，现实与寓言融合。",
+    "period": "romantic",
+    "image": {
+      "commons": "Eugène Delacroix - Le 28 Juillet. La Liberté guidant le peuple.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "wanderer-above-the-sea-of-fog",
+    "title": "雾海上的旅人",
+    "artist": "卡斯帕·大卫·弗里德里希",
+    "yearText": "约1818年",
+    "year": 1818,
+    "medium": "油彩、画布",
+    "location": "汉堡美术馆",
+    "summary": "背影面对浩瀚雾海，表现个体面对崇高自然的渺小。",
+    "period": "romantic",
+    "image": {
+      "commons": "Caspar David Friedrich - Wanderer above the sea of fog.jpg"
+    }
+  },
+  {
+    "id": "burial-at-ornans",
+    "title": "奥尔南的葬礼",
+    "artist": "古斯塔夫·库尔贝",
+    "yearText": "1849 – 1850年",
+    "year": 1849,
+    "medium": "油彩、画布",
+    "location": "巴黎奥赛博物馆",
+    "summary": "用历史画的巨幅尺寸画一场普通乡村葬礼，挑战了题材等级。",
+    "period": "realism",
+    "image": {
+      "commons": "Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg"
+    }
+  },
+  {
+    "id": "the-gleaners",
+    "title": "拾穗者",
+    "artist": "让-弗朗索瓦·米勒",
+    "yearText": "1857年",
+    "year": 1857,
+    "medium": "油彩、画布",
+    "location": "巴黎奥赛博物馆",
+    "summary": "三个弯腰的农妇有纪念碑般的庄重，也被视为对贫困的控诉。",
+    "period": "realism",
+    "image": {
+      "commons": "Jean-François_Millet_-_Gleaners_-_Google_Art_Project_2.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "luncheon-on-the-grass",
+    "title": "草地上的午餐",
+    "artist": "爱德华·马奈",
+    "yearText": "1863年",
+    "year": 1863,
+    "medium": "油彩、画布",
+    "location": "巴黎奥赛博物馆",
+    "summary": "裸女和穿西装的男人同坐，平涂的光线，令沙龙观众震怒。",
+    "period": "realism",
+    "image": {
+      "commons": "Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "olympia",
+    "title": "奥林匹亚",
+    "artist": "爱德华·马奈",
+    "yearText": "1863年",
+    "year": 1863,
+    "medium": "油彩、画布",
+    "location": "巴黎奥赛博物馆",
+    "summary": "套用提香《乌尔比诺的维纳斯》的构图，女神变成直视观众的现实女子。",
+    "period": "realism",
+    "image": {
+      "commons": "Edouard_Manet_-_Olympia_-_Google_Art_ProjectFXD.jpg"
+    }
+  },
+  {
+    "id": "impression-sunrise",
+    "title": "日出·印象",
+    "artist": "克劳德·莫奈",
+    "yearText": "1872年",
+    "year": 1872,
+    "medium": "油彩、画布",
+    "location": "巴黎马摩丹美术馆",
+    "summary": "雾中港口、一轮橙红太阳，几笔带过，“印象派”之名由此而来。",
+    "period": "impression",
+    "image": {
+      "commons": "Monet_-_Impression,_Sunrise.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "moulin-de-la-galette",
+    "title": "煎饼磨坊的舞会",
+    "artist": "皮埃尔-奥古斯特·雷诺阿",
+    "yearText": "1876年",
+    "year": 1876,
+    "medium": "油彩、画布",
+    "location": "巴黎奥赛博物馆",
+    "summary": "树叶间漏下的光斑洒在人群身上，巴黎市民的欢乐周日。",
+    "period": "impression",
+    "image": {
+      "commons": "Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Musée_d'Orsay_RF_2739_(derivative_work_-_AutoContrast_edit_in_LCH_space).jpg"
+    }
+  },
+  {
+    "id": "the-dance-class",
+    "title": "舞蹈课",
+    "artist": "埃德加·德加",
+    "yearText": "约1874年",
+    "year": 1874,
+    "medium": "油彩、画布",
+    "location": "巴黎奥赛博物馆",
+    "summary": "德加更爱室内和人工光，偏斜的视角受摄影和日本浮世绘影响。",
+    "period": "impression",
+    "image": {
+      "commons": "Edgar_Degas_-_La_Classe_de_danse.jpg"
+    }
+  },
+  {
+    "id": "starry-night",
+    "title": "星月夜",
+    "artist": "文森特·梵高",
+    "yearText": "1889年",
+    "year": 1889,
+    "medium": "油彩、画布",
+    "location": "纽约现代艺术博物馆",
+    "summary": "在圣雷米疗养院窗外所见，旋涡状的天空就是画家的情绪。",
+    "period": "post-impression",
+    "image": {
+      "commons": "Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "mont-sainte-victoire",
+    "title": "圣维克多山",
+    "artist": "保罗·塞尚",
+    "yearText": "1880s – 1906年（系列）",
+    "year": 1880,
+    "medium": "油彩、画布",
+    "location": "多处收藏",
+    "summary": "同一座山画了几十遍，用色块搭建空间，而不是描摹表面。",
+    "period": "post-impression",
+    "image": {
+      "commons": "Paul_Cézanne_-_Montagne_Saint-victoire_-_Google_Art_Project.jpg"
+    }
+  },
+  {
+    "id": "where-do-we-come-from",
+    "title": "我们从哪里来？我们是谁？我们往哪里去？",
+    "artist": "保罗·高更",
+    "yearText": "1897 – 1898年",
+    "year": 1897,
+    "medium": "油彩、画布",
+    "location": "波士顿美术馆",
+    "summary": "在塔希提完成的巨幅作品，从右到左读出一生的轮回。",
+    "period": "post-impression",
+    "image": {
+      "commons": "Paul_Gauguin_-_D'ou_venons-nous.jpg"
+    }
+  },
+  {
+    "id": "la-grande-jatte",
+    "title": "大碗岛的星期天下午",
+    "artist": "乔治·修拉",
+    "yearText": "1884 – 1886年",
+    "year": 1884,
+    "medium": "油彩、画布",
+    "location": "芝加哥艺术博物馆",
+    "summary": "无数纯色小点在观众眼中混合，用光学理论画画。",
+    "period": "post-impression",
+    "image": {
+      "commons": "A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg"
+    }
+  },
+  {
+    "id": "the-scream",
+    "title": "呐喊",
+    "artist": "爱德华·蒙克",
+    "yearText": "1893年",
+    "year": 1893,
+    "medium": "蛋彩、蜡笔、纸板",
+    "location": "奥斯陆国家博物馆",
+    "summary": "扭曲的人和血红天空，把焦虑直接画出来，表现主义的先声。",
+    "period": "modern",
+    "image": {
+      "commons": "Edvard_Munch,_1893,_The_Scream,_oil,_tempera_and_pastel_on_cardboard,_91_x_73_cm,_National_Gallery_of_Norway.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "les-demoiselles-d-avignon",
+    "title": "亚维农少女",
+    "artist": "巴勃罗·毕加索",
+    "yearText": "1907年",
+    "year": 1907,
+    "medium": "油彩、画布",
+    "location": "纽约现代艺术博物馆",
+    "summary": "人体被切成棱角块面，受非洲面具启发，通向立体主义。",
+    "period": "modern",
+    "copyright": "毕加索（1973 年去世）的作品仍在版权期",
+    "timeline": true
+  },
+  {
+    "id": "matisse-dance",
+    "title": "舞蹈",
+    "artist": "亨利·马蒂斯",
+    "yearText": "1910年",
+    "year": 1910,
+    "medium": "油彩、画布",
+    "location": "圣彼得堡埃尔米塔日博物馆",
+    "summary": "红、蓝、绿三色加上奔放线条，色彩本身就是情绪。",
+    "period": "modern",
+    "image": {
+      "commons": "Matissedance.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "fountain",
+    "title": "泉",
+    "artist": "马塞尔·杜尚",
+    "yearText": "1917年",
+    "year": 1917,
+    "medium": "现成品小便池",
+    "location": "原件已失，有复制品",
+    "summary": "签上“R. Mutt”送展，把“什么是艺术”变成艺术的核心问题。",
+    "period": "modern",
+    "image": {
+      "commons": "Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg"
+    },
+    "timeline": true
+  },
+  {
+    "id": "persistence-of-memory",
+    "title": "记忆的永恒",
+    "artist": "萨尔瓦多·达利",
+    "yearText": "1931年",
+    "year": 1931,
+    "medium": "油彩、画布",
+    "location": "纽约现代艺术博物馆",
+    "summary": "融化的钟表，超现实主义最出名的梦境图像。",
+    "period": "modern",
+    "copyright": "达利（1989 年去世）的作品仍在版权期",
+    "timeline": true
+  },
+  {
+    "id": "marilyn-diptych",
+    "title": "玛丽莲双联画",
+    "artist": "安迪·沃霍尔",
+    "yearText": "1962年",
+    "year": 1962,
+    "medium": "丝网印刷、丙烯",
+    "location": "伦敦泰特现代美术馆",
+    "summary": "像商品一样重复明星头像，艺术与大众消费合流。",
+    "period": "modern",
+    "copyright": "沃霍尔（1987 年去世）的作品仍在版权期"
+  }
+]

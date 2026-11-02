@@ -1,0 +1,74 @@
+[
+  {
+    "work": "mona-lisa",
+    "heightCm": 77,
+    "widthCm": 53,
+    "default": true
+  },
+  {
+    "work": "girl-with-a-pearl-earring",
+    "heightCm": 44.5,
+    "widthCm": 39,
+    "default": true
+  },
+  {
+    "work": "starry-night",
+    "heightCm": 73.7,
+    "widthCm": 92.1,
+    "default": false
+  },
+  {
+    "work": "las-meninas",
+    "heightCm": 318,
+    "widthCm": 276,
+    "default": false
+  },
+  {
+    "work": "night-watch",
+    "heightCm": 363,
+    "widthCm": 437,
+    "default": true
+  },
+  {
+    "work": "oath-of-the-horatii",
+    "heightCm": 330,
+    "widthCm": 425,
+    "default": false
+  },
+  {
+    "work": "liberty-leading-the-people",
+    "heightCm": 260,
+    "widthCm": 325,
+    "default": false
+  },
+  {
+    "work": "la-grande-jatte",
+    "heightCm": 207.6,
+    "widthCm": 308,
+    "default": false
+  },
+  {
+    "work": "burial-at-ornans",
+    "heightCm": 315,
+    "widthCm": 668,
+    "default": false
+  },
+  {
+    "work": "raft-of-the-medusa",
+    "heightCm": 491,
+    "widthCm": 716,
+    "default": true
+  },
+  {
+    "work": "school-of-athens",
+    "heightCm": 500,
+    "widthCm": 770,
+    "default": false
+  },
+  {
+    "work": "last-supper",
+    "heightCm": 460,
+    "widthCm": 880,
+    "default": false
+  }
+]

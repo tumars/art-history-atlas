@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>艺术史图谱 · Art History Atlas</title>
+  <meta name="description" content="可交互的艺术史图谱：时间全景、时期展厅、交互图解，内容与代码分离，欢迎补充。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232337B5'/%3E%3Cpath d='M8 24 16 7l8 17' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="eyebrow" id="site-eyebrow"></div>
+      <h1 id="site-tagline"></h1>
+      <p id="site-intro"></p>
+    </div>
+    <nav class="sections" aria-label="页面分区">
+      <a href="#panorama">时间全景</a><a href="#hall">展厅</a><a href="#pendulum">钟摆</a><a href="#pairs">对照组</a><a href="#sizes">画有多大</a><a href="#wall">作品墙</a>
+      <select class="trad-switch" id="trad-switch" aria-label="切换艺术史体系" hidden></select>
+    </nav>
+  </header>
+
+  <section class="block" id="panorama" style="margin-top:0">
+    <div class="block-head">
+      <h2>时间全景</h2>
+      <div class="seg" role="group" aria-label="时间比例">
+        <button id="tl-exp" aria-pressed="true">展开比例</button>
+        <button id="tl-real" aria-pressed="false">真实比例</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="dg-wrap"><svg class="dg" id="tl-svg" role="img" aria-label="时间全景：背景历史、历史大事、代表作品与艺术时期"></svg></div>
+      <div class="ev-card band-note" id="band-note" hidden aria-live="polite"></div>
+      <div class="ev-nav"><button class="btn" id="ev-prev">← 上一件</button><button class="btn" id="ev-next">下一件 →</button><span id="ev-count"></span></div>
+      <div class="ev-card" id="ev-card" aria-live="polite" hidden></div>
+      <p class="tl-note" id="tl-note"></p>
+      <div class="eyebrow" style="margin-top:14px">艺术中心接力：主角城市一路迁移</div>
+      <div class="relay" id="relay"></div>
+    </div>
+  </section>
+
+  <section class="block" id="hall">
+    <div class="block-head"><h2>展厅</h2><p>左右方向键也可以切换展厅。</p></div>
+    <nav class="era-nav" aria-label="时期"><ol id="era-nav"></ol></nav>
+    <div class="hall">
+      <div class="intro" id="intro"></div>
+      <div class="feature" id="feature"></div>
+    </div>
+    <div class="diagram card" id="diagram"></div>
+    <div class="bridge-row">
+      <p class="bridge" id="bridge"></p>
+      <div class="nav-btns"><button class="btn" id="prev">上一展厅</button><button class="btn" id="next">下一展厅</button></div>
+    </div>
+  </section>
+
+  <section class="block" id="pendulum">
+    <div class="block-head"><h2 id="pend-title"></h2><p id="pend-note"></p></div>
+    <div class="card"><div class="chart-scroll"><svg class="dg" id="pend" viewBox="0 0 900 250" role="img" aria-label="各时期风格倾向的摆动"></svg></div></div>
+  </section>
+
+  <section class="block" id="pairs">
+    <div class="block-head"><h2>对照组</h2><p>把两件作品并排放，差异一眼就能记住。</p></div>
+    <div class="pair-tabs" id="pair-tabs" role="group" aria-label="选择对照组"></div>
+    <div class="card" id="pair-body"></div>
+  </section>
+
+  <section class="block" id="sizes">
+    <div class="block-head"><h2>画有多大</h2><p>同一比例尺下，和一个 1.7 米高的人站在一起。点选作品添加或移除。</p></div>
+    <div class="card">
+      <div class="size-chips" id="size-chips"></div>
+      <div class="dg-wrap"><svg class="dg" id="size-svg" viewBox="0 0 620 330" role="img" aria-label="作品尺寸与人体比例对比"></svg></div>
+    </div>
+  </section>
+
+  <section class="block" id="wall">
+    <div class="block-head"><h2>作品墙</h2><p>全部作品按时间排列，色条代表所属阶段。点开看大图，也能跳回展厅。</p></div>
+    <div class="wall-legend" id="wall-legend"></div>
+    <div class="wall" id="wall-grid"></div>
+  </section>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="作品大图">
+    <button class="btn lb-top" id="lb-close">关闭</button>
+    <img id="lb-img" alt="">
+    <div class="lb-none" id="lb-none" hidden></div>
+    <div class="lb-cap" id="lb-cap"></div>
+    <div class="lb-actions"><button class="btn" id="lb-go">去这个展厅</button></div>
+  </div>
+
+  <footer class="note" id="footer"></footer>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

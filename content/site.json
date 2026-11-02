@@ -1,0 +1,50 @@
+{
+  "title": "艺术史图谱",
+  "titleEn": "Art History Atlas",
+  "tagline": "从洞穴到小便池",
+  "intro": "一部可以动手玩的艺术史：先看时间全景，再逐厅细看。每个时期一张交互图解，配上代表作。",
+  "axis": {
+    "start": -30000,
+    "end": 1970,
+    "segments": [
+      [
+        -30000,
+        -3000,
+        0,
+        0.13
+      ],
+      [
+        -3000,
+        500,
+        0.13,
+        0.36
+      ],
+      [
+        500,
+        1400,
+        0.36,
+        0.5
+      ],
+      [
+        1400,
+        1970,
+        0.5,
+        1
+      ]
+    ]
+  },
+  "traditions": [
+    "western"
+  ],
+  "defaultTradition": "western",
+  "recommendedReading": [
+    {
+      "title": "《艺术的故事》",
+      "author": "贡布里希"
+    },
+    {
+      "title": "《大话西方艺术史》",
+      "author": "意公子"
+    }
+  ]
+}

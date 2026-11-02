@@ -1,0 +1,58 @@
+name: 从维基共享资源取图
+
+# 在 Actions 页面手动运行。会下载缺少的作品图片、生成署名清单并提交回仓库。
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "全部重新下载"
+        type: boolean
+        default: false
+      only:
+        description: "只处理这些作品（作品 id，逗号分隔，留空为全部）"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  actions: write # 提交后触发一次部署
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 下载图片
+        env:
+          FORCE: ${{ inputs.force }}
+          ONLY: ${{ inputs.only }}
+        run: |
+          ARGS=()
+          if [ "$FORCE" = "true" ]; then ARGS+=(--force); fi
+          if [ -n "$ONLY" ]; then ARGS+=("--only=$ONLY"); fi
+          node scripts/fetch-images.mjs "${ARGS[@]}" | tee fetch.log
+      - name: 写入运行摘要
+        run: |
+          echo '## 取图结果' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          tail -n 40 fetch.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+      - name: 提交
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images CREDITS.md
+          if git diff --cached --quiet; then echo "没有新图片"; exit 0; fi
+          git commit -m "chore(images): 从维基共享资源更新作品图片与署名"
+          git push
+          echo "pushed=true" >> $GITHUB_OUTPUT
+        id: commit
+      # 用 GITHUB_TOKEN 推送不会自动触发其他工作流，这里手动触发一次部署
+      - name: 重新部署
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref ${{ github.ref_name }}
