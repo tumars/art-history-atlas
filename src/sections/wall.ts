@@ -1,37 +1,114 @@
-import { $, esc } from "../lib/dom";
-import { state, actions, allWorksOrdered, periodVar, periodOf, imgSrc, hasImage } from "../state";
+import { $, esc, wikiSearch, prefersReducedMotion } from "../lib/dom";
+import { fmtYear } from "../lib/format";
+import { state, actions, allWorksOrdered, periodVar, periodOf, periodIndex, imgSrc, hasImage } from "../state";
+import { creditLine } from "./hall";
+import type { Work } from "../types";
 
-/* VI 藏品：按大阶段筛选，瀑布流，点开大图（列表为当前筛选结果） */
-let filter = "all";
+/* VI 藏品 · 看片台：上方一件大图 + 说明牌，下方一条按时期分段的缩略图带 */
+let list: Work[] = [];
+let cur = 0;
 
-function visible() {
-  return allWorksOrdered().filter((w) => filter === "all" || periodOf(w.period).group === filter);
+function renderReel() {
+  const t = state.t;
+  // 概览条：每个时期一段，宽度按作品数
+  $("#lt-map").innerHTML = t.periods
+    .map((p) => ({ p, n: list.filter((w) => w.period === p.id).length }))
+    .filter((x) => x.n)
+    .map(({ p, n }) => `<button data-p="${p.id}" style="flex:${n};--g:${periodVar(p.id)}" title="${esc(p.name)} · ${n} 件"><span>${esc(p.short)}</span></button>`)
+    .join("");
+  $("#lt-reel").innerHTML = t.periods
+    .map((p) => {
+      const ws = list.map((w, i) => ({ w, i })).filter(({ w }) => w.period === p.id);
+      if (!ws.length) return "";
+      return `<div class="lt-grp" style="--g:${periodVar(p.id)}"><div class="lt-gname"><b>${esc(p.short)}</b><small>${fmtYear(p.start)}</small></div><div class="lt-thumbs">${ws
+        .map(({ w, i }) => `<button data-i="${i}" aria-label="《${esc(w.title)}》，${esc(w.yearText)}" title="${esc(w.title)}">${hasImage(w) ? `<img src="${imgSrc(w, "thumb")}" alt="" loading="lazy" decoding="async">` : `<span>${esc(w.title[0])}</span>`}</button>`)
+        .join("")}</div></div>`;
+    })
+    .join("");
 }
 
-function render() {
-  const t = state.t, all = allWorksOrdered();
-  const count = (g: string) => all.filter((w) => periodOf(w.period).group === g).length;
-  $("#wall-filters").innerHTML =
-    `<button data-g="all" aria-pressed="${filter === "all"}">全部<sup>${all.length}</sup></button>` +
-    t.meta.groups.map((g, i) => `<button data-g="${g.id}" aria-pressed="${filter === g.id}" style="--g:var(--g${i + 1})"><i></i>${esc(g.name)}<sup>${count(g.id)}</sup></button>`).join("");
-  $("#wall-grid").innerHTML = visible().map((w) => {
-    const ok = hasImage(w);
-    const img = ok
-      ? `<img src="${imgSrc(w, "thumb")}" srcset="${imgSrc(w, "thumb")} 320w, ${imgSrc(w, "full")} 1280w" sizes="(max-width:600px) 46vw, 280px" alt="《${esc(w.title)}》" loading="lazy" decoding="async">`
-      : `<span class="ph">${esc(w.title[0])}</span>`;
-    return `<button class="item" data-w="${w.id}" style="--g:${periodVar(w.period)}">${img}<span class="cap"><b>${esc(w.title)}</b><small>${esc(w.artist)} · ${esc(w.yearText.replace(/^约/, ""))}</small></span></button>`;
-  }).join("");
+function show(i: number, scrollReel = true) {
+  cur = (i + list.length) % list.length;
+  const w = list[cur], p = periodOf(w.period), ok = hasImage(w);
+  const view = $("#lt-view");
+  view.style.setProperty("--g", periodVar(w.period));
+  view.innerHTML = `<figure class="lt-fig">${ok
+      ? `<button class="lt-img" aria-label="放大查看《${esc(w.title)}》"><img src="${imgSrc(w, "full")}" alt="《${esc(w.title)}》" decoding="async"></button>`
+      : `<div class="lt-none"><b>${esc(w.title[0])}</b><span>${w.copyright ? "仍在版权期，这里不放图片。" : "暂无授权图片。"}</span><a href="${wikiSearch(w.title)}" target="_blank" rel="noopener">到维基百科看图 ↗</a></div>`}</figure>
+    <div class="lt-card">
+      <button class="lt-period" data-p="${p.id}"><i></i>${esc(p.name)} · ${fmtYear(p.start)} 起</button>
+      <div class="who">${esc(w.artist)}</div>
+      <h3>《${esc(w.title)}》</h3>
+      <div class="meta"><span>${esc(w.yearText)}</span><span>${esc(w.medium)}</span><span>${esc(w.location)}</span></div>
+      <p class="why">${esc(w.summary)}</p>
+      ${creditLine(w)}
+      <div class="lt-nav">
+        <button class="btn" data-step="-1" aria-label="上一件">←</button>
+        <span class="lt-count">${cur + 1} / ${list.length}</span>
+        <button class="btn" data-step="1" aria-label="下一件">→</button>
+        <button class="btn lt-go" data-p="${p.id}">去${esc(p.short)}展厅</button>
+      </div>
+    </div>`;
+  if (!prefersReducedMotion()) { view.classList.remove("enter"); void view.offsetWidth; view.classList.add("enter"); }
+  // 缩略图带：高亮当前，并只滚动缩略图带本身
+  const reel = $("#lt-reel");
+  reel.querySelectorAll("button[aria-current]").forEach((b) => b.removeAttribute("aria-current"));
+  const b = reel.querySelector<HTMLElement>(`button[data-i="${cur}"]`);
+  if (b) {
+    b.setAttribute("aria-current", "true");
+    if (scrollReel) {
+      const left = b.offsetLeft - reel.clientWidth / 2 + b.offsetWidth / 2;
+      reel.scrollTo({ left, behavior: prefersReducedMotion() ? "auto" : "smooth" });
+    }
+  }
+  const pi = periodIndex(w.period);
+  document.querySelectorAll<HTMLElement>("#lt-map button").forEach((m) => m.toggleAttribute("aria-current", m.dataset.p === state.t.periods[pi].id));
+  // 预取下一张
+  const nx = list[(cur + 1) % list.length];
+  const src = nx && hasImage(nx) ? imgSrc(nx, "full") : null;
+  if (src) new Image().src = src;
 }
 
+let keysBound = false;
 export function initWall() {
-  filter = "all";
-  $("#wall-filters").onclick = (e) => {
+  list = allWorksOrdered();
+  renderReel();
+  $("#lt-map").onclick = (e) => {
     const b = (e.target as Element).closest<HTMLButtonElement>("button");
-    if (b) { filter = b.dataset.g!; render(); }
+    if (b) show(list.findIndex((w) => w.period === b.dataset.p));
   };
-  $("#wall-grid").onclick = (e) => {
-    const b = (e.target as Element).closest<HTMLButtonElement>(".item");
-    if (b) actions.openWork(b.dataset.w!, true, visible().map((w) => w.id));
+  $("#lt-reel").onclick = (e) => {
+    const b = (e.target as Element).closest<HTMLButtonElement>("button[data-i]");
+    if (b) show(+b.dataset.i!, false);
   };
-  render();
+  const view = $("#lt-view");
+  view.onclick = (e) => {
+    const el = e.target as Element;
+    const step = el.closest<HTMLElement>("[data-step]");
+    if (step) return show(cur + +step.dataset.step!);
+    if (el.closest(".lt-img")) return actions.openWork(list[cur].id, true, list.map((w) => w.id));
+    const go = el.closest<HTMLElement>(".lt-go,.lt-period");
+    if (go) actions.goPeriod(periodIndex(go.dataset.p!), true);
+  };
+  // 手机上在大图上左右滑动换一件
+  let x0 = 0, y0 = 0;
+  view.ontouchstart = (e) => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; };
+  view.ontouchend = (e) => {
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(cur + (dx < 0 ? 1 : -1));
+  };
+  if (!keysBound) {
+    keysBound = true;
+    document.addEventListener("keydown", (e) => {
+      if (!$("#lightbox").hidden || e.altKey || e.metaKey || e.ctrlKey) return;
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      const tag = ((e.target as Element).tagName || "").toLowerCase();
+      if (tag === "input" || tag === "select" || tag === "textarea") return;
+      const r = $("#collection").getBoundingClientRect();
+      if (r.top > innerHeight * 0.5 || r.bottom < innerHeight * 0.5) return;
+      show(cur + (e.key === "ArrowRight" ? 1 : -1));
+      e.preventDefault();
+    });
+  }
+  show(Math.min(cur, list.length - 1), false);
 }

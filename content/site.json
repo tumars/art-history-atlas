@@ -76,7 +76,7 @@
     "collection": {
       "numeral": "VI",
       "title": "藏品",
-      "deck": "全部作品，按阶段筛选，点开细看。"
+      "deck": "全部作品按年代排成一条胶片，一件一件翻看。"
     }
   },
   "repo": "https://github.com/tumars/art-history-atlas"
