@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
-// GitHub Pages 部署在 /<仓库名>/ 下，用相对路径最省事，任何子路径都能用
+// 两个发布站点共用此子路径，绝对路径兼容入口末尾没有斜杠的访问。
 export default defineConfig({
-  base: "./",
+  base: "/art-history-atlas/",
   build: { outDir: "dist", assetsInlineLimit: 0 },
 });

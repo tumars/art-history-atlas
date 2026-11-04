@@ -7,5 +7,6 @@
 - **GitHub Pages**：首次配置时，在 **Settings → Pages → Source** 选择 **GitHub Actions**。
 - **主站同步**：本仓库需配置 Actions secret `FERECORD_DEPLOY_KEY`，对应 ferecord 仓库的专用可写 deploy key。工作流只同步图谱目录，但密钥权限覆盖整个目标仓库，应只在受信任的 `main` 工作流中使用。
 - **版本核对**：产物中的 `source-version.txt` 记录源码提交。
+- **资源路径**：Vite 的 `base` 固定为 `/art-history-atlas/`，两个站点均使用该目录；入口 URL 有无末尾斜杠都能正确加载脚本、样式与图片。不要改回 `./`，主站不会自动为目录入口补斜杠。
 - **失败重试**：构建失败不会发布或同步；可在 Actions 手动重跑 `deploy.yml`。手动运行不受 push 路径过滤影响，主站同步仅在 `main` 执行。
 - **图片更新**：取图工作流也通过发布工作流同步图片。
