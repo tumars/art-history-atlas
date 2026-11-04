@@ -1,3 +1,5 @@
+import { artImage } from "../lib/art-image";
+import { observeImages } from "../lib/image-loading";
 import { $, esc, prefersReducedMotion } from "../lib/dom";
 import { state, actions, workById, imgSrc, whoHtml } from "../state";
 import { creditLine } from "./hall";
@@ -36,7 +38,7 @@ function imageFigure(id: string, index: number) {
   const src = imgSrc(w, "full");
   const details = active!.steps[step].details?.filter(d => d.work === id) ?? [];
   return `<figure class="reading-work">
-    <div class="reading-image" data-image="${id}">${src ? `<img src="${src}" alt="${esc(w.artist)}《${esc(w.title)}》" decoding="async">` : `<p>暂无图像，请阅读作品资料。</p>`}
+    <div class="reading-image" data-image="${id}">${src ? `${artImage(w, `${w.artist}《${w.title}》`)}` : `<p>暂无图像，请阅读作品资料。</p>`}
       ${src ? details.map((d, i) => `<button class="reading-spot" data-detail="${active!.steps[step].details!.indexOf(d)}" style="left:${d.x}%;top:${d.y}%" aria-label="放大观察：${esc(d.label)}">${i + 1}</button>`).join("") : ""}
     </div>
     <figcaption><span class="label-sm">${active!.steps[step].works.length > 1 ? `${index + 1} / ` : ""}${esc(w.yearText)}</span><h4>《${esc(w.title)}》</h4><div>${whoHtml(w)}</div>
@@ -64,6 +66,7 @@ function renderStep(focus = false) {
     <footer class="reading-footer"><div class="reading-navigation"><button class="btn" data-prev-step ${step === 0 ? "disabled" : ""}>← 上一步</button><span>${step + 1} / ${r.steps.length}</span>${last ? `<button class="btn" data-step="0">重新看一遍 ↺</button>` : `<button class="btn" data-next-step>继续看 →</button>`}</div>
       ${last ? `<div class="reading-next"><span class="label-sm">带着这个问题，去看下一件</span>${r.next.map(n => `<button data-next-work="${n.work}">${esc(n.label)} →</button>`).join("")}</div>` : ""}
       <details class="reading-sources"><summary>资料出处 · ${r.sources.length} 项</summary><ul>${r.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a></li>`).join("")}</ul><p>画面观察与比较由本站整理；有争议的解释不作为唯一答案。</p></details></footer>`;
+  observeImages(root);
   if (focus) {
     $("#reading-step-title").focus({ preventScroll: true });
     root.scrollIntoView({ block: "start", behavior: prefersReducedMotion() ? "auto" : "smooth" });

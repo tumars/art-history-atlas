@@ -45,17 +45,17 @@ export const groupVar = (groupId: string) => `var(--g${groupIndex(groupId) + 1})
 export const periodVar = (periodId: string) => groupVar(periodOf(periodId).group);
 
 export const hasImage = (w: Work) => !!state.credits[w.id];
-export const imgSrc = (w: Work, size: "full" | "thumb") => {
+export const imgSrc = (w: Work, size: "full" | "thumb" | "display") => {
   const c = state.credits[w.id];
   if (!c) return null;
-  return import.meta.env.BASE_URL + (size === "thumb" ? c.thumb : c.file);
+  return import.meta.env.BASE_URL + (size === "thumb" ? c.optimized?.thumb ?? c.thumb : size === "display" ? c.optimized?.display ?? c.file : c.file);
 };
 
 export const personById = (id: string): Person | undefined => state.t.people.find((p) => p.id === id);
 export const worksBy = (personId: string) => allWorksOrdered().filter((w) => w.by?.includes(personId));
-export const portraitSrc = (p: Person) => {
+export const portraitSrc = (p: Person, size: "thumb" | "display" = "display") => {
   const c = state.credits[`person:${p.id}`];
-  return c ? import.meta.env.BASE_URL + c.file : null;
+  return c ? import.meta.env.BASE_URL + (c.optimized?.[size] ?? (size === "thumb" ? c.thumb : c.file)) : null;
 };
 /** 作者名：挂了人物的作品显示为可点的链接，点了打开人物卡片 */
 export const whoHtml = (w: Work) => {

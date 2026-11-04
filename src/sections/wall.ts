@@ -1,3 +1,5 @@
+import { artImage } from "../lib/art-image";
+import { observeImages } from "../lib/image-loading";
 import { $, esc, wikiSearch, prefersReducedMotion } from "../lib/dom";
 import { fmtYear } from "../lib/format";
 import { whoHtml } from "../state";
@@ -35,7 +37,7 @@ function show(i: number, scrollReel = true) {
   const view = $("#lt-view");
   view.style.setProperty("--g", periodVar(w.period));
   view.innerHTML = `<figure class="lt-fig">${ok
-      ? `<button class="lt-img" aria-label="放大查看《${esc(w.title)}》"><img src="${imgSrc(w, "full")}" alt="《${esc(w.title)}》" decoding="async"></button>`
+      ? `<button class="lt-img" aria-label="放大查看《${esc(w.title)}》">${artImage(w)}</button>`
       : `<div class="lt-none"><b>${esc(w.title[0])}</b><span>${esc(w.noImageReason ?? "暂无对应图片。")}</span><a href="${wikiSearch(w.title)}" target="_blank" rel="noopener">中文维基百科 ↗</a></div>`}</figure>
     <div class="lt-card">
       <button class="lt-period" data-p="${p.id}"><i></i>${esc(p.name)} · ${fmtYear(p.start)} 起</button>
@@ -68,10 +70,7 @@ function show(i: number, scrollReel = true) {
   }
   const pi = periodIndex(w.period);
   document.querySelectorAll<HTMLElement>("#lt-map button").forEach((m) => m.toggleAttribute("aria-current", m.dataset.p === state.t.periods[pi].id));
-  // 预取下一张
-  const nx = list[(cur + 1) % list.length];
-  const src = nx && hasImage(nx) ? imgSrc(nx, "full") : null;
-  if (src) new Image().src = src;
+  observeImages(view);
 }
 
 let keysBound = false;

@@ -1,3 +1,4 @@
+import { loadProgressiveImage, clearProgressiveImage } from "../lib/image-loading";
 import { $, esc, wikiSearch, prefersReducedMotion } from "../lib/dom";
 import { whoHtml } from "../state";
 import { state, actions, workById, periodOf, imgSrc, hasImage } from "../state";
@@ -20,11 +21,13 @@ function show() {
   img.hidden = !ok;
   none.hidden = ok;
   if (ok) {
-    img.src = imgSrc(w, "full")!;
+    const size = state.credits[w.id].optimized;
+    if (size) { img.width = size.width; img.height = size.height; }
+    else { img.removeAttribute("width"); img.removeAttribute("height"); }
+    loadProgressiveImage(img, imgSrc(w, "thumb")!, imgSrc(w, "full")!);
     img.alt = `《${w.title}》`;
-    img.onerror = () => (img.hidden = true);
   } else {
-    img.removeAttribute("src");
+    clearProgressiveImage(img);
     const why = w.noImageReason ?? "暂时没有对应图片。";
     none.innerHTML = `<b>${esc(w.title[0])}</b><span>${esc(why)}</span><a href="${wikiSearch(w.title)}" target="_blank" rel="noopener">中文维基百科 ↗</a>`;
   }
@@ -59,7 +62,7 @@ export function openWork(id: string, go: boolean, ids?: string[]) {
 
 function close() {
   $("#lightbox").hidden = true;
-  $("#lb-img").removeAttribute("src");
+  clearProgressiveImage($<HTMLImageElement>("#lb-img"));
   document.body.style.overflow = "";
   (lastFocus as HTMLElement | null)?.focus?.();
 }

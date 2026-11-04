@@ -235,6 +235,7 @@ export interface ArtSchool {
 
 /** 取图脚本生成的署名信息，public/images/credits.json */
 export interface Credit {
+  optimized?: { thumb: string; display: string; width: number; height: number };
   file: string;
   thumb: string;
   title: string;

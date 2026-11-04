@@ -1,3 +1,5 @@
+import { artImage } from "../lib/art-image";
+import { observeImages } from "../lib/image-loading";
 import { $, esc, clamp, store, wikiSearch, prefersReducedMotion } from "../lib/dom";
 import { fmtYear, roman } from "../lib/format";
 import { whoHtml } from "../state";
@@ -34,7 +36,7 @@ function renderFeature() {
   const img = hasImage(w);
   const noImg = w.noImageReason ?? "暂无对应图片。";
   $("#feature").innerHTML = `
-    ${img ? `<button class="zoom" data-w="${w.id}" aria-label="放大查看《${esc(w.title)}》"><figure class="big"><img src="${imgSrc(w, "full")}" alt="《${esc(w.title)}》" decoding="async"></figure></button>` : ""}
+    ${img ? `<button class="zoom" data-w="${w.id}" aria-label="放大查看《${esc(w.title)}》"><figure class="big">${artImage(w)}</figure></button>` : ""}
     <div class="placard">
       <div class="who">${whoHtml(w)}</div>
       <h3>《${esc(w.title)}》</h3>
@@ -47,6 +49,7 @@ function renderFeature() {
     </div>
     <div class="strip" role="group" aria-label="本厅作品">${works.map((x, i) =>
       `<button data-k="${i}" aria-pressed="${i === state.feat}" title="${esc(x.title)}" aria-label="${esc(x.title)}">${hasImage(x) ? `<img src="${imgSrc(x, "thumb")}" alt="" loading="lazy">` : esc(x.title[0])}</button>`).join("")}</div>`;
+  observeImages($("#feature"));
 }
 
 function renderPeriod() {
@@ -71,6 +74,7 @@ function renderPeriod() {
     const ctx = diagramContext();
     box.innerHTML = `<div class="dhead"><span class="label-sm">图解</span><h3>${esc(p.diagram.title)}</h3></div><p class="diagram-observe">${esc(p.diagram.observe)}</p><div id="dg-body">${d.html(ctx)}</div><div class="diagram-conclusion"><span class="label-sm">从图中理解</span><p class="dcap">${esc(p.diagram.caption)}</p></div><div class="diagram-works"><span class="label-sm">回到作品</span>${p.diagram.works.map(w => `<button class="btn" data-diagram-work="${w.work}">${esc(w.label)} ↗</button>`).join("")}</div>${p.diagram.sources?.length ? `<details class="diagram-sources"><summary>资料出处</summary><ul>${p.diagram.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a></li>`).join("")}</ul></details>` : ""}`;
     d.init($("#dg-body"), ctx);
+    observeImages(box);
   } else box.innerHTML = "";
   const next = t.periods[state.cur + 1];
   $("#bridge").innerHTML = `${esc(p.bridge)}${next ? ` <b>下一间：${esc(next.name)}。</b>` : ""}`;

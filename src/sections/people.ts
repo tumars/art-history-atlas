@@ -214,7 +214,7 @@ function personCard(p: Person) {
   const context = (p.movement ?? []).filter(m => !affiliations.some(a => a.school.name === m));
   return `<div class="wc" style="--g:${periodVar(p.period)}">
     <div class="wc-head">
-      <div class="wc-face">${src ? `<img src="${src}" alt="${esc(p.name)}的肖像" decoding="async">` : `<span>${esc(p.name[0])}</span>`}</div>
+      <div class="wc-face">${src ? `<img src="${src}" alt="${esc(p.name)}的肖像" loading="lazy" decoding="async">` : `<span>${esc(p.name[0])}</span>`}</div>
       <div class="wc-id">
         <div class="wc-roles">${p.roles.map(esc).join(" · ")}</div>
         <h3>${esc(p.name)}</h3>

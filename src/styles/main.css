@@ -726,3 +726,8 @@ svg.dg.graph{min-width:900px;touch-action:pan-x pan-y}
 #diagram [role=button]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
 #bq-svg{min-width:0;max-width:560px;margin-inline:auto}
+
+/* 小图先呈现，解码完成后清晰化；不改变原作比例或局部放大。 */
+.progressive-image{height:auto;transition:filter .25s ease;background:var(--wall)}
+.progressive-image[data-quality="preview"]{filter:blur(.4px)}
+@media(prefers-reduced-motion:reduce){.progressive-image{transition:none}}

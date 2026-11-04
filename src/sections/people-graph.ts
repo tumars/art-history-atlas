@@ -1,3 +1,4 @@
+import { observeImages } from "../lib/image-loading";
 import { $, esc, store } from "../lib/dom";
 import { state, actions, personById, periodVar, groupVar } from "../state";
 import { readingForRelation } from "./readings";
@@ -174,13 +175,14 @@ function draw() {
     const detail = outside ? "跨派系人物" : role;
     const c = state.credits[`person:${p.id}`];
     const face = c
-      ? `<image href="${import.meta.env.BASE_URL + (c.thumb || c.file)}" x="${-R}" y="${-R}" width="${R * 2}" height="${R * 2}" preserveAspectRatio="xMidYMin slice" clip-path="url(#face-clip)"/>`
+      ? `<image data-image-src="${import.meta.env.BASE_URL + (c.optimized?.thumb ?? c.thumb)}" x="${-R}" y="${-R}" width="${R * 2}" height="${R * 2}" preserveAspectRatio="xMidYMin slice" clip-path="url(#face-clip)"/>`
       : `<text class="ini" text-anchor="middle" y="5">${esc(p.name[0])}</text>`;
     return `<g class="nd${outside ? " outside" : ""}" data-p="${p.id}" transform="translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})" style="--g:${periodVar(p.period)}" tabindex="0" role="button" aria-label="${esc(p.name)}，${fmtYear(p.born)} 年生${detail ? `，${esc(detail)}` : ""}">
       <circle r="${R + 2.5}" class="ring"/><circle r="${R}" class="bg"/>${face}
       <text y="${R + 14}" text-anchor="middle" class="nm">${esc(shortName(p.id))}</text>${detail ? `<text y="${R + 28}" text-anchor="middle" class="node-role">${esc(detail)}</text>` : ""}</g>`;
   }).join("")}</g>`;
   svg.innerHTML = s;
+  observeImages(svg);
   applyOff();
   paintGraph();
 }

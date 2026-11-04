@@ -1,3 +1,4 @@
+import { observeImages } from "../lib/image-loading";
 import { $, esc, clamp, lerp, prefersReducedMotion } from "../lib/dom";
 import { state, actions, periodIndex, periodVar, imgSrc } from "../state";
 import type { ContextBand, Year } from "../types";
@@ -138,7 +139,7 @@ export function renderTimeline() {
     const src = imgSrc(w, "thumb");
     s += `<g class="wk" data-w="${w.id}" tabindex="0" role="button" aria-label="${esc(w.title)}，${fmtY(w.year)}" style="opacity:${dim ? 0.25 : 1}"><title>《${esc(w.title)}》${esc(w.yearText)}</title>
       <clipPath id="wkc${k}"><rect x="${x0}" y="${yy}" width="${TS}" height="${TS}" rx="3"/></clipPath>
-      ${src ? `<image href="${src}" x="${x0}" y="${yy}" width="${TS}" height="${TS}" clip-path="url(#wkc${k})" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${x0}" y="${yy}" width="${TS}" height="${TS}" rx="3" class="f-wall"/><text x="${x}" y="${yy + TS / 2 + 4}" text-anchor="middle" class="t-s t-m">${esc(w.title[0])}</text>`}
+      ${src ? `<image data-image-src="${src}" x="${x0}" y="${yy}" width="${TS}" height="${TS}" clip-path="url(#wkc${k})" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${x0}" y="${yy}" width="${TS}" height="${TS}" rx="3" class="f-wall"/><text x="${x}" y="${yy + TS / 2 + 4}" text-anchor="middle" class="t-s t-m">${esc(w.title[0])}</text>`}
       <rect x="${x0}" y="${yy}" width="${TS}" height="${TS}" rx="3" style="fill:none;stroke:${c}" stroke-width="2"/></g>`;
   });
 
@@ -148,6 +149,7 @@ export function renderTimeline() {
   });
 
   svg.innerHTML = s;
+  observeImages(svg);
   renderEventCard();
   renderBandNote();
   const first = t.periods[0];

@@ -25,6 +25,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - run: npm ci
       - name: 下载图片
         env:
           FORCE: ${{ inputs.force }}
@@ -34,6 +35,8 @@ jobs:
           if [ "$FORCE" = "true" ]; then ARGS+=(--force); fi
           if [ -n "$ONLY" ]; then ARGS+=("--only=$ONLY"); fi
           node scripts/fetch-images.mjs "${ARGS[@]}" | tee fetch.log
+      - name: 生成浏览用小图与展示图
+        run: npm run optimize-images
       - name: 写入运行摘要
         run: |
           echo '## 取图结果' >> $GITHUB_STEP_SUMMARY

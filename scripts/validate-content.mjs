@@ -15,6 +15,14 @@ const sources = (list, where) => (list ?? []).forEach((s) => {
   if (/^https:\/\/[^/]*wikipedia\.org\//.test(s.url) && !s.url.startsWith("https://zh.wikipedia.org/")) err(`${where}: 百科资料应使用中文维基百科`);
 });
 const credits = read("public/images/credits.json");
+for (const [id, c] of Object.entries(credits)) {
+  if (!c.optimized) continue;
+  const o = c.optimized;
+  for (const path of [o.thumb, o.display]) {
+    if (!path || !existsSync(join(root, "public", path))) err(`优化图片 ${id}: 文件不存在 ${path}`);
+  }
+  if (!(o.width > 0 && o.height > 0)) err(`优化图片 ${id}: 缺少有效宽高`);
+}
 
 const site = read("content/site.json");
 need(site, ["title", "tagline", "axis", "traditions", "defaultTradition"], "site.json");

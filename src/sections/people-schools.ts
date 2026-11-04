@@ -48,7 +48,7 @@ export function initSchools(onPerson: (id: string) => void, onGraph: (id: string
   const matches = (s: ArtSchool) => normalized(`${s.name} ${s.en}`).includes(query)
     || [...s.members, ...(s.related ?? []).map(r => r.person)].some(personMatches);
   const personTile = (id: string, school: ArtSchool, role = "") => {
-    const p = personById(id)!, portrait = portraitSrc(p);
+    const p = personById(id)!, portrait = portraitSrc(p, "thumb");
     const other = schoolsFor(id).filter(a => a.school.id !== school.id);
     return `<li class="school-person${id === currentPerson ? " is-current" : ""}${query && personMatches(id) ? " is-match" : ""}" data-school-member="${id}">
       <button class="school-person-main" data-school-person="${id}" aria-label="查看${esc(p.name)}的人物资料" aria-pressed="${id === currentPerson}">

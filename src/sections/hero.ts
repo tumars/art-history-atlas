@@ -55,7 +55,7 @@ export function initHero() {
   let camera = space.length ? focusCamera(space[current], DEFAULT_DISTANCE, view) : { x: 0, y: 0, distance: DEFAULT_DISTANCE };
   let target = { ...camera };
   let dragging = false, suppressClick = false, moving = false, chooseAfterMove = false;
-  let paused = false, inView = true, frame = 0, previousTime = 0;
+  let paused = false, inView = false, frame = 0, previousTime = 0;
   let leanX = 0, leanY = 0;
   const select = (i: number, reveal = false) => {
     const item = space[i];
@@ -87,7 +87,10 @@ export function initHero() {
       const node = nodes[i];
       node.hidden = offscreen;
       if (offscreen) return;
-      if (!images[i].getAttribute("src")) images[i].src = images[i].dataset.src!;
+      if (!images[i].getAttribute("src")) {
+        images[i].fetchPriority = i === current ? "high" : "low";
+        images[i].src = images[i].dataset.src!;
+      }
       node.style.transform = `translate3d(${p.x}px,${p.y}px,0) translate(-50%,-50%) perspective(900px) rotateX(${leanY * p.scale}deg) rotateY(${leanX * p.scale}deg) rotateZ(${item.angle + leanX * .1}deg) scale(${p.scale})`;
       node.style.zIndex = String(Math.round(10000 - item.depth));
       node.style.opacity = String(p.opacity);
