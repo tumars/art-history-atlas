@@ -1,9 +1,11 @@
 import { $, esc, wikiSearch, prefersReducedMotion, store } from "../lib/dom";
+import { readingLinks, readingsForPerson } from "./readings";
 import { fmtYear } from "../lib/format";
 import { state, actions, personById, worksBy, portraitSrc, periodVar, periodOf, periodIndex, imgSrc, hasImage } from "../state";
-import type { Encounter, Person, Year } from "../types";
+import type { Encounter, Person, Work, Year } from "../types";
 import { VW, X, unX, AXIS_TICKS } from "./people-axis";
-import { renderGraph, highlightGraph } from "./people-graph";
+import { renderGraph, highlightGraph, filterGraph } from "./people-graph";
+import { initSchools, schoolsFor, highlightSchools, openSchool, selectedSchool } from "./people-schools";
 
 /* III 人物：生命线图 + 扫描线 + 相遇点 + 人物卡片 */
 
@@ -16,8 +18,8 @@ let svgH = 0;
 
 const nameW = (p: Person) => p.name.length * 12.5 + 6;
 const laneY = (id: string) => TOP + (lane.get(id) ?? 0) * ROW;
-const ageText = (p: Person) => `${p.approx ? "约" : ""}${p.died - p.born} 岁`;
-const lifeText = (p: Person) => `${p.approx ? "约" : ""}${fmtYear(p.born)} – ${fmtYear(p.died)}`;
+const ageText = (p: Person) => p.diedText ? "卒年未定，生命线终点仅供定位" : `${p.approx ? "约" : ""}${p.died - p.born} 岁`;
+const lifeText = (p: Person) => `${p.approx && !p.diedText ? "约" : ""}${fmtYear(p.born)} – ${p.diedText ?? fmtYear(p.died)}`;
 
 /** 按出生年排，名字和生命线都不重叠时共用一行 */
 function pack(people: Person[]) {
@@ -130,19 +132,20 @@ let tab: Tab = "overview";
 const thumbBtn = (id: string) => {
   const w = state.t.works.find((x) => x.id === id);
   if (!w) return "";
-  return `<button class="wk-thumb" data-w="${w.id}" aria-label="看大图《${esc(w.title)}》">${hasImage(w) ? `<img src="${imgSrc(w, "thumb")}" alt="" loading="lazy">` : `<span>${esc(w.title[0])}</span>`}</button>`;
+  return `<button class="wk-thumb" data-w="${w.id}" aria-label="查看《${esc(w.title)}》${hasImage(w) ? "图片与介绍" : "介绍"}">${hasImage(w) ? `<img src="${imgSrc(w, "thumb")}" alt="" loading="lazy">` : `<span>${esc(w.title[0])}</span>`}</button>`;
 };
 
 function tabOverview(p: Person) {
   const per = periodOf(p.period);
   const c = state.credits[`person:${p.id}`];
-  return `${p.legacy ? `<div class="wc-legacy"><span class="lb">评价</span><p>${esc(p.legacy)}</p></div>` : ""}
+  return `${readingLinks(readingsForPerson(p.id), "这个人的故事与作品")}${p.legacy ? `<div class="wc-legacy"><span class="lb">评价</span><p>${esc(p.legacy)}</p></div>` : ""}
     ${p.quote ? `<blockquote class="wc-quote"><p>${esc(p.quote.text)}</p><footer>${esc(p.quote.by)}${p.quote.source ? `，${esc(p.quote.source)}` : ""}</footer></blockquote>` : ""}
     ${p.points.length ? `<div class="wc-pts"><span class="lb">看点</span><ul>${p.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
     <div class="wc-act">
       <button class="btn" data-go="${per.id}">去${esc(per.short)}展厅</button>
-      <a class="btn" href="${wikiSearch(p.name)}" target="_blank" rel="noopener">维基百科 ↗</a>
+      <a class="btn" href="${wikiSearch(p.name)}" target="_blank" rel="noopener">中文维基百科 ↗</a>
     </div>
+    ${p.sources?.length ? `<div class="credit-line">人物资料：${p.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a>`).join(" · ")}</div>` : ""}
     ${c ? `<div class="credit-line">肖像：${esc(c.author)} · ${c.licenseUrl ? `<a href="${c.licenseUrl}" target="_blank" rel="noopener">${esc(c.license)}</a>` : esc(c.license)} · <a href="${c.source}" target="_blank" rel="noopener">维基共享资源</a></div>` : ""}`;
 }
 
@@ -164,9 +167,23 @@ function tabLife(p: Person) {
 function tabWorks(p: Person) {
   const listed = p.works ?? [];
   const extra = worksBy(p.id).filter((w) => !listed.some((x) => x.work === w.id));
+  const row = (w: Work, title = w.title, year = w.yearText, where = w.location) => {
+    const noImage = hasImage(w) ? "" : w.noImageReason;
+    return `<li>${thumbBtn(w.id)}<div>
+      <button class="wk-title" data-w="${w.id}">${esc(title)}</button>
+      <span>${esc(year)} · ${esc(where)}</span>
+      ${!w.by?.includes(p.id) ? `<span class="wk-author">创作者：${esc(w.artist)}</span>` : ""}
+      <p>${esc(w.summary)}</p>
+      ${noImage ? `<small class="wk-note">${esc(noImage)}</small>` : w.imageNote ? `<small class="wk-note">${esc(w.imageNote)}</small>` : ""}
+      ${w.source ? `<a class="wk-source" href="${esc(w.source)}" target="_blank" rel="noopener">作品资料 ↗</a>` : ""}
+    </div></li>`;
+  };
   const rows = [
-    ...listed.map((x) => `<li${x.work ? "" : ` class="nothumb"`}>${x.work ? thumbBtn(x.work) : ""}<div><b>${esc(x.title)}</b><span>${esc(x.year)}${x.where ? ` · ${esc(x.where)}` : ""}</span></div></li>`),
-    ...extra.map((w) => `<li>${thumbBtn(w.id)}<div><b>${esc(w.title)}</b><span>${esc(w.yearText)} · ${esc(w.location)}</span></div></li>`),
+    ...listed.map((x) => {
+      const w = state.t.works.find((w) => w.id === x.work);
+      return w ? row(w, x.title, x.year, x.where) : "";
+    }),
+    ...extra.map((w) => row(w)),
   ];
   return rows.length ? `<ol class="wc-wlist">${rows.join("")}</ol>` : `<p class="none">暂无作品资料。</p>`;
 }
@@ -178,7 +195,7 @@ function tabRel(p: Person) {
   const to = [...inv("teachers"), ...inv("influences")];
   const encs = t.encounters.map((e, i) => ({ e, i })).filter(({ e }) => e.people.includes(p.id));
   const empty = (l: string) => `<div class="wr-row"><span class="lb">${l}</span><span class="none">—</span></div>`;
-  return `<div class="wc-chain">
+  return `${readingLinks(readingsForPerson(p.id).filter(r => r.relations?.length), "关系背后的故事")}<div class="wc-chain">
       <div class="ch-col">${from.length ? relRow("师承与来源", from) : empty("师承与来源")}</div>
       <div class="ch-me"><span>${esc(p.name)}</span></div>
       <div class="ch-col">${to.length ? relRow("学生与后来者", to) : empty("学生与后来者")}</div>
@@ -193,6 +210,8 @@ const TAB_HTML: Record<Tab, (p: Person) => string> = { overview: tabOverview, li
 
 function personCard(p: Person) {
   const src = portraitSrc(p);
+  const affiliations = schoolsFor(p.id);
+  const context = (p.movement ?? []).filter(m => !affiliations.some(a => a.school.name === m));
   return `<div class="wc" style="--g:${periodVar(p.period)}">
     <div class="wc-head">
       <div class="wc-face">${src ? `<img src="${src}" alt="${esc(p.name)}的肖像" decoding="async">` : `<span>${esc(p.name[0])}</span>`}</div>
@@ -201,7 +220,8 @@ function personCard(p: Person) {
         <h3>${esc(p.name)}</h3>
         <div class="wc-en">${esc(p.en)}</div>
         <div class="wc-meta"><span>${lifeText(p)}</span><span>${ageText(p)}</span><span>${p.cities.map(esc).join("、")}</span></div>
-        ${p.movement?.length ? `<div class="wc-mv">${p.movement.map((m) => `<span>${esc(m)}</span>`).join("")}</div>` : ""}
+        ${affiliations.length ? `<div class="wc-school-label">艺术派系与关联</div><div class="wc-mv">${affiliations.map(a => `<button data-school="${a.school.id}">${esc(a.school.name)}${a.role ? ` · ${esc(a.role)}` : ""}</button>`).join("")}</div>` : ""}
+        ${context.length ? `<div class="wc-context">${context.map(esc).join(" · ")}</div>` : ""}
       </div>
       <p class="wc-line">${esc(p.line)}</p>
     </div>
@@ -227,6 +247,8 @@ function encCard(e: Encounter) {
     <div>
       <h3>${esc(e.title)}</h3>
       <p>${esc(e.text)}</p>
+      ${readingLinks(state.t.readings.filter(r => r.kind === "story" && r.relations?.some(pair => pair.every(id => e.people.includes(id)))), "继续看这段关系里的作品")}
+      ${e.sources?.length ? `<p class="credit-line">资料：${e.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a>`).join(" · ")}</p>` : ""}
       ${relRow("在场的人", e.people)}
     </div>
   </div>`;
@@ -240,6 +262,7 @@ function showCard() {
   paint();
   markLife();
   highlightGraph(sel.kind === "person" ? { kind: "person", id: sel.id } : { kind: "enc", people: t.encounters[sel.i].people });
+  if (sel.kind === "person") highlightSchools(sel.id, !$("#pv-graph-box").hidden);
   // 窄屏上图表横向滚动：把选中的人或相遇滚到可见范围中间
   const wrap = $("#life-svg").parentElement!;
   if (wrap.scrollWidth > wrap.clientWidth) {
@@ -263,12 +286,15 @@ function showEncounter(i: number) {
 }
 
 const VIEW_KEY = "aha.peopleView";
-function setView(v: "life" | "graph") {
+type PeopleView = "schools" | "life" | "graph";
+function setView(v: PeopleView) {
   store.set(VIEW_KEY, v);
+  $("#pv-schools").setAttribute("aria-pressed", String(v === "schools"));
   $("#pv-life").setAttribute("aria-pressed", String(v === "life"));
   $("#pv-graph").setAttribute("aria-pressed", String(v === "graph"));
   $("#pv-life-box").hidden = v !== "life";
   $("#pv-graph-box").hidden = v !== "graph";
+  $("#pv-schools-box").hidden = v !== "schools";
 }
 
 let bound = false;
@@ -278,10 +304,19 @@ export function initPeople() {
   if (!t.people.length) return;
   if (!personById(sel.kind === "person" ? sel.id : "")) sel = { kind: "person", id: t.people[0].id };
   render();
-  renderGraph((id) => showPerson(id, false));
-  setView(store.get<"life" | "graph">(VIEW_KEY, "life") === "graph" ? "graph" : "life");
+  renderGraph((id) => showPerson(id, false), id => { if (id) openSchool(id); });
+  initSchools(id => {
+    showPerson(id, false);
+    $("#who-card").scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "nearest" });
+  }, id => { filterGraph(id); setView("graph"); });
+  const saved = store.get<PeopleView>(VIEW_KEY, "schools");
+  setView(saved === "life" || saved === "graph" ? saved : "schools");
+  $("#pv-schools").onclick = () => setView("schools");
   $("#pv-life").onclick = () => setView("life");
-  $("#pv-graph").onclick = () => setView("graph");
+  $("#pv-graph").onclick = () => {
+    if (!$("#pv-schools-box").hidden) filterGraph(selectedSchool());
+    setView("graph");
+  };
   const svg = $("#life-svg") as unknown as SVGSVGElement;
   const yearAt = (e: PointerEvent) => {
     const pt = svg.createSVGPoint();
@@ -303,6 +338,12 @@ export function initPeople() {
   svg.onkeydown = (e) => { if ((e.key === "Enter" || e.key === " ") && pick(e.target as Element)) e.preventDefault(); };
   $("#who-card").onclick = (e) => {
     const el = e.target as Element;
+    const school = el.closest<HTMLElement>("[data-school]");
+    if (school) {
+      setView("schools"); openSchool(school.dataset.school!);
+      $("#pv-schools-box").scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+      return;
+    }
     const tb = el.closest<HTMLElement>("[data-tab]");
     if (tb && sel.kind === "person") {
       tab = tb.dataset.tab as Tab;
@@ -312,7 +353,11 @@ export function initPeople() {
       return;
     }
     const w = el.closest<HTMLElement>("[data-w]");
-    if (w && sel.kind === "person") return actions.openWork(w.dataset.w!, true, worksBy(sel.id).map((x) => x.id));
+    if (w && sel.kind === "person") {
+      const p = personById(sel.id)!;
+      const ids = [...new Set([...(p.works ?? []).map((x) => x.work), ...worksBy(p.id).map((x) => x.id)])];
+      return actions.openWork(w.dataset.w!, true, ids);
+    }
     const en = el.closest<HTMLElement>("[data-e]");
     if (en) return showEncounter(+en.dataset.e!);
     const go = el.closest<HTMLElement>("[data-go]");

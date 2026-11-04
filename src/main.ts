@@ -1,4 +1,5 @@
 import "./styles/main.css";
+import "./styles/readings.css";
 import { $, esc, store } from "./lib/dom";
 import { SITE, loadTradition, loadCredits } from "./content";
 import { state, actions } from "./state";
@@ -13,6 +14,7 @@ import { initHero } from "./sections/hero";
 import { initPeople, showPerson } from "./sections/people";
 import { cnNum } from "./lib/format";
 import type { SectionId } from "./types";
+import { initReadings, openReading } from "./sections/readings";
 
 const TRAD_KEY = "aha.tradition";
 
@@ -30,7 +32,7 @@ function applyGroupColors() {
   el.textContent = `:root{${light}}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){${dark}}}:root[data-theme="dark"]{${dark}}`;
 }
 
-const SECTION_IDS: SectionId[] = ["chronology", "hall", "people", "pendulum", "pairs", "sizes", "collection"];
+const SECTION_IDS: SectionId[] = ["chronology", "hall", "people", "pendulum", "pairs", "readings", "sizes", "collection"];
 
 function renderChrome() {
   const t = state.t;
@@ -51,13 +53,13 @@ function renderChrome() {
   sw.hidden = SITE.traditions.length < 2;
   sw.innerHTML = SITE.traditions.map((id) => `<option value="${id}" ${id === t.meta.id ? "selected" : ""}>${esc(loadTradition(id).meta.name)}</option>`).join("");
   const reading = SITE.recommendedReading.map((b) => `${esc(b.title)}（${esc(b.author)}）`).join("、");
-  const missing = t.works.filter((w) => !w.copyright && !state.credits[w.id]).length;
+  const missing = t.works.filter((w) => !state.credits[w.id]).length;
   $("#footer").innerHTML = `<div class="foot-in">
     <div><div class="foot-brand">${esc(SITE.title)}<em>${esc(SITE.titleEn)}</em></div>
       <p style="margin-top:12px">${esc(t.meta.description)}</p>
-      <p>年代多为约数。图解是示意，不是原作。</p></div>
+      <p>年代多为约数。图解含原理示意与原作分析标注。</p></div>
     <div><h4>关于图片</h4>
-      <p>图片来自维基共享资源，只用公有领域和 CC 授权的文件，作者与协议写在每张图下面。还在版权期的作品不放图。${missing ? `另有 ${missing} 件暂缺。` : ""}</p></div>
+      <p>图片来自维基共享资源、维基百科与馆藏网站，作者、来源及权利说明写在作品下方。${missing ? `仍有 ${missing} 件暂无对应图像，具体原因见作品说明。` : ""}</p></div>
     <div><h4>开源</h4>
       <p>代码 MIT，文字 CC BY-SA 4.0。有错误或想补一间展厅，<a href="${SITE.repo}" target="_blank" rel="noopener">来 GitHub</a>。</p>
       <h4 style="margin-top:14px">延伸阅读</h4><p>${reading}</p></div>
@@ -83,7 +85,6 @@ function initTheme() {
     cur = THEMES[(THEMES.indexOf(cur) + 1) % THEMES.length];
     store.set(THEME_KEY, cur);
     apply();
-    initHero(); // 画框光晕颜色随主题
   };
   apply();
 }
@@ -123,6 +124,7 @@ function boot(traditionId: string) {
   initSizes();
   initWall();
   initPeople();
+  initReadings();
   initHero();
 }
 
@@ -132,6 +134,7 @@ async function main() {
   actions.selectEvent = selectEvent;
   actions.openWork = openWork;
   actions.showPerson = showPerson;
+  actions.openReading = openReading;
   actions.refreshPendulum = renderPendulum;
   state.site = SITE;
   initLightbox();

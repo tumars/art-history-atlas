@@ -2,7 +2,8 @@ import { $, esc, wikiSearch, prefersReducedMotion } from "../lib/dom";
 import { fmtYear } from "../lib/format";
 import { whoHtml } from "../state";
 import { state, actions, allWorksOrdered, periodVar, periodOf, periodIndex, imgSrc, hasImage } from "../state";
-import { creditLine } from "./hall";
+import { creditLine, workSources } from "./hall";
+import { readingLinks, readingsForWork } from "./readings";
 import type { Work } from "../types";
 
 /* VI 藏品 · 看片台：上方一件大图 + 说明牌，下方一条按时期分段的缩略图带 */
@@ -35,14 +36,17 @@ function show(i: number, scrollReel = true) {
   view.style.setProperty("--g", periodVar(w.period));
   view.innerHTML = `<figure class="lt-fig">${ok
       ? `<button class="lt-img" aria-label="放大查看《${esc(w.title)}》"><img src="${imgSrc(w, "full")}" alt="《${esc(w.title)}》" decoding="async"></button>`
-      : `<div class="lt-none"><b>${esc(w.title[0])}</b><span>${w.copyright ? "仍在版权期，这里不放图片。" : "暂无授权图片。"}</span><a href="${wikiSearch(w.title)}" target="_blank" rel="noopener">到维基百科看图 ↗</a></div>`}</figure>
+      : `<div class="lt-none"><b>${esc(w.title[0])}</b><span>${esc(w.noImageReason ?? "暂无对应图片。")}</span><a href="${wikiSearch(w.title)}" target="_blank" rel="noopener">中文维基百科 ↗</a></div>`}</figure>
     <div class="lt-card">
       <button class="lt-period" data-p="${p.id}"><i></i>${esc(p.name)} · ${fmtYear(p.start)} 起</button>
       <div class="who">${whoHtml(w)}</div>
       <h3>《${esc(w.title)}》</h3>
       <div class="meta"><span>${esc(w.yearText)}</span><span>${esc(w.medium)}</span><span>${esc(w.location)}</span></div>
       <p class="why">${esc(w.summary)}</p>
+      ${readingLinks(readingsForWork(w.id), "从这件作品出发")}
+      ${w.source ? `<a class="look" href="${esc(w.source)}" target="_blank" rel="noopener">作品资料 ↗</a>` : ""}
       ${creditLine(w)}
+      ${workSources(w)}
       <div class="lt-nav">
         <button class="btn" data-step="-1" aria-label="上一件">←</button>
         <span class="lt-count">${cur + 1} / ${list.length}</span>

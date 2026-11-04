@@ -1,5 +1,6 @@
 import { $, esc, store } from "../lib/dom";
-import { state, personById, periodVar } from "../state";
+import { state, actions, personById, periodVar, groupVar } from "../state";
+import { readingForRelation } from "./readings";
 import { VW } from "./people-axis";
 import { fmtYear } from "../lib/format";
 
@@ -9,7 +10,7 @@ export type RelKind = "teacher" | "influence" | "rival" | "patron" | "met";
 interface Edge { a: string; b: string; kind: RelKind; note?: string }
 interface Node { id: string; tx: number; x: number; y: number; vx: number; vy: number }
 
-const H = 640;
+let H = 640, W = VW;
 const TOP = 40;
 const R = 15;
 export const KINDS: { kind: RelKind; label: string; verb: string }[] = [
@@ -22,11 +23,15 @@ export const KINDS: { kind: RelKind; label: string; verb: string }[] = [
 const OFF_KEY = "aha.graphOff";
 let off = new Set<RelKind>();
 let edges: Edge[] = [];
+let allEdges: Edge[] = [];
+let schoolId = "", showOutside = false;
+let core: Set<string> | null = null;
 let nodes = new Map<string, Node>();
 let onPick: (id: string) => void = () => {};
 let focus: Set<string> | null = null; // 当前突出的人
 let focusPair: ((e: Edge) => boolean) | null = null;
 let hoverId: string | null = null;
+let selectedId: string | null = null;
 let rankX = (_i: number) => 0;
 let ticks: { c: number; i: number }[] = [];
 
@@ -60,12 +65,20 @@ function buildEdges() {
 /** 固定初值的简单力导向：x 拉向出生年，y 由连线吸引、节点排斥决定 */
 function layout() {
   const t = state.t;
-  const list = [...t.people].sort((a, b) => a.born - b.born);
+  const visible = core ? new Set(core) : new Set(t.people.map(p => p.id));
+  if (core && showOutside) allEdges.forEach(e => {
+    if (core!.has(e.a) || core!.has(e.b)) { visible.add(e.a); visible.add(e.b); }
+  });
+  edges = allEdges.filter(e => visible.has(e.a) && visible.has(e.b)
+    && (!core || core.has(e.a) || core.has(e.b)));
+  const list = t.people.filter(p => visible.has(p.id)).sort((a, b) => a.born - b.born);
+  W = core ? Math.max(340, Math.min(VW, list.length * 115)) : VW;
+  H = core ? Math.max(320, Math.min(520, list.length * 35)) : 640;
   // 按出生先后等距排开：保持左右顺序，又不让 19 世纪挤成一团
-  const L = 40, span = VW - L * 2;
-  rankX = (i: number) => L + (i / Math.max(1, list.length - 1)) * span;
+  const L = core ? 50 : 40, span = W - L * 2;
+  rankX = (i: number) => list.length === 1 ? W / 2 : L + (i / Math.max(1, list.length - 1)) * span;
   ticks = [];
-  for (const c of [-500, 1000, 1300, 1400, 1500, 1600, 1700, 1800, 1900]) {
+  for (const c of core ? [] : [-500, 1000, 1300, 1400, 1500, 1600, 1700, 1800, 1900]) {
     const i = list.findIndex((p) => p.born >= c);
     if (i >= 0 && !ticks.some((t) => Math.abs(rankX(t.i) - rankX(i)) < 34)) ticks.push({ c, i });
   }
@@ -98,7 +111,8 @@ function layout() {
         if (d2 < 1) { dy = 1; d2 = 1; }
         const d = Math.sqrt(d2);
         let f = 1500 / d2;
-        if (d < 54) f += (54 - d) * 0.3; // 不重叠（含名字）
+        const gap = core ? 68 : 54;
+        if (d < gap) f += (gap - d) * 0.3; // 不重叠（筛选时给身份文字留空间）
         const fx = (dx / d) * f, fy = (dy / d) * f;
         a.vx -= fx * 0.4; b.vx += fx * 0.4;
         a.vy -= fy; b.vy += fy;
@@ -106,8 +120,9 @@ function layout() {
     for (const n of arr) {
       n.vx *= 0.55; n.vy *= 0.55;
       n.x += n.vx * cool; n.y += n.vy * cool;
-      n.x = Math.min(VW - 24, Math.max(24, n.x));
-      n.y = Math.min(H - 30, Math.max(TOP + 18, n.y));
+      const pad = core ? 40 : 24;
+      n.x = Math.min(W - pad, Math.max(pad, n.x));
+      n.y = Math.min(H - (core ? 46 : 30), Math.max(TOP + 18, n.y));
     }
   }
 }
@@ -133,30 +148,37 @@ function shortName(id: string) {
 
 function draw() {
   const svg = $("#graph-svg");
-  svg.setAttribute("viewBox", `0 0 ${VW} ${H}`);
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.style.minWidth = core ? `${W}px` : "";
+  svg.style.maxWidth = core ? `${W}px` : "";
   let s = `<defs>${(["teacher", "influence", "patron"] as RelKind[]).map((k) => `<marker id="ar-${k}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8z" class="ar ar-${k}"/></marker>`).join("")}
     <clipPath id="face-clip"><circle r="${R}"/></clipPath></defs>`;
   for (const { c, i } of ticks) {
     const x = rankX(i) - 8;
     s += `<line x1="${x}" x2="${x}" y1="${TOP - 12}" y2="${H}" class="grid"/><text x="${x + 3}" y="${TOP - 16}" class="t-s t-m">${fmtYear(c)}</text>`;
   }
-  s += `<text x="${VW - 4}" y="${TOP - 32}" text-anchor="end" class="t-s t-m">按出生先后从左往右排，刻度是该年以后出生的第一人</text>`;
+  s += `<text x="${W - 4}" y="${TOP - 20}" text-anchor="end" class="t-s t-m">${core ? "按出生先后排列 · 点人物查看资料" : "按出生先后从左往右排，刻度是该年以后出生的第一人"}</text>`;
   s += `<g class="g-edges">${edges.map((e, i) => {
     const a = nodes.get(e.a)!, b = nodes.get(e.b)!;
     const k = KINDS.find((x) => x.kind === e.kind)!;
     const title = e.kind === "met" ? `${personById(e.a)!.name} 与 ${personById(e.b)!.name}：${e.note}` : `${personById(e.a)!.name} ${k.verb} ${personById(e.b)!.name}`;
     const arrow = e.kind === "teacher" || e.kind === "influence" || e.kind === "patron" ? ` marker-end="url(#ar-${e.kind})"` : "";
-    return `<path d="${curve(a, b)}" class="ed ed-${e.kind}" data-i="${i}"${arrow}><title>${esc(title)}</title></path>`;
+    const story = readingForRelation(e.a, e.b);
+    return `<path d="${curve(a, b)}" class="ed ed-${e.kind}" data-i="${i}"${arrow}><title>${esc(title)}</title></path>${story ? `<path d="${curve(a, b)}" class="ed-story" data-i="${i}" data-reading="${story.id}" tabindex="0" role="button" aria-label="${esc(title)}，阅读故事：${esc(story.title)}"><title>${esc(story.title)} · 点击阅读</title></path>` : ""}`;
   }).join("")}</g>`;
   s += `<g class="g-nodes">${[...nodes.values()].map((n) => {
     const p = personById(n.id)!;
+    const school = state.t.schools.find(s => s.id === schoolId);
+    const outside = !!core && !core.has(p.id);
+    const role = school?.related?.find(r => r.person === p.id)?.role;
+    const detail = outside ? "跨派系人物" : role;
     const c = state.credits[`person:${p.id}`];
     const face = c
       ? `<image href="${import.meta.env.BASE_URL + (c.thumb || c.file)}" x="${-R}" y="${-R}" width="${R * 2}" height="${R * 2}" preserveAspectRatio="xMidYMin slice" clip-path="url(#face-clip)"/>`
       : `<text class="ini" text-anchor="middle" y="5">${esc(p.name[0])}</text>`;
-    return `<g class="nd" data-p="${p.id}" transform="translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})" style="--g:${periodVar(p.period)}" tabindex="0" role="button" aria-label="${esc(p.name)}，${fmtYear(p.born)} 年生">
+    return `<g class="nd${outside ? " outside" : ""}" data-p="${p.id}" transform="translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})" style="--g:${periodVar(p.period)}" tabindex="0" role="button" aria-label="${esc(p.name)}，${fmtYear(p.born)} 年生${detail ? `，${esc(detail)}` : ""}">
       <circle r="${R + 2.5}" class="ring"/><circle r="${R}" class="bg"/>${face}
-      <text y="${R + 14}" text-anchor="middle" class="nm">${esc(shortName(p.id))}</text></g>`;
+      <text y="${R + 14}" text-anchor="middle" class="nm">${esc(shortName(p.id))}</text>${detail ? `<text y="${R + 28}" text-anchor="middle" class="node-role">${esc(detail)}</text>` : ""}</g>`;
   }).join("")}</g>`;
   svg.innerHTML = s;
   applyOff();
@@ -169,7 +191,7 @@ function renderLegend() {
 }
 
 function applyOff() {
-  document.querySelectorAll<SVGPathElement>("#graph-svg .ed").forEach((el) => {
+  document.querySelectorAll<SVGPathElement>("#graph-svg .ed,#graph-svg .ed-story").forEach((el) => {
     const e = edges[+el.dataset.i!];
     el.style.display = off.has(e.kind) ? "none" : "";
   });
@@ -178,6 +200,7 @@ function applyOff() {
 function paintGraph() {
   const id = hoverId;
   let set = focus, pairOk = focusPair;
+  if (set && ![...set].some(pid => nodes.has(pid))) { set = null; pairOk = null; }
   if (id) {
     set = new Set([id]);
     edges.forEach((e) => { if (!off.has(e.kind) && (e.a === id || e.b === id)) { set!.add(e.a); set!.add(e.b); } });
@@ -186,9 +209,9 @@ function paintGraph() {
   document.querySelectorAll<SVGGElement>("#graph-svg .nd").forEach((g) => {
     const pid = g.dataset.p!;
     g.classList.toggle("dim", !!set && !set.has(pid));
-    g.classList.toggle("on", (id ?? (focus && focus.size === 1 ? [...focus][0] : null)) === pid || (!id && !!focusPair && !!set?.has(pid)));
+    g.classList.toggle("on", (id ?? selectedId) === pid || (!id && !selectedId && !!focusPair && !!set?.has(pid)));
   });
-  document.querySelectorAll<SVGPathElement>("#graph-svg .ed").forEach((el) => {
+  document.querySelectorAll<SVGPathElement>("#graph-svg .ed,#graph-svg .ed-story").forEach((el) => {
     const e = edges[+el.dataset.i!];
     const hit = !!pairOk && pairOk(e);
     el.classList.toggle("hot", hit);
@@ -198,7 +221,7 @@ function paintGraph() {
 
 /** people.ts 调用：选中人或相遇时同步突出 */
 export function highlightGraph(sel: { kind: "person"; id: string } | { kind: "enc"; people: string[] }) {
-  if (!edges.length) return;
+  selectedId = sel.kind === "person" ? sel.id : null;
   if (sel.kind === "person") {
     const id = sel.id;
     focus = new Set([id]);
@@ -212,13 +235,41 @@ export function highlightGraph(sel: { kind: "person"; id: string } | { kind: "en
   paintGraph();
 }
 
-export function renderGraph(pick: (id: string) => void) {
-  onPick = pick;
-  off = new Set(store.get<RelKind[]>(OFF_KEY, []));
-  edges = buildEdges();
+/** 派系筛选只改变图的范围，不改变共用人物资料卡。 */
+export function filterGraph(id: string) {
+  schoolId = id;
+  const school = state.t.schools.find(s => s.id === id);
+  core = school ? new Set([...school.members, ...(school.related ?? []).map(r => r.person)]) : null;
+  focus = null; focusPair = null; hoverId = null; selectedId = null;
   layout();
   draw();
   renderLegend();
+  $<HTMLSelectElement>("#graph-school").value = school?.id ?? "";
+  $<HTMLInputElement>("#graph-outside").disabled = !school;
+  renderContext();
+}
+
+function renderContext() {
+  const school = state.t.schools.find(s => s.id === schoolId);
+  const context = $("#graph-context");
+  context.style.setProperty("--g", school ? groupVar(school.group) : "var(--accent)");
+  context.innerHTML = school
+    ? `<h3>${esc(school.name)} <small>${esc(school.span)}</small></h3><p>${esc(school.summary)}</p><span>${school.members.length} 位艺术家 · ${school.related?.length ?? 0} 位相关人物${showOutside ? ` · ${nodes.size - core!.size} 位跨派系人物` : ""} · ${edges.filter(e => !off.has(e.kind)).length} 条已显示关系</span>`
+    : `<h3>全部人物</h3><span>${nodes.size} 位人物 · ${edges.filter(e => !off.has(e.kind)).length} 条已显示关系</span>`;
+  if (!edges.some(e => !off.has(e.kind))) context.innerHTML += `<p class="graph-empty" role="status">${edges.length ? "当前关系类型均已关闭，可点击下方图例开启。" : "当前范围暂无收录的关系，可勾选跨派系关系或切换派系。"}</p>`;
+}
+
+export function renderGraph(pick: (id: string) => void, onSchool: (id: string) => void) {
+  onPick = pick;
+  off = new Set(store.get<RelKind[]>(OFF_KEY, []));
+  allEdges = buildEdges();
+  const select = $<HTMLSelectElement>("#graph-school");
+  select.innerHTML = `<option value="">全部人物</option>` + state.t.meta.groups.map(g => `<optgroup label="${esc(g.name)}">${state.t.schools.filter(s => s.group === g.id).map(s => `<option value="${s.id}">${esc(s.name)}</option>`).join("")}</optgroup>`).join("");
+  filterGraph("");
+  select.onchange = () => { filterGraph(select.value); onSchool(select.value); };
+  const outside = $<HTMLInputElement>("#graph-outside");
+  outside.checked = showOutside;
+  outside.onchange = () => { showOutside = outside.checked; filterGraph(schoolId); };
   const svg = $("#graph-svg");
   const nodeOf = (el: EventTarget | null) => (el as Element | null)?.closest?.<SVGGElement>(".nd") ?? null;
   svg.onpointerover = (e) => { const g = nodeOf(e.target); hoverId = g ? g.dataset.p! : null; paintGraph(); };
@@ -229,7 +280,12 @@ export function renderGraph(pick: (id: string) => void) {
     svg.addEventListener("focusout", () => { hoverId = null; paintGraph(); });
   }
   svg.onclick = (e) => { const g = nodeOf(e.target); if (g) onPick(g.dataset.p!); };
-  svg.onkeydown = (e) => { const g = nodeOf(e.target); if (g && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); onPick(g.dataset.p!); } };
+  svg.onkeydown = (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const story = (e.target as Element).closest<SVGElement>("[data-reading]");
+    if (story) { e.preventDefault(); actions.openReading(story.dataset.reading!); return; }
+    const g = nodeOf(e.target); if (g) { e.preventDefault(); onPick(g.dataset.p!); }
+  };
   $("#graph-legend").onclick = (e) => {
     const b = (e.target as Element).closest<HTMLButtonElement>("button[data-k]");
     if (!b) return;
@@ -238,6 +294,8 @@ export function renderGraph(pick: (id: string) => void) {
     store.set(OFF_KEY, [...off]);
     b.setAttribute("aria-pressed", String(!off.has(k)));
     applyOff();
-    paintGraph();
+    if (selectedId) highlightGraph({ kind: "person", id: selectedId });
+    else paintGraph();
+    renderContext();
   };
 }

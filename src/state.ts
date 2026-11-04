@@ -23,9 +23,10 @@ export const actions = {
   refreshPendulum: () => {},
   /** 打开人物卡片并滚到人物区 */
   showPerson: (_id: string, _scroll?: boolean) => {},
+  openReading: (_id: string) => {},
 };
 
-/** 长廊顺序：按时期顺序，同一时期内按年份 */
+/** 作品顺序：按时期顺序，同一时期内按年份 */
 export const periodsOrderedWorks = () =>
   state.t.periods.flatMap((p) => state.t.works.filter((w) => w.period === p.id).sort((a, b) => a.year - b.year));
 
@@ -36,17 +37,17 @@ export const worksOf = (periodId: string) => state.t.works.filter((w) => w.perio
 
 /** 作品按时期顺序、再按年份排列 */
 export const allWorksOrdered = () =>
-  state.t.periods.flatMap((p) => worksOf(p.id));
+  periodsOrderedWorks();
 
 const groupIndex = (groupId: string) => state.t.meta.groups.findIndex((g) => g.id === groupId);
 /** 大阶段的颜色变量：--g1 … --gN，由 applyGroupColors 写入 */
 export const groupVar = (groupId: string) => `var(--g${groupIndex(groupId) + 1})`;
 export const periodVar = (periodId: string) => groupVar(periodOf(periodId).group);
 
-export const hasImage = (w: Work) => !w.copyright && !!state.credits[w.id];
+export const hasImage = (w: Work) => !!state.credits[w.id];
 export const imgSrc = (w: Work, size: "full" | "thumb") => {
   const c = state.credits[w.id];
-  if (!c || w.copyright) return null;
+  if (!c) return null;
   return import.meta.env.BASE_URL + (size === "thumb" ? c.thumb : c.file);
 };
 

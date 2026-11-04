@@ -2,7 +2,7 @@
   "title": "三万年长廊",
   "titleEn": "The Long Gallery",
   "tagline": "从拉斯科洞窟里的野牛，到纽约展厅里的小便池。",
-  "intro": "十八个时期，六十多件作品，按年代挂成一条长廊。",
+  "intro": "十八个时期的作品，像灯火一样浮在夜色里。",
   "axis": {
     "start": -30000,
     "end": 1970,
@@ -45,6 +45,18 @@
     {
       "title": "《大话西方艺术史》",
       "author": "意公子"
+    },
+    {
+      "title": "《写给大家的西方美术史》",
+      "author": "蒋勋"
+    },
+    {
+      "title": "《小顾聊绘画》系列",
+      "author": "顾爷"
+    },
+    {
+      "title": "《现代艺术150年：一个未完成的故事》",
+      "author": "威尔·贡培兹"
     }
   ],
   "sections": {
@@ -56,12 +68,12 @@
     "hall": {
       "numeral": "II",
       "title": "展厅",
-      "deck": "每间一个问题，配一张能动手的图。"
+      "deck": "从一个问题出发，走近作品与它的时代。"
     },
     "people": {
       "numeral": "III",
       "title": "人物",
-      "deck": "谁和谁活在同一个年代，又在哪里碰过面。"
+      "deck": "按艺术派系认识人物，也在时间与关系中看见他们的交汇。"
     },
     "pendulum": {
       "numeral": "IV",
@@ -73,13 +85,18 @@
       "title": "并置",
       "deck": "隔着几十年或几万年的两件作品，摆在一起看。"
     },
-    "sizes": {
+    "readings": {
       "numeral": "VI",
+      "title": "三分钟看画",
+      "deck": "从一个问题出发，留意画里的细节，再听它的故事。"
+    },
+    "sizes": {
+      "numeral": "VII",
       "title": "尺度",
       "deck": "画册里一样大的画，挂到墙上可能差出几十倍。"
     },
     "collection": {
-      "numeral": "VII",
+      "numeral": "VIII",
       "title": "藏品",
       "deck": "全部作品，按年代排开。"
     }

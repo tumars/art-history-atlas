@@ -18,7 +18,7 @@ export interface Site {
   repo: string;
 }
 
-export type SectionId = "chronology" | "hall" | "people" | "pendulum" | "pairs" | "sizes" | "collection";
+export type SectionId = "chronology" | "hall" | "people" | "pendulum" | "pairs" | "readings" | "sizes" | "collection";
 
 /** 大阶段（如“文艺复兴”），决定时期和作品的颜色 */
 export interface Group {
@@ -33,8 +33,8 @@ export interface TraditionMeta {
   name: string;
   description: string;
   groups: Group[];
-  /** 艺术中心接力：时期 id + 地点 */
-  relay: { period: string; place: string }[];
+  /** 艺术中心接力：主线站点及同时发展的地点，经纬度仅定位，不表示当时边界。 */
+  relay: { period: string; place: string; era: string; note: string; points: { name: string; lon: number; lat: number }[] }[];
   /** 时间全景里显示的背景行，对应 content/context/<id>.json */
   contextBands: string[];
   pendulum?: { title: string; low: [string, string]; high: [string, string]; note: string };
@@ -52,11 +52,12 @@ export interface Period {
   /** -2（理性/秩序）到 +2（情感/激情），用于钟摆图 */
   mood: number;
   thesis: string;
+  question?: string;
   keywords: string[];
   points: string[];
   bridge: string;
   /** 交互图解：id 对应 src/diagrams 里注册的实现 */
-  diagram?: { id: string; title: string; caption: string };
+  diagram?: { id: string; title: string; observe: string; caption: string; works: { work: string; label: string }[]; sources?: { label: string; url: string }[] };
 }
 
 export interface Work {
@@ -70,10 +71,20 @@ export interface Work {
   location: string;
   summary: string;
   period: string;
-  /** 维基共享资源上的文件名，取图脚本据此下载并记录授权 */
-  image?: { commons: string };
-  /** 作品仍在版权期时写明原因，页面不放图 */
+  /** 图片来源：Commons / 英文维基的文件名，或已核对的馆藏图片地址及署名。百科阅读链接另存于 source。 */
+  image?: { commons: string } | { wikipedia: string } | { url: string; thumb?: string; source: string; author: string; license: string };
+  /** 来源页的版权说明，不作为阻止显示图片的开关。 */
   copyright?: string;
+  /** 非版权原因的缺图说明，例如原作失传。 */
+  noImageReason?: string;
+  /** 复制品、系列代表图、建筑视角等配图说明。 */
+  imageNote?: string;
+  /** 可核查的作品资料链接。 */
+  source?: string;
+  /** 馆藏、研究等核查来源；百科入口仍使用中文。 */
+  sources?: { label: string; url: string }[];
+  /** 人物扩展作品：进入人物、展厅与藏品，有图时也进入画海。 */
+  supplementary?: boolean;
   /** 是否出现在时间全景的“代表作品”行 */
   timeline?: boolean;
   /** 作者（人物 id）；佚名或团队作品可不填 */
@@ -88,6 +99,8 @@ export interface Person {
   died: Year;
   /** 生卒年为约数 */
   approx?: boolean;
+  /** 卒年有下界等情况；died 仅供时间轴定位。 */
+  diedText?: string;
   roles: string[];
   period: string;
   cities: string[];
@@ -98,8 +111,8 @@ export interface Person {
   movement?: string[];
   /** 生平节点，按年份排序 */
   life?: { year: Year; yearText?: string; text: string }[];
-  /** 主要作品；work 指向本站作品 id */
-  works?: { title: string; year: string; where?: string; work?: string }[];
+  /** 创作、委托或收藏的相关作品；work 指向本站作品 id，作者由 Work.by 表示。 */
+  works?: { title: string; year: string; where?: string; work: string }[];
   /** 评价：同代人与后世怎么看他 */
   legacy?: string;
   /** 有可靠出处的名言 */
@@ -107,6 +120,7 @@ export interface Person {
   /** 英文维基百科条目名，取肖像用 */
   wiki: string;
   portrait?: false;
+  sources?: { label: string; url: string }[];
 }
 
 export interface Encounter {
@@ -116,6 +130,29 @@ export interface Encounter {
   people: string[];
   title: string;
   text: string;
+  sources?: { label: string; url: string }[];
+}
+
+/** 短篇看画与主题路线；局部坐标相对于完整图片，感受题没有分数。 */
+export interface Reading {
+  id: string;
+  kind: "story" | "route";
+  title: string;
+  deck: string;
+  minutes: number;
+  periods: string[];
+  people: string[];
+  relations?: [string, string][];
+  steps: {
+    title: string;
+    prompt: string;
+    works: string[];
+    details?: { work: string; label: string; x: number; y: number; note: string }[];
+    choices?: { label: string; response: string }[];
+    context: string;
+  }[];
+  next: { work: string; label: string }[];
+  sources: { label: string; url: string }[];
 }
 
 export interface HistoryEvent {
@@ -178,8 +215,22 @@ export interface Tradition {
   sizes: SizeEntry[];
   movements?: Movements;
   people: Person[];
+  schools: ArtSchool[];
   encounters: Encounter[];
+  readings: Reading[];
   bands: ContextBand[];
+}
+
+/** 人物的画派、艺术运动或历史传统；赞助、先声等关系不等同于成员身份。 */
+export interface ArtSchool {
+  id: string;
+  name: string;
+  en: string;
+  group: string;
+  span: string;
+  summary: string;
+  members: string[];
+  related?: { person: string; role: string }[];
 }
 
 /** 取图脚本生成的署名信息，public/images/credits.json */

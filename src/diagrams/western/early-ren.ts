@@ -3,7 +3,7 @@ import { q, clamp, dragOn } from "../helpers";
 
 /* 7 早期文艺复兴：线性透视 */
 const diagram: Diagram = {
-html(){return `<div class="dg-wrap"><svg class="dg" id="pv-svg" viewBox="0 0 560 300" role="img" aria-label="可拖动消失点的线性透视演示"><g id="pv-g"></g></svg></div>`},
+html(){return `<div class="dg-wrap"><svg class="dg" id="pv-svg" viewBox="0 0 560 300" role="img" aria-label="可拖动消失点的线性透视演示，可用下方滑块调整"><g id="pv-g"></g></svg></div><div class="ctl"><label for="pv-x">消失点左右位置</label><input id="pv-x" type="range" min="30" max="530" value="280"></div><div class="ctl"><label for="pv-y">视平线高度</label><input id="pv-y" type="range" min="50" max="230" value="120"><button class="btn" id="pv-reset">恢复视点</button></div><p class="info-box">汇聚的是同一纵深方向的平行线；横向边线仍与画面平行。</p>`},
 init(r){const svg=q(r,"#pv-svg"),g=q(r,"#pv-g");let vp=[280,120];const B=300;
   const P=(x:number,z:number,h=0)=>[vp[0]+(x-vp[0])/(1+z),vp[1]+(B-vp[1])/(1+z)-(h||0)/(1+z)];
   const box=(x0:number,x1:number,z0:number,z1:number,h:number,cls:string)=>{const f=[P(x0,z0),P(x1,z0),P(x1,z0,h),P(x0,z0,h)],b=[P(x0,z1),P(x1,z1),P(x1,z1,h),P(x0,z1,h)];
@@ -18,8 +18,9 @@ init(r){const svg=q(r,"#pv-svg"),g=q(r,"#pv-g");let vp=[280,120];const B=300;
     s+=box(120,230,.5,1.3,150,"f-acc-soft")+box(360,450,1.4,2.2,90,"f-acc-soft");
     [[60,B],[500,B]].forEach(p=>{s+=`<line x1="${p[0]}" y1="${p[1]}" x2="${vp[0]}" y2="${vp[1]}" style="stroke:var(--bad)" stroke-width="1.5" stroke-dasharray="4 3"/>`});
     s+=`<text x="40" y="292" class="t-s" style="fill:var(--bad)">正交线</text>`;
-    s+=`<circle cx="${vp[0]}" cy="${vp[1]}" r="9" style="fill:var(--bad);stroke:var(--panel)" stroke-width="3"/><text x="${vp[0]+14}" y="${vp[1]-10}" class="t-b">消失点</text>`;
-    g.innerHTML=s.replace(/f-acc-soft/g,"f-panel");};
+    s+=`<circle cx="${vp[0]}" cy="${vp[1]}" r="9" style="fill:var(--bad);stroke:var(--panel)" stroke-width="3"/><text x="${vp[0] > 450 ? vp[0]-14 : vp[0]+14}" y="${vp[1]-10}" text-anchor="${vp[0] > 450 ? 'end' : 'start'}" class="t-b">消失点</text>`;
+    g.innerHTML=s.replace(/f-acc-soft/g,"f-panel");q(r,"#pv-x").value=vp[0];q(r,"#pv-y").value=280-vp[1];};
+  q(r,"#pv-x").oninput=(e:Event)=>{vp[0]=+(e.target as HTMLInputElement).value;draw()};q(r,"#pv-y").oninput=(e:Event)=>{vp[1]=280-+(e.target as HTMLInputElement).value;draw()};q(r,"#pv-reset").onclick=()=>{vp=[280,120];draw()};
   dragOn(svg,p=>{vp=[clamp(p.x,30,530),clamp(p.y,50,230)];draw()});draw();}};
 
 export default diagram;

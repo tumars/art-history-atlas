@@ -32,7 +32,9 @@ export function loadTradition(id: string): Tradition {
     sizes: file(id, "sizes", true) ?? [],
     movements: file(id, "movements", true),
     people: file<{ people: Person[] } | undefined>(id, "people", true)?.people ?? [],
+    schools: file(id, "schools", true) ?? [],
     encounters: file<{ encounters: Encounter[] } | undefined>(id, "people", true)?.encounters ?? [],
+    readings: file(id, "readings", true) ?? [],
     bands,
   };
 }

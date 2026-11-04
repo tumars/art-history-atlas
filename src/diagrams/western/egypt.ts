@@ -25,14 +25,14 @@ html(){
     <path d="M130 94 L154 94 L152 150 L132 150 Z" style="fill:#B5683A"/>
     <line x1="144" y1="82" x2="150" y2="150" style="stroke:#B5683A" stroke-width="8" stroke-linecap="round"/>
     <path d="M128 150 L158 150 L162 180 L124 180 Z" style="fill:#F2EFE6;stroke:#C9C3B4"/>${legs}
-    <text x="210" y="70" class="t-b">眼睛看到的侧影：</text><text x="210" y="90" class="t-m">肩膀窄了，只看见一条胳膊，</text><text x="210" y="108" class="t-m">眼睛缩成一个尖角。</text><text x="210" y="134" class="t-m">埃及人觉得这不“完整”。</text>
+    <text x="210" y="70" class="t-b">单一侧视角的示意：</text><text x="210" y="90" class="t-m">肩膀变窄，</text><text x="210" y="108" class="t-m">只见一侧的手臂。</text><text x="210" y="134" class="t-m">部分特征被遮住。</text>
   </g>
   <line x1="330" y1="20" x2="330" y2="250" class="s-line" stroke-dasharray="3 4"/>
   <text x="350" y="30" class="t-b">等级比例：按地位定大小</text>
   ${([["法老",385,150],["官员",455,100],["仆人",515,62]] as [string,number,number][]).map(([n,x,h])=>`<g style="fill:var(--g1)"><circle cx="${x}" cy="${240-h-h*.13}" r="${h*.12}"/><rect x="${x-h*.15}" y="${240-h}" width="${h*.3}" height="${h}" rx="${h*.08}"/></g><text x="${x}" y="262" text-anchor="middle" class="t-s">${n}</text>`).join("")}
   <line x1="350" y1="240" x2="545" y2="240" class="s-mut"/>
   </svg></div>
-  <div class="ctl">${seg("eg-mode",[["known","心里知道的（埃及画法）"],["seen","眼睛看到的"]],"known")}</div>`},
+  <div class="ctl">${seg("eg-mode",[["known","组合视角"],["seen","单一侧视角"]],"known")}</div>`},
 init(r){bindSeg(r,"eg-mode",v=>{q(r,"#eg-known").style.display=v==="known"?"":"none";q(r,"#eg-seen").style.display=v==="seen"?"":"none"})}};
 
 export default diagram;

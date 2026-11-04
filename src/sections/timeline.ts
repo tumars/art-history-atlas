@@ -1,6 +1,7 @@
 import { $, esc, clamp, lerp, prefersReducedMotion } from "../lib/dom";
 import { state, actions, periodIndex, periodVar, imgSrc } from "../state";
 import type { ContextBand, Year } from "../types";
+import { initRelay } from "./relay";
 
 /* 时间全景：背景行（欧洲分期、中国朝代、教会历史……）、历史大事、代表作品、艺术时期，共用一条时间轴 */
 
@@ -264,14 +265,7 @@ export function initTimeline() {
   $("#ev-card").onclick = toPeriod;
   $("#band-note").onclick = toPeriod;
 
-  const relay = state.t.meta.relay;
-  $("#relay").innerHTML = relay
-    .map(({ period, place }, i) => `${i ? '<span class="arr">→</span>' : ""}<button class="stop" data-id="${period}" style="--g:${periodVar(period)}"><i></i>${esc(place)}<small>${esc(state.t.periods[periodIndex(period)].short)}</small></button>`)
-    .join("");
-  $("#relay").onclick = (e) => {
-    const b = (e.target as Element).closest<HTMLButtonElement>(".stop");
-    if (b) actions.goPeriod(periodIndex(b.dataset.id!), true);
-  };
+  initRelay();
   renderTimeline();
 }
 

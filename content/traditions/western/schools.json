@@ -1,0 +1,146 @@
+[
+  {
+    "id": "greek-classical", "name": "古希腊古典艺术", "en": "Classical Greek Art", "group": "classical", "span": "前 5 世纪",
+    "summary": "以人体比例、均衡与自然动作为重要追求。米隆偏重运动瞬间，菲迪亚斯把理想化人体用于神像与公共雕塑。",
+    "members": ["myron", "phidias"]
+  },
+  {
+    "id": "gothic", "name": "哥特式艺术", "en": "Gothic Art", "group": "medieval", "span": "12–15 世纪",
+    "summary": "尖拱、肋架拱顶与彩色玻璃共同营造向上的空间。叙热通过圣丹尼修道院的营造推动这一传统，是赞助者而非具体作品的创作者。",
+    "members": [], "related": [{ "person": "suger", "role": "赞助与营造" }]
+  },
+  {
+    "id": "florentine", "name": "佛罗伦萨画派", "en": "Florentine School", "group": "renaissance", "span": "14–16 世纪",
+    "summary": "重视素描、结构、透视与人体研究，绘画、雕塑和建筑彼此启发。从乔托到文艺复兴大师，跨越数代艺术家。",
+    "members": ["giotto", "brunelleschi", "masaccio", "verrocchio", "ghirlandaio", "botticelli", "leonardo", "michelangelo"],
+    "related": [{ "person": "cosimo-medici", "role": "赞助人" }, { "person": "lorenzo-medici", "role": "赞助人" }]
+  },
+  {
+    "id": "umbrian", "name": "翁布里亚画派", "en": "Umbrian School", "group": "renaissance", "span": "15 世纪后期–16 世纪初",
+    "summary": "以清澈的空间、柔和的风景与安静的宗教人物著称。佩鲁吉诺的绘画语言影响了早期拉斐尔。",
+    "members": ["perugino", "raphael"]
+  },
+  {
+    "id": "high-renaissance", "name": "盛期文艺复兴", "en": "High Renaissance", "group": "renaissance", "span": "约 1490–1520 年",
+    "summary": "把透视、人体知识与古典理想结合为完整而均衡的构图。这是一个历史阶段与风格理想，几位大师仍有鲜明不同的个人语言。",
+    "members": ["leonardo", "michelangelo", "raphael"], "related": [{ "person": "julius-ii", "role": "教廷赞助人" }]
+  },
+  {
+    "id": "venetian", "name": "威尼斯画派", "en": "Venetian School", "group": "renaissance", "span": "15–16 世纪",
+    "summary": "通过色彩、光线与油彩的层次塑造形体，强调感官经验与画面的整体气氛。贝利尼、乔尔乔内和提香构成其中的重要脉络。",
+    "members": ["bellini", "giorgione", "titian"]
+  },
+  {
+    "id": "early-netherlandish", "name": "早期尼德兰画派", "en": "Early Netherlandish Painting", "group": "renaissance", "span": "15–16 世纪初",
+    "summary": "细密的油画技法让材质、光泽与日常细节获得象征意味。凡·艾克重现可见世界，博斯则把细节编织成奇异的道德图景。",
+    "members": ["van-eyck", "bosch"]
+  },
+  {
+    "id": "northern-renaissance", "name": "北方文艺复兴", "en": "Northern Renaissance", "group": "renaissance", "span": "15–16 世纪",
+    "summary": "涵盖尼德兰与德意志等地不同的艺术传统，重视细节、肖像、版画与日常生活，并与意大利持续交流。它不是单一城市的画派。",
+    "members": ["van-eyck", "bosch", "durer", "holbein", "bruegel"]
+  },
+  {
+    "id": "mannerism", "name": "矫饰主义", "en": "Mannerism", "group": "renaissance", "span": "16 世纪",
+    "summary": "在盛期文艺复兴的均衡之后，以拉长的人体、复杂姿态和不稳定的空间追求精巧与张力。米开朗基罗的部分作品影响了这一转向。",
+    "members": ["vasari"], "related": [{ "person": "michelangelo", "role": "风格先声" }]
+  },
+  {
+    "id": "baroque", "name": "巴洛克艺术", "en": "Baroque Art", "group": "early-modern", "span": "17 世纪",
+    "summary": "强烈的明暗、运动与戏剧性把观众卷入画面或空间。罗马教会、西班牙宫廷和荷兰市民市场形成各不相同的巴洛克面貌。",
+    "members": ["caravaggio", "artemisia", "rubens", "bernini", "velazquez", "rembrandt", "vermeer"],
+    "related": [{ "person": "urban-viii", "role": "教廷赞助人" }]
+  },
+  {
+    "id": "dutch-golden-age", "name": "荷兰黄金时代绘画", "en": "Dutch Golden Age Painting", "group": "early-modern", "span": "17 世纪",
+    "summary": "市民委托与艺术市场推动肖像、风景、静物和日常室内场景的发展。伦勃朗的心理深度与维米尔的安静光线展示了这一传统的不同侧面。",
+    "members": ["rembrandt", "vermeer"]
+  },
+  {
+    "id": "rococo", "name": "洛可可", "en": "Rococo", "group": "early-modern", "span": "18 世纪",
+    "summary": "轻盈的色彩、流动的曲线与亲密的游乐场景取代宏大的英雄叙事；华托的暧昧情绪与弗拉戈纳尔的感官趣味各有侧重。",
+    "members": ["watteau", "fragonard"]
+  },
+  {
+    "id": "neoclassicism", "name": "新古典主义", "en": "Neoclassicism", "group": "nineteenth", "span": "18 世纪后期–19 世纪",
+    "summary": "回到古希腊罗马的秩序、清晰轮廓与历史题材，常把形式的克制与道德、政治理想相连。大卫与安格尔分别强调公共叙事和线条之美。",
+    "members": ["david", "ingres"], "related": [{ "person": "napoleon", "role": "帝国赞助人" }]
+  },
+  {
+    "id": "romanticism", "name": "浪漫主义", "en": "Romanticism", "group": "nineteenth", "span": "18 世纪末–19 世纪中期",
+    "summary": "把情感、想象、自然的力量与当代经验放在中心。可以是弗里德里希的沉思，也可以是籍里柯与德拉克洛瓦的剧烈冲突。",
+    "members": ["goya", "friedrich", "gericault", "delacroix", "turner", "constable"]
+  },
+  {
+    "id": "realism", "name": "现实主义", "en": "Realism", "group": "nineteenth", "span": "19 世纪中期起",
+    "summary": "把普通劳动者、城市生活和当代社会视为值得严肃描绘的主题，挑战理想化的历史画等级。部分人物同时参与印象派的探索。",
+    "members": ["millet", "courbet", "manet", "degas"]
+  },
+  {
+    "id": "barbizon", "name": "巴比松画派", "en": "Barbizon School", "group": "nineteenth", "span": "19 世纪中期",
+    "summary": "围绕法国巴比松与枫丹白露森林形成的自然观察传统，重视乡村风景与质朴生活。米勒的农民题材也与现实主义相连。",
+    "members": ["millet"]
+  },
+  {
+    "id": "impressionism", "name": "印象派", "en": "Impressionism", "group": "nineteenth", "span": "19 世纪后期",
+    "summary": "关注光色变化、瞬间感受与现代生活，通过独立展览建立新的展示方式。马奈是重要同路人与影响者，没有参加印象派团体展。",
+    "members": ["pissarro", "degas", "monet", "renoir", "morisot", "cassatt"], "related": [{ "person": "manet", "role": "同路人与影响者" }]
+  },
+  {
+    "id": "post-impressionism", "name": "后印象派", "en": "Post-Impressionism", "group": "nineteenth", "span": "19 世纪后期",
+    "summary": "是对印象派之后多条道路的概括，而非统一团体：塞尚研究结构，梵高强调情感，高更探索象征，修拉研究系统化的色彩组织。",
+    "members": ["cezanne", "gauguin", "van-gogh", "seurat"]
+  },
+  {
+    "id": "neo-impressionism", "name": "新印象派", "en": "Neo-Impressionism", "group": "nineteenth", "span": "1880 年代起",
+    "summary": "将色彩分割成细小笔触，让颜色在观看中混合，并以较有计划的构图组织画面。修拉是核心人物，毕沙罗曾在一段时期参与这类实验。",
+    "members": ["pissarro", "seurat"]
+  },
+  {
+    "id": "symbolism", "name": "象征主义", "en": "Symbolism", "group": "twentieth", "span": "19 世纪末",
+    "summary": "让形象承载梦、欲望与内心经验，不以客观再现为唯一目标。蒙克的焦虑与生命主题也为表现主义提供了重要先声。",
+    "members": ["munch"]
+  },
+  {
+    "id": "expressionism", "name": "表现主义", "en": "Expressionism", "group": "twentieth", "span": "19 世纪末–20 世纪初",
+    "summary": "通过变形、强烈色彩与节奏传达主观感受。蒙克是重要先声，康定斯基参与蓝骑士的探索并逐步走向抽象。",
+    "members": ["munch", "kandinsky"]
+  },
+  {
+    "id": "fauvism", "name": "野兽派", "en": "Fauvism", "group": "twentieth", "span": "约 1905–1908 年",
+    "summary": "让鲜明的色彩摆脱物体本色的限制，以简化形体和大胆色块组织画面。马蒂斯是这一短暂而重要运动的核心人物。",
+    "members": ["matisse"]
+  },
+  {
+    "id": "cubism", "name": "立体主义", "en": "Cubism", "group": "twentieth", "span": "1907 年起",
+    "summary": "把物体拆解、重组，在一个画面中同时呈现多个观察角度。毕加索是创始者之一；杜尚曾接触这类探索，随后转向现成品与观念。",
+    "members": ["picasso"], "related": [{ "person": "duchamp", "role": "早期探索" }]
+  },
+  {
+    "id": "abstract-art", "name": "抽象艺术", "en": "Abstract Art", "group": "twentieth", "span": "20 世纪起",
+    "summary": "不以可辨认的现实形象为必要条件，用色彩、线条、形状与材料自身构成作品。它涵盖多种方向，康定斯基、蒙德里安与波洛克的路径并不相同。",
+    "members": ["kandinsky", "mondrian", "pollock"]
+  },
+  {
+    "id": "dada", "name": "达达", "en": "Dada", "group": "twentieth", "span": "第一次世界大战前后起",
+    "summary": "以偶然、现成品与反常规的姿态质疑既有艺术秩序。杜尚把选择和命名变成创作的重要部分，改变了作品与艺术家的关系。",
+    "members": ["duchamp"]
+  },
+  {
+    "id": "surrealism", "name": "超现实主义", "en": "Surrealism", "group": "twentieth", "span": "1920 年代起",
+    "summary": "探索梦、潜意识与意外联想，把熟悉之物放进无法按常理解释的场景。达利发展出精细的梦境图像，佩吉·古根海姆与这个圈子有收藏和赞助关系。",
+    "members": ["dali"], "related": [{ "person": "guggenheim", "role": "收藏与赞助" }]
+  },
+  {
+    "id": "abstract-expressionism", "name": "抽象表现主义", "en": "Abstract Expressionism", "group": "twentieth", "span": "1940–1950 年代",
+    "summary": "在战后纽约兴起，以大尺幅、身体动作与开放的画面空间探索抽象表达。波洛克的滴洒绘画是其中一条重要道路，古根海姆曾给予早期支持。",
+    "members": ["pollock"], "related": [{ "person": "guggenheim", "role": "早期赞助人" }]
+  },
+  {
+    "id": "pop-art", "name": "波普艺术", "en": "Pop Art", "group": "twentieth", "span": "1950–1960 年代起",
+    "summary": "把商品、广告、漫画与明星等大众图像带进艺术，并借助重复、复制和商业制作讨论现代消费文化。沃霍尔是美国波普艺术的代表人物。",
+    "members": ["warhol"]
+  }
+,
+  {"id": "de-stijl", "name": "风格派", "en": "De Stijl", "group": "twentieth", "span": "1917年起", "summary": "围绕《风格》杂志形成的艺术与设计探索。蒙德里安以水平、垂直与基本色彩追求关系和平衡；这一圈子并不等于所有抽象艺术。", "members": ["mondrian"]}
+]

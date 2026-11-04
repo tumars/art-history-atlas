@@ -2,7 +2,7 @@
   "name": "art-history-atlas",
   "version": "0.4.0",
   "private": true,
-  "description": "可交互的艺术史图谱：时间全景、时期展厅、交互图解，内容与代码分离",
+  "description": "三万年长廊：从史前洞窟到现代艺术的交互式西方美术史，以浮空画海、时代年表、艺术中心地图、人物派系关系与看画故事，串起作品、艺术家和时代。",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -10,15 +10,12 @@
     "build": "npm run check && vite build",
     "preview": "vite preview",
     "check": "tsc --noEmit && node scripts/validate-content.mjs",
+    "test": "node --test scripts/hero-space.test.mjs",
     "validate": "node scripts/validate-content.mjs",
     "fetch-images": "node scripts/fetch-images.mjs"
   },
   "devDependencies": {
-    "@types/three": "^0.179.0",
     "typescript": "^5.6.3",
     "vite": "^5.4.10"
-  },
-  "dependencies": {
-    "three": "^0.179.1"
   }
 }

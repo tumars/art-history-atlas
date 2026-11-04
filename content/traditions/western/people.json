@@ -68,22 +68,26 @@
         {
           "title": "帕特农神庙横饰带与山花雕像",
           "year": "约前 443–前 432",
-          "where": "伦敦大英博物馆、雅典卫城博物馆"
+          "where": "伦敦大英博物馆、雅典卫城博物馆",
+          "work": "phidias-parthenon-marbles"
         },
         {
           "title": "雅典娜·帕特农",
           "year": "前 438",
-          "where": "已失传"
+          "where": "已失传",
+          "work": "phidias-athena-parthenos"
         },
         {
           "title": "奥林匹亚宙斯像",
           "year": "约前 435",
-          "where": "已失传"
+          "where": "已失传",
+          "work": "phidias-statue-of-zeus-at-olympia"
         },
         {
           "title": "雅典娜·普罗马科斯",
           "year": "约前 456",
-          "where": "已失传"
+          "where": "已失传",
+          "work": "phidias-athena-promachos"
         }
       ],
       "legacy": "古代作者把他列为最伟大的雕塑家，奥林匹亚宙斯像被列入古代世界七大奇观。他亲手做的大像全部失传，今天对他的认识主要来自帕特农神庙的石雕和罗马时代的仿制品。1801 年起埃尔金把大量帕特农石雕运到伦敦，这批石雕影响了十九世纪的新古典主义，归还问题至今仍有争议。",
@@ -150,17 +154,20 @@
         {
           "title": "雅典娜与马尔叙阿斯",
           "year": "约前 450",
-          "where": "法兰克福利比希豪斯（雅典娜）、梵蒂冈博物馆（马尔叙阿斯），均为罗马仿制品"
+          "where": "法兰克福利比希豪斯（雅典娜）、梵蒂冈博物馆（马尔叙阿斯），均为罗马仿制品",
+          "work": "myron-athena-marsyas-group"
         },
         {
           "title": "母牛",
           "year": "约前 450",
-          "where": "已失传"
+          "where": "已失传",
+          "work": "myron-2"
         },
         {
           "title": "赛跑手拉达斯",
           "year": "约前 450",
-          "where": "已失传"
+          "where": "已失传",
+          "work": "myron-3"
         }
       ],
       "legacy": "古人最常称道的是他放在雅典卫城上的青铜母牛，据说逼真到牛犊和牧人都会认错，流传下来的希腊短诗有几十首写它。老普林尼说他让雕塑的姿态比波留克列特斯更丰富，但又批评他不擅表现内心感情，头发的刻法还停留在古风时期。他的原作全部失传，名声靠罗马仿制品和文字记载传下来。",
@@ -230,30 +237,28 @@
       ],
       "works": [
         {
-          "title": "圣德尼修道院教堂圣坛",
-          "year": "1140–1144",
+          "title": "圣德尼修道院教堂（西立面与圣坛重建）",
+          "year": "约 1137–1144",
           "where": "巴黎近郊圣德尼大教堂",
           "work": "saint-denis"
         },
         {
-          "title": "圣德尼修道院教堂西立面",
-          "year": "约 1137–1140",
-          "where": "巴黎近郊圣德尼大教堂"
-        },
-        {
           "title": "基督童年彩窗",
           "year": "约 1144",
-          "where": "巴黎近郊圣德尼大教堂"
+          "where": "巴黎近郊圣德尼大教堂",
+          "work": "suger-basilica-of-saint-denis"
         },
         {
           "title": "叙热之鹰",
           "year": "1147 年以前",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "suger-suger-s-eagle"
         },
         {
           "title": "叙热圣杯",
           "year": "约 1137–1140",
-          "where": "华盛顿国家美术馆"
+          "where": "华盛顿国家美术馆",
+          "work": "suger-chalice-of-the-abbot-suger-of-saint-denis"
         }
       ],
       "legacy": "他留下《论圣德尼的管理》和《论祝圣》两篇记述，交代了改建的经过和用意，中世纪的赞助人很少这样做。1946 年潘诺夫斯基把这些文字译注出版，叙热由此常被称作哥特式建筑之父。后来的学者提醒，真正设计圣坛的石匠师傅没有留下名字，叙热的角色更接近发起人和出资人。",
@@ -332,7 +337,8 @@
         {
           "title": "斯克罗韦尼礼拜堂壁画",
           "year": "约 1303–1305",
-          "where": "帕多瓦斯克罗韦尼礼拜堂"
+          "where": "帕多瓦斯克罗韦尼礼拜堂",
+          "work": "giotto-scrovegni-chapel"
         },
         {
           "title": "哀悼基督",
@@ -343,17 +349,20 @@
         {
           "title": "奥尼桑蒂圣母",
           "year": "约 1306–1310",
-          "where": "佛罗伦萨乌菲兹美术馆"
+          "where": "佛罗伦萨乌菲兹美术馆",
+          "work": "giotto-ognissanti-madonna"
         },
         {
           "title": "巴尔迪礼拜堂圣方济各生平壁画",
           "year": "约 1325",
-          "where": "佛罗伦萨圣十字教堂"
+          "where": "佛罗伦萨圣十字教堂",
+          "work": "giotto-bardi-chapel"
         },
         {
           "title": "佛罗伦萨大教堂钟楼",
           "year": "1334 年动工",
-          "where": "佛罗伦萨"
+          "where": "佛罗伦萨",
+          "work": "giotto-giotto-s-campanile"
         }
       ],
       "legacy": "在世时就有名，但丁在《神曲》里拿他和契马布埃对比，薄伽丘在《十日谈》里说他让埋没了几百年的绘画重见天日。约 1400 年，琴尼诺·琴尼尼写道，乔托把绘画从希腊式改成了拉丁式，指他摆脱了拜占庭的程式。瓦萨里的《艺苑名人传》把他放在近代艺术的开端。钟楼只建到第一层他就去世了。",
@@ -426,27 +435,32 @@
         {
           "title": "圣马可修道院",
           "year": "1437–约 1452",
-          "where": "佛罗伦萨圣马可博物馆"
+          "where": "佛罗伦萨圣马可博物馆",
+          "work": "cosimo-medici-san-marco-florence"
         },
         {
           "title": "圣马可修道院僧房壁画",
           "year": "约 1440–1445",
-          "where": "佛罗伦萨圣马可博物馆"
+          "where": "佛罗伦萨圣马可博物馆",
+          "work": "cosimo-medici-san-marco-cell-frescoes"
         },
         {
           "title": "圣马可图书馆",
           "year": "1441–1444",
-          "where": "佛罗伦萨圣马可博物馆"
+          "where": "佛罗伦萨圣马可博物馆",
+          "work": "cosimo-medici-san-marco-library"
         },
         {
           "title": "美第奇宫",
           "year": "1444 年起",
-          "where": "佛罗伦萨美第奇-里卡迪宫"
+          "where": "佛罗伦萨美第奇-里卡迪宫",
+          "work": "cosimo-medici-palazzo-medici-riccardi"
         },
         {
           "title": "圣洛伦佐教堂",
           "year": "1442 年起",
-          "where": "佛罗伦萨"
+          "where": "佛罗伦萨",
+          "work": "brunelleschi-basilica-of-san-lorenzo-florence"
         }
       ],
       "legacy": "书商维斯帕夏诺·达·比斯蒂奇为他写了传记，记下他在建筑上花的巨款和对书籍的收藏。他支持马尔西利奥·菲奇诺翻译柏拉图，佛罗伦萨的柏拉图研究由此兴起。他借公共建筑和宗教捐赠为家族赢得声望，同时避免张扬地显示权力，这套做法被他的子孙延续下去。多纳泰罗死后被葬在圣洛伦佐教堂，离他的墓很近。",
@@ -523,27 +537,32 @@
         {
           "title": "以撒献祭",
           "year": "1401",
-          "where": "佛罗伦萨巴杰罗美术馆"
+          "where": "佛罗伦萨巴杰罗美术馆",
+          "work": "brunelleschi-sacrifice-of-isaac-brunelleschi"
         },
         {
           "title": "育婴堂",
           "year": "1419–1445",
-          "where": "佛罗伦萨"
+          "where": "佛罗伦萨",
+          "work": "brunelleschi-ospedale-degli-innocenti"
         },
         {
           "title": "圣洛伦佐教堂老圣器室",
           "year": "1421–1428",
-          "where": "佛罗伦萨圣洛伦佐教堂"
+          "where": "佛罗伦萨圣洛伦佐教堂",
+          "work": "brunelleschi-sagrestia-vecchia"
         },
         {
           "title": "圣洛伦佐教堂",
           "year": "1421 年起",
-          "where": "佛罗伦萨"
+          "where": "佛罗伦萨",
+          "work": "brunelleschi-basilica-of-san-lorenzo-florence"
         },
         {
           "title": "圣灵教堂",
           "year": "1436 年起",
-          "where": "佛罗伦萨"
+          "where": "佛罗伦萨",
+          "work": "brunelleschi-santo-spirito-florence"
         }
       ],
       "legacy": "阿尔贝蒂 1436 年把《论绘画》的意大利文本献给他，把他和多纳泰罗、马萨乔等人并列。1480 年代安东尼奥·马内蒂为他写了传记，透视实验的经过就靠这本传记流传下来。他用古罗马的柱式和比例重新组织教堂空间，育婴堂和圣洛伦佐教堂成了后来意大利建筑的样板。帕齐礼拜堂过去归在他名下，现在学界对此有争议。",
@@ -624,27 +643,32 @@
         {
           "title": "纳税银",
           "year": "约 1425",
-          "where": "佛罗伦萨卡尔米内圣母大殿布兰卡奇礼拜堂"
+          "where": "佛罗伦萨卡尔米内圣母大殿布兰卡奇礼拜堂",
+          "work": "masaccio-the-tribute-money-masaccio"
         },
         {
           "title": "逐出伊甸园",
           "year": "约 1425",
-          "where": "佛罗伦萨卡尔米内圣母大殿布兰卡奇礼拜堂"
+          "where": "佛罗伦萨卡尔米内圣母大殿布兰卡奇礼拜堂",
+          "work": "masaccio-expulsion-from-the-garden-of-eden"
         },
         {
           "title": "圣安娜、圣母与圣子",
           "year": "约 1424",
-          "where": "佛罗伦萨乌菲兹美术馆"
+          "where": "佛罗伦萨乌菲兹美术馆",
+          "work": "masaccio-virgin-and-child-with-saint-anne-masaccio"
         },
         {
           "title": "圣母子",
           "year": "1426",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "masaccio-madonna-and-child-masaccio"
         },
         {
           "title": "圣乔维纳莱三联画",
           "year": "1422",
-          "where": "卡夏迪雷杰洛马萨乔宗教艺术博物馆"
+          "where": "卡夏迪雷杰洛马萨乔宗教艺术博物馆",
+          "work": "masaccio-san-giovenale-triptych"
         }
       ],
       "legacy": "“马萨乔”是外号，大意是“邋遢的托马索”，瓦萨里说他一心作画，不在意衣着和钱财。瓦萨里还列出一长串在布兰卡奇礼拜堂临摹过的画家，从弗拉·安杰利科一直到达·芬奇和米开朗基罗。他用单一光源给人物打出体积，用线性透视安排空间，佛罗伦萨绘画在他身后有好几十年都以此为准。",
@@ -716,32 +740,38 @@
         {
           "title": "大卫",
           "year": "1476 年以前",
-          "where": "佛罗伦萨巴杰罗美术馆"
+          "where": "佛罗伦萨巴杰罗美术馆",
+          "work": "verrocchio-david-verrocchio"
         },
         {
           "title": "基督与圣多马",
           "year": "1467–1483",
-          "where": "佛罗伦萨奥尔圣米凯莱博物馆"
+          "where": "佛罗伦萨奥尔圣米凯莱博物馆",
+          "work": "verrocchio-christ-and-st-thomas-verrocchio"
         },
         {
           "title": "皮耶罗与乔瓦尼·德·美第奇墓",
           "year": "1469–1472",
-          "where": "佛罗伦萨圣洛伦佐教堂老圣器室"
+          "where": "佛罗伦萨圣洛伦佐教堂老圣器室",
+          "work": "verrocchio-tomb-of-piero-and-giovanni-de-medici"
         },
         {
           "title": "抱海豚的小天使",
           "year": "约 1470",
-          "where": "佛罗伦萨旧宫"
+          "where": "佛罗伦萨旧宫",
+          "work": "verrocchio-putto-with-a-dolphin"
         },
         {
           "title": "基督受洗",
           "year": "约 1470–1475",
-          "where": "佛罗伦萨乌菲兹美术馆"
+          "where": "佛罗伦萨乌菲兹美术馆",
+          "work": "verrocchio-the-baptism-of-christ-verrocchio-and-leonardo"
         },
         {
           "title": "科莱奥尼骑马像",
           "year": "1480–1488，1496 年落成",
-          "where": "威尼斯圣若望及保禄广场"
+          "where": "威尼斯圣若望及保禄广场",
+          "work": "verrocchio-equestrian-statue-of-bartolomeo-colleoni"
         }
       ],
       "legacy": "他的作坊接金工、雕塑、绘画各种活，美第奇家族是常客。达·芬奇、洛伦佐·迪·克雷迪都在这里学艺，佩鲁吉诺据说也跟过他。瓦萨里认为他的风格有点生硬，功劳主要在勤奋和教出了好学生。二十世纪以来，学者更看重他的雕塑，科莱奥尼骑马像常和多纳泰罗的加塔梅拉塔像并举。",
@@ -812,37 +842,44 @@
         {
           "title": "托尔纳博尼礼拜堂壁画",
           "year": "1485–1490",
-          "where": "佛罗伦萨新圣母大殿"
+          "where": "佛罗伦萨新圣母大殿",
+          "work": "ghirlandaio-tornabuoni-chapel"
         },
         {
           "title": "萨塞蒂礼拜堂壁画",
           "year": "约 1483–1485",
-          "where": "佛罗伦萨圣三一教堂"
+          "where": "佛罗伦萨圣三一教堂",
+          "work": "ghirlandaio-sassetti-chapel"
         },
         {
           "title": "牧羊人朝拜",
           "year": "1485",
-          "where": "佛罗伦萨圣三一教堂萨塞蒂礼拜堂"
+          "where": "佛罗伦萨圣三一教堂萨塞蒂礼拜堂",
+          "work": "ghirlandaio-adoration-of-the-shepherds-ghirlandaio"
         },
         {
           "title": "召唤彼得和安德烈",
           "year": "1481–1482",
-          "where": "梵蒂冈西斯廷礼拜堂"
+          "where": "梵蒂冈西斯廷礼拜堂",
+          "work": "ghirlandaio-vocation-of-the-apostles"
         },
         {
           "title": "最后的晚餐",
           "year": "1480",
-          "where": "佛罗伦萨奥尼桑蒂教堂"
+          "where": "佛罗伦萨奥尼桑蒂教堂",
+          "work": "ghirlandaio-last-supper-ghirlandaio"
         },
         {
           "title": "乔瓦娜·托尔纳博尼像",
           "year": "1488",
-          "where": "马德里提森-博内米萨博物馆"
+          "where": "马德里提森-博内米萨博物馆",
+          "work": "ghirlandaio-portrait-of-giovanna-tornabuoni"
         },
         {
           "title": "老人与孙子",
           "year": "约 1490",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "ghirlandaio-an-old-man-and-his-grandson"
         }
       ],
       "legacy": "他的作坊是当时佛罗伦萨最大的之一，接活快，交工准时。据瓦萨里说，他曾表示希望能把佛罗伦萨整圈城墙都画满故事。他把赞助人一家和城里名流画进圣经故事，今天的历史学家把这些壁画当作十五世纪佛罗伦萨衣着和相貌的记录来读。后人常嫌他缺少新意，名声远不如他的学生米开朗基罗。",
@@ -907,22 +944,26 @@
         {
           "title": "皮耶罗与乔瓦尼·德·美第奇墓",
           "year": "1469–1472",
-          "where": "佛罗伦萨圣洛伦佐教堂老圣器室"
+          "where": "佛罗伦萨圣洛伦佐教堂老圣器室",
+          "work": "verrocchio-tomb-of-piero-and-giovanni-de-medici"
         },
         {
           "title": "波焦阿卡伊阿诺美第奇别墅",
           "year": "约 1485 年起",
-          "where": "普拉托省波焦阿卡伊阿诺"
+          "where": "普拉托省波焦阿卡伊阿诺",
+          "work": "lorenzo-medici-villa-di-poggio-a-caiano"
         },
         {
           "title": "阶梯上的圣母",
           "year": "约 1490",
-          "where": "佛罗伦萨博纳罗蒂故居"
+          "where": "佛罗伦萨博纳罗蒂故居",
+          "work": "lorenzo-medici-madonna-of-the-stairs"
         },
         {
           "title": "半人马之战",
           "year": "约 1492",
-          "where": "佛罗伦萨博纳罗蒂故居"
+          "where": "佛罗伦萨博纳罗蒂故居",
+          "work": "lorenzo-medici-battle-of-the-centaurs-michelangelo"
         }
       ],
       "legacy": "马基雅维利的《佛罗伦萨史》写到他去世为止，说他死后意大利很快陷入战乱。他身边有波利齐亚诺、菲奇诺、皮科·德拉·米兰多拉等学者，他还把城里的画家推荐给其他宫廷，作为外交手段。贡布里希等学者指出，他亲自委托的大型艺术品其实不多，更多钱花在收藏古代宝石和花瓶上。他主政期间美第奇银行的生意也走了下坡路。",
@@ -1005,37 +1046,44 @@
         {
           "title": "春",
           "year": "约 1480",
-          "where": "佛罗伦萨乌菲兹美术馆"
+          "where": "佛罗伦萨乌菲兹美术馆",
+          "work": "botticelli-primavera-botticelli"
         },
         {
           "title": "东方三博士来朝",
           "year": "约 1475",
-          "where": "佛罗伦萨乌菲兹美术馆"
+          "where": "佛罗伦萨乌菲兹美术馆",
+          "work": "botticelli-adoration-of-the-magi-botticelli-1475"
         },
         {
           "title": "摩西的试炼",
           "year": "1481–1482",
-          "where": "梵蒂冈西斯廷礼拜堂"
+          "where": "梵蒂冈西斯廷礼拜堂",
+          "work": "botticelli-youth-of-moses"
         },
         {
           "title": "维纳斯与玛尔斯",
           "year": "约 1485",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "botticelli-venus-and-mars-botticelli"
         },
         {
           "title": "诽谤",
           "year": "约 1494–1495",
-          "where": "佛罗伦萨乌菲兹美术馆"
+          "where": "佛罗伦萨乌菲兹美术馆",
+          "work": "botticelli-calumny-of-apelles-botticelli"
         },
         {
           "title": "神秘的基督降生",
           "year": "1500",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "botticelli-the-mystical-nativity"
         },
         {
           "title": "但丁《神曲》插图",
           "year": "约 1480–1495",
-          "where": "柏林版画素描馆、梵蒂冈图书馆"
+          "where": "柏林版画素描馆、梵蒂冈图书馆",
+          "work": "botticelli-divine-comedy-illustrated-by-botticelli"
         }
       ],
       "legacy": "瓦萨里说他晚年穷困潦倒，拄着拐杖走路。他死后名声沉寂了三百多年，十九世纪才被拉斐尔前派、罗斯金和沃尔特·佩特重新发现。1908 年赫伯特·霍恩出版研究专著，此后《维纳斯的诞生》和《春》成了乌菲兹最出名的藏品。说他把自己的画扔进萨伏那洛拉的“虚荣之火”，只是传闻，没有可靠记录。",
@@ -1114,37 +1162,44 @@
         {
           "title": "交付钥匙",
           "year": "1481–1482",
-          "where": "梵蒂冈西斯廷礼拜堂"
+          "where": "梵蒂冈西斯廷礼拜堂",
+          "work": "perugino-delivery-of-the-keys-perugino"
         },
         {
           "title": "阿波罗与达佛涅斯",
           "year": "约 1483",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "perugino-apollo-and-daphnis-perugino"
         },
         {
           "title": "耶稣受难",
           "year": "1493–1496",
-          "where": "佛罗伦萨抹大拉的圣马利亚修道院"
+          "where": "佛罗伦萨抹大拉的圣马利亚修道院",
+          "work": "perugino-crucifixion-perugino"
         },
         {
           "title": "哀悼基督",
           "year": "1495",
-          "where": "佛罗伦萨皮蒂宫帕拉蒂纳美术馆"
+          "where": "佛罗伦萨皮蒂宫帕拉蒂纳美术馆",
+          "work": "perugino-lamentation-over-the-dead-christ-perugino"
         },
         {
           "title": "银钱兑换业行会会堂壁画",
           "year": "1496–1500",
-          "where": "佩鲁贾银钱兑换业行会会堂"
+          "where": "佩鲁贾银钱兑换业行会会堂",
+          "work": "perugino-collegio-del-cambio"
         },
         {
           "title": "圣母的婚礼",
           "year": "1501–1504",
-          "where": "卡昂美术馆"
+          "where": "卡昂美术馆",
+          "work": "perugino-marriage-of-the-virgin-perugino"
         },
         {
           "title": "爱与贞洁之战",
           "year": "1503–1505",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "perugino-combat-of-love-and-chastity"
         }
       ],
       "legacy": "1490 年代前后他是意大利最抢手的画家之一，后来在佛罗伦萨和佩鲁贾都开了作坊。拉斐尔 1504 年的《圣母的婚礼》几乎照搬他的构图。瓦萨里对他不客气，说他为了赚钱反复使用同一批人物，还记下米开朗基罗当众说他画得笨拙。盛期文艺复兴的新画风兴起后，他很快显得过时。",
@@ -1233,32 +1288,38 @@
         {
           "title": "天使报喜",
           "year": "约 1472–1476",
-          "where": "佛罗伦萨乌菲兹美术馆"
+          "where": "佛罗伦萨乌菲兹美术馆",
+          "work": "leonardo-annunciation-leonardo"
         },
         {
           "title": "吉内薇拉·德·本奇像",
           "year": "约 1474–1478",
-          "where": "华盛顿国家美术馆"
+          "where": "华盛顿国家美术馆",
+          "work": "leonardo-ginevra-de-benci"
         },
         {
           "title": "岩间圣母",
           "year": "约 1483–1486",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "leonardo-virgin-of-the-rocks"
         },
         {
           "title": "抱银鼠的女子",
           "year": "约 1489–1491",
-          "where": "克拉科夫恰尔托雷斯基博物馆"
+          "where": "克拉科夫恰尔托雷斯基博物馆",
+          "work": "leonardo-lady-with-an-ermine"
         },
         {
           "title": "维特鲁威人",
           "year": "约 1490",
-          "where": "威尼斯学院美术馆"
+          "where": "威尼斯学院美术馆",
+          "work": "leonardo-vitruvian-man"
         },
         {
           "title": "圣母子与圣安娜",
           "year": "约 1503–1519",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "leonardo-the-virgin-and-child-with-saint-anne-leonardo"
         }
       ],
       "legacy": "公认出自他手的画不到二十幅，不少还没画完，瓦萨里也把半途而废看作他的毛病。《最后的晚餐》用油和蛋彩画在干墙上，他在世时就开始剥落。笔记死后分散各地，1994 年比尔·盖茨买下《莱斯特手稿》。《蒙娜丽莎》1911 年在卢浮宫被盗，两年后找回，此后名气越来越大。",
@@ -1338,32 +1399,38 @@
         {
           "title": "新圣彼得大教堂",
           "year": "1506 年奠基",
-          "where": "梵蒂冈"
+          "where": "梵蒂冈",
+          "work": "julius-ii-st-peter-s-basilica"
         },
         {
           "title": "观景庭院",
           "year": "1505 年起",
-          "where": "梵蒂冈博物馆"
+          "where": "梵蒂冈博物馆",
+          "work": "julius-ii-cortile-del-belvedere"
         },
         {
           "title": "西斯廷礼拜堂天顶画",
           "year": "1508–1512",
-          "where": "梵蒂冈西斯廷礼拜堂"
+          "where": "梵蒂冈西斯廷礼拜堂",
+          "work": "sistine-ceiling"
         },
         {
           "title": "签字厅壁画",
           "year": "1508–1511",
-          "where": "梵蒂冈博物馆拉斐尔房间"
+          "where": "梵蒂冈博物馆拉斐尔房间",
+          "work": "julius-ii-raphael-rooms"
         },
         {
           "title": "尤利乌斯二世陵墓",
           "year": "1505–1545",
-          "where": "罗马圣彼得镣铐教堂"
+          "where": "罗马圣彼得镣铐教堂",
+          "work": "julius-ii-tomb-of-pope-julius-ii"
         },
         {
           "title": "尤利乌斯二世像",
           "year": "1511–1512",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "julius-ii-portrait-of-pope-julius-ii"
         }
       ],
       "legacy": "同时代人叫他“可怕的教皇”，因他脾气暴烈又亲自领兵。1514 年流传的讽刺对话《被拒于天门外的尤利乌斯》写他死后进不了天堂，一般认为是伊拉斯谟写的。他在任九年，先后启用布拉曼特、米开朗基罗和拉斐尔，罗马由此取代佛罗伦萨成了艺术中心。重建圣彼得大教堂靠出售赎罪券筹款，后来成了路德宗教改革的导火索之一。",
@@ -1450,7 +1517,8 @@
         {
           "title": "圣殇",
           "year": "1498–1499",
-          "where": "梵蒂冈圣彼得大教堂"
+          "where": "梵蒂冈圣彼得大教堂",
+          "work": "michelangelo-pieta-michelangelo"
         },
         {
           "title": "西斯廷礼拜堂天顶画",
@@ -1461,27 +1529,32 @@
         {
           "title": "最后的审判",
           "year": "1536–1541",
-          "where": "梵蒂冈西斯廷礼拜堂"
+          "where": "梵蒂冈西斯廷礼拜堂",
+          "work": "michelangelo-the-last-judgment-michelangelo"
         },
         {
           "title": "摩西",
           "year": "约 1513–1515",
-          "where": "罗马圣彼得镣铐教堂"
+          "where": "罗马圣彼得镣铐教堂",
+          "work": "michelangelo-moses-michelangelo"
         },
         {
           "title": "美第奇礼拜堂",
           "year": "1520–1534",
-          "where": "佛罗伦萨圣洛伦佐教堂新圣器室"
+          "where": "佛罗伦萨圣洛伦佐教堂新圣器室",
+          "work": "michelangelo-medici-chapels"
         },
         {
           "title": "洛伦佐图书馆",
           "year": "1524 年起",
-          "where": "佛罗伦萨圣洛伦佐教堂"
+          "where": "佛罗伦萨圣洛伦佐教堂",
+          "work": "michelangelo-laurentian-library"
         },
         {
           "title": "圣彼得大教堂穹顶",
           "year": "1546 年起设计，1590 年完成",
-          "where": "梵蒂冈"
+          "where": "梵蒂冈",
+          "work": "michelangelo-st-peter-s-basilica"
         }
       ],
       "legacy": "同时代人称他“神圣的米开朗基罗”。瓦萨里 1550 年的传记把他放在全书顶点，三年后他的学生孔迪维又出了一部传记，据说由他授意。《最后的审判》满墙裸体引起非议，1563 年特伦托会议结束后，达尼埃莱·达·沃尔泰拉奉命给人物加画遮羞布。他晚年扭曲的人体和打破常规的建筑语汇，影响了矫饰主义和巴洛克。",
@@ -1574,37 +1647,44 @@
         {
           "title": "圣母的婚礼",
           "year": "1504",
-          "where": "米兰布雷拉美术馆"
+          "where": "米兰布雷拉美术馆",
+          "work": "raphael-the-marriage-of-the-virgin-raphael"
         },
         {
           "title": "草地上的圣母",
           "year": "1506",
-          "where": "维也纳艺术史博物馆"
+          "where": "维也纳艺术史博物馆",
+          "work": "raphael-madonna-del-prato-raphael"
         },
         {
           "title": "基督下葬",
           "year": "1507",
-          "where": "罗马博尔盖塞美术馆"
+          "where": "罗马博尔盖塞美术馆",
+          "work": "raphael-the-deposition-raphael"
         },
         {
           "title": "伽拉忒亚的凯旋",
           "year": "约 1512",
-          "where": "罗马法尔内西纳别墅"
+          "where": "罗马法尔内西纳别墅",
+          "work": "raphael-the-triumph-of-galatea"
         },
         {
           "title": "西斯廷圣母",
           "year": "1512–1513",
-          "where": "德累斯顿历代大师画廊"
+          "where": "德累斯顿历代大师画廊",
+          "work": "raphael-sistine-madonna"
         },
         {
           "title": "卡斯蒂廖内像",
           "year": "约 1514–1515",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "raphael-portrait-of-baldassare-castiglione"
         },
         {
           "title": "基督显圣容",
           "year": "1516–1520",
-          "where": "梵蒂冈博物馆绘画馆"
+          "where": "梵蒂冈博物馆绘画馆",
+          "work": "raphael-transfiguration-raphael"
         }
       ],
       "legacy": "瓦萨里称赞他为人谦和，说他走到哪里身后都跟着一群学生和助手。他的作坊规模庞大，朱利奥·罗马诺等弟子把他的画风带到曼托瓦等地。三百多年里，欧洲各国学院都把他当作绘画的标准。1848 年英国的一批年轻画家自称“拉斐尔前派”，就是要反对从拉斐尔沿袭下来的学院画法。",
@@ -1696,32 +1776,38 @@
         {
           "title": "艺苑名人传",
           "year": "1550，1568 年增订",
-          "where": "印本，多家图书馆收藏"
+          "where": "印本，多家图书馆收藏",
+          "work": "vasari-lives-of-the-most-excellent-painters-sculptors-and-architects"
         },
         {
           "title": "乌菲齐宫",
           "year": "1560–1581",
-          "where": "佛罗伦萨"
+          "where": "佛罗伦萨",
+          "work": "vasari-uffizi"
         },
         {
           "title": "五百人大厅天顶画",
           "year": "1563–1565",
-          "where": "佛罗伦萨维奇奥宫"
+          "where": "佛罗伦萨维奇奥宫",
+          "work": "vasari-salone-dei-cinquecento"
         },
         {
           "title": "瓦萨里走廊",
           "year": "1565",
-          "where": "佛罗伦萨"
+          "where": "佛罗伦萨",
+          "work": "vasari-vasari-corridor"
         },
         {
           "title": "米开朗基罗墓",
           "year": "1564–1578",
-          "where": "佛罗伦萨圣十字教堂"
+          "where": "佛罗伦萨圣十字教堂",
+          "work": "vasari-tomb-of-michelangelo"
         },
         {
           "title": "最后的审判（穹顶壁画，祖卡里续成）",
           "year": "1572–1579",
-          "where": "佛罗伦萨圣母百花大教堂"
+          "where": "佛罗伦萨圣母百花大教堂",
+          "work": "vasari-the-last-judgment-vasari-and-zuccari"
         }
       ],
       "legacy": "《艺苑名人传》把艺术的复兴分成三个阶段，从契马布埃、乔托写起，到米开朗基罗达到顶点，这个叙事框架影响了此后几百年的艺术史写作。书里偏重佛罗伦萨和托斯卡纳，对威尼斯和北方画家写得少，常被后人批评。他自己的壁画后世评价平平，乌菲齐和走廊至今仍是佛罗伦萨的地标。",
@@ -1796,37 +1882,44 @@
         {
           "title": "园中祈祷",
           "year": "约 1465",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "bellini-agony-in-the-garden-bellini"
         },
         {
           "title": "沙漠中的圣方济各",
           "year": "约 1475–1480",
-          "where": "纽约弗里克收藏馆"
+          "where": "纽约弗里克收藏馆",
+          "work": "bellini-st-francis-in-ecstasy-bellini"
         },
         {
           "title": "圣约伯祭坛画",
           "year": "约 1487",
-          "where": "威尼斯学院美术馆"
+          "where": "威尼斯学院美术馆",
+          "work": "bellini-san-giobbe-altarpiece"
         },
         {
           "title": "弗拉里三联祭坛画",
           "year": "1488",
-          "where": "威尼斯弗拉里荣耀圣母教堂"
+          "where": "威尼斯弗拉里荣耀圣母教堂",
+          "work": "bellini-frari-triptych"
         },
         {
           "title": "总督莱昂纳多·洛雷丹像",
           "year": "约 1501",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "bellini-portrait-of-doge-leonardo-loredan"
         },
         {
           "title": "圣扎卡利亚祭坛画",
           "year": "1505",
-          "where": "威尼斯圣扎卡利亚教堂"
+          "where": "威尼斯圣扎卡利亚教堂",
+          "work": "bellini-san-zaccaria-altarpiece"
         },
         {
           "title": "诸神之宴",
           "year": "1514",
-          "where": "华盛顿国家美术馆"
+          "where": "华盛顿国家美术馆",
+          "work": "bellini-the-feast-of-the-gods"
         }
       ],
       "legacy": "他活了八十多岁，画法从蛋彩换成油彩，风格跟着变了几次。他把圣母和圣徒放在同一个建筑空间里，用统一的光把他们连起来，这种“神圣对话”式祭坛画成了威尼斯此后几十年的标准格局。乔尔乔内、提香自立门户之后，他仍在接大订单，瓦萨里也承认他晚年的画在进步。",
@@ -1883,17 +1976,20 @@
         {
           "title": "卡斯泰尔弗兰科祭坛画",
           "year": "约 1503–1504",
-          "where": "卡斯泰尔弗兰科主教堂"
+          "where": "卡斯泰尔弗兰科主教堂",
+          "work": "giorgione-castelfranco-madonna"
         },
         {
           "title": "劳拉",
           "year": "1506",
-          "where": "维也纳艺术史博物馆"
+          "where": "维也纳艺术史博物馆",
+          "work": "giorgione-laura-giorgione"
         },
         {
           "title": "老妇像",
           "year": "约 1506",
-          "where": "威尼斯学院美术馆"
+          "where": "威尼斯学院美术馆",
+          "work": "giorgione-la-vecchia-painting"
         },
         {
           "title": "暴风雨",
@@ -1904,17 +2000,20 @@
         {
           "title": "三位哲学家",
           "year": "约 1508–1509",
-          "where": "维也纳艺术史博物馆"
+          "where": "维也纳艺术史博物馆",
+          "work": "giorgione-the-three-philosophers"
         },
         {
           "title": "沉睡的维纳斯（提香续成）",
           "year": "约 1510",
-          "where": "德累斯顿历代大师画廊"
+          "where": "德累斯顿历代大师画廊",
+          "work": "giorgione-sleeping-venus-giorgione"
         },
         {
           "title": "德国商馆外墙壁画",
           "year": "1508",
-          "where": "已失传，残片存威尼斯黄金宫"
+          "where": "已失传，残片存威尼斯黄金宫",
+          "work": "giorgione-fondaco-dei-tedeschi"
         }
       ],
       "legacy": "瓦萨里把他和达·芬奇并列，认为他让威尼斯绘画进入了“现代手法”。能确定出自他手的画只有六幅左右，《田园合奏》等画在他和提香之间来回归属，争论至今未停。他的不少画没有明确的故事来源，《暴风雨》画的是什么至今各说各话，这种为收藏家画的诗意小画后来在威尼斯很流行。",
@@ -1988,22 +2087,26 @@
         {
           "title": "天上的爱与人间的爱",
           "year": "约 1514",
-          "where": "罗马博尔盖塞美术馆"
+          "where": "罗马博尔盖塞美术馆",
+          "work": "titian-sacred-and-profane-love"
         },
         {
           "title": "圣母升天",
           "year": "1516–1518",
-          "where": "威尼斯弗拉里荣耀圣母教堂"
+          "where": "威尼斯弗拉里荣耀圣母教堂",
+          "work": "titian-assumption-of-the-virgin-titian"
         },
         {
           "title": "酒神与阿里阿德涅",
           "year": "1520–1523",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "titian-bacchus-and-ariadne"
         },
         {
           "title": "佩萨罗祭坛画",
           "year": "1519–1526",
-          "where": "威尼斯弗拉里荣耀圣母教堂"
+          "where": "威尼斯弗拉里荣耀圣母教堂",
+          "work": "titian-pesaro-madonna"
         },
         {
           "title": "乌尔比诺的维纳斯",
@@ -2014,17 +2117,20 @@
         {
           "title": "查理五世骑马像",
           "year": "1548",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "titian-equestrian-portrait-of-charles-v"
         },
         {
           "title": "剥马西亚斯的皮",
           "year": "约 1570–1576",
-          "where": "捷克克罗梅日什大主教宫"
+          "where": "捷克克罗梅日什大主教宫",
+          "work": "titian-flaying-of-marsyas-titian"
         },
         {
           "title": "圣殇（小帕尔马续成）",
           "year": "约 1575–1576",
-          "where": "威尼斯学院美术馆"
+          "where": "威尼斯学院美术馆",
+          "work": "titian-pieta-titian"
         }
       ],
       "legacy": "据瓦萨里记载，米开朗基罗看过他在罗马画的《达那厄》，称赞色彩，又说可惜威尼斯人一开始没把素描学好。这句话后来常被当作佛罗伦萨素描与威尼斯色彩之争的出处。据他的晚年学生小帕尔马回忆，他最后几年常用手指抹画面。这种松散的画法被鲁本斯、委拉斯开兹和伦勃朗接了过去。",
@@ -2096,12 +2202,14 @@
         {
           "title": "根特祭坛画",
           "year": "1432",
-          "where": "根特圣巴夫主教座堂"
+          "where": "根特圣巴夫主教座堂",
+          "work": "van-eyck-ghent-altarpiece"
         },
         {
           "title": "戴红头巾的男子",
           "year": "1433",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "van-eyck-portrait-of-a-man-self-portrait"
         },
         {
           "title": "阿尔诺芬尼夫妇像",
@@ -2112,22 +2220,26 @@
         {
           "title": "罗林大臣的圣母",
           "year": "约 1435",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "van-eyck-madonna-of-chancellor-rolin"
         },
         {
           "title": "卡农范德帕勒的圣母",
           "year": "1436",
-          "where": "布鲁日格罗宁格博物馆"
+          "where": "布鲁日格罗宁格博物馆",
+          "work": "van-eyck-virgin-and-child-with-canon-van-der-paele"
         },
         {
           "title": "圣芭芭拉",
           "year": "1437",
-          "where": "安特卫普皇家美术馆"
+          "where": "安特卫普皇家美术馆",
+          "work": "van-eyck-saint-barbara-van-eyck"
         },
         {
           "title": "画家妻子玛格丽特像",
           "year": "1439",
-          "where": "布鲁日格罗宁格博物馆"
+          "where": "布鲁日格罗宁格博物馆",
+          "work": "van-eyck-portrait-of-margaret-van-eyck"
         }
       ],
       "legacy": "1456 年前后，意大利人文学者巴尔托洛梅奥·法齐就把他列为当代第一画家。瓦萨里说是他发明了油画，这个说法流传很久，其实油彩在他之前已有人用，他的长处在于一层层薄涂透明色。《阿尔诺芬尼夫妇像》后来进了西班牙王室收藏，常被认为启发了委拉斯开兹《宫娥》里的镜子。",
@@ -2183,12 +2295,14 @@
         {
           "title": "圣约翰在拔摩岛",
           "year": "约 1489",
-          "where": "柏林画廊"
+          "where": "柏林画廊",
+          "work": "bosch-saint-john-the-evangelist-on-patmos"
         },
         {
           "title": "愚人船",
           "year": "约 1490–1500",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "bosch-ship-of-fools-painting"
         },
         {
           "title": "人间乐园",
@@ -2199,17 +2313,20 @@
         {
           "title": "最后的审判三联画",
           "year": "约 1482–1505",
-          "where": "维也纳美术学院画廊"
+          "where": "维也纳美术学院画廊",
+          "work": "bosch-the-last-judgment-bosch-triptych"
         },
         {
           "title": "圣安东尼的诱惑",
           "year": "约 1501",
-          "where": "里斯本国立古代艺术博物馆"
+          "where": "里斯本国立古代艺术博物馆",
+          "work": "bosch-triptych-of-the-temptation-of-st-anthony"
         },
         {
           "title": "干草车",
           "year": "约 1510–1516",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "bosch-the-haywain-triptych"
         }
       ],
       "legacy": "西班牙国王腓力二世热衷收藏他的画，所以普拉多今天藏他的作品最多。1605 年，埃斯科里亚尔修道院的修士西古恩萨为他辩护，说别人画人的外表，他敢画人的内心。他死后仿作很多，勃鲁盖尔早年也靠这类题材出名。画里大量象征至今没有公认的解释。",
@@ -2282,7 +2399,8 @@
         {
           "title": "启示录（木刻组画）",
           "year": "1498",
-          "where": "版画，多家博物馆藏有印本"
+          "where": "版画，多家博物馆藏有印本",
+          "work": "durer-apocalypse-durer"
         },
         {
           "title": "二十八岁自画像",
@@ -2293,32 +2411,38 @@
         {
           "title": "野兔",
           "year": "1502",
-          "where": "维也纳阿尔贝蒂娜博物馆"
+          "where": "维也纳阿尔贝蒂娜博物馆",
+          "work": "durer-young-hare"
         },
         {
           "title": "玫瑰花环节",
           "year": "1506",
-          "where": "布拉格国家美术馆"
+          "where": "布拉格国家美术馆",
+          "work": "durer-feast-of-the-rosary"
         },
         {
           "title": "亚当与夏娃",
           "year": "1507",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "durer-adam-and-eve-durer"
         },
         {
           "title": "骑士、死神与魔鬼",
           "year": "1513",
-          "where": "版画，多家博物馆藏有印本"
+          "where": "版画，多家博物馆藏有印本",
+          "work": "durer-knight-death-and-the-devil"
         },
         {
           "title": "忧郁 I",
           "year": "1514",
-          "where": "版画，多家博物馆藏有印本"
+          "where": "版画，多家博物馆藏有印本",
+          "work": "durer-melencolia-i"
         },
         {
           "title": "四使徒",
           "year": "1526",
-          "where": "慕尼黑老绘画陈列馆"
+          "where": "慕尼黑老绘画陈列馆",
+          "work": "durer-the-four-apostles"
         }
       ],
       "legacy": "伊拉斯谟称他为“黑线条的阿佩莱斯”，说他只用黑线就能画出光影和情绪。据瓦萨里说，威尼斯版画家莱蒙迪连签名一起仿刻他的版画，他为此去威尼斯告状。他写了透视和人体比例的论著，是北方较早系统写作画理的画家。他用字母 AD 组成的签名很早就被仿冒。",
@@ -2396,22 +2520,26 @@
         {
           "title": "坟墓中的基督尸体",
           "year": "1521–1522",
-          "where": "巴塞尔美术馆"
+          "where": "巴塞尔美术馆",
+          "work": "holbein-the-body-of-the-dead-christ-in-the-tomb"
         },
         {
           "title": "伊拉斯谟像",
           "year": "1523",
-          "where": "巴塞尔美术馆"
+          "where": "巴塞尔美术馆",
+          "work": "holbein-portrait-of-erasmus-of-rotterdam"
         },
         {
           "title": "托马斯·莫尔爵士像",
           "year": "1527",
-          "where": "纽约弗里克收藏馆"
+          "where": "纽约弗里克收藏馆",
+          "work": "holbein-portrait-of-sir-thomas-more"
         },
         {
           "title": "商人格奥尔格·吉兹像",
           "year": "1532",
-          "where": "柏林画廊"
+          "where": "柏林画廊",
+          "work": "holbein-portrait-of-georg-giese"
         },
         {
           "title": "大使",
@@ -2422,17 +2550,20 @@
         {
           "title": "亨利八世像",
           "year": "约 1537",
-          "where": "马德里提森-博内米萨博物馆"
+          "where": "马德里提森-博内米萨博物馆",
+          "work": "holbein-portrait-of-henry-viii"
         },
         {
           "title": "克莱沃的安妮像",
           "year": "1539",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "holbein-portrait-of-anne-of-cleves-holbein"
         },
         {
           "title": "死神之舞（木刻组画）",
           "year": "1520 年代设计，1538 年出版",
-          "where": "版画，多家博物馆藏有印本"
+          "where": "版画，多家博物馆藏有印本",
+          "work": "holbein-danse-macabre-holbein"
         }
       ],
       "legacy": "他的肖像细到能看清衣料的纹路和信纸上的字，画家自己的态度藏得很深。白厅宫里亨利八世家族像的壁画 1698 年毁于大火，留下的草图和摹本定下了亨利八世叉腿站立的形象。伊拉斯谟、莫尔等人文学者的样貌，今天也主要靠他的画认识。",
@@ -2499,17 +2630,20 @@
         {
           "title": "尼德兰谚语",
           "year": "1559",
-          "where": "柏林画廊"
+          "where": "柏林画廊",
+          "work": "bruegel-netherlandish-proverbs"
         },
         {
           "title": "死亡的胜利",
           "year": "约 1562",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "bruegel-the-triumph-of-death"
         },
         {
           "title": "巴别塔",
           "year": "1563",
-          "where": "维也纳艺术史博物馆"
+          "where": "维也纳艺术史博物馆",
+          "work": "bruegel-the-tower-of-babel-bruegel"
         },
         {
           "title": "雪中猎人",
@@ -2520,17 +2654,20 @@
         {
           "title": "收割者",
           "year": "1565",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "bruegel-the-harvesters-painting"
         },
         {
           "title": "农民的婚礼",
           "year": "约 1567",
-          "where": "维也纳艺术史博物馆"
+          "where": "维也纳艺术史博物馆",
+          "work": "bruegel-the-peasant-wedding"
         },
         {
           "title": "盲人引导盲人",
           "year": "1568",
-          "where": "那不勒斯卡波迪蒙特博物馆"
+          "where": "那不勒斯卡波迪蒙特博物馆",
+          "work": "bruegel-the-blind-leading-the-blind"
         }
       ],
       "legacy": "范·曼德尔在 1604 年的《画家之书》里说，他常和朋友扮成农民混进乡村婚礼和集市，后人因此叫他“农民勃鲁盖尔”。他的画很早进了哈布斯堡皇室收藏，存世约四十幅里有十来幅在维也纳艺术史博物馆。长子小彼得大量复制他的构图，让这些画面传得更广。",
@@ -2610,7 +2747,8 @@
         {
           "title": "果篮",
           "year": "约 1599",
-          "where": "米兰安布罗西亚纳美术馆"
+          "where": "米兰安布罗西亚纳美术馆",
+          "work": "caravaggio-basket-of-fruit-caravaggio"
         },
         {
           "title": "圣马太蒙召",
@@ -2621,32 +2759,38 @@
         {
           "title": "圣马太殉难",
           "year": "1599–1600",
-          "where": "罗马圣王路易堂"
+          "where": "罗马圣王路易堂",
+          "work": "caravaggio-the-martyrdom-of-saint-matthew-caravaggio"
         },
         {
           "title": "圣保罗皈依",
           "year": "1601",
-          "where": "罗马人民圣母堂"
+          "where": "罗马人民圣母堂",
+          "work": "caravaggio-conversion-on-the-way-to-damascus"
         },
         {
           "title": "基督下葬",
           "year": "1603–1604",
-          "where": "梵蒂冈博物馆"
+          "where": "梵蒂冈博物馆",
+          "work": "caravaggio-the-entombment-of-christ-caravaggio"
         },
         {
           "title": "圣母之死",
           "year": "1601–1606",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "caravaggio-death-of-the-virgin-caravaggio"
         },
         {
           "title": "圣约翰斩首",
           "year": "1608",
-          "where": "瓦莱塔圣约翰副主教座堂"
+          "where": "瓦莱塔圣约翰副主教座堂",
+          "work": "caravaggio-the-beheading-of-saint-john-the-baptist-caravaggio"
         },
         {
           "title": "手提歌利亚头颅的大卫",
           "year": "约 1610",
-          "where": "罗马博尔盖塞美术馆"
+          "where": "罗马博尔盖塞美术馆",
+          "work": "caravaggio-david-with-the-head-of-goliath-caravaggio-rome"
         }
       ],
       "legacy": "《圣母之死》被订画的教堂拒收，当时在曼托瓦宫廷的鲁本斯劝公爵买下了它。17 世纪的贝洛里批评他只会照着模特画，不懂挑选美的东西。据法国作家费利比安记载，普桑说他来到世上是为了毁掉绘画。1951 年意大利学者隆吉在米兰办了他的大展，他的声誉才重新回到第一流。",
@@ -2720,37 +2864,44 @@
         {
           "title": "上十字架",
           "year": "1610–1611",
-          "where": "安特卫普圣母主教座堂"
+          "where": "安特卫普圣母主教座堂",
+          "work": "rubens-the-elevation-of-the-cross-rubens"
         },
         {
           "title": "下十字架",
           "year": "1612–1614",
-          "where": "安特卫普圣母主教座堂"
+          "where": "安特卫普圣母主教座堂",
+          "work": "rubens-the-descent-from-the-cross-rubens-1612-1614"
         },
         {
           "title": "劫夺留基伯的女儿",
           "year": "约 1618",
-          "where": "慕尼黑老绘画陈列馆"
+          "where": "慕尼黑老绘画陈列馆",
+          "work": "rubens-the-rape-of-the-daughters-of-leucippus"
         },
         {
           "title": "玛丽·德·美第奇生平组画",
           "year": "1622–1625",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "rubens-marie-de-medici-cycle"
         },
         {
           "title": "白厅国宴厅天顶画",
           "year": "1630–1634",
-          "where": "伦敦白厅国宴厅"
+          "where": "伦敦白厅国宴厅",
+          "work": "rubens-banqueting-house-ceiling"
         },
         {
           "title": "毛皮衣",
           "year": "约 1636–1638",
-          "where": "维也纳艺术史博物馆"
+          "where": "维也纳艺术史博物馆",
+          "work": "rubens-het-pelsken"
         },
         {
           "title": "战争的后果",
           "year": "1637–1638",
-          "where": "佛罗伦萨皮蒂宫帕拉蒂纳美术馆"
+          "where": "佛罗伦萨皮蒂宫帕拉蒂纳美术馆",
+          "work": "rubens-consequences-of-war"
         }
       ],
       "legacy": "17 世纪末，法国皇家绘画学院里争论素描和色彩孰重，罗歇·德·皮勒站在“鲁本斯派”一边，反对“普桑派”，最后为色彩争得了地位。华托、德拉克洛瓦和雷诺阿都认真学过他。他画中丰腴的女性身体后来在英语里成了一个形容词。",
@@ -2828,27 +2979,32 @@
         {
           "title": "圣比比亚纳教堂立面与圣徒像",
           "year": "1624–1626",
-          "where": "罗马圣比比亚纳教堂"
+          "where": "罗马圣比比亚纳教堂",
+          "work": "urban-viii-santa-bibiana"
         },
         {
           "title": "圣彼得青铜华盖",
           "year": "1624–1633",
-          "where": "梵蒂冈圣彼得大教堂"
+          "where": "梵蒂冈圣彼得大教堂",
+          "work": "bernini-st-peter-s-baldachin"
         },
         {
           "title": "巴贝里尼宫",
           "year": "1627–1633",
-          "where": "罗马国立古代艺术馆"
+          "where": "罗马国立古代艺术馆",
+          "work": "urban-viii-palazzo-barberini"
         },
         {
           "title": "乌尔班八世墓",
           "year": "1628–1647",
-          "where": "梵蒂冈圣彼得大教堂"
+          "where": "梵蒂冈圣彼得大教堂",
+          "work": "urban-viii-tomb-of-pope-urban-viii"
         },
         {
           "title": "特里同喷泉",
           "year": "1642–1643",
-          "where": "罗马巴贝里尼广场"
+          "where": "罗马巴贝里尼广场",
+          "work": "urban-viii-triton-fountain"
         }
       ],
       "legacy": "他在位二十一年，罗马的建筑和祭坛上到处是巴贝里尼家族的蜜蜂徽章。为铸大炮和华盖拆了万神殿门廊的古铜，罗马人据说贴出讽刺话，说蛮族没干的事巴贝里尼干了。他大肆提拔侄子，晚年打卡斯特罗战争，掏空了教廷财政。年轻时他写拉丁文诗，和伽利略交好，后来又亲自促成了对伽利略的审判。",
@@ -2922,22 +3078,26 @@
         {
           "title": "劫夺普洛塞庇娜",
           "year": "1621–1622",
-          "where": "罗马博尔盖塞美术馆"
+          "where": "罗马博尔盖塞美术馆",
+          "work": "bernini-the-rape-of-proserpina"
         },
         {
           "title": "阿波罗与达芙妮",
           "year": "1622–1625",
-          "where": "罗马博尔盖塞美术馆"
+          "where": "罗马博尔盖塞美术馆",
+          "work": "bernini-apollo-and-daphne-bernini"
         },
         {
           "title": "大卫",
           "year": "1623–1624",
-          "where": "罗马博尔盖塞美术馆"
+          "where": "罗马博尔盖塞美术馆",
+          "work": "bernini-david-bernini"
         },
         {
           "title": "圣彼得青铜华盖",
           "year": "1624–1633",
-          "where": "梵蒂冈圣彼得大教堂"
+          "where": "梵蒂冈圣彼得大教堂",
+          "work": "bernini-st-peter-s-baldachin"
         },
         {
           "title": "圣特雷莎的狂喜",
@@ -2948,17 +3108,20 @@
         {
           "title": "四河喷泉",
           "year": "1648–1651",
-          "where": "罗马纳沃纳广场"
+          "where": "罗马纳沃纳广场",
+          "work": "bernini-fontana-dei-quattro-fiumi"
         },
         {
           "title": "圣彼得广场柱廊",
           "year": "1656–1667",
-          "where": "梵蒂冈圣彼得广场"
+          "where": "梵蒂冈圣彼得广场",
+          "work": "bernini-st-peter-s-square"
         },
         {
           "title": "奎里纳莱的圣安德烈教堂",
           "year": "1658–1670",
-          "where": "罗马"
+          "where": "罗马",
+          "work": "bernini-sant-andrea-al-quirinale"
         }
       ],
       "legacy": "同代人把他当作米开朗基罗之后的第一人，他的对手博罗米尼却始终觉得他抢了自己的功劳。1665 年他在巴黎的言行由陪同的尚特卢逐日记下，是了解他艺术观的重要材料。18 世纪新古典主义兴起，温克尔曼等人嫌他的雕塑过于造作，他的声誉低落了很久，20 世纪才回升。",
@@ -3039,32 +3202,38 @@
         {
           "title": "塞维利亚卖水人",
           "year": "约 1618–1622",
-          "where": "伦敦阿普斯利邸"
+          "where": "伦敦阿普斯利邸",
+          "work": "velazquez-the-waterseller-of-seville"
         },
         {
           "title": "酒神的胜利",
           "year": "1628–1629",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "velazquez-the-triumph-of-bacchus"
         },
         {
           "title": "布雷达的投降",
           "year": "1634–1635",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "velazquez-the-surrender-of-breda"
         },
         {
           "title": "镜前的维纳斯",
           "year": "1647–1651",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "velazquez-rokeby-venus"
         },
         {
           "title": "胡安·德·帕雷哈像",
           "year": "1650",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "velazquez-portrait-of-juan-de-pareja"
         },
         {
           "title": "教皇英诺森十世像",
           "year": "1650",
-          "where": "罗马多利亚·潘菲利美术馆"
+          "where": "罗马多利亚·潘菲利美术馆",
+          "work": "velazquez-portrait-of-innocent-x"
         },
         {
           "title": "宫娥",
@@ -3075,7 +3244,8 @@
         {
           "title": "纺纱女",
           "year": "约 1655–1660",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "velazquez-las-hilanderas-velazquez"
         }
       ],
       "legacy": "他的画多数锁在西班牙王宫里，西班牙以外的人长期很少见到。普拉多博物馆 1819 年开馆后，法国画家陆续去马德里看他，马奈、惠斯勒、萨金特都深受影响。据说英诺森十世看了自己的肖像，说画得“太真了”。1957 年毕加索一口气画了五十多幅《宫娥》的变奏。",
@@ -3160,12 +3330,14 @@
         {
           "title": "杜尔普医生的解剖课",
           "year": "1632",
-          "where": "海牙莫瑞泰斯皇家美术馆"
+          "where": "海牙莫瑞泰斯皇家美术馆",
+          "work": "rembrandt-the-anatomy-lesson-of-dr-nicolaes-tulp"
         },
         {
           "title": "伯沙撒王的盛宴",
           "year": "约 1635–1638",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "rembrandt-belshazzar-s-feast-rembrandt"
         },
         {
           "title": "夜巡",
@@ -3176,27 +3348,32 @@
         {
           "title": "百盾版画",
           "year": "约 1648",
-          "where": "版画，多家博物馆藏有印本"
+          "where": "版画，多家博物馆藏有印本",
+          "work": "rembrandt-hundred-guilder-print"
         },
         {
           "title": "布商公会理事",
           "year": "1662",
-          "where": "阿姆斯特丹国立博物馆"
+          "where": "阿姆斯特丹国立博物馆",
+          "work": "rembrandt-syndics-of-the-drapers-guild"
         },
         {
           "title": "犹太新娘",
           "year": "约 1665–1669",
-          "where": "阿姆斯特丹国立博物馆"
+          "where": "阿姆斯特丹国立博物馆",
+          "work": "rembrandt-the-jewish-bride"
         },
         {
           "title": "两个圆圈的自画像",
           "year": "约 1665–1669",
-          "where": "伦敦肯伍德府"
+          "where": "伦敦肯伍德府",
+          "work": "rembrandt-self-portrait-with-two-circles"
         },
         {
           "title": "浪子回头",
           "year": "约 1668",
-          "where": "圣彼得堡埃尔米塔日博物馆"
+          "where": "圣彼得堡埃尔米塔日博物馆",
+          "work": "rembrandt-the-return-of-the-prodigal-son-rembrandt"
         }
       ],
       "legacy": "1630 年前后，执政的秘书康斯坦丁·惠更斯在自传里称赞莱顿的年轻人伦勃朗和利文斯，说他们很快会超过前人。他晚年厚涂粗放，不合当时流行的精细画风，后来的古典派批评者说他不守规矩。他学生和作坊的仿作很多，1968 年成立的“伦勃朗研究计划”逐幅鉴定，剔除了不少旧日归在他名下的画。",
@@ -3258,27 +3435,32 @@
         {
           "title": "倒牛奶的女仆",
           "year": "约 1657–1658",
-          "where": "阿姆斯特丹国立博物馆"
+          "where": "阿姆斯特丹国立博物馆",
+          "work": "vermeer-the-milkmaid-vermeer"
         },
         {
           "title": "窗前读信的少女",
           "year": "约 1657–1659",
-          "where": "德累斯顿历代大师画廊"
+          "where": "德累斯顿历代大师画廊",
+          "work": "vermeer-girl-reading-a-letter-at-an-open-window"
         },
         {
           "title": "小街",
           "year": "约 1658",
-          "where": "阿姆斯特丹国立博物馆"
+          "where": "阿姆斯特丹国立博物馆",
+          "work": "vermeer-the-little-street"
         },
         {
           "title": "代尔夫特风景",
           "year": "约 1660–1661",
-          "where": "海牙莫瑞泰斯皇家美术馆"
+          "where": "海牙莫瑞泰斯皇家美术馆",
+          "work": "vermeer-view-of-delft"
         },
         {
           "title": "读信的蓝衣女子",
           "year": "约 1663",
-          "where": "阿姆斯特丹国立博物馆"
+          "where": "阿姆斯特丹国立博物馆",
+          "work": "vermeer-woman-in-blue-reading-a-letter"
         },
         {
           "title": "戴珍珠耳环的少女",
@@ -3289,12 +3471,14 @@
         {
           "title": "绘画的艺术",
           "year": "约 1666–1668",
-          "where": "维也纳艺术史博物馆"
+          "where": "维也纳艺术史博物馆",
+          "work": "vermeer-the-art-of-painting"
         },
         {
           "title": "天文学家",
           "year": "1668",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "vermeer-the-astronomer-vermeer"
         }
       ],
       "legacy": "1866 年，法国评论家托雷-比尔热在《美术报》上连载文章，称他为“代尔夫特的斯芬克斯”，替他找回了几十幅画。普鲁斯特在《追忆似水年华》里让作家贝戈特死在《代尔夫特风景》的一小块黄墙前。1930 至 40 年代，范·米格伦伪造他的宗教画卖给了戈林。他是否借助暗箱作画，至今仍有争论。",
@@ -3374,32 +3558,38 @@
         {
           "title": "舟发西苔岛（第二版）",
           "year": "约1718–1719",
-          "where": "柏林夏洛滕堡宫"
+          "where": "柏林夏洛滕堡宫",
+          "work": "watteau-pilgrimage-to-cythera"
         },
         {
           "title": "皮埃罗",
           "year": "约1718–1719",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "watteau-pierrot-watteau"
         },
         {
           "title": "威尼斯游乐会",
           "year": "约1718–1719",
-          "where": "爱丁堡苏格兰国家美术馆"
+          "where": "爱丁堡苏格兰国家美术馆",
+          "work": "watteau-fetes-venitiennes"
         },
         {
           "title": "梅泽坦",
           "year": "约1718–1720",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "watteau-mezzetino-painting"
         },
         {
           "title": "意大利喜剧演员",
           "year": "约1720",
-          "where": "华盛顿国家美术馆"
+          "where": "华盛顿国家美术馆",
+          "work": "watteau-the-italian-comedians"
         },
         {
           "title": "热尔桑画店招牌",
           "year": "1720",
-          "where": "柏林夏洛滕堡宫"
+          "where": "柏林夏洛滕堡宫",
+          "work": "watteau-l-enseigne-de-gersaint"
         }
       ],
       "legacy": "学院为接纳他专门设了“游乐画家”这个名目，生前作品就被富有的藏家争购。新古典主义兴起后他被当作旧制度的轻浮趣味，据说大卫的学生曾朝《舟发西苔岛》扔面包团。19 世纪中叶龚古尔兄弟重新推崇他，把他画中那层淡淡的忧郁看作 18 世纪法国绘画最动人的部分。",
@@ -3480,27 +3670,32 @@
         {
           "title": "大祭司科雷素斯舍身救卡莉罗埃",
           "year": "1765",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "fragonard-coresus-sacrificing-himself-to-save-callirhoe"
         },
         {
           "title": "读书的少女",
           "year": "约1769",
-          "where": "华盛顿国家美术馆"
+          "where": "华盛顿国家美术馆",
+          "work": "fragonard-a-young-girl-reading"
         },
         {
           "title": "爱情的进程",
           "year": "1771–1772",
-          "where": "纽约弗里克收藏馆"
+          "where": "纽约弗里克收藏馆",
+          "work": "fragonard-the-progress-of-love-fragonard"
         },
         {
           "title": "门闩",
           "year": "约1777–1778",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "fragonard-the-bolt-fragonard"
         },
         {
           "title": "偷吻",
           "year": "1780年代末",
-          "where": "圣彼得堡埃尔米塔日博物馆"
+          "where": "圣彼得堡埃尔米塔日博物馆",
+          "work": "fragonard-the-stolen-kiss-fragonard"
         }
       ],
       "legacy": "他以历史画进入学院，随后却放弃官方前程，专为私人藏家画小幅的风流题材和快笔“幻想肖像”。大革命让这类趣味一夜过时，他晚年靠大卫照顾才在博物馆系统里谋到职位。19 世纪中叶龚古尔兄弟把他和华托、布歇一起重新写进法国绘画史，雷诺阿等人也欣赏他松快的笔触。",
@@ -3579,22 +3774,26 @@
         {
           "title": "阳伞",
           "year": "1777",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "goya-the-parasol"
         },
         {
           "title": "裸体的玛哈",
           "year": "1795–1800",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "goya-the-nude-maja"
         },
         {
           "title": "卡洛斯四世一家",
           "year": "1800–1801",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "goya-charles-iv-of-spain-and-his-family"
         },
         {
           "title": "1808年5月2日",
           "year": "1814",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "goya-the-second-of-may-1808"
         },
         {
           "title": "1808年5月3日",
@@ -3605,12 +3804,14 @@
         {
           "title": "农神吞噬其子",
           "year": "1819–1823",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "goya-saturn-devouring-his-son"
         },
         {
           "title": "波尔多的卖奶姑娘",
           "year": "约1825–1827",
-          "where": "马德里普拉多博物馆"
+          "where": "马德里普拉多博物馆",
+          "work": "goya-the-milkmaid-of-bordeaux"
         }
       ],
       "legacy": "他做了几十年宫廷画家，同时用版画讥讽教会、贵族和迷信。《战争的灾难》直到 1863 年才由马德里美术学院出版。马奈 1865 年去马德里看过他的画，后来画《枪决马克西米利安皇帝》时借用了《1808年5月3日》的构图。波德莱尔 1857 年专文谈过他的版画，毕加索的《格尔尼卡》也常被拿来和他相比。",
@@ -3698,12 +3899,14 @@
         {
           "title": "苏格拉底之死",
           "year": "1787",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "david-the-death-of-socrates"
         },
         {
           "title": "侍从给布鲁图斯送回儿子们的尸体",
           "year": "1789",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "david-the-lictors-bring-to-brutus-the-bodies-of-his-sons"
         },
         {
           "title": "马拉之死",
@@ -3714,12 +3917,14 @@
         {
           "title": "萨宾妇女",
           "year": "1799",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "david-the-intervention-of-the-sabine-women"
         },
         {
           "title": "雷卡米耶夫人",
           "year": "1800",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "david-portrait-of-madame-recamier"
         },
         {
           "title": "拿破仑翻越阿尔卑斯山",
@@ -3730,7 +3935,8 @@
         {
           "title": "拿破仑一世加冕礼",
           "year": "1805–1807",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "david-the-coronation-of-napoleon"
         }
       ],
       "legacy": "从路易十六到大革命再到拿破仑，他为三个政权画过最重要的官方画，也因此几度沉浮。他的工作室培养了格罗、吉罗代、热拉尔和安格尔等一代画家，左右法国学院艺术半个世纪。年轻的浪漫派以反对他的冷硬线条起家，但德拉克洛瓦也承认《马拉之死》的力量。",
@@ -3806,32 +4012,38 @@
         {
           "title": "拿破仑一世加冕礼",
           "year": "1805–1807",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "david-the-coronation-of-napoleon"
         },
         {
           "title": "拿破仑视察雅法鼠疫病院",
           "year": "1804",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "napoleon-bonaparte-visiting-the-plague-victims-of-jaffa"
         },
         {
           "title": "王座上的拿破仑一世",
           "year": "1806",
-          "where": "巴黎军事博物馆（荣军院）"
+          "where": "巴黎军事博物馆（荣军院）",
+          "work": "ingres-napoleon-i-on-his-imperial-throne"
         },
         {
           "title": "卡鲁塞尔凯旋门",
           "year": "1806–1808",
-          "where": "巴黎卡鲁塞尔广场"
+          "where": "巴黎卡鲁塞尔广场",
+          "work": "napoleon-arc-de-triomphe-du-carrousel"
         },
         {
           "title": "旺多姆圆柱",
           "year": "1806–1810",
-          "where": "巴黎旺多姆广场"
+          "where": "巴黎旺多姆广场",
+          "work": "napoleon-vendome-column"
         },
         {
           "title": "星形广场凯旋门",
           "year": "1806–1836",
-          "where": "巴黎戴高乐广场"
+          "where": "巴黎戴高乐广场",
+          "work": "napoleon-arc-de-triomphe"
         }
       ],
       "legacy": "他把绘画、建筑和博物馆都当作统治的工具。大卫、格罗、安格尔为他塑造形象，建筑师佩西耶和方丹为他定下帝国风格的室内与家具样式。德农主持的拿破仑博物馆一度汇集欧洲各地的名作，向公众开放，后来的国家博物馆多少都受它影响。被掠走的作品大多在 1815 年后归还原主，但仍有一部分留在法国。",
@@ -3900,17 +4112,20 @@
         {
           "title": "山上的十字架",
           "year": "1807–1808",
-          "where": "德累斯顿新大师画廊"
+          "where": "德累斯顿新大师画廊",
+          "work": "friedrich-cross-in-the-mountains"
         },
         {
           "title": "海边的僧侣",
           "year": "1808–1810",
-          "where": "柏林老国家美术馆"
+          "where": "柏林老国家美术馆",
+          "work": "friedrich-the-monk-by-the-sea"
         },
         {
           "title": "橡树林中的修道院",
           "year": "1809–1810",
-          "where": "柏林老国家美术馆"
+          "where": "柏林老国家美术馆",
+          "work": "friedrich-the-abbey-in-the-oakwood"
         },
         {
           "title": "雾海上的旅人",
@@ -3921,17 +4136,20 @@
         {
           "title": "吕根岛的白垩崖",
           "year": "约1818",
-          "where": "温特图尔奥斯卡·莱因哈特收藏馆"
+          "where": "温特图尔奥斯卡·莱因哈特收藏馆",
+          "work": "friedrich-chalk-cliffs-on-rugen"
         },
         {
           "title": "两人观月",
           "year": "1819–1820",
-          "where": "德累斯顿新大师画廊"
+          "where": "德累斯顿新大师画廊",
+          "work": "friedrich-two-men-contemplating-the-moon"
         },
         {
           "title": "冰海",
           "year": "1823–1824",
-          "where": "汉堡美术馆"
+          "where": "汉堡美术馆",
+          "work": "friedrich-the-sea-of-ice"
         }
       ],
       "legacy": "他在 1810 年前后很受推崇，歌德也一度关注他，但晚年被视为古怪过时，死后几乎被遗忘。1906 年柏林的“德国百年艺术展”让他重新进入公众视野。纳粹时期他的画被当作民族象征，战后一度遭到冷落。1970 年代起，美国学者罗森布鲁姆把他和罗斯科放在同一条传统里讨论，他的地位由此稳固。",
@@ -4008,12 +4226,14 @@
         {
           "title": "王座上的拿破仑一世",
           "year": "1806",
-          "where": "巴黎军事博物馆（荣军院）"
+          "where": "巴黎军事博物馆（荣军院）",
+          "work": "ingres-napoleon-i-on-his-imperial-throne"
         },
         {
           "title": "瓦平松的浴女",
           "year": "1808",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "ingres-the-valpincon-bather"
         },
         {
           "title": "大宫女",
@@ -4024,27 +4244,32 @@
         {
           "title": "路易十三的誓愿",
           "year": "1824",
-          "where": "蒙托邦圣母大教堂"
+          "where": "蒙托邦圣母大教堂",
+          "work": "ingres-the-vow-of-louis-xiii"
         },
         {
           "title": "贝尔坦先生像",
           "year": "1832",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "ingres-portrait-of-monsieur-bertin"
         },
         {
           "title": "泉",
           "year": "1820–1856",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "ingres-the-source-ingres"
         },
         {
           "title": "莫瓦特西耶夫人像",
           "year": "1856",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "ingres-madame-moitessier"
         },
         {
           "title": "土耳其浴室",
           "year": "1862",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "ingres-the-turkish-bath"
         }
       ],
       "legacy": "早年他被批评为过于“哥特”和怪异，中年后却成了学院正统的代表，与德拉克洛瓦被看作线条与色彩两派的领头人。他最看重历史画，后世却更欣赏他的肖像和铅笔素描。德加收藏过他的作品，1905 年秋季沙龙的安格尔回顾展让毕加索和马蒂斯都从他变形的人体里得到启发。",
@@ -4133,12 +4358,14 @@
         {
           "title": "轻骑兵军官的冲锋",
           "year": "1812",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "gericault-the-charging-chasseur"
         },
         {
           "title": "受伤的胸甲骑兵",
           "year": "1814",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "gericault-the-wounded-cuirassier"
         },
         {
           "title": "梅杜萨之筏",
@@ -4149,17 +4376,20 @@
         {
           "title": "埃普索姆赛马",
           "year": "1821",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "gericault-the-1821-derby-at-epsom"
         },
         {
           "title": "患嫉妒偏执症的女人",
           "year": "约1819–1822",
-          "where": "里昂美术馆"
+          "where": "里昂美术馆",
+          "work": "gericault-insane-woman"
         },
         {
           "title": "患偷窃偏执症的男人",
           "year": "约1819–1822",
-          "where": "根特美术馆"
+          "where": "根特美术馆",
+          "work": "gericault-portrait-of-a-kleptomaniac"
         }
       ],
       "legacy": "他把当代新闻事件画成历史画的尺幅，打破了古代题材对大画的垄断。他死后不久，卢浮宫买下了《梅杜萨之筏》。德拉克洛瓦曾为这幅画当模特，把他看作领路人。他画的精神病人肖像不带道德评判，后来常被拿来和库尔贝的现实主义一起讨论。",
@@ -4234,17 +4464,20 @@
         {
           "title": "但丁之舟",
           "year": "1822",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "delacroix-the-barque-of-dante"
         },
         {
           "title": "希阿岛的屠杀",
           "year": "1824",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "delacroix-the-massacre-at-chios"
         },
         {
           "title": "萨达纳帕勒斯之死",
           "year": "1827",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "delacroix-the-death-of-sardanapalus"
         },
         {
           "title": "自由引导人民",
@@ -4255,30 +4488,40 @@
         {
           "title": "阿尔及尔的女人",
           "year": "1834",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "delacroix-women-of-algiers-in-their-apartment"
         },
         {
           "title": "肖邦像",
           "year": "1838",
-          "where": "巴黎卢浮宫"
+          "where": "巴黎卢浮宫",
+          "work": "delacroix-portrait-of-frederic-chopin-and-george-sand"
         },
         {
           "title": "雅各与天使搏斗",
           "year": "1854–1861",
-          "where": "巴黎圣叙尔皮斯教堂"
+          "where": "巴黎圣叙尔皮斯教堂",
+          "work": "delacroix-jacob-wrestling-with-the-angel-delacroix"
         }
       ],
       "legacy": "波德莱尔在多篇沙龙评论里把他捧为当代最重要的画家。他和安格尔的对立，被时人简化成色彩与线条之争。他死后第二年，方丹-拉图尔画了《向德拉克洛瓦致敬》，画中有马奈、惠斯勒和波德莱尔。他的日记出版后，成为研究 19 世纪绘画的重要文献，塞尚和梵高都细读过他的色彩。",
       "rel": {
         "influences": [
           "gericault",
-          "rubens"
+          "rubens",
+          "constable"
         ],
         "rivals": [
           "ingres"
         ]
       },
-      "wiki": "Eugène_Delacroix"
+      "wiki": "Eugène_Delacroix",
+      "sources": [
+        {
+          "label": "耶鲁英国艺术中心：康斯太布尔与德拉克洛瓦",
+          "url": "https://bridget-riley.publications.britishart.yale.edu/c-and-d/"
+        }
+      ]
     },
     {
       "id": "millet",
@@ -4343,12 +4586,14 @@
         {
           "title": "簸谷者",
           "year": "约1847–1848",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "millet-the-winnower-millet"
         },
         {
           "title": "播种者",
           "year": "1850",
-          "where": "波士顿美术馆"
+          "where": "波士顿美术馆",
+          "work": "millet-the-sower-millet"
         },
         {
           "title": "拾穗者",
@@ -4359,17 +4604,20 @@
         {
           "title": "晚钟",
           "year": "1857–1859",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "millet-the-angelus-painting"
         },
         {
           "title": "扶锄的男人",
           "year": "1860–1862",
-          "where": "洛杉矶盖蒂博物馆"
+          "where": "洛杉矶盖蒂博物馆",
+          "work": "millet-man-with-a-hoe"
         },
         {
           "title": "春天",
           "year": "1868–1873",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "millet-spring-millet"
         }
       ],
       "legacy": "第二帝国时期，右派批评他美化粗野，左派则把他的农民看成控诉，他本人很少表态。死后他的名声迅速上升，《晚钟》1889 年拍卖时被美国人买走，次年又由法国藏家肖沙尔高价买回，后来捐给国家。梵高长期临摹他的画，达利也对《晚钟》着迷，专门写过一本书分析它。",
@@ -4440,12 +4688,14 @@
         {
           "title": "带黑狗的库尔贝",
           "year": "1842",
-          "where": "巴黎小皇宫美术馆"
+          "where": "巴黎小皇宫美术馆",
+          "work": "courbet-self-portrait-with-a-black-dog"
         },
         {
           "title": "石工",
           "year": "1849",
-          "where": "已失传"
+          "where": "已失传",
+          "work": "courbet-the-stone-breakers"
         },
         {
           "title": "奥尔南的葬礼",
@@ -4456,22 +4706,26 @@
         {
           "title": "你好，库尔贝先生",
           "year": "1854",
-          "where": "蒙彼利埃法布尔博物馆"
+          "where": "蒙彼利埃法布尔博物馆",
+          "work": "courbet-bonjour-monsieur-courbet"
         },
         {
           "title": "画家的画室",
           "year": "1854–1855",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "courbet-the-painter-s-studio"
         },
         {
           "title": "世界的起源",
           "year": "1866",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "courbet-l-origine-du-monde"
         },
         {
           "title": "暴风雨后的埃特雷塔悬崖",
           "year": "1870",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "courbet-the-cliff-at-etretat-after-the-storm"
         }
       ],
       "legacy": "他把乡下的葬礼和石匠画成历史画的大尺幅，激怒了沙龙的评论家，作家尚弗勒里则为他辩护。他自办展览、为展览目录写《现实主义》前言、和媒体对着干，给后来的独立画家做了样子。马奈、莫奈和年轻的塞尚都从他厚重的刮刀笔法里学到东西。《石工》在 1945 年德累斯顿的轰炸中被毁。",
@@ -4549,27 +4803,32 @@
         {
           "title": "白霜",
           "year": "1873",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "pissarro-hoarfrost-pissarro"
         },
         {
           "title": "红屋顶",
           "year": "1877",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "pissarro-red-roofs-pissarro"
         },
         {
           "title": "埃拉尼的苹果收获",
           "year": "1888",
-          "where": "达拉斯美术馆"
+          "where": "达拉斯美术馆",
+          "work": "pissarro-apple-harvest"
         },
         {
           "title": "蒙马特大街，冬日清晨",
           "year": "1897",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "pissarro-the-boulevard-montmartre-on-a-winter-morning"
         },
         {
           "title": "蒙马特大街夜景",
           "year": "1897",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "pissarro-boulevard-montmartre-at-night"
         }
       ],
       "legacy": "他是印象派圈子里的长者和调停人，也是同伴里最肯带年轻人的一位。塞尚 1906 年在艾克斯参展时，在目录里称自己是“毕沙罗的学生”。他接受修拉的点彩又放弃，被一些老友看作摇摆。他还信奉无政府主义，德雷福斯事件中站在左拉一边，和反德雷福斯派的德加因此疏远。",
@@ -4656,27 +4915,32 @@
         {
           "title": "吹笛少年",
           "year": "1866",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "manet-the-fifer"
         },
         {
           "title": "左拉像",
           "year": "1868",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "manet-portrait-of-emile-zola"
         },
         {
           "title": "阳台",
           "year": "1868–1869",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "manet-the-balcony-manet"
         },
         {
           "title": "枪决马克西米利安皇帝",
           "year": "1868–1869",
-          "where": "曼海姆美术馆"
+          "where": "曼海姆美术馆",
+          "work": "manet-the-execution-of-emperor-maximilian"
         },
         {
           "title": "女神游乐厅的吧台",
           "year": "1882",
-          "where": "伦敦考陶尔德美术馆"
+          "where": "伦敦考陶尔德美术馆",
+          "work": "manet-a-bar-at-the-folies-bergere"
         }
       ],
       "legacy": "左拉 1866 至 1867 年间撰文为他辩护，波德莱尔和马拉美也是他的朋友。他一生在沙龙里挨骂，直到 1881 年才得到荣誉军团勋章。1890 年莫奈发起募捐，买下《奥林匹亚》献给国家，这幅画 1907 年进入卢浮宫。后人常把他看作从库尔贝走向印象派的那个转折点。",
@@ -4761,12 +5025,14 @@
         {
           "title": "贝列里一家",
           "year": "1858–1869",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "degas-the-bellelli-family"
         },
         {
           "title": "新奥尔良的棉花交易所",
           "year": "1873",
-          "where": "波城美术馆"
+          "where": "波城美术馆",
+          "work": "degas-a-cotton-office-in-new-orleans"
         },
         {
           "title": "舞蹈课",
@@ -4777,22 +5043,26 @@
         {
           "title": "协和广场",
           "year": "1875",
-          "where": "圣彼得堡埃尔米塔日博物馆"
+          "where": "圣彼得堡埃尔米塔日博物馆",
+          "work": "degas-place-de-la-concorde-painting"
         },
         {
           "title": "苦艾酒",
           "year": "1875–1876",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "degas-l-absinthe"
         },
         {
           "title": "十四岁的小舞者",
           "year": "1878–1881",
-          "where": "华盛顿国家美术馆（蜡制原作）"
+          "where": "华盛顿国家美术馆（蜡制原作）",
+          "work": "degas-little-dancer-of-fourteen-years"
         },
         {
           "title": "盆浴",
           "year": "1886",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "degas-the-tub-painting"
         }
       ],
       "legacy": "他参加了八次印象派展里的七次，却一直和莫奈等人的户外写生保持距离，更看重素描和构图。他的取景方式借鉴了日本浮世绘和摄影，对图卢兹-罗特列克影响很大。他死后，工作室里的蜡像被翻铸成青铜，雕塑家的身份才广为人知。德雷福斯事件中他站在反德雷福斯派一边，与毕沙罗等老友疏远。",
@@ -4867,32 +5137,38 @@
         {
           "title": "缢死者之屋",
           "year": "1873",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "cezanne-the-house-of-the-hanged-man"
         },
         {
           "title": "穿红背心的男孩",
           "year": "1888–1890",
-          "where": "苏黎世布尔勒基金会"
+          "where": "苏黎世布尔勒基金会",
+          "work": "cezanne-the-boy-in-the-red-vest"
         },
         {
           "title": "苹果篮",
           "year": "约1893",
-          "where": "芝加哥艺术学院"
+          "where": "芝加哥艺术学院",
+          "work": "cezanne-the-basket-of-apples"
         },
         {
           "title": "玩纸牌者",
           "year": "1894–1895",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "cezanne-the-card-players"
         },
         {
           "title": "苹果和橘子",
           "year": "约1899",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "cezanne-apples-and-oranges-cezanne"
         },
         {
           "title": "大浴女",
           "year": "1898–1905",
-          "where": "费城艺术博物馆"
+          "where": "费城艺术博物馆",
+          "work": "cezanne-the-bathers-cezanne"
         },
         {
           "title": "圣维克多山",
@@ -4979,7 +5255,8 @@
         {
           "title": "花园里的女人",
           "year": "1866",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "monet-women-in-the-garden"
         },
         {
           "title": "日出·印象",
@@ -4990,27 +5267,32 @@
         {
           "title": "撑阳伞的女人",
           "year": "1875",
-          "where": "华盛顿国家美术馆"
+          "where": "华盛顿国家美术馆",
+          "work": "monet-woman-with-a-parasol-madame-monet-and-her-son"
         },
         {
           "title": "圣拉扎尔火车站",
           "year": "1877",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "monet-gare-saint-lazare-monet-series"
         },
         {
           "title": "干草堆（系列）",
           "year": "1890–1891",
-          "where": "芝加哥艺术学院等多处"
+          "where": "芝加哥艺术学院等多处",
+          "work": "monet-haystacks-monet-series"
         },
         {
           "title": "鲁昂大教堂（系列）",
           "year": "1892–1894",
-          "where": "巴黎奥赛博物馆等多处"
+          "where": "巴黎奥赛博物馆等多处",
+          "work": "monet-rouen-cathedral-monet-series"
         },
         {
           "title": "睡莲（大装饰画）",
           "year": "1914–1926",
-          "where": "巴黎橘园美术馆"
+          "where": "巴黎橘园美术馆",
+          "work": "monet-water-lilies-monet-series"
         }
       ],
       "legacy": "1874 年的首展让他成了“印象派”的靶子，十几年后他却是这批人里最先在商业上成功的。好友克列孟梭促成了他把睡莲大装饰画捐给国家。他死后一度被看作过时，1950 年代纽约的抽象表现主义兴起，他晚年的大幅睡莲才被重新看重，纽约现代艺术博物馆随后买入了睡莲大画。",
@@ -5086,12 +5368,14 @@
         {
           "title": "青蛙塘",
           "year": "1869",
-          "where": "斯德哥尔摩国立博物馆"
+          "where": "斯德哥尔摩国立博物馆",
+          "work": "renoir-la-grenouillere-renoir"
         },
         {
           "title": "包厢",
           "year": "1874",
-          "where": "伦敦考陶尔德美术馆"
+          "where": "伦敦考陶尔德美术馆",
+          "work": "renoir-la-loge"
         },
         {
           "title": "煎饼磨坊的舞会",
@@ -5102,17 +5386,20 @@
         {
           "title": "游艇上的午餐",
           "year": "1880–1881",
-          "where": "华盛顿菲利普斯收藏馆"
+          "where": "华盛顿菲利普斯收藏馆",
+          "work": "renoir-luncheon-of-the-boating-party"
         },
         {
           "title": "大浴女",
           "year": "1884–1887",
-          "where": "费城艺术博物馆"
+          "where": "费城艺术博物馆",
+          "work": "renoir-the-bathers-renoir"
         },
         {
           "title": "弹钢琴的少女",
           "year": "1892",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "renoir-girls-at-the-piano"
         }
       ],
       "legacy": "画商杜朗-吕埃尔长期收购他的画，让他比多数印象派同伴更早过上安稳日子。1880 年代他转向线条和古典构图，晚年的丰腴裸女被马蒂斯和毕加索看重，毕加索自己就收藏过他的画。美国收藏家巴恩斯一人买下他一百八十多件作品，今天都在费城的巴恩斯基金会。也有批评者嫌他晚期的裸女甜腻重复。",
@@ -5186,22 +5473,26 @@
         {
           "title": "布道后的幻象",
           "year": "1888",
-          "where": "爱丁堡苏格兰国家美术馆"
+          "where": "爱丁堡苏格兰国家美术馆",
+          "work": "gauguin-vision-after-the-sermon"
         },
         {
           "title": "黄色基督",
           "year": "1889",
-          "where": "布法罗 AKG 艺术博物馆"
+          "where": "布法罗 AKG 艺术博物馆",
+          "work": "gauguin-the-yellow-christ"
         },
         {
           "title": "死者的幽灵在注视",
           "year": "1892",
-          "where": "布法罗 AKG 艺术博物馆"
+          "where": "布法罗 AKG 艺术博物馆",
+          "work": "gauguin-spirit-of-the-dead-watching"
         },
         {
           "title": "永不再",
           "year": "1897",
-          "where": "伦敦考陶尔德美术馆"
+          "where": "伦敦考陶尔德美术馆",
+          "work": "gauguin-nevermore-gauguin"
         },
         {
           "title": "我们从哪里来？我们是谁？我们往哪里去？",
@@ -5212,7 +5503,8 @@
         {
           "title": "两个塔希提女人",
           "year": "1899",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "gauguin-two-tahitian-women"
         }
       ],
       "legacy": "1888 年塞律西耶按他的指点在雪茄盒盖上画了一小幅风景，带回巴黎，催生了纳比派。1906 年秋季沙龙为他办回顾展，马蒂斯、毕加索等人都受到他平涂色彩和原始题材的影响。今天的研究者也指出他在塔希提与未成年少女同居，他笔下的南太平洋带着殖民者的想象。",
@@ -5289,27 +5581,32 @@
         {
           "title": "吃土豆的人",
           "year": "1885",
-          "where": "阿姆斯特丹梵高博物馆"
+          "where": "阿姆斯特丹梵高博物馆",
+          "work": "van-gogh-the-potato-eaters"
         },
         {
           "title": "向日葵",
           "year": "1888",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "van-gogh-sunflowers-van-gogh-series"
         },
         {
           "title": "夜间咖啡馆",
           "year": "1888",
-          "where": "纽黑文耶鲁大学美术馆"
+          "where": "纽黑文耶鲁大学美术馆",
+          "work": "van-gogh-the-night-cafe"
         },
         {
           "title": "阿尔的卧室",
           "year": "1888",
-          "where": "阿姆斯特丹梵高博物馆"
+          "where": "阿姆斯特丹梵高博物馆",
+          "work": "van-gogh-bedroom-in-arles"
         },
         {
           "title": "包扎耳朵的自画像",
           "year": "1889",
-          "where": "伦敦考陶尔德美术馆"
+          "where": "伦敦考陶尔德美术馆",
+          "work": "van-gogh-self-portrait-with-bandaged-ear"
         },
         {
           "title": "星月夜",
@@ -5320,7 +5617,8 @@
         {
           "title": "麦田群鸦",
           "year": "1890",
-          "where": "阿姆斯特丹梵高博物馆"
+          "where": "阿姆斯特丹梵高博物馆",
+          "work": "van-gogh-wheatfield-with-crows"
         }
       ],
       "legacy": "1890 年初评论家奥里耶在《法兰西信使》上撰文称赞他，这是他生前得到的少有的正面评论。提奥半年后也去世，提奥的遗孀约翰娜整理画作、出版书信，推动了他身后的名声。1905 年阿姆斯特丹市立博物馆的大型回顾展之后，野兽派和德国表现主义画家都把他当作先驱。",
@@ -5389,7 +5687,8 @@
         {
           "title": "阿涅尔的浴者",
           "year": "1884",
-          "where": "伦敦国家美术馆"
+          "where": "伦敦国家美术馆",
+          "work": "seurat-bathers-at-asnieres"
         },
         {
           "title": "大碗岛的星期天下午",
@@ -5400,27 +5699,32 @@
         {
           "title": "模特儿",
           "year": "1886–1888",
-          "where": "费城巴恩斯基金会"
+          "where": "费城巴恩斯基金会",
+          "work": "seurat-models-seurat"
         },
         {
           "title": "马戏开场",
           "year": "1887–1888",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "seurat-parade-de-cirque"
         },
         {
           "title": "扑粉的年轻女子",
           "year": "1889–1890",
-          "where": "伦敦考陶尔德美术馆"
+          "where": "伦敦考陶尔德美术馆",
+          "work": "seurat-young-woman-powdering-herself"
         },
         {
           "title": "骚动舞",
           "year": "1889–1890",
-          "where": "奥特洛克勒勒-米勒博物馆"
+          "where": "奥特洛克勒勒-米勒博物馆",
+          "work": "seurat-le-chahut"
         },
         {
           "title": "马戏团",
           "year": "1890–1891",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "seurat-the-circus-seurat"
         }
       ],
       "legacy": "1886 年老画家毕沙罗一度改用他的点彩法，莫奈和雷诺阿则拒绝和他同场展出。修拉死后，西涅克接过这套方法，1899 年写书把它追溯到德拉克洛瓦。马蒂斯 1904 年在西涅克身边画出《奢华、宁静与享乐》，点彩成了他走向野兽派的一步。1984 年的音乐剧《星期天与乔治同游公园》以《大碗岛》为题材。",
@@ -5496,7 +5800,8 @@
         {
           "title": "病孩",
           "year": "1885–1886",
-          "where": "奥斯陆国家博物馆"
+          "where": "奥斯陆国家博物馆",
+          "work": "munch-the-sick-child-munch"
         },
         {
           "title": "呐喊",
@@ -5507,22 +5812,26 @@
         {
           "title": "青春期",
           "year": "1894–1895",
-          "where": "奥斯陆国家博物馆"
+          "where": "奥斯陆国家博物馆",
+          "work": "munch-puberty-painting"
         },
         {
           "title": "生命之舞",
           "year": "1899–1900",
-          "where": "奥斯陆国家博物馆"
+          "where": "奥斯陆国家博物馆",
+          "work": "munch-the-dance-of-life-munch"
         },
         {
           "title": "太阳",
           "year": "1911–1916",
-          "where": "奥斯陆大学礼堂"
+          "where": "奥斯陆大学礼堂",
+          "work": "munch-the-sun-munch"
         },
         {
           "title": "自画像：在时钟与床之间",
           "year": "1940–1943",
-          "where": "奥斯陆蒙克美术馆"
+          "where": "奥斯陆蒙克美术馆",
+          "work": "munch-self-portrait-between-the-clock-and-the-bed"
         }
       ],
       "legacy": "他把爱情、焦虑和死亡的画作编成一组，称为“生命的饰带”。1892 年柏林展览风波促成了柏林分离派，德累斯顿的桥社画家从他的木刻和色彩里学了很多。他遗赠给奥斯陆的作品构成了蒙克美术馆的馆藏，《呐喊》的一个粉彩版本 2012 年拍出一亿多美元。",
@@ -5602,37 +5911,44 @@
         {
           "title": "即兴 28 号（第二版）",
           "year": "1912",
-          "where": "纽约古根海姆博物馆"
+          "where": "纽约古根海姆博物馆",
+          "work": "kandinsky-improvisation-28-second-version"
         },
         {
           "title": "构成第七号",
           "year": "1913",
-          "where": "莫斯科特列季亚科夫画廊"
+          "where": "莫斯科特列季亚科夫画廊",
+          "work": "kandinsky-composition-vii"
         },
         {
           "title": "构成第八号",
           "year": "1923",
-          "where": "纽约古根海姆博物馆"
+          "where": "纽约古根海姆博物馆",
+          "work": "kandinsky-composition-viii"
         },
         {
           "title": "黄、红、蓝",
           "year": "1925",
-          "where": "巴黎蓬皮杜中心"
+          "where": "巴黎蓬皮杜中心",
+          "work": "kandinsky-yellow-red-blue"
         },
         {
           "title": "几个圆圈",
           "year": "1926",
-          "where": "纽约古根海姆博物馆"
+          "where": "纽约古根海姆博物馆",
+          "work": "kandinsky-several-circles"
         },
         {
           "title": "构成第十号",
           "year": "1939",
-          "where": "杜塞尔多夫北威州艺术品收藏馆"
+          "where": "杜塞尔多夫北威州艺术品收藏馆",
+          "work": "kandinsky-composition-x"
         },
         {
           "title": "天蓝",
           "year": "1940",
-          "where": "巴黎蓬皮杜中心"
+          "where": "巴黎蓬皮杜中心",
+          "work": "kandinsky-sky-blue-kandinsky"
         }
       ],
       "legacy": "他长期被称为第一位抽象画家，后来瑞典的希尔玛·阿夫·克林特更早的抽象画被重新发现，这个说法有了争议。他的书把色彩、形状和音乐、情感联系起来，影响了几代抽象画家。所罗门·古根海姆在希拉·雷贝的建议下大量收购他的画，今天纽约古根海姆博物馆是他作品的主要收藏地之一。",
@@ -5712,17 +6028,20 @@
         {
           "title": "奢华、宁静与享乐",
           "year": "1904",
-          "where": "巴黎奥赛博物馆"
+          "where": "巴黎奥赛博物馆",
+          "work": "matisse-luxe-calme-et-volupte"
         },
         {
           "title": "戴帽子的女人",
           "year": "1905",
-          "where": "旧金山现代艺术博物馆"
+          "where": "旧金山现代艺术博物馆",
+          "work": "matisse-woman-with-a-hat"
         },
         {
           "title": "生活的欢乐",
           "year": "1905–1906",
-          "where": "费城巴恩斯基金会"
+          "where": "费城巴恩斯基金会",
+          "work": "matisse-le-bonheur-de-vivre"
         },
         {
           "title": "舞蹈",
@@ -5733,17 +6052,20 @@
         {
           "title": "红色画室",
           "year": "1911",
-          "where": "纽约现代艺术博物馆"
+          "where": "纽约现代艺术博物馆",
+          "work": "matisse-the-red-studio"
         },
         {
           "title": "蓝色裸体 II",
           "year": "1952",
-          "where": "巴黎蓬皮杜中心"
+          "where": "巴黎蓬皮杜中心",
+          "work": "matisse-blue-nudes"
         },
         {
           "title": "蜗牛",
           "year": "1953",
-          "where": "伦敦泰特美术馆"
+          "where": "伦敦泰特美术馆",
+          "work": "matisse-the-snail"
         }
       ],
       "legacy": "早期支持他的是斯泰因家族、希楚金和莫罗佐夫这些收藏家，十月革命后两位俄国人的藏品被收归国有，所以今天他许多重要作品在莫斯科和圣彼得堡。他和毕加索互相较劲几十年，晚年仍彼此看画。他晚期的剪纸把色彩和线条合在一起，影响了战后的色域绘画和设计。",
@@ -5830,12 +6152,14 @@
         {
           "title": "老吉他手",
           "year": "1903–1904",
-          "where": "芝加哥艺术博物馆"
+          "where": "芝加哥艺术博物馆",
+          "work": "picasso-the-old-guitarist"
         },
         {
           "title": "格特鲁德·斯泰因像",
           "year": "1905–1906",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "picasso-portrait-of-gertrude-stein"
         },
         {
           "title": "亚维农少女",
@@ -5846,22 +6170,26 @@
         {
           "title": "有藤椅的静物",
           "year": "1912",
-          "where": "巴黎毕加索博物馆"
+          "where": "巴黎毕加索博物馆",
+          "work": "picasso-still-life-with-chair-caning"
         },
         {
           "title": "三个音乐家",
           "year": "1921",
-          "where": "纽约现代艺术博物馆"
+          "where": "纽约现代艺术博物馆",
+          "work": "picasso-three-musicians-picasso"
         },
         {
           "title": "格尔尼卡",
           "year": "1937",
-          "where": "马德里索菲亚王后国家艺术中心"
+          "where": "马德里索菲亚王后国家艺术中心",
+          "work": "picasso-guernica-picasso"
         },
         {
           "title": "哭泣的女人",
           "year": "1937",
-          "where": "伦敦泰特美术馆"
+          "where": "伦敦泰特美术馆",
+          "work": "picasso-the-weeping-woman"
         }
       ],
       "legacy": "画商卡恩韦勒从立体主义时期就代理他的作品，他在世时便名利双收。《格尔尼卡》按他的意愿在佛朗哥统治期间一直留在纽约，直到 1981 年才运回西班牙。他一生留下数万件绘画、雕塑、版画和陶艺。近年来他与多位女性伴侣的关系也常被批评者提起。",
@@ -5942,12 +6270,14 @@
         {
           "title": "下楼梯的裸女，第 2 号",
           "year": "1912",
-          "where": "费城艺术博物馆"
+          "where": "费城艺术博物馆",
+          "work": "duchamp-nude-descending-a-staircase-no-2"
         },
         {
           "title": "自行车轮",
           "year": "1913",
-          "where": "原件已失，1951 年重制版藏纽约现代艺术博物馆"
+          "where": "原件已失，1951 年重制版藏纽约现代艺术博物馆",
+          "work": "duchamp-bicycle-wheel"
         },
         {
           "title": "泉",
@@ -5958,12 +6288,14 @@
         {
           "title": "大玻璃",
           "year": "1915–1923",
-          "where": "费城艺术博物馆"
+          "where": "费城艺术博物馆",
+          "work": "duchamp-the-bride-stripped-bare-by-her-bachelors-even"
         },
         {
           "title": "给予：1. 瀑布 2. 照明的煤气",
           "year": "1946–1966",
-          "where": "费城艺术博物馆"
+          "where": "费城艺术博物馆",
+          "work": "duchamp-etant-donnes"
         }
       ],
       "legacy": "他在世时作品不多，影响却主要在身后显现。1960 年代的贾斯珀·琼斯、劳森伯格、沃霍尔和观念艺术家都把他当作源头。2004 年英国一项对五百位艺术界人士的调查把《泉》选为最有影响力的现代艺术品。也有研究者认为《泉》的构想出自达达艺术家埃尔莎·冯·弗赖塔格-洛林霍芬，此说尚无定论。",
@@ -6046,27 +6378,32 @@
         {
           "title": "马克斯·恩斯特，新娘的盛装",
           "year": "1940",
-          "where": "威尼斯佩吉·古根海姆收藏馆"
+          "where": "威尼斯佩吉·古根海姆收藏馆",
+          "work": "guggenheim-attirement-of-the-bride"
         },
         {
           "title": "布朗库西，空间中的鸟",
           "year": "1932–1940",
-          "where": "威尼斯佩吉·古根海姆收藏馆"
+          "where": "威尼斯佩吉·古根海姆收藏馆",
+          "work": "guggenheim-bird-in-space"
         },
         {
           "title": "波洛克，月亮女人",
           "year": "1942",
-          "where": "威尼斯佩吉·古根海姆收藏馆"
+          "where": "威尼斯佩吉·古根海姆收藏馆",
+          "work": "pollock-the-moon-woman"
         },
         {
           "title": "波洛克，壁画",
           "year": "1943",
-          "where": "爱荷华城爱荷华大学斯坦利艺术博物馆"
+          "where": "爱荷华城爱荷华大学斯坦利艺术博物馆",
+          "work": "pollock-mural-1943"
         },
         {
           "title": "波洛克，炼金术",
           "year": "1947",
-          "where": "威尼斯佩吉·古根海姆收藏馆"
+          "where": "威尼斯佩吉·古根海姆收藏馆",
+          "work": "guggenheim-alchemy-painting"
         }
       ],
       "legacy": "她的顾问名单里有杜尚和英国艺术史家赫伯特·里德，靠他们的指点建立起系统的现代艺术收藏。本世纪艺术画廊给波洛克、罗斯科、马瑟韦尔等人办了早期个展，是纽约画派兴起的重要一环。她对自己的私生活毫不讳言，回忆录出版时引起不少非议。",
@@ -6144,27 +6481,32 @@
         {
           "title": "内战的预感",
           "year": "1936",
-          "where": "费城艺术博物馆"
+          "where": "费城艺术博物馆",
+          "work": "dali-soft-construction-with-boiled-beans-premonition-of-civil-war"
         },
         {
           "title": "那喀索斯的变形",
           "year": "1937",
-          "where": "伦敦泰特美术馆"
+          "where": "伦敦泰特美术馆",
+          "work": "dali-metamorphosis-of-narcissus"
         },
         {
           "title": "一只蜜蜂绕石榴飞行引起的梦",
           "year": "1944",
-          "where": "马德里蒂森-博内米萨博物馆"
+          "where": "马德里蒂森-博内米萨博物馆",
+          "work": "dali-dream-caused-by-the-flight-of-a-bee-around-a-pomegranate-a-second-before-awakening"
         },
         {
           "title": "十字若望的基督",
           "year": "1951",
-          "where": "格拉斯哥凯尔文格罗夫美术馆"
+          "where": "格拉斯哥凯尔文格罗夫美术馆",
+          "work": "dali-christ-of-saint-john-of-the-cross"
         },
         {
           "title": "最后的晚餐圣礼",
           "year": "1955",
-          "where": "华盛顿国家美术馆"
+          "where": "华盛顿国家美术馆",
+          "work": "dali-the-sacrament-of-the-last-supper"
         }
       ],
       "legacy": "他的偏执批判法和精确写实的梦境画，让超现实主义在大众中广为人知。布勒东嫌他贪财和政治立场暧昧，把他的名字改拼成“Avida Dollars”（贪恋美元），并把他逐出团体。晚年大量签名版画的真伪问题至今困扰市场。他与迪士尼合作的动画短片《命运》直到 2003 年才完成。",
@@ -6237,37 +6579,44 @@
         {
           "title": "月亮女人",
           "year": "1942",
-          "where": "威尼斯佩吉·古根海姆收藏馆"
+          "where": "威尼斯佩吉·古根海姆收藏馆",
+          "work": "pollock-the-moon-woman"
         },
         {
           "title": "壁画",
           "year": "1943",
-          "where": "爱荷华城爱荷华大学斯坦利艺术博物馆"
+          "where": "爱荷华城爱荷华大学斯坦利艺术博物馆",
+          "work": "pollock-mural-1943"
         },
         {
           "title": "第 1A 号，1948",
           "year": "1948",
-          "where": "纽约现代艺术博物馆"
+          "where": "纽约现代艺术博物馆",
+          "work": "pollock-number-1a-1948"
         },
         {
           "title": "薰衣草之雾（第 1 号，1950）",
           "year": "1950",
-          "where": "华盛顿国家美术馆"
+          "where": "华盛顿国家美术馆",
+          "work": "pollock-number-1-1950-lavender-mist"
         },
         {
           "title": "秋天的节奏（第 30 号）",
           "year": "1950",
-          "where": "纽约大都会艺术博物馆"
+          "where": "纽约大都会艺术博物馆",
+          "work": "pollock-autumn-rhythm-number-30"
         },
         {
           "title": "一：第 31 号，1950",
           "year": "1950",
-          "where": "纽约现代艺术博物馆"
+          "where": "纽约现代艺术博物馆",
+          "work": "pollock-one-number-31-1950"
         },
         {
           "title": "蓝色杆子",
           "year": "1952",
-          "where": "堪培拉澳大利亚国家美术馆"
+          "where": "堪培拉澳大利亚国家美术馆",
+          "work": "pollock-blue-poles"
         }
       ],
       "legacy": "评论家格林伯格力推他，把他的画看作美国绘画超越巴黎的证据。1952 年罗森伯格提出“行动绘画”，说画布成了行动的场地，常被拿来解释他的画法。1973 年澳大利亚国家美术馆以 130 万澳元买下《蓝色杆子》，当年在澳大利亚引发激烈争论。",
@@ -6350,17 +6699,20 @@
         {
           "title": "金宝汤罐头",
           "year": "1962",
-          "where": "纽约现代艺术博物馆"
+          "where": "纽约现代艺术博物馆",
+          "work": "warhol-campbell-s-soup-cans"
         },
         {
           "title": "绿色可口可乐瓶",
           "year": "1962",
-          "where": "纽约惠特尼美国艺术博物馆"
+          "where": "纽约惠特尼美国艺术博物馆",
+          "work": "warhol-green-coca-cola-bottles"
         },
         {
           "title": "金色玛丽莲·梦露",
           "year": "1962",
-          "where": "纽约现代艺术博物馆"
+          "where": "纽约现代艺术博物馆",
+          "work": "warhol-gold-marilyn-monroe"
         },
         {
           "title": "玛丽莲双联画",
@@ -6371,7 +6723,8 @@
         {
           "title": "毛",
           "year": "1972",
-          "where": "芝加哥艺术博物馆"
+          "where": "芝加哥艺术博物馆",
+          "work": "warhol-mao-warhol"
         }
       ],
       "legacy": "起初不少评论家认为他只是复制商品，他自己也乐于说作品没有深意。他让作品脱离手工痕迹，把名气、广告和批量生产本身变成题材。1994 年匹兹堡的安迪·沃霍尔美术馆开馆。2022 年他的《射击过的鼠尾草蓝玛丽莲》拍出 1.95 亿美元，是当时美国艺术家作品的拍卖纪录。",
@@ -6386,6 +6739,453 @@
         ]
       },
       "wiki": "Andy_Warhol"
+    },
+    {
+      "id": "morisot",
+      "name": "贝尔特·莫里索",
+      "en": "Berthe Morisot",
+      "born": 1841,
+      "died": 1895,
+      "period": "impression",
+      "cities": [
+        "布尔日",
+        "巴黎"
+      ],
+      "line": "印象派独立展览的参与者，把亲密生活与流动的笔触变成自己的绘画语言。",
+      "movement": [
+        "印象派"
+      ],
+      "points": [
+        "1874年参加首次印象派展览，创作与展览活动都是理解她的入口。",
+        "从目光、薄纱和开放的笔触看她怎样组织空间。"
+      ],
+      "rel": {
+        "influences": [
+          "manet"
+        ]
+      },
+      "wiki": "Berthe_Morisot",
+      "life": [
+        {
+          "year": 1841,
+          "text": "生于法国布尔日。"
+        },
+        {
+          "year": 1864,
+          "text": "作品开始在巴黎沙龙展出。"
+        },
+        {
+          "year": 1868,
+          "text": "在卢浮宫临摹期间结识马奈，展开长期艺术交流。"
+        },
+        {
+          "year": 1874,
+          "text": "参加首次印象派展览，展出《摇篮》等作品。"
+        },
+        {
+          "year": 1895,
+          "text": "在巴黎去世。"
+        }
+      ],
+      "legacy": "她把家庭空间、亲友和都市休闲转化为有力度的构图与笔触实验。与马奈的关系不能替代她作为独立创作者及印象派组织参与者的身份。",
+      "sources": [
+        {
+          "label": "英国国家美术馆：莫里索生平",
+          "url": "https://www.nationalgallery.org.uk/artists/berthe-morisot"
+        }
+      ],
+      "roles": [
+        "画家"
+      ],
+      "works": [
+        {
+          "title": "摇篮",
+          "year": "1872",
+          "where": "巴黎奥赛博物馆",
+          "work": "morisot-the-cradle"
+        },
+        {
+          "title": "夏日",
+          "year": "约1879",
+          "where": "伦敦国家美术馆",
+          "work": "morisot-summers-day"
+        }
+      ]
+    },
+    {
+      "id": "cassatt",
+      "name": "玛丽·卡萨特",
+      "en": "Mary Cassatt",
+      "born": 1844,
+      "died": 1926,
+      "period": "impression",
+      "cities": [
+        "阿勒格尼城",
+        "巴黎"
+      ],
+      "line": "在巴黎发展的美国画家，以俯视、裁切和纹样重新组织日常生活。",
+      "movement": [
+        "印象派"
+      ],
+      "points": [
+        "1879年首次参加印象派展览，并非1874年首展成员。",
+        "母子题材也可以从视点、手势和画面结构来读。"
+      ],
+      "rel": {
+        "influences": [
+          "degas"
+        ]
+      },
+      "wiki": "Mary_Cassatt",
+      "life": [
+        {
+          "year": 1844,
+          "text": "生于美国宾夕法尼亚州阿勒格尼城。"
+        },
+        {
+          "year": 1877,
+          "text": "接受德加邀请，准备参加印象派展览。"
+        },
+        {
+          "year": 1879,
+          "text": "首次随印象派展出，《蓝色扶手椅上的小女孩》在列。"
+        },
+        {
+          "year": 1893,
+          "text": "创作《孩子的沐浴》，探索俯视空间与装饰纹样。"
+        },
+        {
+          "year": 1926,
+          "text": "在法国去世。"
+        }
+      ],
+      "legacy": "卡萨特把美国艺术家在巴黎的经历带入印象派，也以绘画和版画探索现代生活。她与德加有长期交流，但她的作品不应只被当成男性同行的附注。",
+      "sources": [
+        {
+          "label": "美国国家美术馆：德加／卡萨特",
+          "url": "https://www.nga.gov/exhibitions/exhibition-degascassatt"
+        },
+        {
+          "label": "芝加哥艺术博物馆提供的《孩子的沐浴》记录",
+          "url": "https://artsandculture.google.com/asset/the-child-s-bath-0094/FQGpjnFFEcrMyw"
+        }
+      ],
+      "roles": [
+        "画家"
+      ],
+      "works": [
+        {
+          "title": "孩子的沐浴",
+          "year": "1893",
+          "where": "芝加哥艺术博物馆",
+          "work": "cassatt-childs-bath"
+        },
+        {
+          "title": "蓝色扶手椅上的小女孩",
+          "year": "1878",
+          "where": "华盛顿国家美术馆",
+          "work": "cassatt-blue-armchair"
+        }
+      ]
+    },
+    {
+      "id": "artemisia",
+      "name": "阿尔泰米西娅·真蒂莱斯基",
+      "en": "Artemisia Gentileschi",
+      "born": 1593,
+      "died": 1654,
+      "diedText": "1654年或以后",
+      "approx": true,
+      "period": "baroque",
+      "cities": [
+        "罗马",
+        "佛罗伦萨",
+        "那不勒斯",
+        "伦敦"
+      ],
+      "line": "在多个城市建立职业生涯，把女性角色、自我形象与巴洛克的戏剧性结合。",
+      "movement": [
+        "巴洛克艺术"
+      ],
+      "points": [
+        "1616年成为佛罗伦萨素描艺术学院的女性成员。",
+        "自画像可同时是角色扮演、职业身份与画面结构的实验。"
+      ],
+      "rel": {
+        "influences": [
+          "caravaggio"
+        ]
+      },
+      "wiki": "Artemisia_Gentileschi",
+      "life": [
+        {
+          "year": 1593,
+          "text": "生于罗马，向父亲奥拉齐奥学习绘画。"
+        },
+        {
+          "year": 1616,
+          "text": "加入佛罗伦萨素描艺术学院。"
+        },
+        {
+          "year": 1630,
+          "text": "移居那不勒斯，继续接受宗教与私人委托。"
+        },
+        {
+          "year": 1638,
+          "text": "前往伦敦，在查理一世宫廷工作。"
+        },
+        {
+          "year": 1654,
+          "text": "文献记载她当年仍在那不勒斯；确切卒年不详。"
+        }
+      ],
+      "legacy": "她在宗教画、历史画和自我形象中展示出独立的职业追求与构图能力。理解其生涯需要关注委托、城市迁移和绘画实践，不应只用创伤经历解释所有作品。",
+      "sources": [
+        {
+          "label": "英国国家美术馆：生平与卒年考证",
+          "url": "https://www.nationalgallery.org.uk/artists/artemisia-gentileschi"
+        }
+      ],
+      "roles": [
+        "画家"
+      ],
+      "works": [
+        {
+          "title": "扮作亚历山大的圣凯瑟琳的自画像",
+          "year": "约1615–1617",
+          "where": "伦敦国家美术馆",
+          "work": "artemisia-saint-catherine"
+        },
+        {
+          "title": "作为绘画寓言的自画像",
+          "year": "约1638–1639",
+          "where": "英国王室收藏",
+          "work": "artemisia-allegory-of-painting"
+        }
+      ]
+    },
+    {
+      "id": "turner",
+      "name": "透纳",
+      "en": "Joseph Mallord William Turner",
+      "born": 1775,
+      "died": 1851,
+      "period": "romantic",
+      "cities": [
+        "伦敦",
+        "威尼斯"
+      ],
+      "line": "让风景中的光、雾与速度成为主角，也让工业时代进入绘画。",
+      "movement": [
+        "浪漫主义"
+      ],
+      "points": [
+        "风景既是自然经验，也能承载历史与技术变化。",
+        "看远景如何溶解，再看深色形体怎样把空间拉回来。"
+      ],
+      "rel": {},
+      "wiki": "J._M._W._Turner",
+      "life": [
+        {
+          "year": 1775,
+          "text": "生于伦敦。"
+        },
+        {
+          "year": 1802,
+          "text": "当选英国皇家美术学院院士。"
+        },
+        {
+          "year": 1839,
+          "text": "展出《战舰无畏号》，回应旧战舰被拖往拆解的事件。"
+        },
+        {
+          "year": 1844,
+          "text": "展出《雨、蒸汽和速度——大西部铁路》。"
+        },
+        {
+          "year": 1851,
+          "text": "在伦敦去世。"
+        }
+      ],
+      "legacy": "透纳把风景画拓展为关于光色、自然力量与现代经验的探索。他可以与后来的印象派形成观看主题上的对照，但这不等同于已经核实的直接师承。",
+      "sources": [
+        {
+          "label": "英国国家美术馆：透纳",
+          "url": "https://www.nationalgallery.org.uk/artists/joseph-mallord-william-turner"
+        }
+      ],
+      "roles": [
+        "画家"
+      ],
+      "works": [
+        {
+          "title": "雨、蒸汽和速度——大西部铁路",
+          "year": "1844",
+          "where": "伦敦国家美术馆",
+          "work": "turner-rain-steam-speed"
+        },
+        {
+          "title": "战舰无畏号",
+          "year": "1839",
+          "where": "伦敦国家美术馆",
+          "work": "turner-fighting-temeraire"
+        }
+      ]
+    },
+    {
+      "id": "constable",
+      "name": "康斯太布尔",
+      "en": "John Constable",
+      "born": 1776,
+      "died": 1837,
+      "period": "romantic",
+      "cities": [
+        "东伯格霍尔特",
+        "伦敦"
+      ],
+      "line": "反复观察熟悉的乡野，让云、树与劳动成为大型风景画的中心。",
+      "movement": [
+        "浪漫主义"
+      ],
+      "points": [
+        "写生与画室里的整理共同构成创作，不能把所有作品都说成现场完成。",
+        "1824年巴黎展览让他的风景画参与了英法之间的艺术交流。"
+      ],
+      "rel": {},
+      "wiki": "John_Constable",
+      "life": [
+        {
+          "year": 1776,
+          "text": "生于英国萨福克郡东伯格霍尔特。"
+        },
+        {
+          "year": 1817,
+          "text": "展出《弗拉特福德磨坊》。"
+        },
+        {
+          "year": 1821,
+          "text": "展出《干草车》。"
+        },
+        {
+          "year": 1824,
+          "text": "《干草车》等作品在巴黎沙龙展出并获奖。"
+        },
+        {
+          "year": 1837,
+          "text": "在伦敦去世。"
+        }
+      ],
+      "legacy": "康斯太布尔把熟悉的乡村作为值得长期研究的主题。他的自然观察与大型画室作品相互支持，1824年的法国展览也影响了法国画家对风景与色彩的思考。",
+      "sources": [
+        {
+          "label": "英国国家美术馆：康斯太布尔",
+          "url": "https://www.nationalgallery.org.uk/artists/john-constable"
+        },
+        {
+          "label": "英国国家美术馆：《干草车》研究",
+          "url": "https://www.nationalgallery.org.uk/paintings/catalogues/egerton-2000/the-hay-wain"
+        }
+      ],
+      "roles": [
+        "画家"
+      ],
+      "works": [
+        {
+          "title": "干草车",
+          "year": "1821",
+          "where": "伦敦国家美术馆",
+          "work": "constable-hay-wain"
+        },
+        {
+          "title": "弗拉特福德磨坊：通航河上的景象",
+          "year": "1816–1817",
+          "where": "伦敦泰特美术馆",
+          "work": "constable-flatford-mill"
+        }
+      ]
+    },
+    {
+      "id": "mondrian",
+      "name": "蒙德里安",
+      "en": "Piet Mondrian",
+      "born": 1872,
+      "died": 1944,
+      "period": "modern",
+      "cities": [
+        "阿姆斯特丹",
+        "巴黎",
+        "伦敦",
+        "纽约"
+      ],
+      "line": "从自然形象走向水平、垂直与色块，又在纽约让网格获得音乐般的节奏。",
+      "movement": [
+        "风格派",
+        "抽象艺术"
+      ],
+      "points": [
+        "几何抽象不等于简单对称，色块面积与位置可以彼此制衡。",
+        "比较1921年的构成与晚年纽约作品，观察线与节奏的变化。"
+      ],
+      "rel": {
+        "influences": [
+          "picasso"
+        ]
+      },
+      "wiki": "Piet_Mondrian",
+      "life": [
+        {
+          "year": 1872,
+          "text": "生于荷兰阿默斯福特。"
+        },
+        {
+          "year": 1912,
+          "text": "移居巴黎，研究立体主义的形式问题。"
+        },
+        {
+          "year": 1917,
+          "text": "参与创办《风格》杂志，阐述新造型主义。"
+        },
+        {
+          "year": 1938,
+          "text": "离开巴黎前往伦敦。"
+        },
+        {
+          "year": 1940,
+          "text": "移居纽约，接触城市网格与布吉伍吉音乐。"
+        },
+        {
+          "year": 1944,
+          "text": "在纽约去世。"
+        }
+      ],
+      "legacy": "蒙德里安是几何抽象与风格派的重要人物。他追求基本元素间的关系，但创作并非停止变化；纽约时期密集的彩色节奏，显示出这套语言的新可能。",
+      "sources": [
+        {
+          "label": "提森博物馆：蒙德里安生平",
+          "url": "https://www.museothyssen.org/en/collection/artists/mondrian-piet"
+        },
+        {
+          "label": "MoMA：《百老汇爵士乐》",
+          "url": "https://www.moma.org/collection/works/78682"
+        }
+      ],
+      "roles": [
+        "画家"
+      ],
+      "works": [
+        {
+          "title": "红、蓝、黑、黄与灰的构成",
+          "year": "1921",
+          "where": "纽约现代艺术博物馆",
+          "work": "mondrian-composition-1921"
+        },
+        {
+          "title": "百老汇爵士乐",
+          "year": "1942–1943",
+          "where": "纽约现代艺术博物馆",
+          "work": "mondrian-broadway-boogie-woogie"
+        }
+      ]
     }
   ],
   "encounters": [
@@ -6545,10 +7345,33 @@
         "renoir",
         "degas",
         "pissarro",
-        "cezanne"
+        "cezanne",
+        "morisot"
       ],
       "title": "第一次印象派展览",
-      "text": "他们在摄影师纳达尔的旧工作室自办展览。一位评论家拿莫奈的《日出·印象》开涮，称他们为“印象派”。"
+      "text": "莫奈、雷诺阿、德加、毕沙罗、塞尚和莫里索等艺术家在巴黎自主组织展览，不经官方沙龙评审。莫里索展出《摇篮》等作品。参展者的题材与画法并不相同，但共同尝试掌握展示作品的主动权；卡萨特则于1879年首次参加。",
+      "sources": [
+        {
+          "label": "奥赛：《摇篮》及1874年展览",
+          "url": "https://www.musee-orsay.fr/en/artworks/le-berceau-1132"
+        }
+      ]
+    },
+    {
+      "year": 1879,
+      "place": "巴黎，第四次印象派展览",
+      "people": [
+        "cassatt",
+        "degas"
+      ],
+      "title": "卡萨特加入独立展览",
+      "text": "卡萨特接受德加的邀请，在1879年首次参加印象派展览，展出《蓝色扶手椅上的小女孩》等作品。两人的交流涉及绘画、版画和现代生活题材，不能只用单向师承概括。",
+      "sources": [
+        {
+          "label": "美国国家美术馆：德加／卡萨特展",
+          "url": "https://www.nga.gov/exhibitions/exhibition-degascassatt"
+        }
+      ]
     },
     {
       "year": 1888,

@@ -33,6 +33,142 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:The_Arnolfini_portrait_(1434).jpg"
   },
+  "artemisia-allegory-of-painting": {
+    "file": "images/works/artemisia-allegory-of-painting.jpg",
+    "thumb": "images/works/artemisia-allegory-of-painting.thumb.jpg",
+    "title": "作为绘画寓言的自画像",
+    "author": "Artemisia Gentileschi",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Self-portrait_as_the_Allegory_of_Painting_(La_Pittura)_-_Artemisia_Gentileschi.jpg"
+  },
+  "artemisia-saint-catherine": {
+    "file": "images/works/artemisia-saint-catherine.jpg",
+    "thumb": "images/works/artemisia-saint-catherine.thumb.jpg",
+    "title": "扮作亚历山大的圣凯瑟琳的自画像",
+    "author": "Artemisia Gentileschi",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Self-Portrait_as_Saint_Catherine_of_Alexandria_(Gentileschi).jpg"
+  },
+  "bellini-agony-in-the-garden-bellini": {
+    "file": "images/works/bellini-agony-in-the-garden-bellini.jpg",
+    "thumb": "images/works/bellini-agony-in-the-garden-bellini.thumb.jpg",
+    "title": "园中祈祷",
+    "author": "Giovanni Bellini",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bellini,Giovanni_-_Agony_in_the_Garden_-_National_Gallery.jpg"
+  },
+  "bellini-frari-triptych": {
+    "file": "images/works/bellini-frari-triptych.jpg",
+    "thumb": "images/works/bellini-frari-triptych.thumb.jpg",
+    "title": "弗拉里三联祭坛画",
+    "author": "Giovanni Bellini",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Frari_(Venice)_-_Sacristy_-_triptych_by_Giovanni_Bellini.jpg"
+  },
+  "bellini-portrait-of-doge-leonardo-loredan": {
+    "file": "images/works/bellini-portrait-of-doge-leonardo-loredan.jpg",
+    "thumb": "images/works/bellini-portrait-of-doge-leonardo-loredan.thumb.jpg",
+    "title": "总督莱昂纳多·洛雷丹像",
+    "author": "Giovanni Bellini",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giovanni_Bellini,_portrait_of_Doge_Leonardo_Loredan.jpg"
+  },
+  "bellini-san-giobbe-altarpiece": {
+    "file": "images/works/bellini-san-giobbe-altarpiece.jpg",
+    "thumb": "images/works/bellini-san-giobbe-altarpiece.thumb.jpg",
+    "title": "圣约伯祭坛画",
+    "author": "Didier Descouens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Accademia_-_Pala_di_San_Giobbe_by_Giovanni_Bellini.jpg"
+  },
+  "bellini-san-zaccaria-altarpiece": {
+    "file": "images/works/bellini-san-zaccaria-altarpiece.jpg",
+    "thumb": "images/works/bellini-san-zaccaria-altarpiece.thumb.jpg",
+    "title": "圣扎卡利亚祭坛画",
+    "author": "Didier Descouens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pala_di_San_Zaccaria_(Venezia).jpg"
+  },
+  "bellini-st-francis-in-ecstasy-bellini": {
+    "file": "images/works/bellini-st-francis-in-ecstasy-bellini.jpg",
+    "thumb": "images/works/bellini-st-francis-in-ecstasy-bellini.thumb.jpg",
+    "title": "沙漠中的圣方济各",
+    "author": "Giovanni Bellini",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giovanni_Bellini_-_Saint_Francis_in_the_Desert_-_Google_Art_Project.jpg"
+  },
+  "bellini-the-feast-of-the-gods": {
+    "file": "images/works/bellini-the-feast-of-the-gods.jpg",
+    "thumb": "images/works/bellini-the-feast-of-the-gods.thumb.jpg",
+    "title": "诸神之宴",
+    "author": "Giovanni Bellini / Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giovanni_Bellini_and_Titian_-_The_Feast_of_the_Gods_-_Google_Art_Project.jpg"
+  },
+  "bernini-apollo-and-daphne-bernini": {
+    "file": "images/works/bernini-apollo-and-daphne-bernini.jpg",
+    "thumb": "images/works/bernini-apollo-and-daphne-bernini.thumb.jpg",
+    "title": "阿波罗与达芙妮",
+    "author": "Architas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Apollo_and_Daphne_(Bernini)_(cropped).jpg"
+  },
+  "bernini-david-bernini": {
+    "file": "images/works/bernini-david-bernini.jpg",
+    "thumb": "images/works/bernini-david-bernini.thumb.jpg",
+    "title": "大卫",
+    "author": "Gian Lorenzo Bernini",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bernini%27s_David_02.jpg"
+  },
+  "bernini-fontana-dei-quattro-fiumi": {
+    "file": "images/works/bernini-fontana-dei-quattro-fiumi.jpg",
+    "thumb": "images/works/bernini-fontana-dei-quattro-fiumi.thumb.jpg",
+    "title": "四河喷泉",
+    "author": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a message . This image is not in the publ",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Obelisco_Fontana_dei_Fiumi_Piazza_Navona_Roma.jpg"
+  },
+  "bernini-sant-andrea-al-quirinale": {
+    "file": "images/works/bernini-sant-andrea-al-quirinale.jpg",
+    "thumb": "images/works/bernini-sant-andrea-al-quirinale.thumb.jpg",
+    "title": "奎里纳莱的圣安德烈教堂",
+    "author": "Architas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sant%27Andrea_al_Quirinale.jpg"
+  },
+  "bernini-st-peter-s-baldachin": {
+    "file": "images/works/bernini-st-peter-s-baldachin.jpg",
+    "thumb": "images/works/bernini-st-peter-s-baldachin.thumb.jpg",
+    "title": "圣彼得青铜华盖",
+    "author": "Jebulon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Baldaquin_Bernin_Saint-Pierre_Vatican.jpg"
+  },
+  "bernini-st-peter-s-square": {
+    "file": "images/works/bernini-st-peter-s-square.jpg",
+    "thumb": "images/works/bernini-st-peter-s-square.thumb.jpg",
+    "title": "圣彼得广场柱廊",
+    "author": "Diliff",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:St_Peter%27s_Square,_Vatican_City_-_April_2007.jpg"
+  },
+  "bernini-the-rape-of-proserpina": {
+    "file": "images/works/bernini-the-rape-of-proserpina.jpg",
+    "thumb": "images/works/bernini-the-rape-of-proserpina.thumb.jpg",
+    "title": "劫夺普洛塞庇娜",
+    "author": "Alvesgaspar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rape_of_Prosepina_September_2015-3a.jpg"
+  },
   "birth-of-venus": {
     "file": "images/works/birth-of-venus.jpg",
     "thumb": "images/works/birth-of-venus.thumb.jpg",
@@ -40,6 +176,196 @@
     "author": "Sandro Botticelli",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"
+  },
+  "bosch-saint-john-the-evangelist-on-patmos": {
+    "file": "images/works/bosch-saint-john-the-evangelist-on-patmos.jpg",
+    "thumb": "images/works/bosch-saint-john-the-evangelist-on-patmos.thumb.jpg",
+    "title": "圣约翰在拔摩岛",
+    "author": "Hieronymus Bosch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Johannes_op_Patmos_Saint_John_on_Patmos_Berlin,_Staatlichen_Museen_zu_Berlin,_Gemaldegalerie_HR.jpg"
+  },
+  "bosch-ship-of-fools-painting": {
+    "file": "images/works/bosch-ship-of-fools-painting.jpg",
+    "thumb": "images/works/bosch-ship-of-fools-painting.thumb.jpg",
+    "title": "愚人船",
+    "author": "Hieronymus Bosch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_011.jpg"
+  },
+  "bosch-the-haywain-triptych": {
+    "file": "images/works/bosch-the-haywain-triptych.jpg",
+    "thumb": "images/works/bosch-the-haywain-triptych.thumb.jpg",
+    "title": "干草车",
+    "author": "Hieronymus Bosch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bosch_-_Haywain_Triptych_(1512-1515).jpg"
+  },
+  "bosch-the-last-judgment-bosch-triptych": {
+    "file": "images/works/bosch-the-last-judgment-bosch-triptych.jpg",
+    "thumb": "images/works/bosch-the-last-judgment-bosch-triptych.thumb.jpg",
+    "title": "最后的审判三联画",
+    "author": "Hieronymus Bosch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Last_judgement_Bosch.jpg"
+  },
+  "bosch-triptych-of-the-temptation-of-st-anthony": {
+    "file": "images/works/bosch-triptych-of-the-temptation-of-st-anthony.jpg",
+    "thumb": "images/works/bosch-triptych-of-the-temptation-of-st-anthony.thumb.jpg",
+    "title": "圣安东尼的诱惑",
+    "author": "Hieronymus Bosch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeroen_Bosch_(ca._1450-1516)_-_De_verzoeking_van_de_heilige_Antonius_(ca.1500)_-_Lissabon_Museu_Nacional_de_Arte_Antiga_19-10-2010_16-21-31.jpg"
+  },
+  "botticelli-adoration-of-the-magi-botticelli-1475": {
+    "file": "images/works/botticelli-adoration-of-the-magi-botticelli-1475.jpg",
+    "thumb": "images/works/botticelli-adoration-of-the-magi-botticelli-1475.thumb.jpg",
+    "title": "东方三博士来朝",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Botticelli_-_Adoration_of_the_Magi_(Zanobi_Altar)_-_Uffizi.jpg"
+  },
+  "botticelli-calumny-of-apelles-botticelli": {
+    "file": "images/works/botticelli-calumny-of-apelles-botticelli.jpg",
+    "thumb": "images/works/botticelli-calumny-of-apelles-botticelli.thumb.jpg",
+    "title": "诽谤",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_La_calumnia_de_Apeles.jpg"
+  },
+  "botticelli-divine-comedy-illustrated-by-botticelli": {
+    "file": "images/works/botticelli-divine-comedy-illustrated-by-botticelli.jpg",
+    "thumb": "images/works/botticelli-divine-comedy-illustrated-by-botticelli.thumb.jpg",
+    "title": "但丁《神曲》插图",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_Carte_de_l%27Enfer.jpg"
+  },
+  "botticelli-primavera-botticelli": {
+    "file": "images/works/botticelli-primavera-botticelli.jpg",
+    "thumb": "images/works/botticelli-primavera-botticelli.thumb.jpg",
+    "title": "春",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg"
+  },
+  "botticelli-the-mystical-nativity": {
+    "file": "images/works/botticelli-the-mystical-nativity.jpg",
+    "thumb": "images/works/botticelli-the-mystical-nativity.thumb.jpg",
+    "title": "神秘的基督降生",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mystic_Nativity,_Sandro_Botticelli.jpg"
+  },
+  "botticelli-venus-and-mars-botticelli": {
+    "file": "images/works/botticelli-venus-and-mars-botticelli.jpg",
+    "thumb": "images/works/botticelli-venus-and-mars-botticelli.thumb.jpg",
+    "title": "维纳斯与玛尔斯",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Venus_and_Mars_National_Gallery.jpg"
+  },
+  "botticelli-youth-of-moses": {
+    "file": "images/works/botticelli-youth-of-moses.jpg",
+    "thumb": "images/works/botticelli-youth-of-moses.thumb.jpg",
+    "title": "摩西的试炼",
+    "author": "Sandro Botticelli",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eventos_de_la_vida_de_Mois%C3%A9s_(Sandro_Botticelli).jpg"
+  },
+  "bruegel-netherlandish-proverbs": {
+    "file": "images/works/bruegel-netherlandish-proverbs.jpg",
+    "thumb": "images/works/bruegel-netherlandish-proverbs.thumb.jpg",
+    "title": "尼德兰谚语",
+    "author": "Pieter Brueghel the Elder",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg"
+  },
+  "bruegel-the-blind-leading-the-blind": {
+    "file": "images/works/bruegel-the-blind-leading-the-blind.jpg",
+    "thumb": "images/works/bruegel-the-blind-leading-the-blind.thumb.jpg",
+    "title": "盲人引导盲人",
+    "author": "Pieter Brueghel the Elder",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D1%80%D0%B8%D1%82%D1%87%D0%B0_%D0%BE_%D1%81%D0%BB%D0%B5%D0%BF%D1%8B%D1%85.jpeg"
+  },
+  "bruegel-the-harvesters-painting": {
+    "file": "images/works/bruegel-the-harvesters-painting.jpg",
+    "thumb": "images/works/bruegel-the-harvesters-painting.thumb.jpg",
+    "title": "收割者",
+    "author": "Pieter Brueghel the Elder",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder-_The_Harvesters_-_Google_Art_Project.jpg"
+  },
+  "bruegel-the-peasant-wedding": {
+    "file": "images/works/bruegel-the-peasant-wedding.jpg",
+    "thumb": "images/works/bruegel-the-peasant-wedding.thumb.jpg",
+    "title": "农民的婚礼",
+    "author": "Pieter Brueghel the Elder",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_Peasant_Wedding_-_Google_Art_Project_2.jpg"
+  },
+  "bruegel-the-tower-of-babel-bruegel": {
+    "file": "images/works/bruegel-the-tower-of-babel-bruegel.jpg",
+    "thumb": "images/works/bruegel-the-tower-of-babel-bruegel.thumb.jpg",
+    "title": "巴别塔",
+    "author": "Pieter Brueghel the Elder",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project_-_edited.jpg"
+  },
+  "bruegel-the-triumph-of-death": {
+    "file": "images/works/bruegel-the-triumph-of-death.jpg",
+    "thumb": "images/works/bruegel-the-triumph-of-death.thumb.jpg",
+    "title": "死亡的胜利",
+    "author": "Pieter Brueghel the Elder",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Triumph_of_Death_Brueghel.jpg"
+  },
+  "brunelleschi-basilica-of-san-lorenzo-florence": {
+    "file": "images/works/brunelleschi-basilica-of-san-lorenzo-florence.jpg",
+    "thumb": "images/works/brunelleschi-basilica-of-san-lorenzo-florence.thumb.jpg",
+    "title": "圣洛伦佐教堂",
+    "author": "Zairon",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Firenze_Basilica_di_San_Lorenzo_Esterno_Lato_Nord_1.jpg"
+  },
+  "brunelleschi-ospedale-degli-innocenti": {
+    "file": "images/works/brunelleschi-ospedale-degli-innocenti.jpg",
+    "thumb": "images/works/brunelleschi-ospedale-degli-innocenti.thumb.jpg",
+    "title": "育婴堂",
+    "author": "MenkinAlRire",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Florence,_Piazza_SS_Annunziata_with_Ospedale_degli_Innocenti_(1419-39)_and_part_of_SS_Annunziata_(1601).jpg"
+  },
+  "brunelleschi-sacrifice-of-isaac-brunelleschi": {
+    "file": "images/works/brunelleschi-sacrifice-of-isaac-brunelleschi.jpg",
+    "thumb": "images/works/brunelleschi-sacrifice-of-isaac-brunelleschi.thumb.jpg",
+    "title": "以撒献祭",
+    "author": "MenkinAlRire",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Filippo_Brunelleschi,_The_Sacrifice_of_Isaac,_1401-2,_Bargello,_Florence.jpg"
+  },
+  "brunelleschi-sagrestia-vecchia": {
+    "file": "images/works/brunelleschi-sagrestia-vecchia.jpg",
+    "thumb": "images/works/brunelleschi-sagrestia-vecchia.thumb.jpg",
+    "title": "圣洛伦佐教堂老圣器室",
+    "author": "Sailko",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sagrestia_vecchia,_veduta_00.jpg"
+  },
+  "brunelleschi-santo-spirito-florence": {
+    "file": "images/works/brunelleschi-santo-spirito-florence.jpg",
+    "thumb": "images/works/brunelleschi-santo-spirito-florence.thumb.jpg",
+    "title": "圣灵教堂",
+    "author": "Lucarelli",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chiesa_Santo_Spirito,_Firenze.jpg"
   },
   "burial-at-ornans": {
     "file": "images/works/burial-at-ornans.jpg",
@@ -56,6 +382,126 @@
     "author": "Caravaggio",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:The_Calling_of_Saint_Matthew-Caravaggo_(1599-1600).jpg"
+  },
+  "caravaggio-basket-of-fruit-caravaggio": {
+    "file": "images/works/caravaggio-basket-of-fruit-caravaggio.jpg",
+    "thumb": "images/works/caravaggio-basket-of-fruit-caravaggio.thumb.jpg",
+    "title": "果篮",
+    "author": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Canestra_di_frutta_(Caravaggio).jpg"
+  },
+  "caravaggio-conversion-on-the-way-to-damascus": {
+    "file": "images/works/caravaggio-conversion-on-the-way-to-damascus.jpg",
+    "thumb": "images/works/caravaggio-conversion-on-the-way-to-damascus.thumb.jpg",
+    "title": "圣保罗皈依",
+    "author": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Conversion_on_the_Way_to_Damascus-Caravaggio_(c.1600-1).jpg"
+  },
+  "caravaggio-david-with-the-head-of-goliath-caravaggio-rome": {
+    "file": "images/works/caravaggio-david-with-the-head-of-goliath-caravaggio-rome.jpg",
+    "thumb": "images/works/caravaggio-david-with-the-head-of-goliath-caravaggio-rome.thumb.jpg",
+    "title": "手提歌利亚头颅的大卫",
+    "author": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:David_with_the_Head_of_Goliath-Caravaggio_(1610).jpg"
+  },
+  "caravaggio-death-of-the-virgin-caravaggio": {
+    "file": "images/works/caravaggio-death-of-the-virgin-caravaggio.jpg",
+    "thumb": "images/works/caravaggio-death-of-the-virgin-caravaggio.thumb.jpg",
+    "title": "圣母之死",
+    "author": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Death_of_the_Virgin-Caravaggio_(1606).jpg"
+  },
+  "caravaggio-the-beheading-of-saint-john-the-baptist-caravaggio": {
+    "file": "images/works/caravaggio-the-beheading-of-saint-john-the-baptist-caravaggio.jpg",
+    "thumb": "images/works/caravaggio-the-beheading-of-saint-john-the-baptist-caravaggio.thumb.jpg",
+    "title": "圣约翰斩首",
+    "author": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_decapitaci%C3%B3n_de_San_Juan_Bautista,_por_Caravaggio.jpg"
+  },
+  "caravaggio-the-entombment-of-christ-caravaggio": {
+    "file": "images/works/caravaggio-the-entombment-of-christ-caravaggio.jpg",
+    "thumb": "images/works/caravaggio-the-entombment-of-christ-caravaggio.thumb.jpg",
+    "title": "基督下葬",
+    "author": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Entombment_of_Christ-Caravaggio_(c.1602-3).jpg"
+  },
+  "caravaggio-the-martyrdom-of-saint-matthew-caravaggio": {
+    "file": "images/works/caravaggio-the-martyrdom-of-saint-matthew-caravaggio.jpg",
+    "thumb": "images/works/caravaggio-the-martyrdom-of-saint-matthew-caravaggio.thumb.jpg",
+    "title": "圣马太殉难",
+    "author": "Caravaggio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caravaggio_%E2%80%94_The_Martyrdom_of_Saint_Matthew.jpg"
+  },
+  "cassatt-blue-armchair": {
+    "file": "images/works/cassatt-blue-armchair.jpg",
+    "thumb": "images/works/cassatt-blue-armchair.thumb.jpg",
+    "title": "蓝色扶手椅上的小女孩",
+    "author": "Mary Cassatt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cassat_-_Blue_Armchair_NGA.jpg"
+  },
+  "cassatt-childs-bath": {
+    "file": "images/works/cassatt-childs-bath.jpg",
+    "thumb": "images/works/cassatt-childs-bath.thumb.jpg",
+    "title": "孩子的沐浴",
+    "author": "Mary Cassatt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg"
+  },
+  "cezanne-apples-and-oranges-cezanne": {
+    "file": "images/works/cezanne-apples-and-oranges-cezanne.jpg",
+    "thumb": "images/works/cezanne-apples-and-oranges-cezanne.thumb.jpg",
+    "title": "苹果和橘子",
+    "author": "Paul Cézanne",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nature_morte_aux_pommes_et_aux_oranges,_par_Paul_C%C3%A9zanne.jpg"
+  },
+  "cezanne-the-basket-of-apples": {
+    "file": "images/works/cezanne-the-basket-of-apples.jpg",
+    "thumb": "images/works/cezanne-the-basket-of-apples.thumb.jpg",
+    "title": "苹果篮",
+    "author": "Paul Cézanne",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_C%C3%A9zanne_-_The_Basket_of_Apples_-_1926.252_-_Art_Institute_of_Chicago.jpg"
+  },
+  "cezanne-the-bathers-cezanne": {
+    "file": "images/works/cezanne-the-bathers-cezanne.jpg",
+    "thumb": "images/works/cezanne-the-bathers-cezanne.thumb.jpg",
+    "title": "大浴女",
+    "author": "Paul Cézanne",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_C%C3%A9zanne,_French_-_The_Large_Bathers_-_Google_Art_Project.jpg"
+  },
+  "cezanne-the-boy-in-the-red-vest": {
+    "file": "images/works/cezanne-the-boy-in-the-red-vest.jpg",
+    "thumb": "images/works/cezanne-the-boy-in-the-red-vest.thumb.jpg",
+    "title": "穿红背心的男孩",
+    "author": "Paul Cézanne",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Gar%C3%A7on_au_gilet_rouge,_par_Paul_C%C3%A9zanne,_FWN_496.jpg"
+  },
+  "cezanne-the-card-players": {
+    "file": "images/works/cezanne-the-card-players.jpg",
+    "thumb": "images/works/cezanne-the-card-players.thumb.jpg",
+    "title": "玩纸牌者",
+    "author": "Paul Cézanne",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Les_Joueurs_de_cartes,_par_Paul_C%C3%A9zanne.jpg"
+  },
+  "cezanne-the-house-of-the-hanged-man": {
+    "file": "images/works/cezanne-the-house-of-the-hanged-man.jpg",
+    "thumb": "images/works/cezanne-the-house-of-the-hanged-man.thumb.jpg",
+    "title": "缢死者之屋",
+    "author": "Paul Cézanne",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Maison_du_pendu,_Auvers-sur-Oise,_par_Paul_C%C3%A9zanne,_FWN_81.jpg"
   },
   "chartres": {
     "file": "images/works/chartres.jpg",
@@ -75,6 +521,185 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
   },
+  "constable-flatford-mill": {
+    "file": "images/works/constable-flatford-mill.jpg",
+    "thumb": "images/works/constable-flatford-mill.thumb.jpg",
+    "title": "弗拉特福德磨坊：通航河上的景象",
+    "author": "John Constable",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Constable_-_Flatford_Mill.jpg"
+  },
+  "constable-hay-wain": {
+    "file": "images/works/constable-hay-wain.jpg",
+    "thumb": "images/works/constable-hay-wain.thumb.jpg",
+    "title": "干草车",
+    "author": "John Constable",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Constable_-_The_Hay_Wain_(1821).jpg"
+  },
+  "cosimo-medici-palazzo-medici-riccardi": {
+    "file": "images/works/cosimo-medici-palazzo-medici-riccardi.jpg",
+    "thumb": "images/works/cosimo-medici-palazzo-medici-riccardi.thumb.jpg",
+    "title": "美第奇宫",
+    "author": "Yair Haklai",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palazzo_Medici_Riccardi-Florence.jpg"
+  },
+  "cosimo-medici-san-marco-cell-frescoes": {
+    "file": "images/works/cosimo-medici-san-marco-cell-frescoes.jpg",
+    "thumb": "images/works/cosimo-medici-san-marco-cell-frescoes.thumb.jpg",
+    "title": "圣马可修道院僧房壁画",
+    "author": "Fra Angelico",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Transfiguration_by_fra_Angelico_(San_Marco_Cell_6).jpg"
+  },
+  "cosimo-medici-san-marco-florence": {
+    "file": "images/works/cosimo-medici-san-marco-florence.jpg",
+    "thumb": "images/works/cosimo-medici-san-marco-florence.thumb.jpg",
+    "title": "圣马可修道院",
+    "author": "Sailko",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Firenze,_san_marco,_facciata_02.jpg"
+  },
+  "cosimo-medici-san-marco-library": {
+    "file": "images/works/cosimo-medici-san-marco-library.jpg",
+    "thumb": "images/works/cosimo-medici-san-marco-library.thumb.jpg",
+    "title": "圣马可图书馆",
+    "author": "Francesco Bini",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:San_marco,_biblioteca_di_michelozzo_02.jpg"
+  },
+  "courbet-bonjour-monsieur-courbet": {
+    "file": "images/works/courbet-bonjour-monsieur-courbet.jpg",
+    "thumb": "images/works/courbet-bonjour-monsieur-courbet.thumb.jpg",
+    "title": "你好，库尔贝先生",
+    "author": "Gustave Courbet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_Bonjour_Monsieur_Courbet_-_Mus%C3%A9e_Fabre.jpg"
+  },
+  "courbet-l-origine-du-monde": {
+    "file": "images/works/courbet-l-origine-du-monde.jpg",
+    "thumb": "images/works/courbet-l-origine-du-monde.thumb.jpg",
+    "title": "世界的起源",
+    "author": "Gustave Courbet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Origin-of-the-World.jpg"
+  },
+  "courbet-self-portrait-with-a-black-dog": {
+    "file": "images/works/courbet-self-portrait-with-a-black-dog.jpg",
+    "thumb": "images/works/courbet-self-portrait-with-a-black-dog.thumb.jpg",
+    "title": "带黑狗的库尔贝",
+    "author": "佚名",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_Selbstportr%C3%A4t_mit_schwarzem_Hund.jpg"
+  },
+  "courbet-the-cliff-at-etretat-after-the-storm": {
+    "file": "images/works/courbet-the-cliff-at-etretat-after-the-storm.jpg",
+    "thumb": "images/works/courbet-the-cliff-at-etretat-after-the-storm.thumb.jpg",
+    "title": "暴风雨后的埃特雷塔悬崖",
+    "author": "Gustave Courbet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_The_Etretat_Cliffs_after_the_Storm_-_Google_Art_Project.jpg"
+  },
+  "courbet-the-painter-s-studio": {
+    "file": "images/works/courbet-the-painter-s-studio.jpg",
+    "thumb": "images/works/courbet-the-painter-s-studio.thumb.jpg",
+    "title": "画家的画室",
+    "author": "Gustave Courbet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Courbet_LAtelier_du_peintre.jpg"
+  },
+  "courbet-the-stone-breakers": {
+    "file": "images/works/courbet-the-stone-breakers.jpg",
+    "thumb": "images/works/courbet-the-stone-breakers.thumb.jpg",
+    "title": "石工",
+    "author": "Gustave Courbet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg"
+  },
+  "dali-christ-of-saint-john-of-the-cross": {
+    "file": "images/works/dali-christ-of-saint-john-of-the-cross.jpg",
+    "thumb": "images/works/dali-christ-of-saint-john-of-the-cross.thumb.jpg",
+    "title": "十字若望的基督",
+    "author": "达利",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Christ_of_Saint_John_of_the_Cross.jpg"
+  },
+  "dali-dream-caused-by-the-flight-of-a-bee-around-a-pomegranate-a-second-before-awakening": {
+    "file": "images/works/dali-dream-caused-by-the-flight-of-a-bee-around-a-pomegranate-a-second-before-awakening.jpg",
+    "thumb": "images/works/dali-dream-caused-by-the-flight-of-a-bee-around-a-pomegranate-a-second-before-awakening.thumb.jpg",
+    "title": "一只蜜蜂绕石榴飞行引起的梦",
+    "author": "达利",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Dream_Caused_by_the_Flight_of_a_Bumblebee_around_a_Pomegranate_a_Second_Before_Awakening.jpg"
+  },
+  "dali-metamorphosis-of-narcissus": {
+    "file": "images/works/dali-metamorphosis-of-narcissus.jpg",
+    "thumb": "images/works/dali-metamorphosis-of-narcissus.thumb.jpg",
+    "title": "那喀索斯的变形",
+    "author": "达利",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Metamorphosis_of_Narcissus.jpg"
+  },
+  "dali-soft-construction-with-boiled-beans-premonition-of-civil-war": {
+    "file": "images/works/dali-soft-construction-with-boiled-beans-premonition-of-civil-war.jpg",
+    "thumb": "images/works/dali-soft-construction-with-boiled-beans-premonition-of-civil-war.thumb.jpg",
+    "title": "内战的预感",
+    "author": "达利",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:SalvadorDali-SoftConstructionWithBeans.jpg"
+  },
+  "dali-the-sacrament-of-the-last-supper": {
+    "file": "images/works/dali-the-sacrament-of-the-last-supper.jpg",
+    "thumb": "images/works/dali-the-sacrament-of-the-last-supper.thumb.jpg",
+    "title": "最后的晚餐圣礼",
+    "author": "达利",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Dali_-_The_Sacrament_of_the_Last_Supper_-_lowres.jpg"
+  },
+  "david-portrait-of-madame-recamier": {
+    "file": "images/works/david-portrait-of-madame-recamier.jpg",
+    "thumb": "images/works/david-portrait-of-madame-recamier.thumb.jpg",
+    "title": "雷卡米耶夫人",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Juliette_R%C3%A9camier,_n%C3%A9e_Bernard_-_Jacques-Louis_David_-_Mus%C3%A9e_duLouvre_Peintures_INV_3708.jpg"
+  },
+  "david-the-coronation-of-napoleon": {
+    "file": "images/works/david-the-coronation-of-napoleon.jpg",
+    "thumb": "images/works/david-the-coronation-of-napoleon.thumb.jpg",
+    "title": "拿破仑一世加冕礼",
+    "author": "Jacques-Louis David / Georges Rouget",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Coronation_of_Napoleon_(1805-1807).jpg"
+  },
+  "david-the-death-of-socrates": {
+    "file": "images/works/david-the-death-of-socrates.jpg",
+    "thumb": "images/works/david-the-death-of-socrates.thumb.jpg",
+    "title": "苏格拉底之死",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg"
+  },
+  "david-the-intervention-of-the-sabine-women": {
+    "file": "images/works/david-the-intervention-of-the-sabine-women.jpg",
+    "thumb": "images/works/david-the-intervention-of-the-sabine-women.thumb.jpg",
+    "title": "萨宾妇女",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg"
+  },
+  "david-the-lictors-bring-to-brutus-the-bodies-of-his-sons": {
+    "file": "images/works/david-the-lictors-bring-to-brutus-the-bodies-of-his-sons.jpg",
+    "thumb": "images/works/david-the-lictors-bring-to-brutus-the-bodies-of-his-sons.thumb.jpg",
+    "title": "侍从给布鲁图斯送回儿子们的尸体",
+    "author": "Jacques-Louis David",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:David_Brutus.jpg"
+  },
   "death-of-marat": {
     "file": "images/works/death-of-marat.jpg",
     "thumb": "images/works/death-of-marat.thumb.jpg",
@@ -82,6 +707,104 @@
     "author": "Jacques-Louis David",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Death_of_Marat_by_David.jpg"
+  },
+  "degas-a-cotton-office-in-new-orleans": {
+    "file": "images/works/degas-a-cotton-office-in-new-orleans.jpg",
+    "thumb": "images/works/degas-a-cotton-office-in-new-orleans.thumb.jpg",
+    "title": "新奥尔良的棉花交易所",
+    "author": "Edgar Degas",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cottonexchange1873-Degas.jpg"
+  },
+  "degas-l-absinthe": {
+    "file": "images/works/degas-l-absinthe.jpg",
+    "thumb": "images/works/degas-l-absinthe.thumb.jpg",
+    "title": "苦艾酒",
+    "author": "Edgar Degas",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_In_a_Caf%C3%A9_-_Google_Art_Project_2.jpg"
+  },
+  "degas-little-dancer-of-fourteen-years": {
+    "file": "images/works/degas-little-dancer-of-fourteen-years.jpg",
+    "thumb": "images/works/degas-little-dancer-of-fourteen-years.thumb.jpg",
+    "title": "十四岁的小舞者",
+    "author": "Edgar Degas",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Little_Fourteen-Year-Old_Dancer_MET_DP-14939-005.jpg"
+  },
+  "degas-place-de-la-concorde-painting": {
+    "file": "images/works/degas-place-de-la-concorde-painting.jpg",
+    "thumb": "images/works/degas-place-de-la-concorde-painting.thumb.jpg",
+    "title": "协和广场",
+    "author": "Edgar Degas",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_Place_de_la_Concorde.jpg"
+  },
+  "degas-the-bellelli-family": {
+    "file": "images/works/degas-the-bellelli-family.jpg",
+    "thumb": "images/works/degas-the-bellelli-family.thumb.jpg",
+    "title": "贝列里一家",
+    "author": "Edgar Degas",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_The_Bellelli_Family_-_Google_Art_Project.jpg"
+  },
+  "degas-the-tub-painting": {
+    "file": "images/works/degas-the-tub-painting.jpg",
+    "thumb": "images/works/degas-the-tub-painting.thumb.jpg",
+    "title": "盆浴",
+    "author": "Edgar Degas",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_Le_Tub_(1886_Mus%C3%A9e_d%27Orsay).jpg"
+  },
+  "delacroix-jacob-wrestling-with-the-angel-delacroix": {
+    "file": "images/works/delacroix-jacob-wrestling-with-the-angel-delacroix.jpg",
+    "thumb": "images/works/delacroix-jacob-wrestling-with-the-angel-delacroix.thumb.jpg",
+    "title": "雅各与天使搏斗",
+    "author": "Jean-Pierre Dalbéra",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:La_lutte_de_Jacob_avec_l%27Ange_d%27E._Delacroix_(%C3%A9glise_St_Sulpice,_Paris)_-_Flickr_-_dalbera.jpg"
+  },
+  "delacroix-portrait-of-frederic-chopin-and-george-sand": {
+    "file": "images/works/delacroix-portrait-of-frederic-chopin-and-george-sand.jpg",
+    "thumb": "images/works/delacroix-portrait-of-frederic-chopin-and-george-sand.thumb.jpg",
+    "title": "肖邦像",
+    "author": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fr%C3%A9d%C3%A9ric_Chopin_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1717.jpg"
+  },
+  "delacroix-the-barque-of-dante": {
+    "file": "images/works/delacroix-the-barque-of-dante.jpg",
+    "thumb": "images/works/delacroix-the-barque-of-dante.thumb.jpg",
+    "title": "但丁之舟",
+    "author": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dante_et_Virgile,_dit_aussi_La_barque_de_Dante_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3820_;_L_3837.jpg"
+  },
+  "delacroix-the-death-of-sardanapalus": {
+    "file": "images/works/delacroix-the-death-of-sardanapalus.jpg",
+    "thumb": "images/works/delacroix-the-death-of-sardanapalus.thumb.jpg",
+    "title": "萨达纳帕勒斯之死",
+    "author": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Mort_de_Sardanapale_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2346.jpg"
+  },
+  "delacroix-the-massacre-at-chios": {
+    "file": "images/works/delacroix-the-massacre-at-chios.jpg",
+    "thumb": "images/works/delacroix-the-massacre-at-chios.thumb.jpg",
+    "title": "希阿岛的屠杀",
+    "author": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sc%C3%A8ne_des_massacres_de_Scio,_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3823_;_C3.jpg"
+  },
+  "delacroix-women-of-algiers-in-their-apartment": {
+    "file": "images/works/delacroix-women-of-algiers-in-their-apartment.jpg",
+    "thumb": "images/works/delacroix-women-of-algiers-in-their-apartment.thumb.jpg",
+    "title": "阿尔及尔的女人",
+    "author": "Eugène Delacroix",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Femmes_d%27Alger_dans_leur_appartement,_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3824.jpg"
   },
   "discobolus": {
     "file": "images/works/discobolus.jpg",
@@ -92,6 +815,79 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:The_Discobolus_Lancellotti,_Roman_copy_of_a_5th_century_BC_Greek_original_by_Myron,_Hadrianic_period,_Palazzo_Massimo_alle_Terme_(11398129933).jpg"
   },
+  "duchamp-bicycle-wheel": {
+    "file": "images/works/duchamp-bicycle-wheel.jpg",
+    "thumb": "images/works/duchamp-bicycle-wheel.thumb.jpg",
+    "title": "自行车轮",
+    "author": "Daderot",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bicycle_wheel_by_Marcel_Duchamp,_1913,_this_version_1964_-_Galleria_nazionale_d%27arte_moderna_-_Rome,_Italy_-_DSC05467.jpg"
+  },
+  "duchamp-etant-donnes": {
+    "file": "images/works/duchamp-etant-donnes.jpg",
+    "thumb": "images/works/duchamp-etant-donnes.thumb.jpg",
+    "title": "给予：1. 瀑布 2. 照明的煤气",
+    "author": "杜尚",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Etant_donnes.jpg"
+  },
+  "duchamp-nude-descending-a-staircase-no-2": {
+    "file": "images/works/duchamp-nude-descending-a-staircase-no-2.jpg",
+    "thumb": "images/works/duchamp-nude-descending-a-staircase-no-2.thumb.jpg",
+    "title": "下楼梯的裸女，第 2 号",
+    "author": "Marcel Duchamp (1887-1968)",
+    "license": "PD-US",
+    "source": "https://en.wikipedia.org/wiki/File:Duchamp_-_Nude_Descending_a_Staircase.jpg"
+  },
+  "duchamp-the-bride-stripped-bare-by-her-bachelors-even": {
+    "file": "images/works/duchamp-the-bride-stripped-bare-by-her-bachelors-even.jpg",
+    "thumb": "images/works/duchamp-the-bride-stripped-bare-by-her-bachelors-even.thumb.jpg",
+    "title": "大玻璃",
+    "author": "Marcel Duchamp (1887-1968)",
+    "license": "PD-US",
+    "source": "https://en.wikipedia.org/wiki/File:Duchamp_LargeGlass.jpg"
+  },
+  "durer-adam-and-eve-durer": {
+    "file": "images/works/durer-adam-and-eve-durer.jpg",
+    "thumb": "images/works/durer-adam-and-eve-durer.thumb.jpg",
+    "title": "亚当与夏娃",
+    "author": "Albrecht Dürer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Adam_and_Eve_(Prado).jpg"
+  },
+  "durer-apocalypse-durer": {
+    "file": "images/works/durer-apocalypse-durer.jpg",
+    "thumb": "images/works/durer-apocalypse-durer.thumb.jpg",
+    "title": "启示录（木刻组画）",
+    "author": "Dürer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:D%C3%BCrer_Apocalypse_0.jpg"
+  },
+  "durer-feast-of-the-rosary": {
+    "file": "images/works/durer-feast-of-the-rosary.jpg",
+    "thumb": "images/works/durer-feast-of-the-rosary.thumb.jpg",
+    "title": "玫瑰花环节",
+    "author": "Albrecht Dürer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Feast_of_Rose_Garlands_-_Google_Art_Project.jpg"
+  },
+  "durer-knight-death-and-the-devil": {
+    "file": "images/works/durer-knight-death-and-the-devil.jpg",
+    "thumb": "images/works/durer-knight-death-and-the-devil.thumb.jpg",
+    "title": "骑士、死神与魔鬼",
+    "author": "Albrecht Dürer",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer,_Knight,_Death_and_Devil,_1513,_NGA_6637.jpg"
+  },
+  "durer-melencolia-i": {
+    "file": "images/works/durer-melencolia-i.jpg",
+    "thumb": "images/works/durer-melencolia-i.thumb.jpg",
+    "title": "忧郁 I",
+    "author": "Albrecht Dürer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Melencolia_I_-_Google_Art_Project_(_AGDdr3EHmNGyA).jpg"
+  },
   "durer-self-portrait-1500": {
     "file": "images/works/durer-self-portrait-1500.jpg",
     "thumb": "images/works/durer-self-portrait-1500.thumb.jpg",
@@ -99,6 +895,22 @@
     "author": "Albrecht Dürer",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_1500_self-portrait_(High_resolution_and_detail).jpg"
+  },
+  "durer-the-four-apostles": {
+    "file": "images/works/durer-the-four-apostles.jpg",
+    "thumb": "images/works/durer-the-four-apostles.thumb.jpg",
+    "title": "四使徒",
+    "author": "Albrecht Dürer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_The_Four_Apostles,_Saints_John,_Peter,_Mark_and_Paul.jpg"
+  },
+  "durer-young-hare": {
+    "file": "images/works/durer-young-hare.jpg",
+    "thumb": "images/works/durer-young-hare.thumb.jpg",
+    "title": "野兔",
+    "author": "Albrecht Dürer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Hare,_1502_-_Google_Art_Project.jpg"
   },
   "ecstasy-of-saint-teresa": {
     "file": "images/works/ecstasy-of-saint-teresa.jpg",
@@ -126,6 +938,94 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Marcel_Duchamp,_1917,_Fountain,_photograph_by_Alfred_Stieglitz.jpg"
   },
+  "fragonard-a-young-girl-reading": {
+    "file": "images/works/fragonard-a-young-girl-reading.jpg",
+    "thumb": "images/works/fragonard-a-young-girl-reading.thumb.jpg",
+    "title": "读书的少女",
+    "author": "Jean-Honoré Fragonard",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fragonard,_The_Reader.jpg"
+  },
+  "fragonard-coresus-sacrificing-himself-to-save-callirhoe": {
+    "file": "images/works/fragonard-coresus-sacrificing-himself-to-save-callirhoe.jpg",
+    "thumb": "images/works/fragonard-coresus-sacrificing-himself-to-save-callirhoe.thumb.jpg",
+    "title": "大祭司科雷素斯舍身救卡莉罗埃",
+    "author": "Jean-Honoré Fragonard",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fragonard_coresus_sacrificing_himselt_to_save_callirhoe.jpg"
+  },
+  "fragonard-the-bolt-fragonard": {
+    "file": "images/works/fragonard-the-bolt-fragonard.jpg",
+    "thumb": "images/works/fragonard-the-bolt-fragonard.thumb.jpg",
+    "title": "门闩",
+    "author": "Jean-Honoré Fragonard",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Verrou_-_Jean-Honor%C3%A9_Fragonard_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1974_2.jpg"
+  },
+  "fragonard-the-progress-of-love-fragonard": {
+    "file": "images/works/fragonard-the-progress-of-love-fragonard.jpg",
+    "thumb": "images/works/fragonard-the-progress-of-love-fragonard.thumb.jpg",
+    "title": "爱情的进程",
+    "author": "Jean-Honoré Fragonard",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Honor%C3%A9_Fragonard_-_The_Progress_of_Love_-_The_Meeting_-_WGA08071.jpg"
+  },
+  "fragonard-the-stolen-kiss-fragonard": {
+    "file": "images/works/fragonard-the-stolen-kiss-fragonard.jpg",
+    "thumb": "images/works/fragonard-the-stolen-kiss-fragonard.thumb.jpg",
+    "title": "偷吻",
+    "author": "Jean-Honoré Fragonard / Marguerite Gérard",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Honor%C3%A9_Fragonard_-_The_Stolen_Kiss.jpg"
+  },
+  "friedrich-chalk-cliffs-on-rugen": {
+    "file": "images/works/friedrich-chalk-cliffs-on-rugen.jpg",
+    "thumb": "images/works/friedrich-chalk-cliffs-on-rugen.thumb.jpg",
+    "title": "吕根岛的白垩崖",
+    "author": "Caspar David Friedrich",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich%27s_Chalk_Cliffs_on_R%C3%BCgen.jpg"
+  },
+  "friedrich-cross-in-the-mountains": {
+    "file": "images/works/friedrich-cross-in-the-mountains.jpg",
+    "thumb": "images/works/friedrich-cross-in-the-mountains.thumb.jpg",
+    "title": "山上的十字架",
+    "author": "Caspar David Friedrich",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Friedrich_Tetschener_Altar_1808.jpg"
+  },
+  "friedrich-the-abbey-in-the-oakwood": {
+    "file": "images/works/friedrich-the-abbey-in-the-oakwood.jpg",
+    "thumb": "images/works/friedrich-the-abbey-in-the-oakwood.thumb.jpg",
+    "title": "橡树林中的修道院",
+    "author": "Caspar David Friedrich",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg"
+  },
+  "friedrich-the-monk-by-the-sea": {
+    "file": "images/works/friedrich-the-monk-by-the-sea.jpg",
+    "thumb": "images/works/friedrich-the-monk-by-the-sea.thumb.jpg",
+    "title": "海边的僧侣",
+    "author": "Caspar David Friedrich",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg"
+  },
+  "friedrich-the-sea-of-ice": {
+    "file": "images/works/friedrich-the-sea-of-ice.jpg",
+    "thumb": "images/works/friedrich-the-sea-of-ice.thumb.jpg",
+    "title": "冰海",
+    "author": "Caspar David Friedrich",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Das_Eismeer_-_Hamburger_Kunsthalle_-_02.jpg"
+  },
+  "friedrich-two-men-contemplating-the-moon": {
+    "file": "images/works/friedrich-two-men-contemplating-the-moon.jpg",
+    "thumb": "images/works/friedrich-two-men-contemplating-the-moon.thumb.jpg",
+    "title": "两人观月",
+    "author": "Caspar David Friedrich",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Two_Men_Contemplating_the_Moon_-_Google_Art_Project.jpg"
+  },
   "garden-of-earthly-delights": {
     "file": "images/works/garden-of-earthly-delights.jpg",
     "thumb": "images/works/garden-of-earthly-delights.thumb.jpg",
@@ -134,6 +1034,212 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:The_Garden_of_earthly_delights.jpg"
   },
+  "gauguin-nevermore-gauguin": {
+    "file": "images/works/gauguin-nevermore-gauguin.jpg",
+    "thumb": "images/works/gauguin-nevermore-gauguin.thumb.jpg",
+    "title": "永不再",
+    "author": "Paul Gauguin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_091.jpg"
+  },
+  "gauguin-spirit-of-the-dead-watching": {
+    "file": "images/works/gauguin-spirit-of-the-dead-watching.jpg",
+    "thumb": "images/works/gauguin-spirit-of-the-dead-watching.thumb.jpg",
+    "title": "死者的幽灵在注视",
+    "author": "Paul Gauguin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin-_Manao_tupapau_(The_Spirit_of_the_Dead_Keep_Watch).JPG"
+  },
+  "gauguin-the-yellow-christ": {
+    "file": "images/works/gauguin-the-yellow-christ.jpg",
+    "thumb": "images/works/gauguin-the-yellow-christ.thumb.jpg",
+    "title": "黄色基督",
+    "author": "Paul Gauguin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_The_Yellow_Christ_(Le_Christ_jaune)_1889.jpg"
+  },
+  "gauguin-two-tahitian-women": {
+    "file": "images/works/gauguin-two-tahitian-women.jpg",
+    "thumb": "images/works/gauguin-two-tahitian-women.thumb.jpg",
+    "title": "两个塔希提女人",
+    "author": "Paul Gauguin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_Deux_Tahitiennes.jpg"
+  },
+  "gauguin-vision-after-the-sermon": {
+    "file": "images/works/gauguin-vision-after-the-sermon.jpg",
+    "thumb": "images/works/gauguin-vision-after-the-sermon.thumb.jpg",
+    "title": "布道后的幻象",
+    "author": "Paul Gauguin",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_vision_apr%C3%A8s_le_sermon_(Paul_Gauguin).jpg"
+  },
+  "gericault-insane-woman": {
+    "file": "images/works/gericault-insane-woman.jpg",
+    "thumb": "images/works/gericault-insane-woman.thumb.jpg",
+    "title": "患嫉妒偏执症的女人",
+    "author": "Théodore Géricault",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Monomane_de_l%27envie.jpg"
+  },
+  "gericault-portrait-of-a-kleptomaniac": {
+    "file": "images/works/gericault-portrait-of-a-kleptomaniac.jpg",
+    "thumb": "images/works/gericault-portrait-of-a-kleptomaniac.thumb.jpg",
+    "title": "患偷窃偏执症的男人",
+    "author": "Théodore Géricault",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_-_Portrait_of_a_Kleptomaniac_-_WGA08636.jpg"
+  },
+  "gericault-the-1821-derby-at-epsom": {
+    "file": "images/works/gericault-the-1821-derby-at-epsom.jpg",
+    "thumb": "images/works/gericault-the-1821-derby-at-epsom.thumb.jpg",
+    "title": "埃普索姆赛马",
+    "author": "Théodore Géricault",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Derby_de_1821_%C3%A0_Epsom_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_MI_708_-_photo_2.jpg"
+  },
+  "gericault-the-charging-chasseur": {
+    "file": "images/works/gericault-the-charging-chasseur.jpg",
+    "thumb": "images/works/gericault-the-charging-chasseur.thumb.jpg",
+    "title": "轻骑兵军官的冲锋",
+    "author": "Théodore Géricault",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:GericaultHorseman.jpg"
+  },
+  "gericault-the-wounded-cuirassier": {
+    "file": "images/works/gericault-the-wounded-cuirassier.jpg",
+    "thumb": "images/works/gericault-the-wounded-cuirassier.thumb.jpg",
+    "title": "受伤的胸甲骑兵",
+    "author": "Théodore Géricault",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cuirassier_bless%C3%A9,_quittant_le_feu_-_Th%C3%A9odore_G%C3%A9ricault_-_Mus%C3%A9e_du_Louvre_Peintures_INV_4886_;_MN_51.jpg"
+  },
+  "ghirlandaio-adoration-of-the-shepherds-ghirlandaio": {
+    "file": "images/works/ghirlandaio-adoration-of-the-shepherds-ghirlandaio.jpg",
+    "thumb": "images/works/ghirlandaio-adoration-of-the-shepherds-ghirlandaio.thumb.jpg",
+    "title": "牧羊人朝拜",
+    "author": "Sailko",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Domenico_ghirlandaio,_adorazione_dei_pastori,_1485_ca..JPG"
+  },
+  "ghirlandaio-an-old-man-and-his-grandson": {
+    "file": "images/works/ghirlandaio-an-old-man-and-his-grandson.jpg",
+    "thumb": "images/works/ghirlandaio-an-old-man-and-his-grandson.thumb.jpg",
+    "title": "老人与孙子",
+    "author": "Domenico Ghirlandaio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ghirlandaio,_Domenico_-_An_Old_Man_and_His_Grandson_-_Louvre_-_Google_Art_Project.jpg"
+  },
+  "ghirlandaio-last-supper-ghirlandaio": {
+    "file": "images/works/ghirlandaio-last-supper-ghirlandaio.jpg",
+    "thumb": "images/works/ghirlandaio-last-supper-ghirlandaio.thumb.jpg",
+    "title": "最后的晚餐",
+    "author": "Domenico Ghirlandaio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Domenico_ghirlandaio,_cenacolo_di_ognissanti_01.jpg"
+  },
+  "ghirlandaio-portrait-of-giovanna-tornabuoni": {
+    "file": "images/works/ghirlandaio-portrait-of-giovanna-tornabuoni.jpg",
+    "thumb": "images/works/ghirlandaio-portrait-of-giovanna-tornabuoni.thumb.jpg",
+    "title": "乔瓦娜·托尔纳博尼像",
+    "author": "Domenico Ghirlandaio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ghirlandaio-Giovanna_Tornabuoni_cropped.jpg"
+  },
+  "ghirlandaio-sassetti-chapel": {
+    "file": "images/works/ghirlandaio-sassetti-chapel.jpg",
+    "thumb": "images/works/ghirlandaio-sassetti-chapel.thumb.jpg",
+    "title": "萨塞蒂礼拜堂壁画",
+    "author": "sailko",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Santa_Trinita_Cappella_Sassetti2.JPG"
+  },
+  "ghirlandaio-tornabuoni-chapel": {
+    "file": "images/works/ghirlandaio-tornabuoni-chapel.jpg",
+    "thumb": "images/works/ghirlandaio-tornabuoni-chapel.thumb.jpg",
+    "title": "托尔纳博尼礼拜堂壁画",
+    "author": "Karatecoop",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Domenico_Ghirlandaio_und_Werkstatt,_Tornabuoni-Kapelle,_1486%E2%80%931490,_Freskenzyklus,_Santa_Maria_Novella,_Florenz.jpg"
+  },
+  "ghirlandaio-vocation-of-the-apostles": {
+    "file": "images/works/ghirlandaio-vocation-of-the-apostles.jpg",
+    "thumb": "images/works/ghirlandaio-vocation-of-the-apostles.thumb.jpg",
+    "title": "召唤彼得和安德烈",
+    "author": "Domenico Ghirlandaio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ghirlandaio,_Domenico_-_Calling_of_the_Apostles_-_1481.jpg"
+  },
+  "giorgione-castelfranco-madonna": {
+    "file": "images/works/giorgione-castelfranco-madonna.jpg",
+    "thumb": "images/works/giorgione-castelfranco-madonna.thumb.jpg",
+    "title": "卡斯泰尔弗兰科祭坛画",
+    "author": "Giorgione",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giorgione_-_Pala_di_Castelfranco.jpg"
+  },
+  "giorgione-fondaco-dei-tedeschi": {
+    "file": "images/works/giorgione-fondaco-dei-tedeschi.jpg",
+    "thumb": "images/works/giorgione-fondaco-dei-tedeschi.thumb.jpg",
+    "title": "德国商馆外墙壁画",
+    "author": "Sailko",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Giorgione,_la_nuda,_dal_fondaco_dei_tedeschi_02.jpg"
+  },
+  "giorgione-la-vecchia-painting": {
+    "file": "images/works/giorgione-la-vecchia-painting.jpg",
+    "thumb": "images/works/giorgione-la-vecchia-painting.thumb.jpg",
+    "title": "老妇像",
+    "author": "Giorgione",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giorgione_-_La_Vecchia.jpg"
+  },
+  "giorgione-laura-giorgione": {
+    "file": "images/works/giorgione-laura-giorgione.jpg",
+    "thumb": "images/works/giorgione-laura-giorgione.thumb.jpg",
+    "title": "劳拉",
+    "author": "Giorgione",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giorgione_-_Young_Woman_(%E2%80%9CLaura%E2%80%9D)_-_Google_Art_Project.jpg"
+  },
+  "giorgione-sleeping-venus-giorgione": {
+    "file": "images/works/giorgione-sleeping-venus-giorgione.jpg",
+    "thumb": "images/works/giorgione-sleeping-venus-giorgione.thumb.jpg",
+    "title": "沉睡的维纳斯（提香续成）",
+    "author": "Titian / Giorgione",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giorgione_-_Sleeping_Venus_-_Google_Art_Project_2.jpg"
+  },
+  "giorgione-the-three-philosophers": {
+    "file": "images/works/giorgione-the-three-philosophers.jpg",
+    "thumb": "images/works/giorgione-the-three-philosophers.thumb.jpg",
+    "title": "三位哲学家",
+    "author": "Giorgione",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giorgione_-_Three_Philosophers_-_Google_Art_Project.jpg"
+  },
+  "giotto-bardi-chapel": {
+    "file": "images/works/giotto-bardi-chapel.jpg",
+    "thumb": "images/works/giotto-bardi-chapel.thumb.jpg",
+    "title": "巴尔迪礼拜堂圣方济各生平壁画",
+    "author": "gaspa",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Santa_croce,_cappella_bardi_00.jpg"
+  },
+  "giotto-giotto-s-campanile": {
+    "file": "images/works/giotto-giotto-s-campanile.jpg",
+    "thumb": "images/works/giotto-giotto-s-campanile.thumb.jpg",
+    "title": "佛罗伦萨大教堂钟楼",
+    "author": "Thermos",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:CampanileGiotto-01.jpg"
+  },
   "giotto-lamentation": {
     "file": "images/works/giotto-lamentation.jpg",
     "thumb": "images/works/giotto-lamentation.thumb.jpg",
@@ -141,6 +1247,23 @@
     "author": "Giotto",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-36-_-_Lamentation_(The_Mourning_of_Christ)_adj.jpg"
+  },
+  "giotto-ognissanti-madonna": {
+    "file": "images/works/giotto-ognissanti-madonna.jpg",
+    "thumb": "images/works/giotto-ognissanti-madonna.thumb.jpg",
+    "title": "奥尼桑蒂圣母",
+    "author": "Giotto",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giotto,_1267_Around-1337_-_Maest%C3%A0_-_Google_Art_Project.jpg"
+  },
+  "giotto-scrovegni-chapel": {
+    "file": "images/works/giotto-scrovegni-chapel.jpg",
+    "thumb": "images/works/giotto-scrovegni-chapel.thumb.jpg",
+    "title": "斯克罗韦尼礼拜堂壁画",
+    "author": "Zairon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Padova_Cappella_degli_Scrovegni_Innen_Langhaus_West_5.jpg"
   },
   "girl-with-a-pearl-earring": {
     "file": "images/works/girl-with-a-pearl-earring.jpg",
@@ -159,6 +1282,54 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg"
   },
+  "goya-charles-iv-of-spain-and-his-family": {
+    "file": "images/works/goya-charles-iv-of-spain-and-his-family.jpg",
+    "thumb": "images/works/goya-charles-iv-of-spain-and-his-family.thumb.jpg",
+    "title": "卡洛斯四世一家",
+    "author": "Francisco Goya",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_familia_de_Carlos_IV.jpg"
+  },
+  "goya-saturn-devouring-his-son": {
+    "file": "images/works/goya-saturn-devouring-his-son.jpg",
+    "thumb": "images/works/goya-saturn-devouring-his-son.thumb.jpg",
+    "title": "农神吞噬其子",
+    "author": "Francisco Goya",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg"
+  },
+  "goya-the-milkmaid-of-bordeaux": {
+    "file": "images/works/goya-the-milkmaid-of-bordeaux.jpg",
+    "thumb": "images/works/goya-the-milkmaid-of-bordeaux.thumb.jpg",
+    "title": "波尔多的卖奶姑娘",
+    "author": "Francisco Goya",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Goya_MilkMaid.jpg"
+  },
+  "goya-the-nude-maja": {
+    "file": "images/works/goya-the-nude-maja.jpg",
+    "thumb": "images/works/goya-the-nude-maja.thumb.jpg",
+    "title": "裸体的玛哈",
+    "author": "Francisco Goya",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Goya_Maja_naga2.jpg"
+  },
+  "goya-the-parasol": {
+    "file": "images/works/goya-the-parasol.jpg",
+    "thumb": "images/works/goya-the-parasol.thumb.jpg",
+    "title": "阳伞",
+    "author": "Francisco Goya",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Quitasol_(Goya).jpg"
+  },
+  "goya-the-second-of-may-1808": {
+    "file": "images/works/goya-the-second-of-may-1808.jpg",
+    "thumb": "images/works/goya-the-second-of-may-1808.thumb.jpg",
+    "title": "1808年5月2日",
+    "author": "Francisco Goya",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:El_dos_de_mayo_de_1808_en_Madrid.jpg"
+  },
   "grande-odalisque": {
     "file": "images/works/grande-odalisque.jpg",
     "thumb": "images/works/grande-odalisque.thumb.jpg",
@@ -166,6 +1337,30 @@
     "author": "Jean-Auguste-Dominique Ingres",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Jean_Auguste_Dominique_Ingres,_La_Grande_Odalisque,_1814.jpg"
+  },
+  "guggenheim-alchemy-painting": {
+    "file": "images/works/guggenheim-alchemy-painting.jpg",
+    "thumb": "images/works/guggenheim-alchemy-painting.thumb.jpg",
+    "title": "炼金术",
+    "author": "Jackson Pollock；图像：Peggy Guggenheim Collection",
+    "license": "© Pollock-Krasner Foundation / Artists Rights Society (ARS), New York, by SIAE 2022.",
+    "source": "https://www.guggenheim-venice.it/en/art/works/alchemy/"
+  },
+  "guggenheim-attirement-of-the-bride": {
+    "file": "images/works/guggenheim-attirement-of-the-bride.jpg",
+    "thumb": "images/works/guggenheim-attirement-of-the-bride.thumb.jpg",
+    "title": "新娘的盛装",
+    "author": "Max Ernst；图像：Peggy Guggenheim Collection",
+    "license": "© Max Ernst, by SIAE 2022.",
+    "source": "https://www.guggenheim-venice.it/en/art/works/attirement-of-the-bride/"
+  },
+  "guggenheim-bird-in-space": {
+    "file": "images/works/guggenheim-bird-in-space.jpg",
+    "thumb": "images/works/guggenheim-bird-in-space.thumb.jpg",
+    "title": "空间中的鸟",
+    "author": "Constantin Brancusi；图像：Peggy Guggenheim Collection",
+    "license": "© Succession Brancusi / All rights reserved.",
+    "source": "https://www.guggenheim-venice.it/en/art/works/bird-in-space/"
   },
   "hagia-sophia": {
     "file": "images/works/hagia-sophia.jpg",
@@ -175,6 +1370,62 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg"
+  },
+  "holbein-danse-macabre-holbein": {
+    "file": "images/works/holbein-danse-macabre-holbein.jpg",
+    "thumb": "images/works/holbein-danse-macabre-holbein.thumb.jpg",
+    "title": "死神之舞（木刻组画）",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Holbein_Danse_Macabre_18.jpg"
+  },
+  "holbein-portrait-of-anne-of-cleves-holbein": {
+    "file": "images/works/holbein-portrait-of-anne-of-cleves-holbein.jpg",
+    "thumb": "images/works/holbein-portrait-of-anne-of-cleves-holbein.thumb.jpg",
+    "title": "克莱沃的安妮像",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_Anne_of_Cleves_by_Hans_Holbein_the_Younger_(Louvre).jpg"
+  },
+  "holbein-portrait-of-erasmus-of-rotterdam": {
+    "file": "images/works/holbein-portrait-of-erasmus-of-rotterdam.jpg",
+    "thumb": "images/works/holbein-portrait-of-erasmus-of-rotterdam.thumb.jpg",
+    "title": "伊拉斯谟像",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_d._J._-_Bildnis_des_schreibenden_Erasmus_von_Rotterdam,_1523.jpg"
+  },
+  "holbein-portrait-of-georg-giese": {
+    "file": "images/works/holbein-portrait-of-georg-giese.jpg",
+    "thumb": "images/works/holbein-portrait-of-georg-giese.thumb.jpg",
+    "title": "商人格奥尔格·吉兹像",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_der_J%C3%BCngere_-_Der_Kaufmann_Georg_Gisze_-_Google_Art_Project.jpg"
+  },
+  "holbein-portrait-of-henry-viii": {
+    "file": "images/works/holbein-portrait-of-henry-viii.jpg",
+    "thumb": "images/works/holbein-portrait-of-henry-viii.thumb.jpg",
+    "title": "亨利八世像",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_King_Henry_VIII_of_England_(1491%E2%80%931547),_by_Hans_Holbein_the_Younger_(Thyssen-Bornemisza_Museum,_Madrid).jpg"
+  },
+  "holbein-portrait-of-sir-thomas-more": {
+    "file": "images/works/holbein-portrait-of-sir-thomas-more.jpg",
+    "thumb": "images/works/holbein-portrait-of-sir-thomas-more.thumb.jpg",
+    "title": "托马斯·莫尔爵士像",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein,_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg"
+  },
+  "holbein-the-body-of-the-dead-christ-in-the-tomb": {
+    "file": "images/works/holbein-the-body-of-the-dead-christ-in-the-tomb.jpg",
+    "thumb": "images/works/holbein-the-body-of-the-dead-christ-in-the-tomb.thumb.jpg",
+    "title": "坟墓中的基督尸体",
+    "author": "Hans Holbein the Younger",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein-_The_Body_of_the_Dead_Christ_in_the_Tomb.JPG"
   },
   "hunters-in-the-snow": {
     "file": "images/works/hunters-in-the-snow.jpg",
@@ -192,6 +1443,104 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg"
   },
+  "ingres-madame-moitessier": {
+    "file": "images/works/ingres-madame-moitessier.jpg",
+    "thumb": "images/works/ingres-madame-moitessier.thumb.jpg",
+    "title": "莫瓦特西耶夫人像",
+    "author": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dominique_Ingres_-_Mme_Moitessier.jpg"
+  },
+  "ingres-napoleon-i-on-his-imperial-throne": {
+    "file": "images/works/ingres-napoleon-i-on-his-imperial-throne.jpg",
+    "thumb": "images/works/ingres-napoleon-i-on-his-imperial-throne.thumb.jpg",
+    "title": "王座上的拿破仑一世",
+    "author": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ingres,_Napoleon_on_his_Imperial_throne.jpg"
+  },
+  "ingres-portrait-of-monsieur-bertin": {
+    "file": "images/works/ingres-portrait-of-monsieur-bertin.jpg",
+    "thumb": "images/works/ingres-portrait-of-monsieur-bertin.thumb.jpg",
+    "title": "贝尔坦先生像",
+    "author": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Louis-Francois_Bertin.jpg"
+  },
+  "ingres-the-source-ingres": {
+    "file": "images/works/ingres-the-source-ingres.jpg",
+    "thumb": "images/works/ingres-the-source-ingres.thumb.jpg",
+    "title": "泉",
+    "author": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean_Auguste_Dominique_Ingres_-_The_Spring_-_Google_Art_Project_2.jpg"
+  },
+  "ingres-the-turkish-bath": {
+    "file": "images/works/ingres-the-turkish-bath.jpg",
+    "thumb": "images/works/ingres-the-turkish-bath.thumb.jpg",
+    "title": "土耳其浴室",
+    "author": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Bain_Turc,_by_Jean_Auguste_Dominique_Ingres,_from_C2RMFFXD.jpg"
+  },
+  "ingres-the-valpincon-bather": {
+    "file": "images/works/ingres-the-valpincon-bather.jpg",
+    "thumb": "images/works/ingres-the-valpincon-bather.thumb.jpg",
+    "title": "瓦平松的浴女",
+    "author": "Jean-Auguste-Dominique Ingres",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Auguste-Dominique_Ingres_-_La_Baigneuse_Valpin%C3%A7on.jpg"
+  },
+  "ingres-the-vow-of-louis-xiii": {
+    "file": "images/works/ingres-the-vow-of-louis-xiii.jpg",
+    "thumb": "images/works/ingres-the-vow-of-louis-xiii.thumb.jpg",
+    "title": "路易十三的誓愿",
+    "author": "Didier Descouens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:(Montauban)_%27Le_v%C5%93u_de_Louis_XIII%27,_par_Ingres.jpg"
+  },
+  "julius-ii-cortile-del-belvedere": {
+    "file": "images/works/julius-ii-cortile-del-belvedere.jpg",
+    "thumb": "images/works/julius-ii-cortile-del-belvedere.thumb.jpg",
+    "title": "观景庭院",
+    "author": "Étienne Dupérac",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cortile.del.belvedere.1.jpg"
+  },
+  "julius-ii-portrait-of-pope-julius-ii": {
+    "file": "images/works/julius-ii-portrait-of-pope-julius-ii.jpg",
+    "thumb": "images/works/julius-ii-portrait-of-pope-julius-ii.thumb.jpg",
+    "title": "尤利乌斯二世像",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pope_Julius_II.jpg"
+  },
+  "julius-ii-raphael-rooms": {
+    "file": "images/works/julius-ii-raphael-rooms.jpg",
+    "thumb": "images/works/julius-ii-raphael-rooms.thumb.jpg",
+    "title": "签字厅壁画",
+    "author": "Lure",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raffael_Stanza_della_Segnatura.jpg"
+  },
+  "julius-ii-st-peter-s-basilica": {
+    "file": "images/works/julius-ii-st-peter-s-basilica.jpg",
+    "thumb": "images/works/julius-ii-st-peter-s-basilica.thumb.jpg",
+    "title": "新圣彼得大教堂",
+    "author": "Alvesgaspar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg"
+  },
+  "julius-ii-tomb-of-pope-julius-ii": {
+    "file": "images/works/julius-ii-tomb-of-pope-julius-ii.jpg",
+    "thumb": "images/works/julius-ii-tomb-of-pope-julius-ii.thumb.jpg",
+    "title": "尤利乌斯二世陵墓",
+    "author": "Livioandronico2013",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_Moses_(Rome).jpg"
+  },
   "justinian-mosaic": {
     "file": "images/works/justinian-mosaic.jpg",
     "thumb": "images/works/justinian-mosaic.thumb.jpg",
@@ -199,6 +1548,63 @@
     "author": "Meister von San Vitale in Ravenna",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Meister_von_San_Vitale_in_Ravenna_003.jpg"
+  },
+  "kandinsky-composition-vii": {
+    "file": "images/works/kandinsky-composition-vii.jpg",
+    "thumb": "images/works/kandinsky-composition-vii.thumb.jpg",
+    "title": "构成第七号",
+    "author": "Wassily Kandinsky",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Composition_VII_-_Wassily_Kandinsky,_GAC.jpg"
+  },
+  "kandinsky-composition-viii": {
+    "file": "images/works/kandinsky-composition-viii.jpg",
+    "thumb": "images/works/kandinsky-composition-viii.thumb.jpg",
+    "title": "构成第八号",
+    "author": "Xyxyzyz",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Kandinsky_-_Composition_8,_July_1923.jpg"
+  },
+  "kandinsky-composition-x": {
+    "file": "images/works/kandinsky-composition-x.jpg",
+    "thumb": "images/works/kandinsky-composition-x.thumb.jpg",
+    "title": "构成第十号",
+    "author": "Wassily Kandinsky",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vassily_Kandinsky,_1939_-_Composition_10.jpg"
+  },
+  "kandinsky-improvisation-28-second-version": {
+    "file": "images/works/kandinsky-improvisation-28-second-version.jpg",
+    "thumb": "images/works/kandinsky-improvisation-28-second-version.thumb.jpg",
+    "title": "即兴 28 号（第二版）",
+    "author": "Wassily Kandinsky",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vasily_Kandinsky_Improvisation_28_(second_version).jpg"
+  },
+  "kandinsky-several-circles": {
+    "file": "images/works/kandinsky-several-circles.jpg",
+    "thumb": "images/works/kandinsky-several-circles.thumb.jpg",
+    "title": "几个圆圈",
+    "author": "Wassily Kandinsky",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vassily_Kandinsky,_1926_-_Several_Circles,_Gugg_0910_25.jpg"
+  },
+  "kandinsky-sky-blue-kandinsky": {
+    "file": "images/works/kandinsky-sky-blue-kandinsky.jpg",
+    "thumb": "images/works/kandinsky-sky-blue-kandinsky.thumb.jpg",
+    "title": "天蓝",
+    "author": "Wassily Kandinsky",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wassily_Kandinsky_-_Sky_Blue,_1940.jpg"
+  },
+  "kandinsky-yellow-red-blue": {
+    "file": "images/works/kandinsky-yellow-red-blue.jpg",
+    "thumb": "images/works/kandinsky-yellow-red-blue.thumb.jpg",
+    "title": "黄、红、蓝",
+    "author": "Wassily Kandinsky",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kandinsky_-_Jaune_Rouge_Bleu.jpg"
   },
   "la-grande-jatte": {
     "file": "images/works/la-grande-jatte.jpg",
@@ -241,6 +1647,62 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:%C3%9Altima_Cena_-_Da_Vinci_5.jpg"
   },
+  "leonardo-annunciation-leonardo": {
+    "file": "images/works/leonardo-annunciation-leonardo.jpg",
+    "thumb": "images/works/leonardo-annunciation-leonardo.thumb.jpg",
+    "title": "天使报喜",
+    "author": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Annunciation_(Leonardo_c._1472%E2%80%931476).jpg"
+  },
+  "leonardo-ginevra-de-benci": {
+    "file": "images/works/leonardo-ginevra-de-benci.jpg",
+    "thumb": "images/works/leonardo-ginevra-de-benci.thumb.jpg",
+    "title": "吉内薇拉·德·本奇像",
+    "author": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_Ginevra_de%27_Benci_-_Google_Art_Project.jpg"
+  },
+  "leonardo-lady-with-an-ermine": {
+    "file": "images/works/leonardo-lady-with-an-ermine.jpg",
+    "thumb": "images/works/leonardo-lady-with-an-ermine.thumb.jpg",
+    "title": "抱银鼠的女子",
+    "author": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lady_with_an_Ermine_-_Leonardo_da_Vinci_(adjusted_levels).jpg"
+  },
+  "leonardo-the-virgin-and-child-with-saint-anne-leonardo": {
+    "file": "images/works/leonardo-the-virgin-and-child-with-saint-anne-leonardo.jpg",
+    "thumb": "images/works/leonardo-the-virgin-and-child-with-saint-anne-leonardo.thumb.jpg",
+    "title": "圣母子与圣安娜",
+    "author": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sainte_Anne_Leonard.jpg"
+  },
+  "leonardo-virgin-of-the-rocks": {
+    "file": "images/works/leonardo-virgin-of-the-rocks.jpg",
+    "thumb": "images/works/leonardo-virgin-of-the-rocks.thumb.jpg",
+    "title": "岩间圣母",
+    "author": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Leonardo_Da_Vinci_-_Vergine_delle_Rocce_(Louvre).jpg"
+  },
+  "leonardo-vitruvian-man": {
+    "file": "images/works/leonardo-vitruvian-man.jpg",
+    "thumb": "images/works/leonardo-vitruvian-man.thumb.jpg",
+    "title": "维特鲁威人",
+    "author": "Leonardo da Vinci",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Da_Vinci_Vitruve_Luc_Viatour.jpg"
+  },
+  "les-demoiselles-d-avignon": {
+    "file": "images/works/les-demoiselles-d-avignon.jpg",
+    "thumb": "images/works/les-demoiselles-d-avignon.thumb.jpg",
+    "title": "亚维农少女",
+    "author": "Pablo Picasso",
+    "license": "PD-US",
+    "source": "https://en.wikipedia.org/wiki/File:Les_Demoiselles_d%27Avignon.jpg"
+  },
   "liberty-leading-the-people": {
     "file": "images/works/liberty-leading-the-people.jpg",
     "thumb": "images/works/liberty-leading-the-people.thumb.jpg",
@@ -248,6 +1710,33 @@
     "author": "Eugène Delacroix",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg"
+  },
+  "lorenzo-medici-battle-of-the-centaurs-michelangelo": {
+    "file": "images/works/lorenzo-medici-battle-of-the-centaurs-michelangelo.jpg",
+    "thumb": "images/works/lorenzo-medici-battle-of-the-centaurs-michelangelo.thumb.jpg",
+    "title": "半人马之战",
+    "author": "sailko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo,_centauromachia,_1492_ca._01.JPG"
+  },
+  "lorenzo-medici-madonna-of-the-stairs": {
+    "file": "images/works/lorenzo-medici-madonna-of-the-stairs.jpg",
+    "thumb": "images/works/lorenzo-medici-madonna-of-the-stairs.thumb.jpg",
+    "title": "阶梯上的圣母",
+    "author": "Sailko",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo,_madonna_della_scala,_1491_ca,_01.JPG"
+  },
+  "lorenzo-medici-villa-di-poggio-a-caiano": {
+    "file": "images/works/lorenzo-medici-villa-di-poggio-a-caiano.jpg",
+    "thumb": "images/works/lorenzo-medici-villa-di-poggio-a-caiano.thumb.jpg",
+    "title": "波焦阿卡伊阿诺美第奇别墅",
+    "author": "Mongolo1984",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Villa_di_Poggio_a_Caiano,1.JPG"
   },
   "luncheon-on-the-grass": {
     "file": "images/works/luncheon-on-the-grass.jpg",
@@ -257,6 +1746,86 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg"
   },
+  "manet-a-bar-at-the-folies-bergere": {
+    "file": "images/works/manet-a-bar-at-the-folies-bergere.jpg",
+    "thumb": "images/works/manet-a-bar-at-the-folies-bergere.thumb.jpg",
+    "title": "女神游乐厅的吧台",
+    "author": "Édouard Manet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%22Un_Bar_aux_Folies-Berg%C3%A8re%22_by_%C3%89douard_Manet_(1882).jpg"
+  },
+  "manet-portrait-of-emile-zola": {
+    "file": "images/works/manet-portrait-of-emile-zola.jpg",
+    "thumb": "images/works/manet-portrait-of-emile-zola.thumb.jpg",
+    "title": "左拉像",
+    "author": "佚名",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Manet,_Edouard_-_Portrait_of_Emile_Zola.jpg"
+  },
+  "manet-the-balcony-manet": {
+    "file": "images/works/manet-the-balcony-manet.jpg",
+    "thumb": "images/works/manet-the-balcony-manet.thumb.jpg",
+    "title": "阳台",
+    "author": "Édouard Manet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_The_Balcony_-_Google_Art_Project.jpg"
+  },
+  "manet-the-execution-of-emperor-maximilian": {
+    "file": "images/works/manet-the-execution-of-emperor-maximilian.jpg",
+    "thumb": "images/works/manet-the-execution-of-emperor-maximilian.thumb.jpg",
+    "title": "枪决马克西米利安皇帝",
+    "author": "Édouard Manet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_022.jpg"
+  },
+  "manet-the-fifer": {
+    "file": "images/works/manet-the-fifer.jpg",
+    "thumb": "images/works/manet-the-fifer.thumb.jpg",
+    "title": "吹笛少年",
+    "author": "Édouard Manet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Manet,_Edouard_-_Young_Flautist,_or_The_Fifer,_1866_(2).jpg"
+  },
+  "marilyn-diptych": {
+    "file": "images/works/marilyn-diptych.jpg",
+    "thumb": "images/works/marilyn-diptych.thumb.jpg",
+    "title": "玛丽莲双联画",
+    "author": "安迪·沃霍尔",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Marilyndiptych.jpg"
+  },
+  "masaccio-expulsion-from-the-garden-of-eden": {
+    "file": "images/works/masaccio-expulsion-from-the-garden-of-eden.jpg",
+    "thumb": "images/works/masaccio-expulsion-from-the-garden-of-eden.thumb.jpg",
+    "title": "逐出伊甸园",
+    "author": "Masaccio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Masaccio-TheExpulsionOfAdamAndEveFromEden-Restoration.jpg"
+  },
+  "masaccio-madonna-and-child-masaccio": {
+    "file": "images/works/masaccio-madonna-and-child-masaccio.jpg",
+    "thumb": "images/works/masaccio-madonna-and-child-masaccio.thumb.jpg",
+    "title": "圣母子",
+    "author": "Masaccio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Masaccio._Madonna_and_Child._1426._National_Gallery,_London.jpg"
+  },
+  "masaccio-san-giovenale-triptych": {
+    "file": "images/works/masaccio-san-giovenale-triptych.jpg",
+    "thumb": "images/works/masaccio-san-giovenale-triptych.thumb.jpg",
+    "title": "圣乔维纳莱三联画",
+    "author": "Masaccio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:San_Giovenale_Masaccio.jpg"
+  },
+  "masaccio-the-tribute-money-masaccio": {
+    "file": "images/works/masaccio-the-tribute-money-masaccio.jpg",
+    "thumb": "images/works/masaccio-the-tribute-money-masaccio.thumb.jpg",
+    "title": "纳税银",
+    "author": "Masaccio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Tribute_Money_by_Masaccio.jpg"
+  },
   "masaccio-trinity": {
     "file": "images/works/masaccio-trinity.jpg",
     "thumb": "images/works/masaccio-trinity.thumb.jpg",
@@ -265,6 +1834,22 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Masaccio,_trinit%C3%A0.jpg"
   },
+  "masaccio-virgin-and-child-with-saint-anne-masaccio": {
+    "file": "images/works/masaccio-virgin-and-child-with-saint-anne-masaccio.jpg",
+    "thumb": "images/works/masaccio-virgin-and-child-with-saint-anne-masaccio.thumb.jpg",
+    "title": "圣安娜、圣母与圣子",
+    "author": "Masolino da Panicale / Masaccio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Masaccio._The_Madonna_and_Child_with_st._Anna._ca._1424._Uffizi,_Florence.jpg"
+  },
+  "matisse-blue-nudes": {
+    "file": "images/works/matisse-blue-nudes.jpg",
+    "thumb": "images/works/matisse-blue-nudes.thumb.jpg",
+    "title": "蓝色裸体 II",
+    "author": "马蒂斯",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Blue_Nudes_Henri_Matisse.jpg"
+  },
   "matisse-dance": {
     "file": "images/works/matisse-dance.jpg",
     "thumb": "images/works/matisse-dance.thumb.jpg",
@@ -272,6 +1857,46 @@
     "author": "Henri Matisse",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Matissedance.jpg"
+  },
+  "matisse-le-bonheur-de-vivre": {
+    "file": "images/works/matisse-le-bonheur-de-vivre.jpg",
+    "thumb": "images/works/matisse-le-bonheur-de-vivre.thumb.jpg",
+    "title": "生活的欢乐",
+    "author": "Henri Matisse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bonheur_Matisse.jpg"
+  },
+  "matisse-luxe-calme-et-volupte": {
+    "file": "images/works/matisse-luxe-calme-et-volupte.jpg",
+    "thumb": "images/works/matisse-luxe-calme-et-volupte.thumb.jpg",
+    "title": "奢华、宁静与享乐",
+    "author": "Henri Matisse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Matisse-Luxe.jpg"
+  },
+  "matisse-the-red-studio": {
+    "file": "images/works/matisse-the-red-studio.jpg",
+    "thumb": "images/works/matisse-the-red-studio.thumb.jpg",
+    "title": "红色画室",
+    "author": "Henri Matisse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:L%27Atelier_rouge,_par_Henri_Matisse.jpg"
+  },
+  "matisse-the-snail": {
+    "file": "images/works/matisse-the-snail.jpg",
+    "thumb": "images/works/matisse-the-snail.thumb.jpg",
+    "title": "蜗牛",
+    "author": "马蒂斯",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Matissesnail.jpg"
+  },
+  "matisse-woman-with-a-hat": {
+    "file": "images/works/matisse-woman-with-a-hat.jpg",
+    "thumb": "images/works/matisse-woman-with-a-hat.thumb.jpg",
+    "title": "戴帽子的女人",
+    "author": "Henri Matisse",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Matisse-Woman-with-a-Hat.jpg"
   },
   "michelangelo-david": {
     "file": "images/works/michelangelo-david.jpg",
@@ -282,6 +1907,98 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_David_-_right_view_2.jpg"
   },
+  "michelangelo-laurentian-library": {
+    "file": "images/works/michelangelo-laurentian-library.jpg",
+    "thumb": "images/works/michelangelo-laurentian-library.thumb.jpg",
+    "title": "洛伦佐图书馆",
+    "author": "No machine-readable author provided. Richardfabi~commonswiki assumed (based on copyright claims).",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Medicibib.jpg"
+  },
+  "michelangelo-medici-chapels": {
+    "file": "images/works/michelangelo-medici-chapels.jpg",
+    "thumb": "images/works/michelangelo-medici-chapels.thumb.jpg",
+    "title": "美第奇礼拜堂",
+    "author": "Francesco Bini",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sagrestia_nuova,_interno,_03.jpg"
+  },
+  "michelangelo-moses-michelangelo": {
+    "file": "images/works/michelangelo-moses-michelangelo.jpg",
+    "thumb": "images/works/michelangelo-moses-michelangelo.thumb.jpg",
+    "title": "摩西",
+    "author": "Livioandronico2013",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_Moses_(Rome).jpg"
+  },
+  "michelangelo-pieta-michelangelo": {
+    "file": "images/works/michelangelo-pieta-michelangelo.jpg",
+    "thumb": "images/works/michelangelo-pieta-michelangelo.thumb.jpg",
+    "title": "圣殇",
+    "author": "original file by Stanislav Traykov",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Pieta_de_Michelangelo_-_Vaticano.jpg"
+  },
+  "michelangelo-st-peter-s-basilica": {
+    "file": "images/works/michelangelo-st-peter-s-basilica.jpg",
+    "thumb": "images/works/michelangelo-st-peter-s-basilica.thumb.jpg",
+    "title": "圣彼得大教堂穹顶",
+    "author": "sailko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:San_pietro,_cupola_di_michelangelo.JPG"
+  },
+  "michelangelo-the-last-judgment-michelangelo": {
+    "file": "images/works/michelangelo-the-last-judgment-michelangelo.jpg",
+    "thumb": "images/works/michelangelo-the-last-judgment-michelangelo.thumb.jpg",
+    "title": "最后的审判",
+    "author": "Michelangelo",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Last_Judgement_(Michelangelo).jpg"
+  },
+  "millet-man-with-a-hoe": {
+    "file": "images/works/millet-man-with-a-hoe.jpg",
+    "thumb": "images/works/millet-man-with-a-hoe.thumb.jpg",
+    "title": "扶锄的男人",
+    "author": "Jean-François Millet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Millet,_Jean-Fran%C3%A7ois_-_Man_with_a_Hoe_-_Google_Art_Project.jpg"
+  },
+  "millet-spring-millet": {
+    "file": "images/works/millet-spring-millet.jpg",
+    "thumb": "images/works/millet-spring-millet.thumb.jpg",
+    "title": "春天",
+    "author": "Jean-François Millet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Millet_-_Le_Printemps,_RF_509.jpg"
+  },
+  "millet-the-angelus-painting": {
+    "file": "images/works/millet-the-angelus-painting.jpg",
+    "thumb": "images/works/millet-the-angelus-painting.thumb.jpg",
+    "title": "晚钟",
+    "author": "Jean-François Millet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JEAN-FRAN%C3%87OIS_MILLET_-_El_%C3%81ngelus_(Museo_de_Orsay,_1857-1859._%C3%93leo_sobre_lienzo,_55.5_x_66_cm).jpg"
+  },
+  "millet-the-sower-millet": {
+    "file": "images/works/millet-the-sower-millet.jpg",
+    "thumb": "images/works/millet-the-sower-millet.thumb.jpg",
+    "title": "播种者",
+    "author": "Jean-François Millet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_The_Sower_-_Google_Art_Project.jpg"
+  },
+  "millet-the-winnower-millet": {
+    "file": "images/works/millet-the-winnower-millet.jpg",
+    "thumb": "images/works/millet-the-winnower-millet.thumb.jpg",
+    "title": "簸谷者",
+    "author": "Jean-François Millet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet,_The_Winnower_(London).jpg"
+  },
   "mona-lisa": {
     "file": "images/works/mona-lisa.jpg",
     "thumb": "images/works/mona-lisa.thumb.jpg",
@@ -289,6 +2006,71 @@
     "author": "Leonardo da Vinci",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
+  },
+  "mondrian-broadway-boogie-woogie": {
+    "file": "images/works/mondrian-broadway-boogie-woogie.jpg",
+    "thumb": "images/works/mondrian-broadway-boogie-woogie.thumb.jpg",
+    "title": "百老汇爵士乐",
+    "author": "Piet Mondrian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Piet_Mondrian,_1942_-_Broadway_Boogie_Woogie.jpg"
+  },
+  "mondrian-composition-1921": {
+    "file": "images/works/mondrian-composition-1921.jpg",
+    "thumb": "images/works/mondrian-composition-1921.thumb.jpg",
+    "title": "红、蓝、黑、黄与灰的构成",
+    "author": "Piet Mondrian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Piet_Mondriaan_-_Composition_with_red,_blue,_black,_yellow_and_gray_-_154.1957_-_Museum_of_Modern_Art.jpg"
+  },
+  "monet-gare-saint-lazare-monet-series": {
+    "file": "images/works/monet-gare-saint-lazare-monet-series.jpg",
+    "thumb": "images/works/monet-gare-saint-lazare-monet-series.thumb.jpg",
+    "title": "圣拉扎尔火车站",
+    "author": "Claude Monet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Gare_Saint-Lazare_-_Claude_Monet.jpg"
+  },
+  "monet-haystacks-monet-series": {
+    "file": "images/works/monet-haystacks-monet-series.jpg",
+    "thumb": "images/works/monet-haystacks-monet-series.thumb.jpg",
+    "title": "干草堆（系列）",
+    "author": "Claude Monet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Stacks_of_Wheat_(End_of_Summer)_-_1985.1103_-_Art_Institute_of_Chicago.jpg"
+  },
+  "monet-rouen-cathedral-monet-series": {
+    "file": "images/works/monet-rouen-cathedral-monet-series.jpg",
+    "thumb": "images/works/monet-rouen-cathedral-monet-series.thumb.jpg",
+    "title": "鲁昂大教堂（系列）",
+    "author": "Claude Monet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:RouenCathedral_Monet_1894.jpg"
+  },
+  "monet-water-lilies-monet-series": {
+    "file": "images/works/monet-water-lilies-monet-series.jpg",
+    "thumb": "images/works/monet-water-lilies-monet-series.thumb.jpg",
+    "title": "睡莲（大装饰画）",
+    "author": "Sailko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Claude_monet,_Ninfee_e_Nuvole,_1920-1926_(orangerie)_03.JPG"
+  },
+  "monet-woman-with-a-parasol-madame-monet-and-her-son": {
+    "file": "images/works/monet-woman-with-a-parasol-madame-monet-and-her-son.jpg",
+    "thumb": "images/works/monet-woman-with-a-parasol-madame-monet-and-her-son.thumb.jpg",
+    "title": "撑阳伞的女人",
+    "author": "Claude Monet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg"
+  },
+  "monet-women-in-the-garden": {
+    "file": "images/works/monet-women-in-the-garden.jpg",
+    "thumb": "images/works/monet-women-in-the-garden.thumb.jpg",
+    "title": "花园里的女人",
+    "author": "Claude Monet",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet_024.jpg"
   },
   "mont-sainte-victoire": {
     "file": "images/works/mont-sainte-victoire.jpg",
@@ -298,6 +2080,22 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Paul_C%C3%A9zanne_-_Montagne_Saint-victoire_-_Google_Art_Project.jpg"
   },
+  "morisot-summers-day": {
+    "file": "images/works/morisot-summers-day.jpg",
+    "thumb": "images/works/morisot-summers-day.thumb.jpg",
+    "title": "夏日",
+    "author": "Berthe Morisot",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Berthe_Morisot_-_Jour_d%27%C3%A9t%C3%A9,_1879.jpg"
+  },
+  "morisot-the-cradle": {
+    "file": "images/works/morisot-the-cradle.jpg",
+    "thumb": "images/works/morisot-the-cradle.thumb.jpg",
+    "title": "摇篮",
+    "author": "Berthe Morisot",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Berthe_Morisot_008.jpg"
+  },
   "moulin-de-la-galette": {
     "file": "images/works/moulin-de-la-galette.jpg",
     "thumb": "images/works/moulin-de-la-galette.thumb.jpg",
@@ -306,6 +2104,89 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Mus%C3%A9e_d%27Orsay_RF_2739_(derivative_work_-_AutoContrast_edit_in_LCH_space).jpg"
   },
+  "munch-puberty-painting": {
+    "file": "images/works/munch-puberty-painting.jpg",
+    "thumb": "images/works/munch-puberty-painting.thumb.jpg",
+    "title": "青春期",
+    "author": "Edvard Munch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Puberty_(1894-95)_by_Edvard_Munch.jpg"
+  },
+  "munch-self-portrait-between-the-clock-and-the-bed": {
+    "file": "images/works/munch-self-portrait-between-the-clock-and-the-bed.jpg",
+    "thumb": "images/works/munch-self-portrait-between-the-clock-and-the-bed.thumb.jpg",
+    "title": "自画像：在时钟与床之间",
+    "author": "Edvard Munch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edvard_Munch,_Selvportrett._Mellom_klokken_og_sengen.JPG"
+  },
+  "munch-the-dance-of-life-munch": {
+    "file": "images/works/munch-the-dance-of-life-munch.jpg",
+    "thumb": "images/works/munch-the-dance-of-life-munch.thumb.jpg",
+    "title": "生命之舞",
+    "author": "Edvard Munch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_The_dance_of_life_(1899-1900).jpg"
+  },
+  "munch-the-sick-child-munch": {
+    "file": "images/works/munch-the-sick-child-munch.jpg",
+    "thumb": "images/works/munch-the-sick-child-munch.thumb.jpg",
+    "title": "病孩",
+    "author": "Edvard Munch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Munch_Det_Syke_Barn_1885-86.jpg"
+  },
+  "munch-the-sun-munch": {
+    "file": "images/works/munch-the-sun-munch.jpg",
+    "thumb": "images/works/munch-the-sun-munch.thumb.jpg",
+    "title": "太阳",
+    "author": "Edvard Munch",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%22The_Sun%22_by_Edvard_Munch,_canvas_mounted_on_wall,_at_the_hall_of_ceremonies_at_University_of_Oslo.jpg"
+  },
+  "myron-2": {
+    "file": "images/works/myron-2.jpg",
+    "thumb": "images/works/myron-2.thumb.jpg",
+    "title": "母牛",
+    "author": "Daderot",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cow,_M.C._inv._921,_Roman,_from_the_Horti_Tauriani_near_the_church_of_S._Eusebio,_copy_after_the_bronze_by_Myron,_460-440_BC,_marble_-_Musei_Capitolini_-_Rome,_Italy_-_DSC05846.jpg"
+  },
+  "myron-athena-marsyas-group": {
+    "file": "images/works/myron-athena-marsyas-group.jpg",
+    "thumb": "images/works/myron-athena-marsyas-group.thumb.jpg",
+    "title": "雅典娜与马尔叙阿斯",
+    "author": "Sailko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mirone_(da),_Atena_e_Marsia,_copia_romana_da_originale_del_450_ac.ca_02.JPG"
+  },
+  "napoleon-arc-de-triomphe": {
+    "file": "images/works/napoleon-arc-de-triomphe.jpg",
+    "thumb": "images/works/napoleon-arc-de-triomphe.thumb.jpg",
+    "title": "星形广场凯旋门",
+    "author": "ZeusUpsistos",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg"
+  },
+  "napoleon-arc-de-triomphe-du-carrousel": {
+    "file": "images/works/napoleon-arc-de-triomphe-du-carrousel.jpg",
+    "thumb": "images/works/napoleon-arc-de-triomphe-du-carrousel.thumb.jpg",
+    "title": "卡鲁塞尔凯旋门",
+    "author": "Thesupermat",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paris_-_Jardin_des_Tuileries_-_Arc_de_Triomphe_du_Carrousel_-_PA00085992_-_003.jpg"
+  },
+  "napoleon-bonaparte-visiting-the-plague-victims-of-jaffa": {
+    "file": "images/works/napoleon-bonaparte-visiting-the-plague-victims-of-jaffa.jpg",
+    "thumb": "images/works/napoleon-bonaparte-visiting-the-plague-victims-of-jaffa.thumb.jpg",
+    "title": "拿破仑视察雅法鼠疫病院",
+    "author": "Antoine-Jean Gros",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Antoine-Jean_Gros_-_Bonaparte_Visiting_the_Plague_Victims_of_Jaffa.jpeg"
+  },
   "napoleon-crossing-the-alps": {
     "file": "images/works/napoleon-crossing-the-alps.jpg",
     "thumb": "images/works/napoleon-crossing-the-alps.thumb.jpg",
@@ -313,6 +2194,15 @@
     "author": "Jacques-Louis David",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:David_-_Napoleon_crossing_the_Alps_-_Malmaison1.jpg"
+  },
+  "napoleon-vendome-column": {
+    "file": "images/works/napoleon-vendome-column.jpg",
+    "thumb": "images/works/napoleon-vendome-column.thumb.jpg",
+    "title": "旺多姆圆柱",
+    "author": "Giorgio Galeotti",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Place_Vendome,_Paris_20_April_2011.jpg"
   },
   "night-watch": {
     "file": "images/works/night-watch.jpg",
@@ -364,6 +2254,22 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg"
+  },
+  "persistence-of-memory": {
+    "file": "images/works/persistence-of-memory.jpg",
+    "thumb": "images/works/persistence-of-memory.thumb.jpg",
+    "title": "记忆的永恒",
+    "author": "Salvador Dalí (1904-1989)",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:The_Persistence_of_Memory.jpg"
+  },
+  "person:artemisia": {
+    "file": "images/people/artemisia.jpg",
+    "thumb": "images/people/artemisia.thumb.jpg",
+    "title": "阿尔泰米西娅·真蒂莱斯基（肖像）",
+    "author": "Artemisia Gentileschi",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Artemisia_Gentileschi_Selfportrait_Martyr.jpg"
   },
   "person:bellini": {
     "file": "images/people/bellini.jpg",
@@ -421,6 +2327,14 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Bild-Ottavio_Leoni,_Caravaggio.jpg"
   },
+  "person:cassatt": {
+    "file": "images/people/cassatt.jpg",
+    "thumb": "images/people/cassatt.thumb.jpg",
+    "title": "玛丽·卡萨特（肖像）",
+    "author": "Unknown author Unknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:1914_Mary_Cassatt.jpg"
+  },
   "person:cezanne": {
     "file": "images/people/cezanne.jpg",
     "thumb": "images/people/cezanne.thumb.jpg",
@@ -428,6 +2342,15 @@
     "author": "Unknown; Cézanne was born in 1839 and died in 1906",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Paul-Cezanne.jpg"
+  },
+  "person:constable": {
+    "file": "images/people/constable.jpg",
+    "thumb": "images/people/constable.thumb.jpg",
+    "title": "康斯太布尔（肖像）",
+    "author": "Stephencdickson",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Constable_by_Daniel_Gardner,_1796.JPG"
   },
   "person:cosimo-medici": {
     "file": "images/people/cosimo-medici.jpg",
@@ -656,6 +2579,14 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Jean-FrancoisMillet(Nadar).jpg"
   },
+  "person:mondrian": {
+    "file": "images/people/mondrian.jpg",
+    "thumb": "images/people/mondrian.thumb.jpg",
+    "title": "蒙德里安（肖像）",
+    "author": "Anonymous Unknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Piet_Mondriaan.jpg"
+  },
   "person:monet": {
     "file": "images/people/monet.jpg",
     "thumb": "images/people/monet.thumb.jpg",
@@ -663,6 +2594,14 @@
     "author": "Nadar",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar_crop.jpg"
+  },
+  "person:morisot": {
+    "file": "images/people/morisot.jpg",
+    "thumb": "images/people/morisot.thumb.jpg",
+    "title": "贝尔特·莫里索（肖像）",
+    "author": "Unknown author Unknown author",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Morisot_berthe_photo.jpg"
   },
   "person:munch": {
     "file": "images/people/munch.jpg",
@@ -769,6 +2708,14 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Vecellio_di_Gregorio_Tiziano_-_autoritratto.jpg"
   },
+  "person:turner": {
+    "file": "images/people/turner.jpg",
+    "thumb": "images/people/turner.thumb.jpg",
+    "title": "透纳（肖像）",
+    "author": "J. M. W. Turner",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_auto-retrato.jpg"
+  },
   "person:urban-viii": {
     "file": "images/people/urban-viii.jpg",
     "thumb": "images/people/urban-viii.thumb.jpg",
@@ -843,6 +2790,146 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:(Treviso)_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg"
   },
+  "perugino-apollo-and-daphnis-perugino": {
+    "file": "images/works/perugino-apollo-and-daphnis-perugino.jpg",
+    "thumb": "images/works/perugino-apollo-and-daphnis-perugino.thumb.jpg",
+    "title": "阿波罗与达佛涅斯",
+    "author": "Pietro Perugino",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Apollon_et_Daphnis_-_Le_P%C3%A9rugin_-_Mus%C3%A9e_du_Louvre_Peintures_RF_370.jpg"
+  },
+  "perugino-collegio-del-cambio": {
+    "file": "images/works/perugino-collegio-del-cambio.jpg",
+    "thumb": "images/works/perugino-collegio-del-cambio.thumb.jpg",
+    "title": "银钱兑换业行会会堂壁画",
+    "author": "Adri08",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Collegio_del_Cambio_1.JPG"
+  },
+  "perugino-combat-of-love-and-chastity": {
+    "file": "images/works/perugino-combat-of-love-and-chastity.jpg",
+    "thumb": "images/works/perugino-combat-of-love-and-chastity.thumb.jpg",
+    "title": "爱与贞洁之战",
+    "author": "Pietro Perugino",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Combat_de_l%27Amour_et_de_la_Chastet%C3%A9_-_Le_P%C3%A9rugin_-_Mus%C3%A9e_du_Louvre_Peintures_INV_722_;_MR_401.jpg"
+  },
+  "perugino-crucifixion-perugino": {
+    "file": "images/works/perugino-crucifixion-perugino.jpg",
+    "thumb": "images/works/perugino-crucifixion-perugino.thumb.jpg",
+    "title": "耶稣受难",
+    "author": "Pietro Perugino",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Perugino,_crocifissione_con_la_maddalena,_la_madonna,_s._giovanni_e_i_ss._bernardo_e_benedetto,_1493-96,_01_(cropped).JPG"
+  },
+  "perugino-delivery-of-the-keys-perugino": {
+    "file": "images/works/perugino-delivery-of-the-keys-perugino.jpg",
+    "thumb": "images/works/perugino-delivery-of-the-keys-perugino.thumb.jpg",
+    "title": "交付钥匙",
+    "author": "Pietro Perugino",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Entrega_de_las_llaves_a_San_Pedro_(Perugino).jpg"
+  },
+  "perugino-lamentation-over-the-dead-christ-perugino": {
+    "file": "images/works/perugino-lamentation-over-the-dead-christ-perugino.jpg",
+    "thumb": "images/works/perugino-lamentation-over-the-dead-christ-perugino.thumb.jpg",
+    "title": "哀悼基督",
+    "author": "Pietro Perugino",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pietro_Perugino_cat40.jpg"
+  },
+  "perugino-marriage-of-the-virgin-perugino": {
+    "file": "images/works/perugino-marriage-of-the-virgin-perugino.jpg",
+    "thumb": "images/works/perugino-marriage-of-the-virgin-perugino.thumb.jpg",
+    "title": "圣母的婚礼",
+    "author": "Pietro Perugino",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pietro_Perugino_cat66.jpg"
+  },
+  "phidias-athena-parthenos": {
+    "file": "images/works/phidias-athena-parthenos.jpg",
+    "thumb": "images/works/phidias-athena-parthenos.thumb.jpg",
+    "title": "雅典娜·帕特农",
+    "author": "Unknown (After Phidias' Athena Parthenos)",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:NAMA_Ath%C3%A9na_Varvakeion.jpg"
+  },
+  "phidias-athena-promachos": {
+    "file": "images/works/phidias-athena-promachos.jpg",
+    "thumb": "images/works/phidias-athena-promachos.thumb.jpg",
+    "title": "雅典娜·普罗马科斯",
+    "author": "Leo von Klenze",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Akropolis_by_Leo_von_Klenze-award-3.jpg"
+  },
+  "phidias-parthenon-marbles": {
+    "file": "images/works/phidias-parthenon-marbles.jpg",
+    "thumb": "images/works/phidias-parthenon-marbles.thumb.jpg",
+    "title": "帕特农神庙横饰带与山花雕像",
+    "author": "Yair-haklai",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Frieze_of_the_Parthenon_-_East_Block_VI.jpg"
+  },
+  "phidias-statue-of-zeus-at-olympia": {
+    "file": "images/works/phidias-statue-of-zeus-at-olympia.jpg",
+    "thumb": "images/works/phidias-statue-of-zeus-at-olympia.thumb.jpg",
+    "title": "奥林匹亚宙斯像",
+    "author": "Quatremère de Quincy",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Jupiter_Olympien_ou_l%27art_de_la_sculpture_antique.jpg"
+  },
+  "picasso-guernica-picasso": {
+    "file": "images/works/picasso-guernica-picasso.jpg",
+    "thumb": "images/works/picasso-guernica-picasso.thumb.jpg",
+    "title": "格尔尼卡",
+    "author": "Pablo Picasso",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:PicassoGuernica.jpg"
+  },
+  "picasso-portrait-of-gertrude-stein": {
+    "file": "images/works/picasso-portrait-of-gertrude-stein.jpg",
+    "thumb": "images/works/picasso-portrait-of-gertrude-stein.thumb.jpg",
+    "title": "格特鲁德·斯泰因像",
+    "author": "Pablo Picasso",
+    "license": "PD-US",
+    "source": "https://en.wikipedia.org/wiki/File:GertrudeStein.JPG"
+  },
+  "picasso-still-life-with-chair-caning": {
+    "file": "images/works/picasso-still-life-with-chair-caning.jpg",
+    "thumb": "images/works/picasso-still-life-with-chair-caning.thumb.jpg",
+    "title": "有藤椅的静物",
+    "author": "Pablo Picasso；图像：Musée national Picasso-Paris",
+    "license": "馆藏图片，来源页未标注开放授权",
+    "source": "https://www.museepicassoparis.fr/fr/chefs-d-oeuvre/nature-morte-a-la-chaise-cannee/"
+  },
+  "picasso-the-old-guitarist": {
+    "file": "images/works/picasso-the-old-guitarist.jpg",
+    "thumb": "images/works/picasso-the-old-guitarist.thumb.jpg",
+    "title": "老吉他手",
+    "author": "Pablo Picasso",
+    "license": "PD-US",
+    "source": "https://en.wikipedia.org/wiki/File:Old_guitarist_chicago.jpg"
+  },
+  "picasso-the-weeping-woman": {
+    "file": "images/works/picasso-the-weeping-woman.jpg",
+    "thumb": "images/works/picasso-the-weeping-woman.thumb.jpg",
+    "title": "哭泣的女人",
+    "author": "Pablo Picasso",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Picasso_The_Weeping_Woman_Tate_identifier_T05010_10.jpg"
+  },
+  "picasso-three-musicians-picasso": {
+    "file": "images/works/picasso-three-musicians-picasso.jpg",
+    "thumb": "images/works/picasso-three-musicians-picasso.thumb.jpg",
+    "title": "三个音乐家",
+    "author": "Pablo Picasso (1881-1973)",
+    "license": "PD",
+    "source": "https://en.wikipedia.org/wiki/File:Picasso_three_musicians_moma_2006.jpg"
+  },
   "pilgrimage-to-cythera": {
     "file": "images/works/pilgrimage-to-cythera.jpg",
     "thumb": "images/works/pilgrimage-to-cythera.thumb.jpg",
@@ -851,6 +2938,103 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:L%27Embarquement_pour_Cyth%C3%A8re,_by_Antoine_Watteau,_from_C2RMF_retouched.jpg"
   },
+  "pissarro-apple-harvest": {
+    "file": "images/works/pissarro-apple-harvest.jpg",
+    "thumb": "images/works/pissarro-apple-harvest.thumb.jpg",
+    "title": "埃拉尼的苹果收获",
+    "author": "Camille Pissarro",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Camille_Pissarro_-_Apple_Harvest_-_1955.17.M_-_Dallas_Museum_of_Art.jpg"
+  },
+  "pissarro-boulevard-montmartre-at-night": {
+    "file": "images/works/pissarro-boulevard-montmartre-at-night.jpg",
+    "thumb": "images/works/pissarro-boulevard-montmartre-at-night.thumb.jpg",
+    "title": "蒙马特大街夜景",
+    "author": "Camille Pissarro",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Camille_Pissarro,_The_Boulevard_Montmartre_at_Night,_1897.jpg"
+  },
+  "pissarro-hoarfrost-pissarro": {
+    "file": "images/works/pissarro-hoarfrost-pissarro.jpg",
+    "thumb": "images/works/pissarro-hoarfrost-pissarro.thumb.jpg",
+    "title": "白霜",
+    "author": "Camille Pissarro",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Camille_Pissarro,_Gelee_blanche_(Hoarfrost),_1873.jpg"
+  },
+  "pissarro-red-roofs-pissarro": {
+    "file": "images/works/pissarro-red-roofs-pissarro.jpg",
+    "thumb": "images/works/pissarro-red-roofs-pissarro.thumb.jpg",
+    "title": "红屋顶",
+    "author": "Camille Pissarro",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Camille_Pissarro_-_Red_roofs,_corner_of_a_village,_winter_-_Google_Art_Project.jpg"
+  },
+  "pissarro-the-boulevard-montmartre-on-a-winter-morning": {
+    "file": "images/works/pissarro-the-boulevard-montmartre-on-a-winter-morning.jpg",
+    "thumb": "images/works/pissarro-the-boulevard-montmartre-on-a-winter-morning.thumb.jpg",
+    "title": "蒙马特大街，冬日清晨",
+    "author": "Camille Pissarro",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Boulevard_Montmartre_on_a_Winter_Morning_MET_DT1906.jpg"
+  },
+  "pollock-autumn-rhythm-number-30": {
+    "file": "images/works/pollock-autumn-rhythm-number-30.jpg",
+    "thumb": "images/works/pollock-autumn-rhythm-number-30.thumb.jpg",
+    "title": "秋天的节奏（第 30 号）",
+    "author": "波洛克",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Autumn_Rhythm.jpg"
+  },
+  "pollock-blue-poles": {
+    "file": "images/works/pollock-blue-poles.jpg",
+    "thumb": "images/works/pollock-blue-poles.thumb.jpg",
+    "title": "蓝色杆子",
+    "author": "波洛克",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Blue_Poles_(Jackson_Pollock_painting).jpg"
+  },
+  "pollock-mural-1943": {
+    "file": "images/works/pollock-mural-1943.jpg",
+    "thumb": "images/works/pollock-mural-1943.thumb.jpg",
+    "title": "壁画",
+    "author": "波洛克",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Jackson_Pollock_Mural_1943_Oil_and_casein_on_canvas.jpg"
+  },
+  "pollock-number-1-1950-lavender-mist": {
+    "file": "images/works/pollock-number-1-1950-lavender-mist.jpg",
+    "thumb": "images/works/pollock-number-1-1950-lavender-mist.thumb.jpg",
+    "title": "薰衣草之雾（第 1 号，1950）",
+    "author": "Jackson Pollock",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Number_1,_1950_(Lavender_Mist)_by_Jackson_Pollock_(1950).jpg"
+  },
+  "pollock-number-1a-1948": {
+    "file": "images/works/pollock-number-1a-1948.jpg",
+    "thumb": "images/works/pollock-number-1a-1948.thumb.jpg",
+    "title": "第 1A 号，1948",
+    "author": "Jackson Pollock；图像：MoMA",
+    "license": "© 2026 Pollock-Krasner Foundation / Artists Rights Society (ARS), New York",
+    "source": "https://www.moma.org/collection/works/78699"
+  },
+  "pollock-one-number-31-1950": {
+    "file": "images/works/pollock-one-number-31-1950.jpg",
+    "thumb": "images/works/pollock-one-number-31-1950.thumb.jpg",
+    "title": "一：第 31 号，1950",
+    "author": "Jackson Pollock；图像：MoMA",
+    "license": "© 2026 Pollock-Krasner Foundation / Artists Rights Society (ARS), New York",
+    "source": "https://www.moma.org/collection/works/78386"
+  },
+  "pollock-the-moon-woman": {
+    "file": "images/works/pollock-the-moon-woman.jpg",
+    "thumb": "images/works/pollock-the-moon-woman.thumb.jpg",
+    "title": "月亮女人",
+    "author": "Jackson Pollock；图像：Peggy Guggenheim Collection",
+    "license": "© Pollock-Krasner Foundation / Artists Rights Society (ARS), New York, by SIAE 2022.",
+    "source": "https://www.guggenheim-venice.it/en/art/works/the-moon-woman/"
+  },
   "raft-of-the-medusa": {
     "file": "images/works/raft-of-the-medusa.jpg",
     "thumb": "images/works/raft-of-the-medusa.thumb.jpg",
@@ -858,6 +3042,217 @@
     "author": "Théodore Géricault",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_(Museo_del_Louvre,_1818-19).jpg"
+  },
+  "raphael-madonna-del-prato-raphael": {
+    "file": "images/works/raphael-madonna-del-prato-raphael.jpg",
+    "thumb": "images/works/raphael-madonna-del-prato-raphael.thumb.jpg",
+    "title": "草地上的圣母",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raphael_-_Madonna_in_the_Meadow_-_Google_Art_Project.jpg"
+  },
+  "raphael-portrait-of-baldassare-castiglione": {
+    "file": "images/works/raphael-portrait-of-baldassare-castiglione.jpg",
+    "thumb": "images/works/raphael-portrait-of-baldassare-castiglione.thumb.jpg",
+    "title": "卡斯蒂廖内像",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Baldassare_Castiglione,_by_Raffaello_Sanzio,_from_C2RMF_retouched.jpg"
+  },
+  "raphael-sistine-madonna": {
+    "file": "images/works/raphael-sistine-madonna.jpg",
+    "thumb": "images/works/raphael-sistine-madonna.thumb.jpg",
+    "title": "西斯廷圣母",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:RAFAEL_-_Madonna_Sixtina_(Gem%C3%A4ldegalerie_Alter_Meister,_Dresden,_1513-14._%C3%93leo_sobre_lienzo,_265_x_196_cm).jpg"
+  },
+  "raphael-the-deposition-raphael": {
+    "file": "images/works/raphael-the-deposition-raphael.jpg",
+    "thumb": "images/works/raphael-the-deposition-raphael.thumb.jpg",
+    "title": "基督下葬",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raffaello,_pala_baglioni,_deposizione.jpg"
+  },
+  "raphael-the-marriage-of-the-virgin-raphael": {
+    "file": "images/works/raphael-the-marriage-of-the-virgin-raphael.jpg",
+    "thumb": "images/works/raphael-the-marriage-of-the-virgin-raphael.thumb.jpg",
+    "title": "圣母的婚礼",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raffaello_-_Spozalizio_-_Web_Gallery_of_Art.jpg"
+  },
+  "raphael-the-triumph-of-galatea": {
+    "file": "images/works/raphael-the-triumph-of-galatea.jpg",
+    "thumb": "images/works/raphael-the-triumph-of-galatea.thumb.jpg",
+    "title": "伽拉忒亚的凯旋",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Galatea_Raphael.jpg"
+  },
+  "raphael-transfiguration-raphael": {
+    "file": "images/works/raphael-transfiguration-raphael.jpg",
+    "thumb": "images/works/raphael-transfiguration-raphael.thumb.jpg",
+    "title": "基督显圣容",
+    "author": "Raphael",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Transfiguration_Raphael.jpg"
+  },
+  "rembrandt-belshazzar-s-feast-rembrandt": {
+    "file": "images/works/rembrandt-belshazzar-s-feast-rembrandt.jpg",
+    "thumb": "images/works/rembrandt-belshazzar-s-feast-rembrandt.thumb.jpg",
+    "title": "伯沙撒王的盛宴",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt-Belsazar.jpg"
+  },
+  "rembrandt-hundred-guilder-print": {
+    "file": "images/works/rembrandt-hundred-guilder-print.jpg",
+    "thumb": "images/works/rembrandt-hundred-guilder-print.thumb.jpg",
+    "title": "百盾版画",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_The_Hundred_Guilder_Print.jpg"
+  },
+  "rembrandt-self-portrait-with-two-circles": {
+    "file": "images/works/rembrandt-self-portrait-with-two-circles.jpg",
+    "thumb": "images/works/rembrandt-self-portrait-with-two-circles.thumb.jpg",
+    "title": "两个圆圈的自画像",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_Self-portrait_(Kenwood).jpg"
+  },
+  "rembrandt-syndics-of-the-drapers-guild": {
+    "file": "images/works/rembrandt-syndics-of-the-drapers-guild.jpg",
+    "thumb": "images/works/rembrandt-syndics-of-the-drapers-guild.thumb.jpg",
+    "title": "布商公会理事",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_(waardijns)_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg"
+  },
+  "rembrandt-the-anatomy-lesson-of-dr-nicolaes-tulp": {
+    "file": "images/works/rembrandt-the-anatomy-lesson-of-dr-nicolaes-tulp.jpg",
+    "thumb": "images/works/rembrandt-the-anatomy-lesson-of-dr-nicolaes-tulp.thumb.jpg",
+    "title": "杜尔普医生的解剖课",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg"
+  },
+  "rembrandt-the-jewish-bride": {
+    "file": "images/works/rembrandt-the-jewish-bride.jpg",
+    "thumb": "images/works/rembrandt-the-jewish-bride.thumb.jpg",
+    "title": "犹太新娘",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Portret_van_een_paar_als_oudtestamentische_figuren,_genaamd_%27Het_Joodse_bruidje%27_-_Google_Art_Project.jpg"
+  },
+  "rembrandt-the-return-of-the-prodigal-son-rembrandt": {
+    "file": "images/works/rembrandt-the-return-of-the-prodigal-son-rembrandt.jpg",
+    "thumb": "images/works/rembrandt-the-return-of-the-prodigal-son-rembrandt.thumb.jpg",
+    "title": "浪子回头",
+    "author": "Rembrandt",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz_van_Rijn_-_Return_of_the_Prodigal_Son_-_Google_Art_Project.jpg"
+  },
+  "renoir-girls-at-the-piano": {
+    "file": "images/works/renoir-girls-at-the-piano.jpg",
+    "thumb": "images/works/renoir-girls-at-the-piano.thumb.jpg",
+    "title": "弹钢琴的少女",
+    "author": "Pierre-Auguste Renoir",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Young_Girls_at_the_Piano_-_Google_Art_Project.jpg"
+  },
+  "renoir-la-grenouillere-renoir": {
+    "file": "images/works/renoir-la-grenouillere-renoir.jpg",
+    "thumb": "images/works/renoir-la-grenouillere-renoir.thumb.jpg",
+    "title": "青蛙塘",
+    "author": "Pierre-Auguste Renoir",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_La_Grenouill%C3%A8re_-_Google_Art_Project.jpg"
+  },
+  "renoir-la-loge": {
+    "file": "images/works/renoir-la-loge.jpg",
+    "thumb": "images/works/renoir-la-loge.thumb.jpg",
+    "title": "包厢",
+    "author": "Jean-Pierre Dalbéra from Paris, France",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Loge_de_P.-A._Renoir_(Fondation_Vuitton,_Paris)_(46499625955).jpg"
+  },
+  "renoir-luncheon-of-the-boating-party": {
+    "file": "images/works/renoir-luncheon-of-the-boating-party.jpg",
+    "thumb": "images/works/renoir-luncheon-of-the-boating-party.thumb.jpg",
+    "title": "游艇上的午餐",
+    "author": "Pierre-Auguste Renoir",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg"
+  },
+  "renoir-the-bathers-renoir": {
+    "file": "images/works/renoir-the-bathers-renoir.jpg",
+    "thumb": "images/works/renoir-the-bathers-renoir.thumb.jpg",
+    "title": "大浴女",
+    "author": "Pierre-Auguste Renoir",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir,_French_-_The_Large_Bathers_-_Google_Art_Project.jpg"
+  },
+  "rubens-banqueting-house-ceiling": {
+    "file": "images/works/rubens-banqueting-house-ceiling.jpg",
+    "thumb": "images/works/rubens-banqueting-house-ceiling.thumb.jpg",
+    "title": "白厅国宴厅天顶画",
+    "author": "Matt Brown",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Banqueting_House_ceiling.jpg"
+  },
+  "rubens-consequences-of-war": {
+    "file": "images/works/rubens-consequences-of-war.jpg",
+    "thumb": "images/works/rubens-consequences-of-war.thumb.jpg",
+    "title": "战争的后果",
+    "author": "Peter Paul Rubens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Los_horrores_de_la_guerra.jpg"
+  },
+  "rubens-het-pelsken": {
+    "file": "images/works/rubens-het-pelsken.jpg",
+    "thumb": "images/works/rubens-het-pelsken.thumb.jpg",
+    "title": "毛皮衣",
+    "author": "Peter Paul Rubens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Het_pelsken_1636-1638.jpg"
+  },
+  "rubens-marie-de-medici-cycle": {
+    "file": "images/works/rubens-marie-de-medici-cycle.jpg",
+    "thumb": "images/works/rubens-marie-de-medici-cycle.thumb.jpg",
+    "title": "玛丽·德·美第奇生平组画",
+    "author": "Ivo Jansch",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flanders_exposition_at_the_Richelieu_wing_of_the_Louvre.jpg"
+  },
+  "rubens-the-descent-from-the-cross-rubens-1612-1614": {
+    "file": "images/works/rubens-the-descent-from-the-cross-rubens-1612-1614.jpg",
+    "thumb": "images/works/rubens-the-descent-from-the-cross-rubens-1612-1614.thumb.jpg",
+    "title": "下十字架",
+    "author": "Peter Paul Rubens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Descent_from_the_Cross_(Antwerp_Cathedral).,_c._1613.jpg"
+  },
+  "rubens-the-elevation-of-the-cross-rubens": {
+    "file": "images/works/rubens-the-elevation-of-the-cross-rubens.jpg",
+    "thumb": "images/works/rubens-the-elevation-of-the-cross-rubens.thumb.jpg",
+    "title": "上十字架",
+    "author": "Peter Paul Rubens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Raising_of_the_Cross_(Antwerp_Cathedral).JPG"
+  },
+  "rubens-the-rape-of-the-daughters-of-leucippus": {
+    "file": "images/works/rubens-the-rape-of-the-daughters-of-leucippus.jpg",
+    "thumb": "images/works/rubens-the-rape-of-the-daughters-of-leucippus.thumb.jpg",
+    "title": "劫夺留基伯的女儿",
+    "author": "Peter Paul Rubens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_%26_Jan_Wildens_-_De_ontvoering_van_de_Dochters_van_Leucippus.jpg"
   },
   "saint-denis": {
     "file": "images/works/saint-denis.jpg",
@@ -885,6 +3280,54 @@
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Le_Scribe_accroupi_-_Mus%C3%A9e_du_Louvre_Antiquit%C3%A9s_%C3%A9gyptiennes_E_3023.jpg"
   },
+  "seurat-bathers-at-asnieres": {
+    "file": "images/works/seurat-bathers-at-asnieres.jpg",
+    "thumb": "images/works/seurat-bathers-at-asnieres.thumb.jpg",
+    "title": "阿涅尔的浴者",
+    "author": "Georges Seurat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Baigneurs_a_Asnieres.jpg"
+  },
+  "seurat-le-chahut": {
+    "file": "images/works/seurat-le-chahut.jpg",
+    "thumb": "images/works/seurat-le-chahut.thumb.jpg",
+    "title": "骚动舞",
+    "author": "Georges Seurat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Georges_Seurat,_1889-90,_Le_Chahut,_Kr%C3%B6ller-M%C3%BCller_Museum.jpg"
+  },
+  "seurat-models-seurat": {
+    "file": "images/works/seurat-models-seurat.jpg",
+    "thumb": "images/works/seurat-models-seurat.thumb.jpg",
+    "title": "模特儿",
+    "author": "Georges Seurat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_Models_(Poseuses)_-_BF811_-_Barnes_Foundation.jpg"
+  },
+  "seurat-parade-de-cirque": {
+    "file": "images/works/seurat-parade-de-cirque.jpg",
+    "thumb": "images/works/seurat-parade-de-cirque.thumb.jpg",
+    "title": "马戏开场",
+    "author": "Georges Seurat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_066.jpg"
+  },
+  "seurat-the-circus-seurat": {
+    "file": "images/works/seurat-the-circus-seurat.jpg",
+    "thumb": "images/works/seurat-the-circus-seurat.thumb.jpg",
+    "title": "马戏团",
+    "author": "Georges Seurat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Georges_Seurat,_1891,_Le_Cirque_(The_Circus),_oil_on_canvas,_185_x_152_cm,_Mus%C3%A9e_d%27Orsay.jpg"
+  },
+  "seurat-young-woman-powdering-herself": {
+    "file": "images/works/seurat-young-woman-powdering-herself.jpg",
+    "thumb": "images/works/seurat-young-woman-powdering-herself.thumb.jpg",
+    "title": "扑粉的年轻女子",
+    "author": "Georges Seurat",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Young_Woman_Powdering_Herself_Georges_Seurat.jpg"
+  },
   "sistine-ceiling": {
     "file": "images/works/sistine-ceiling.jpg",
     "thumb": "images/works/sistine-ceiling.thumb.jpg",
@@ -909,6 +3352,33 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Stonehenge2007_07_30.jpg"
+  },
+  "suger-basilica-of-saint-denis": {
+    "file": "images/works/suger-basilica-of-saint-denis.jpg",
+    "thumb": "images/works/suger-basilica-of-saint-denis.thumb.jpg",
+    "title": "基督童年彩窗",
+    "author": "Mariordo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Basilique_Saint-Denis_Annunciation_Pane_Infancy_Window_04_2024_8422.jpg"
+  },
+  "suger-chalice-of-the-abbot-suger-of-saint-denis": {
+    "file": "images/works/suger-chalice-of-the-abbot-suger-of-saint-denis.jpg",
+    "thumb": "images/works/suger-chalice-of-the-abbot-suger-of-saint-denis.thumb.jpg",
+    "title": "叙热圣杯",
+    "author": "French 12th Century (mounting); Alexandrian 2nd/1st Century B.C.(cup)",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:French_12th_Century_(mounting);_Alexandrian_2nd-1st_Century_B.C.(cup)_,_Chalice_of_the_Abbot_Suger_of_Saint-Denis,_NGA_1437.jpg"
+  },
+  "suger-suger-s-eagle": {
+    "file": "images/works/suger-suger-s-eagle.jpg",
+    "thumb": "images/works/suger-suger-s-eagle.thumb.jpg",
+    "title": "叙热之鹰",
+    "author": "Siren-Com",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aigle_de_Suger.jpg"
   },
   "the-ambassadors": {
     "file": "images/works/the-ambassadors.jpg",
@@ -967,6 +3437,63 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:El_Tres_de_Mayo,_by_Francisco_de_Goya,_from_Prado_thin_black_margin.jpg"
   },
+  "titian-assumption-of-the-virgin-titian": {
+    "file": "images/works/titian-assumption-of-the-virgin-titian.jpg",
+    "thumb": "images/works/titian-assumption-of-the-virgin-titian.thumb.jpg",
+    "title": "圣母升天",
+    "author": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tizian_041.jpg"
+  },
+  "titian-bacchus-and-ariadne": {
+    "file": "images/works/titian-bacchus-and-ariadne.jpg",
+    "thumb": "images/works/titian-bacchus-and-ariadne.thumb.jpg",
+    "title": "酒神与阿里阿德涅",
+    "author": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Titian_Bacchus_and_Ariadne.jpg"
+  },
+  "titian-equestrian-portrait-of-charles-v": {
+    "file": "images/works/titian-equestrian-portrait-of-charles-v.jpg",
+    "thumb": "images/works/titian-equestrian-portrait-of-charles-v.thumb.jpg",
+    "title": "查理五世骑马像",
+    "author": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Carlos_V_en_M%C3%BChlberg,_by_Titian,_from_Prado_in_Google_Earth.jpg"
+  },
+  "titian-flaying-of-marsyas-titian": {
+    "file": "images/works/titian-flaying-of-marsyas-titian.jpg",
+    "thumb": "images/works/titian-flaying-of-marsyas-titian.thumb.jpg",
+    "title": "剥马西亚斯的皮",
+    "author": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Titian_-_The_Flaying_of_Marsyas.jpg"
+  },
+  "titian-pesaro-madonna": {
+    "file": "images/works/titian-pesaro-madonna.jpg",
+    "thumb": "images/works/titian-pesaro-madonna.thumb.jpg",
+    "title": "佩萨罗祭坛画",
+    "author": "Titian",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Frari_(Venice)_nave_left_-_Altar_of_Madona_di_Ca%27Pesaro.jpg"
+  },
+  "titian-pieta-titian": {
+    "file": "images/works/titian-pieta-titian.jpg",
+    "thumb": "images/works/titian-pieta-titian.thumb.jpg",
+    "title": "圣殇（小帕尔马续成）",
+    "author": "Didier Descouens",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Accademia_-_Piet%C3%A0_by_Titian.jpg"
+  },
+  "titian-sacred-and-profane-love": {
+    "file": "images/works/titian-sacred-and-profane-love.jpg",
+    "thumb": "images/works/titian-sacred-and-profane-love.thumb.jpg",
+    "title": "天上的爱与人间的爱",
+    "author": "Titian",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Amor_sacro_e_amor_profano_02.jpg"
+  },
   "trajans-column": {
     "file": "images/works/trajans-column.jpg",
     "thumb": "images/works/trajans-column.thumb.jpg",
@@ -975,6 +3502,263 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Trajan%27s_Column_HD.jpg"
+  },
+  "turner-fighting-temeraire": {
+    "file": "images/works/turner-fighting-temeraire.jpg",
+    "thumb": "images/works/turner-fighting-temeraire.thumb.jpg",
+    "title": "战舰无畏号",
+    "author": "J. M. W. Turner",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Fighting_Temeraire,_JMW_Turner,_National_Gallery.jpg"
+  },
+  "turner-rain-steam-speed": {
+    "file": "images/works/turner-rain-steam-speed.jpg",
+    "thumb": "images/works/turner-rain-steam-speed.thumb.jpg",
+    "title": "雨、蒸汽和速度——大西部铁路",
+    "author": "J. M. W. Turner",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rain_Steam_and_Speed_the_Great_Western_Railway.jpg"
+  },
+  "urban-viii-palazzo-barberini": {
+    "file": "images/works/urban-viii-palazzo-barberini.jpg",
+    "thumb": "images/works/urban-viii-palazzo-barberini.thumb.jpg",
+    "title": "巴贝里尼宫",
+    "author": "PubblicUsername",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palazzo_Barberini_-_esterno.jpg"
+  },
+  "urban-viii-santa-bibiana": {
+    "file": "images/works/urban-viii-santa-bibiana.jpg",
+    "thumb": "images/works/urban-viii-santa-bibiana.thumb.jpg",
+    "title": "圣比比亚纳教堂立面与圣徒像",
+    "author": "RealRome",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:DSC00700-bibiana_int.jpg"
+  },
+  "urban-viii-tomb-of-pope-urban-viii": {
+    "file": "images/works/urban-viii-tomb-of-pope-urban-viii.jpg",
+    "thumb": "images/works/urban-viii-tomb-of-pope-urban-viii.thumb.jpg",
+    "title": "乌尔班八世墓",
+    "author": "Ferdinand Gregorovius",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tomb_of_Pope_Urban_VIII_Gregorovius.jpg"
+  },
+  "urban-viii-triton-fountain": {
+    "file": "images/works/urban-viii-triton-fountain.jpg",
+    "thumb": "images/works/urban-viii-triton-fountain.thumb.jpg",
+    "title": "特里同喷泉",
+    "author": "Architas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fontana_del_Tritone,Rome.jpg"
+  },
+  "van-eyck-ghent-altarpiece": {
+    "file": "images/works/van-eyck-ghent-altarpiece.jpg",
+    "thumb": "images/works/van-eyck-ghent-altarpiece.thumb.jpg",
+    "title": "根特祭坛画",
+    "author": "Jan van Eyck / Presumably Hubert van Eyck",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ghent_Altarpiece_Google_Art_Project.jpg"
+  },
+  "van-eyck-madonna-of-chancellor-rolin": {
+    "file": "images/works/van-eyck-madonna-of-chancellor-rolin.jpg",
+    "thumb": "images/works/van-eyck-madonna-of-chancellor-rolin.thumb.jpg",
+    "title": "罗林大臣的圣母",
+    "author": "Jan van Eyck",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Vierge_du_chancelier_Rolin_-_Jan_van_Eyck_-_Mus%C3%A9e_du_Louvre_Peintures_INV_1271.jpg"
+  },
+  "van-eyck-portrait-of-a-man-self-portrait": {
+    "file": "images/works/van-eyck-portrait-of-a-man-self-portrait.jpg",
+    "thumb": "images/works/van-eyck-portrait-of-a-man-self-portrait.thumb.jpg",
+    "title": "戴红头巾的男子",
+    "author": "Jan van Eyck",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_Portrait_of_a_Man_(Self_Portrait%3F)_1433.jpg"
+  },
+  "van-eyck-portrait-of-margaret-van-eyck": {
+    "file": "images/works/van-eyck-portrait-of-margaret-van-eyck.jpg",
+    "thumb": "images/works/van-eyck-portrait-of-margaret-van-eyck.thumb.jpg",
+    "title": "画家妻子玛格丽特像",
+    "author": "Jan van Eyck",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_Portrait_of_Margaret_van_Eyck_(1439).jpg"
+  },
+  "van-eyck-saint-barbara-van-eyck": {
+    "file": "images/works/van-eyck-saint-barbara-van-eyck.jpg",
+    "thumb": "images/works/van-eyck-saint-barbara-van-eyck.thumb.jpg",
+    "title": "圣芭芭拉",
+    "author": "Jan van Eyck",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Heilige_Barbara_van_Nicomedi%C3%AB,_Jan_van_Eyck,_1437,_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen,_410.jpg"
+  },
+  "van-eyck-virgin-and-child-with-canon-van-der-paele": {
+    "file": "images/works/van-eyck-virgin-and-child-with-canon-van-der-paele.jpg",
+    "thumb": "images/works/van-eyck-virgin-and-child-with-canon-van-der-paele.thumb.jpg",
+    "title": "卡农范德帕勒的圣母",
+    "author": "Jan van Eyck",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eyck,_Jan_van_-_Madonna_with_Canon_van_der_Paele.jpeg"
+  },
+  "van-gogh-bedroom-in-arles": {
+    "file": "images/works/van-gogh-bedroom-in-arles.jpg",
+    "thumb": "images/works/van-gogh-bedroom-in-arles.thumb.jpg",
+    "title": "阿尔的卧室",
+    "author": "佚名",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_De_slaapkamer_-_Google_Art_Project.jpg"
+  },
+  "van-gogh-self-portrait-with-bandaged-ear": {
+    "file": "images/works/van-gogh-self-portrait-with-bandaged-ear.jpg",
+    "thumb": "images/works/van-gogh-self-portrait-with-bandaged-ear.thumb.jpg",
+    "title": "包扎耳朵的自画像",
+    "author": "Vincent van Gogh",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-portrait_with_bandaged_ear_(1889,_Courtauld_Institute).jpg"
+  },
+  "van-gogh-sunflowers-van-gogh-series": {
+    "file": "images/works/van-gogh-sunflowers-van-gogh-series.jpg",
+    "thumb": "images/works/van-gogh-sunflowers-van-gogh-series.thumb.jpg",
+    "title": "向日葵",
+    "author": "Vincent van Gogh",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_Willem_van_Gogh_127.jpg"
+  },
+  "van-gogh-the-night-cafe": {
+    "file": "images/works/van-gogh-the-night-cafe.jpg",
+    "thumb": "images/works/van-gogh-the-night-cafe.thumb.jpg",
+    "title": "夜间咖啡馆",
+    "author": "Vincent van Gogh",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_The_Night_Caf%C3%A9_(1888).jpg"
+  },
+  "van-gogh-the-potato-eaters": {
+    "file": "images/works/van-gogh-the-potato-eaters.jpg",
+    "thumb": "images/works/van-gogh-the-potato-eaters.thumb.jpg",
+    "title": "吃土豆的人",
+    "author": "Vincent van Gogh",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:De_aardappeleters_-_s0005V1962_-_Van_Gogh_Museum.jpg"
+  },
+  "van-gogh-wheatfield-with-crows": {
+    "file": "images/works/van-gogh-wheatfield-with-crows.jpg",
+    "thumb": "images/works/van-gogh-wheatfield-with-crows.thumb.jpg",
+    "title": "麦田群鸦",
+    "author": "Vincent van Gogh",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Korenveld_met_kraaien_-_s0149V1962_-_Van_Gogh_Museum.jpg"
+  },
+  "vasari-lives-of-the-most-excellent-painters-sculptors-and-architects": {
+    "file": "images/works/vasari-lives-of-the-most-excellent-painters-sculptors-and-architects.jpg",
+    "thumb": "images/works/vasari-lives-of-the-most-excellent-painters-sculptors-and-architects.thumb.jpg",
+    "title": "艺苑名人传",
+    "author": "Giorgio Vasari",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vite.jpg"
+  },
+  "vasari-salone-dei-cinquecento": {
+    "file": "images/works/vasari-salone-dei-cinquecento.jpg",
+    "thumb": "images/works/vasari-salone-dei-cinquecento.thumb.jpg",
+    "title": "五百人大厅天顶画",
+    "author": "sailko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salone_dei_cinquecento,_soffitto,_dipinti_03.JPG"
+  },
+  "vasari-the-last-judgment-vasari-and-zuccari": {
+    "file": "images/works/vasari-the-last-judgment-vasari-and-zuccari.jpg",
+    "thumb": "images/works/vasari-the-last-judgment-vasari-and-zuccari.thumb.jpg",
+    "title": "最后的审判（穹顶壁画，祖卡里续成）",
+    "author": "udaywatwe",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_last_Judgement_-_Giorgio_Vasari_-_Federico_Zuccari_-_Dome_-_Santa_Maria_del_Fiore_(Florence)_-_June_2015.jpg"
+  },
+  "vasari-tomb-of-michelangelo": {
+    "file": "images/works/vasari-tomb-of-michelangelo.jpg",
+    "thumb": "images/works/vasari-tomb-of-michelangelo.thumb.jpg",
+    "title": "米开朗基罗墓",
+    "author": "Rufus46",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grab_Michelangelo_Buonarroti_Santa_Croce_Florenz-2.jpg"
+  },
+  "vasari-uffizi": {
+    "file": "images/works/vasari-uffizi.jpg",
+    "thumb": "images/works/vasari-uffizi.thumb.jpg",
+    "title": "乌菲齐宫",
+    "author": "Arek N.",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Florence,_Italy_-_panoramio_(125).jpg"
+  },
+  "vasari-vasari-corridor": {
+    "file": "images/works/vasari-vasari-corridor.jpg",
+    "thumb": "images/works/vasari-vasari-corridor.thumb.jpg",
+    "title": "瓦萨里走廊",
+    "author": "Ray in Manila",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Vasari_Corridor_Bridge,_Via_della_Ninna,_Florence.jpg"
+  },
+  "velazquez-las-hilanderas-velazquez": {
+    "file": "images/works/velazquez-las-hilanderas-velazquez.jpg",
+    "thumb": "images/works/velazquez-las-hilanderas-velazquez.thumb.jpg",
+    "title": "纺纱女",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Velazquez-las_hilanderas.jpg"
+  },
+  "velazquez-portrait-of-innocent-x": {
+    "file": "images/works/velazquez-portrait-of-innocent-x.jpg",
+    "thumb": "images/works/velazquez-portrait-of-innocent-x.thumb.jpg",
+    "title": "教皇英诺森十世像",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Retrato_del_Papa_Inocencio_X._Roma,_by_Diego_Vel%C3%A1zquez.jpg"
+  },
+  "velazquez-portrait-of-juan-de-pareja": {
+    "file": "images/works/velazquez-portrait-of-juan-de-pareja.jpg",
+    "thumb": "images/works/velazquez-portrait-of-juan-de-pareja.thumb.jpg",
+    "title": "胡安·德·帕雷哈像",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Retrato_de_Juan_Pareja,_by_Diego_Vel%C3%A1zquez.jpg"
+  },
+  "velazquez-rokeby-venus": {
+    "file": "images/works/velazquez-rokeby-venus.jpg",
+    "thumb": "images/works/velazquez-rokeby-venus.thumb.jpg",
+    "title": "镜前的维纳斯",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_-_Rokeby_Venus.jpg"
+  },
+  "velazquez-the-surrender-of-breda": {
+    "file": "images/works/velazquez-the-surrender-of-breda.jpg",
+    "thumb": "images/works/velazquez-the-surrender-of-breda.thumb.jpg",
+    "title": "布雷达的投降",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Velazquez-The_Surrender_of_Breda.jpg"
+  },
+  "velazquez-the-triumph-of-bacchus": {
+    "file": "images/works/velazquez-the-triumph-of-bacchus.jpg",
+    "thumb": "images/works/velazquez-the-triumph-of-bacchus.thumb.jpg",
+    "title": "酒神的胜利",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vel%C3%A1zquez_-_El_Triunfo_de_Baco_o_Los_Borrachos_(Museo_del_Prado,_1628-29).jpg"
+  },
+  "velazquez-the-waterseller-of-seville": {
+    "file": "images/works/velazquez-the-waterseller-of-seville.jpg",
+    "thumb": "images/works/velazquez-the-waterseller-of-seville.thumb.jpg",
+    "title": "塞维利亚卖水人",
+    "author": "Diego Velázquez",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:El_aguador_de_Sevilla,_por_Diego_Vel%C3%A1zquez.jpg"
   },
   "venus-de-milo": {
     "file": "images/works/venus-de-milo.jpg",
@@ -1002,6 +3786,115 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
     "source": "https://commons.wikimedia.org/wiki/File:Venus_von_Willendorf_01.jpg"
   },
+  "vermeer-girl-reading-a-letter-at-an-open-window": {
+    "file": "images/works/vermeer-girl-reading-a-letter-at-an-open-window.jpg",
+    "thumb": "images/works/vermeer-girl-reading-a-letter-at-an-open-window.thumb.jpg",
+    "title": "窗前读信的少女",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Brieflezend_meisje_bij_het_venster_(ca._1657-59).jpg"
+  },
+  "vermeer-the-art-of-painting": {
+    "file": "images/works/vermeer-the-art-of-painting.jpg",
+    "thumb": "images/works/vermeer-the-art-of-painting.thumb.jpg",
+    "title": "绘画的艺术",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg"
+  },
+  "vermeer-the-astronomer-vermeer": {
+    "file": "images/works/vermeer-the-astronomer-vermeer.jpg",
+    "thumb": "images/works/vermeer-the-astronomer-vermeer.thumb.jpg",
+    "title": "天文学家",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_The_Astronomer_-_1668.jpg"
+  },
+  "vermeer-the-little-street": {
+    "file": "images/works/vermeer-the-little-street.jpg",
+    "thumb": "images/works/vermeer-the-little-street.thumb.jpg",
+    "title": "小街",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft,_bekend_als_%27Het_straatje%27_-_Google_Art_Project.jpg"
+  },
+  "vermeer-the-milkmaid-vermeer": {
+    "file": "images/works/vermeer-the-milkmaid-vermeer.png",
+    "thumb": "images/works/vermeer-the-milkmaid-vermeer.thumb.png",
+    "title": "倒牛奶的女仆",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.png"
+  },
+  "vermeer-view-of-delft": {
+    "file": "images/works/vermeer-view-of-delft.jpg",
+    "thumb": "images/works/vermeer-view-of-delft.thumb.jpg",
+    "title": "代尔夫特风景",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vermeer-view-of-delft.jpg"
+  },
+  "vermeer-woman-in-blue-reading-a-letter": {
+    "file": "images/works/vermeer-woman-in-blue-reading-a-letter.jpg",
+    "thumb": "images/works/vermeer-woman-in-blue-reading-a-letter.thumb.jpg",
+    "title": "读信的蓝衣女子",
+    "author": "Johannes Vermeer",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vermeer,_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg"
+  },
+  "verrocchio-christ-and-st-thomas-verrocchio": {
+    "file": "images/works/verrocchio-christ-and-st-thomas-verrocchio.jpg",
+    "thumb": "images/works/verrocchio-christ-and-st-thomas-verrocchio.thumb.jpg",
+    "title": "基督与圣多马",
+    "author": "Sailko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Museo_di_orsanmichele,_verrocchio,_incredulit%C3%A0_di_s._tommaso_03.JPG"
+  },
+  "verrocchio-david-verrocchio": {
+    "file": "images/works/verrocchio-david-verrocchio.jpg",
+    "thumb": "images/works/verrocchio-david-verrocchio.thumb.jpg",
+    "title": "大卫",
+    "author": "Rufus46",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:David,_Andrea_del_Verrocchio,_ca._1466-69,_Bargello_Florenz-01.jpg"
+  },
+  "verrocchio-equestrian-statue-of-bartolomeo-colleoni": {
+    "file": "images/works/verrocchio-equestrian-statue-of-bartolomeo-colleoni.jpg",
+    "thumb": "images/works/verrocchio-equestrian-statue-of-bartolomeo-colleoni.thumb.jpg",
+    "title": "科莱奥尼骑马像",
+    "author": "Didier Descouens",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bartolomeo_Colleoni_by_Andrea_del_Verrocchio.jpg"
+  },
+  "verrocchio-putto-with-a-dolphin": {
+    "file": "images/works/verrocchio-putto-with-a-dolphin.jpg",
+    "thumb": "images/works/verrocchio-putto-with-a-dolphin.thumb.jpg",
+    "title": "抱海豚的小天使",
+    "author": "sailko",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Andrea_del_verrocchio,_putto_con_delfino_01.JPG"
+  },
+  "verrocchio-the-baptism-of-christ-verrocchio-and-leonardo": {
+    "file": "images/works/verrocchio-the-baptism-of-christ-verrocchio-and-leonardo.jpg",
+    "thumb": "images/works/verrocchio-the-baptism-of-christ-verrocchio-and-leonardo.thumb.jpg",
+    "title": "基督受洗",
+    "author": "Andrea del Verrocchio / Leonardo da Vinci",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Baptism_of_Christ_(Verrocchio_and_Leonardo).jpg"
+  },
+  "verrocchio-tomb-of-piero-and-giovanni-de-medici": {
+    "file": "images/works/verrocchio-tomb-of-piero-and-giovanni-de-medici.jpg",
+    "thumb": "images/works/verrocchio-tomb-of-piero-and-giovanni-de-medici.thumb.jpg",
+    "title": "皮耶罗与乔瓦尼·德·美第奇墓",
+    "author": "Andrea del Verrocchio",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tomb_of_Piero_and_Giovanni_de%27_Medici.jpg"
+  },
   "wanderer-above-the-sea-of-fog": {
     "file": "images/works/wanderer-above-the-sea-of-fog.jpg",
     "thumb": "images/works/wanderer-above-the-sea-of-fog.thumb.jpg",
@@ -1009,6 +3902,87 @@
     "author": "Caspar David Friedrich",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg"
+  },
+  "warhol-campbell-s-soup-cans": {
+    "file": "images/works/warhol-campbell-s-soup-cans.jpg",
+    "thumb": "images/works/warhol-campbell-s-soup-cans.thumb.jpg",
+    "title": "金宝汤罐头",
+    "author": "Brandon Fick",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Campbell%27s_Soup_Cans_by_Andy_Warhol.jpg"
+  },
+  "warhol-gold-marilyn-monroe": {
+    "file": "images/works/warhol-gold-marilyn-monroe.jpg",
+    "thumb": "images/works/warhol-gold-marilyn-monroe.thumb.jpg",
+    "title": "金色玛丽莲·梦露",
+    "author": "Andy Warhol",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Warhol_-_Gold_Marilyn_Monroe_(1962).jpg"
+  },
+  "warhol-green-coca-cola-bottles": {
+    "file": "images/works/warhol-green-coca-cola-bottles.jpg",
+    "thumb": "images/works/warhol-green-coca-cola-bottles.thumb.jpg",
+    "title": "绿色可口可乐瓶",
+    "author": "沃霍尔",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Greencocacola.jpg"
+  },
+  "warhol-mao-warhol": {
+    "file": "images/works/warhol-mao-warhol.jpg",
+    "thumb": "images/works/warhol-mao-warhol.thumb.jpg",
+    "title": "毛",
+    "author": "Andy Warhol",
+    "license": "Fair use",
+    "source": "https://en.wikipedia.org/wiki/File:Mao_by_Andy_Warhol.jpg"
+  },
+  "watteau-fetes-venitiennes": {
+    "file": "images/works/watteau-fetes-venitiennes.jpg",
+    "thumb": "images/works/watteau-fetes-venitiennes.thumb.jpg",
+    "title": "威尼斯游乐会",
+    "author": "Jean-Antoine Watteau",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg"
+  },
+  "watteau-l-enseigne-de-gersaint": {
+    "file": "images/works/watteau-l-enseigne-de-gersaint.jpg",
+    "thumb": "images/works/watteau-l-enseigne-de-gersaint.thumb.jpg",
+    "title": "热尔桑画店招牌",
+    "author": "Jean-Antoine Watteau",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:L%27Enseigne_de_Gersaint.jpg"
+  },
+  "watteau-mezzetino-painting": {
+    "file": "images/works/watteau-mezzetino-painting.jpg",
+    "thumb": "images/works/watteau-mezzetino-painting.thumb.jpg",
+    "title": "梅泽坦",
+    "author": "Jean-Antoine Watteau",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Antoine_Watteau_-_Mezzetin.JPG"
+  },
+  "watteau-pierrot-watteau": {
+    "file": "images/works/watteau-pierrot-watteau.jpg",
+    "thumb": "images/works/watteau-pierrot-watteau.thumb.jpg",
+    "title": "皮埃罗",
+    "author": "Jean-Antoine Watteau",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pierrot_-_Antoine_Watteau_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1121_-_apr%C3%A8s_restauration_2024.jpg"
+  },
+  "watteau-pilgrimage-to-cythera": {
+    "file": "images/works/watteau-pilgrimage-to-cythera.jpg",
+    "thumb": "images/works/watteau-pilgrimage-to-cythera.thumb.jpg",
+    "title": "舟发西苔岛（第二版）",
+    "author": "Jean-Antoine Watteau",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Antoine_Watteau_-_Pilgrimage_to_Cythera_-_WGA25454.jpg"
+  },
+  "watteau-the-italian-comedians": {
+    "file": "images/works/watteau-the-italian-comedians.jpg",
+    "thumb": "images/works/watteau-the-italian-comedians.thumb.jpg",
+    "title": "意大利喜剧演员",
+    "author": "Jean-Antoine Watteau",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Antoine_Watteau,_The_Italian_Comedians,_probably_1720,_NGA_32687.jpg"
   },
   "where-do-we-come-from": {
     "file": "images/works/where-do-we-come-from.jpg",

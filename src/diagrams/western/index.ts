@@ -1,5 +1,4 @@
 import type { Diagram } from "../types";
-import d0 from "./prehistory";
 import d1 from "./egypt";
 import d2 from "./greece";
 import d3 from "./rome";
@@ -18,9 +17,8 @@ import d15 from "./impression";
 import d16 from "./post-impression";
 import d17 from "./modern";
 
-/** 西方艺术史 18 个时期的交互图解，键是 periods.json 里 diagram.id */
+/** 西方艺术史的可选交互图解，键是 periods.json 里 diagram.id */
 export const westernDiagrams: Record<string, Diagram> = {
-  "prehistory": d0,
   "egypt": d1,
   "greece": d2,
   "rome": d3,

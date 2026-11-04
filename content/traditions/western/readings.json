@@ -1,0 +1,758 @@
+[
+  {
+    "id": "olympia-looks-back",
+    "kind": "story",
+    "title": "同样躺着，她为什么引起争议？",
+    "deck": "提香与马奈 · 从一道目光开始",
+    "minutes": 3,
+    "periods": [
+      "venice",
+      "realism"
+    ],
+    "people": [
+      "titian",
+      "manet"
+    ],
+    "relations": [
+      [
+        "titian",
+        "manet"
+      ]
+    ],
+    "steps": [
+      {
+        "title": "先看两道目光",
+        "prompt": "先不读背景。两个人都看向画外，你觉得自己更像被邀请进入，还是被对方审视？试着指出让你产生这种感觉的细节。",
+        "works": [
+          "venus-of-urbino",
+          "olympia"
+        ],
+        "choices": [
+          {
+            "label": "《奥林匹亚》让我更有被注视的感觉",
+            "response": "可以看看她的正面视线、抬起的头和撑起上身的手臂。这些可见的动作，怎样影响你的感觉？"
+          },
+          {
+            "label": "两幅都像在与观众对视",
+            "response": "是的，两幅画都没有让视线躲开观众。再比较表情、身体轮廓和周围人物，看看相似姿势怎样带出不同气氛。"
+          }
+        ],
+        "context": "马奈借用了提香等前人的卧姿裸体传统。相似的构图让比较有了起点，却没有规定我们必须产生相同感受。先记住自己的第一印象，接着看看画里的人与物。"
+      },
+      {
+        "title": "把视线移到旁边",
+        "prompt": "看看人物身旁的花束、动物，以及远处或近处的人。相近的身体姿势，放进了怎样不同的环境？",
+        "works": [
+          "venus-of-urbino",
+          "olympia"
+        ],
+        "details": [
+          {
+            "work": "venus-of-urbino",
+            "label": "提香：脚边的小狗",
+            "x": 90,
+            "y": 69,
+            "note": "小狗蜷卧在床边。把它与马奈画里的黑猫比较：它们的姿态与画面节奏有什么不同？"
+          },
+          {
+            "work": "olympia",
+            "label": "马奈：花束与送花的人",
+            "x": 65,
+            "y": 43,
+            "note": "花束由画中另一位女性捧来。注意她的视线，以及主角没有转身看花的姿态。她也是观看关系的一部分。"
+          }
+        ],
+        "context": "画面中的配角不只是背景装饰。提香的室内空间与马奈的当代场景，组织出不同的社会关系。对花、狗或猫可以提出象征性的解释，但不能把每一个物件当成只有一种答案的密码。"
+      },
+      {
+        "title": "争议不只因为裸体",
+        "prompt": "回到全图：如果只用“画了裸体”解释争议，会遗漏哪些你刚才看见的差异？",
+        "works": [
+          "olympia"
+        ],
+        "context": "《奥林匹亚》画于1863年，在1865年沙龙引起争议。奥赛博物馆把题材和画法一起放进解释：作品呈现当代性交易的现实指向，也以鲜明轮廓、明暗对比和较少的过渡挑战惯常期待。争议不能归结为一个姿势或一处裸露。与旧作的联系，正让这种改变更容易被察觉。"
+      }
+    ],
+    "next": [
+      {
+        "work": "luncheon-on-the-grass",
+        "label": "再看马奈：古典构图怎样进入当代生活"
+      },
+      {
+        "work": "manet-a-bar-at-the-folies-bergere",
+        "label": "换一个场景：吧台前谁在看谁"
+      }
+    ],
+    "sources": [
+      {
+        "label": "奥赛博物馆：《奥林匹亚》及1865年沙龙语境",
+        "url": "https://www.musee-orsay.fr/en/artworks/olympia-712"
+      },
+      {
+        "label": "乌菲齐美术馆：《乌尔比诺的维纳斯》",
+        "url": "https://www.uffizi.it/en/artworks/venus-urbino-titian"
+      }
+    ]
+  },
+  {
+    "id": "follow-the-light",
+    "kind": "story",
+    "title": "一束光，怎样把故事叫醒？",
+    "deck": "卡拉瓦乔 · 顺着光线与手势看",
+    "minutes": 3,
+    "periods": [
+      "baroque"
+    ],
+    "people": [
+      "caravaggio"
+    ],
+    "steps": [
+      {
+        "title": "你先看见了什么",
+        "prompt": "暗处的人围着一张桌子，右边又来了两个人。不急着认出人物：第一眼，什么把你拉进了画面？",
+        "works": [
+          "calling-of-saint-matthew"
+        ],
+        "choices": [
+          {
+            "label": "斜着切进来的光",
+            "response": "试着沿光的方向看过去，留意它让哪些脸和手从暗处浮现。"
+          },
+          {
+            "label": "人物伸出的手",
+            "response": "比较右侧人物的手与桌边人物的手：它们是否把视线继续传给了别人？"
+          },
+          {
+            "label": "桌边人的反应",
+            "response": "有人抬起头，有人仍看着桌面。把这些不同反应连起来，静止的画面也有了时间感。"
+          }
+        ],
+        "context": "《圣马太蒙召》约作于1599—1600年，为罗马圣王路易堂的孔塔雷利礼拜堂绘制。宗教事件被放进近似当代日常生活的环境，观众可以从普通人的动作进入故事。"
+      },
+      {
+        "title": "让眼睛跟着手走",
+        "prompt": "先看右边伸出的手，再看桌边人的回应。画家没有用文字箭头，你的视线却会移动。",
+        "works": [
+          "calling-of-saint-matthew"
+        ],
+        "details": [
+          {
+            "work": "calling-of-saint-matthew",
+            "label": "右侧：发出的召唤",
+            "x": 64,
+            "y": 42,
+            "note": "伸出的手臂把右侧来人与左侧桌边的人联系起来。注意手指方向与光线方向的呼应。"
+          },
+          {
+            "work": "calling-of-saint-matthew",
+            "label": "桌边：不同的回应",
+            "x": 29,
+            "y": 55,
+            "note": "手指、眼神和身体朝向没有完全一致。正是这种迟疑与反应的差异，让故事像正在发生。"
+          }
+        ],
+        "context": "光既塑造人物的体积，也组织叙事。右侧手势常被拿来与米开朗基罗的《创造亚当》比较；这是研究中的视觉关联，不等于两幅作品讲的是同一件事。"
+      },
+      {
+        "title": "不必急着判定主角",
+        "prompt": "如果把画理解为“有人被召唤、有人尚未察觉”，你会如何描述它最有张力的一刻？",
+        "works": [
+          "calling-of-saint-matthew"
+        ],
+        "context": "哪一位人物是马太，学界存在不同解读。常见解释把指向自己的蓄须男子认作马太，也有研究提出另一种阅读。我们可以把身份判断暂时放下：明暗、动作和相互注视，已经让“召唤与回应”变得可见。"
+      }
+    ],
+    "next": [
+      {
+        "work": "artemisia-saint-catherine",
+        "label": "另一位巴洛克画家：阿尔泰米西娅怎样塑造自己"
+      },
+      {
+        "work": "calling-of-saint-matthew",
+        "label": "回到展厅，再完整看一次原作"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MuMa：卡拉瓦乔的罗马原作及其影响",
+        "url": "https://www.muma-lehavre.fr/en/collections/artworks-in-context/15th-18th-century/ter-brugghen-calling-saint-matthew"
+      },
+      {
+        "label": "可汗学院／Smarthistory：作品细读",
+        "url": "https://www.khanacademy.org/humanities/renaissance-reformation/baroque-art1/baroque-italy/v/caravaggios-calling-of-saint-matthew"
+      },
+      {
+        "label": "Thomas Puttfarken：圣马太故事的不同解读（1998）",
+        "url": "https://doi.org/10.1111/1467-8365.00101"
+      }
+    ]
+  },
+  {
+    "id": "cezannes-table",
+    "kind": "story",
+    "title": "这张桌子，为什么对不齐？",
+    "deck": "塞尚 · 找到局部，再看整体",
+    "minutes": 3,
+    "periods": [
+      "post-impression"
+    ],
+    "people": [
+      "cezanne"
+    ],
+    "steps": [
+      {
+        "title": "桌前有一点不对劲",
+        "prompt": "想象你坐到桌前。瓶子、篮子、桌沿，哪一处让你觉得最不稳定？先找一找，再打开提示。",
+        "works": [
+          "cezanne-the-basket-of-apples"
+        ],
+        "details": [
+          {
+            "work": "cezanne-the-basket-of-apples",
+            "label": "桌布左侧的桌沿",
+            "x": 12,
+            "y": 89,
+            "note": "记住左侧桌沿的位置与倾斜方向，再去比较桌布右侧。"
+          },
+          {
+            "work": "cezanne-the-basket-of-apples",
+            "label": "桌布右侧的桌沿",
+            "x": 93,
+            "y": 77,
+            "note": "如果把左右桌沿延长，它们并不顺畅地接成同一条线。桌布让这种变化不那么容易被第一眼察觉。"
+          }
+        ],
+        "context": "我们通常期待桌面服从一个稳定的观察角度。这幅画却让桌沿、篮子和瓶子各有倾斜。芝加哥艺术博物馆与作品研究都把这些不一致作为理解画面空间的线索。"
+      },
+      {
+        "title": "不一致，也能有秩序",
+        "prompt": "回到全图。哪些形状让画面不至于散开？从自己的观看感受选一个，再指出画面里的位置。",
+        "works": [
+          "cezanne-the-basket-of-apples"
+        ],
+        "choices": [
+          {
+            "label": "深色瓶子像一个支点",
+            "response": "看看它在亮色桌布和水果之间怎样形成一条较强的竖向形状。支点本身略有倾斜，也让画面保留动势。"
+          },
+          {
+            "label": "苹果反复出现，像节拍",
+            "response": "沿散落的苹果移动视线，观察相近圆形与不同色彩怎样把篮子、桌布和桌面串起来。"
+          },
+          {
+            "label": "白桌布把各处连在一起",
+            "response": "顺着褶皱从高处走向桌边，看看明亮的不规则形状如何穿过其他物体。"
+          }
+        ],
+        "context": "这些观察不是在猜唯一的创作意图。它们让我们看到：一幅画可以在局部不完全服从统一透视的同时，通过颜色、形状与重复建立整体秩序。"
+      },
+      {
+        "title": "把问题带到下一幅",
+        "prompt": "再看《玩纸牌者》。从苹果换成人物后，你还能找到形状的重复、支点和稳定感吗？",
+        "works": [
+          "cezanne-the-card-players"
+        ],
+        "context": "静物与人物画题材不同，却都可以从形体之间的关系来读。接着看立体主义时，也可以继续追问“一个画面为什么必须只服从一个视点”。这是一条观看路线，不表示后来的探索只有塞尚这一个来源。"
+      }
+    ],
+    "next": [
+      {
+        "work": "cezanne-apples-and-oranges-cezanne",
+        "label": "再找一次：另一桌水果怎样安排空间"
+      },
+      {
+        "work": "les-demoiselles-d-avignon",
+        "label": "继续追问：形体怎样被重新组织"
+      }
+    ],
+    "sources": [
+      {
+        "label": "芝加哥艺术博物馆：《苹果篮》",
+        "url": "https://www.artic.edu/artworks/111436/the-basket-of-apples"
+      },
+      {
+        "label": "Smarthistory：《苹果篮》的空间细读",
+        "url": "https://smarthistory.org/cezanne-the-basket-of-apples/"
+      },
+      {
+        "label": "塞尚作品编年目录：约1893年的《苹果篮》",
+        "url": "https://www.cezannecatalogue.com/catalogue/entry.php?id=776"
+      }
+    ]
+  },
+  {
+    "id": "pissarro-cezanne",
+    "kind": "story",
+    "title": "一起写生，会画成同一种样子吗？",
+    "deck": "毕沙罗与塞尚 · 一条师友关系的两端",
+    "minutes": 3,
+    "periods": [
+      "impression",
+      "post-impression"
+    ],
+    "people": [
+      "pissarro",
+      "cezanne"
+    ],
+    "relations": [
+      [
+        "pissarro",
+        "cezanne"
+      ]
+    ],
+    "steps": [
+      {
+        "title": "先看两片乡野",
+        "prompt": "同在1873年前后，两位画家怎样让你走进风景？沿田埂、小路和屋墙看看视线会到哪里。这里是两件作品的比较，不是同一地点的同步写生。",
+        "works": [
+          "pissarro-hoarfrost-pissarro",
+          "cezanne-the-house-of-the-hanged-man"
+        ],
+        "choices": [
+          {
+            "label": "我更注意田野和光色",
+            "response": "看看田地的斜线与细碎色彩怎样让你感到距离，再比较另一幅画的屋墙和小路。"
+          },
+          {
+            "label": "我更注意房屋和形体",
+            "response": "试着把房屋看成相邻的色块，再留意这些块面之间仍有光线、空气和细小笔触。"
+          }
+        ],
+        "context": "1872—1874年，塞尚在蓬图瓦兹、瓦兹河畔欧韦一带与毕沙罗频繁一起工作。奥赛的两人联展研究强调他们的交流与回应，关系并不是单向复制一种画法。"
+      },
+      {
+        "title": "共享问题，不同回答",
+        "prompt": "把两幅画都看作“怎样给自然建立秩序”的尝试。你能各找出一处斜线和一组重复的形状吗？",
+        "works": [
+          "pissarro-hoarfrost-pissarro",
+          "cezanne-the-house-of-the-hanged-man"
+        ],
+        "context": "两件作品都参加了1874年的独立展览。共享展览与写生经验，并不意味着个人差异消失。这里保留“师友”关系，同时把具体的比较交还给画面：地面、屋墙、树木和笔触是可见的证据。"
+      },
+      {
+        "title": "关系图里还有时间",
+        "prompt": "将两人后来的作品并置。你刚才注意到的光色与结构，哪些还在，哪些变了？",
+        "works": [
+          "pissarro-red-roofs-pissarro",
+          "cezanne-the-basket-of-apples"
+        ],
+        "context": "这两幅画来自不同年份，比较的是持续的探索，不是某一次相遇的直接结果。关系图的一条线可以指出交流的方向，却不能替代艺术家此后几十年的选择。"
+      }
+    ],
+    "next": [
+      {
+        "work": "cezanne-the-basket-of-apples",
+        "label": "深入塞尚：这张桌子为什么对不齐"
+      },
+      {
+        "work": "pissarro-the-boulevard-montmartre-on-a-winter-morning",
+        "label": "跟着毕沙罗：从乡野走到城市"
+      }
+    ],
+    "sources": [
+      {
+        "label": "奥赛博物馆：塞尚与毕沙罗1865—1885联展",
+        "url": "https://www.musee-orsay.fr/en/program/whats-on/exhibitions/presentation/cezanne-and-pissarro-1865-1885"
+      },
+      {
+        "label": "卢浮宫：毕沙罗所绘塞尚肖像与共同工作记录",
+        "url": "https://collections.louvre.fr/ark:/53355/cl020025872"
+      },
+      {
+        "label": "奥赛博物馆：印象派展览时期1874—1886",
+        "url": "https://www.musee-orsay.fr/fr/ressources/parcours-au-temps-des-expositions-impressionnistes-1874-1886-86"
+      },
+      {
+        "label": "奥赛博物馆：《缢死者之屋》与1874年参展记录",
+        "url": "https://www.musee-orsay.fr/en/artworks/la-maison-du-pendu-auvers-sur-oise-1476"
+      },
+      {
+        "label": "巴贝里尼博物馆：《白霜》与首次印象派展览",
+        "url": "https://prolog.museum-barberini.de/en/20593/the-honest-eye"
+      }
+    ]
+  },
+  {
+    "id": "an-exhibition-of-their-own",
+    "kind": "story",
+    "title": "他们为什么要自己办展览？",
+    "deck": "1874年 · 把莫里索放回印象派的现场",
+    "minutes": 3,
+    "periods": [
+      "impression"
+    ],
+    "people": [
+      "morisot",
+      "monet",
+      "degas",
+      "renoir",
+      "pissarro",
+      "cezanne"
+    ],
+    "relations": [
+      [
+        "morisot",
+        "monet"
+      ],
+      [
+        "morisot",
+        "pissarro"
+      ]
+    ],
+    "steps": [
+      {
+        "title": "同一场展览，两种生活",
+        "prompt": "港口的晨光与室内的照料，能属于同一个艺术群体吗？先看看两幅画有什么不同。",
+        "works": [
+          "impression-sunrise",
+          "morisot-the-cradle"
+        ],
+        "context": "1874年，一批艺术家在巴黎自主组织展览，不经过官方沙龙的评审。《日出·印象》和莫里索的《摇篮》都在其中。独立展览不仅是画法的变化，也是决定谁能展示、怎样展示的一次尝试。"
+      },
+      {
+        "title": "看见照料的动作",
+        "prompt": "不要只把《摇篮》归为温柔的家庭画。找找母亲的目光、手臂与薄纱，它们怎样把两个人联系起来？",
+        "works": [
+          "morisot-the-cradle"
+        ],
+        "details": [
+          {
+            "work": "morisot-the-cradle",
+            "label": "母亲的目光",
+            "x": 37,
+            "y": 42,
+            "note": "母亲看向婴儿，弯曲的手臂也参与了这个向内收拢的姿态。画中母亲是莫里索的姐姐埃德玛。"
+          },
+          {
+            "work": "morisot-the-cradle",
+            "label": "薄纱与孩子",
+            "x": 73,
+            "y": 69,
+            "note": "薄纱既遮挡又让人看见。试着观察它的斜向边缘怎样与母亲的姿态呼应。"
+          }
+        ],
+        "context": "莫里索是参展艺术家，不只是马奈笔下的模特。她把自己能够接近的现代生活转化为复杂的观看与构图问题。《摇篮》画的是姐姐埃德玛与孩子布朗什。"
+      },
+      {
+        "title": "一个群体，不止一种画法",
+        "prompt": "卡萨特在1879年加入印象派展览。看看这位女孩与《摇篮》中的孩子：姿态、空间和观看距离有什么变化？",
+        "works": [
+          "cassatt-blue-armchair"
+        ],
+        "context": "卡萨特并未参加1874年首展。她与德加的交流促成了另一种进入印象派的路径；《蓝色扶手椅上的小女孩》参加了她1879年的首次印象派展览。印象派可以是一群人的展览合作，也包含各自不同的题材、画法和生活经验。"
+      }
+    ],
+    "next": [
+      {
+        "work": "morisot-summers-day",
+        "label": "跟着莫里索：到湖上的小舟里看一看"
+      },
+      {
+        "work": "cassatt-childs-bath",
+        "label": "跟着卡萨特：俯视怎样改变日常场景"
+      }
+    ],
+    "sources": [
+      {
+        "label": "奥赛博物馆：《摇篮》与1874年展览",
+        "url": "https://www.musee-orsay.fr/en/artworks/le-berceau-1132"
+      },
+      {
+        "label": "奥赛博物馆：印象派展览时期1874—1886",
+        "url": "https://www.musee-orsay.fr/fr/ressources/parcours-au-temps-des-expositions-impressionnistes-1874-1886-86"
+      },
+      {
+        "label": "美国国家美术馆：德加／卡萨特展",
+        "url": "https://www.nga.gov/exhibitions/exhibition-degascassatt"
+      },
+      {
+        "label": "美国国家美术馆：《蓝色扶手椅上的小女孩》",
+        "url": "https://www.nga.gov/artworks/61368-little-girl-blue-armchair"
+      }
+    ]
+  },
+  {
+    "id": "modern-colour",
+    "kind": "route",
+    "title": "颜色：不照原样画，还能表达什么？",
+    "deck": "从野兽派到剪纸 · 看颜色怎样组织画面",
+    "minutes": 4,
+    "periods": [
+      "modern"
+    ],
+    "people": [
+      "matisse"
+    ],
+    "steps": [
+      {
+        "title": "皮肤一定是肤色吗",
+        "prompt": "看脸上相邻的绿、红和浅色。暂时不问像不像真人，先看这些颜色如何把脸组织起来。",
+        "works": [
+          "matisse-woman-with-a-hat"
+        ],
+        "choices": [
+          {
+            "label": "颜色让我觉得有冲突",
+            "response": "找一对最突出的相邻颜色，再看看同样的颜色是否在帽子或背景里再次出现。"
+          },
+          {
+            "label": "颜色让我觉得有活力",
+            "response": "试着说出这种活力来自对比、笔触还是重复。不同观察都可以在画面里找到依据。"
+          }
+        ],
+        "context": "马蒂斯1905年的《戴帽子的女人》与野兽派的形成密切相关。颜色可以描绘物体，也可以独立承担画面的强度与结构。观看时不必先记术语，先比较相邻色块的作用。"
+      },
+      {
+        "title": "红色能成为房间吗",
+        "prompt": "如果没有完整的明暗塑形，你靠什么认出画室里的物体？找找红色中留下的轮廓线。",
+        "works": [
+          "matisse-the-red-studio"
+        ],
+        "context": "《红色画室》让大片红色贯穿地面、墙壁与家具，线条和画中作品帮助我们辨认空间。颜色不再只是附着在物体上的外衣，它也可以决定整个画面的观看经验。"
+      },
+      {
+        "title": "剪纸也能让颜色跳舞",
+        "prompt": "在《蜗牛》中沿着色块走一圈。哪个色块让你转向，哪个让你停住？",
+        "works": [
+          "matisse-the-snail"
+        ],
+        "context": "晚年的马蒂斯使用涂色纸剪贴。观看可以从色块的方向和相邻关系开始；作品不依赖精细描摹蜗牛的外观，仍能让人感到旋转与聚合。这条路线比较的是颜色的作用，而不是说野兽派一直以同一形式延续。"
+      }
+    ],
+    "next": [
+      {
+        "work": "matisse-dance",
+        "label": "再看身体与颜色怎样组成节奏"
+      },
+      {
+        "work": "kandinsky-yellow-red-blue",
+        "label": "继续到抽象：颜色与形状自己说话"
+      }
+    ],
+    "sources": [
+      {
+        "label": "旧金山现代艺术博物馆：《戴帽子的女人》",
+        "url": "https://www.sfmoma.org/artwork/91.161/"
+      },
+      {
+        "label": "MoMA：《红色画室》",
+        "url": "https://www.moma.org/collection/works/78389"
+      },
+      {
+        "label": "泰特：《蜗牛》",
+        "url": "https://www.tate.org.uk/art/artworks/matisse-the-snail-t00540"
+      }
+    ]
+  },
+  {
+    "id": "modern-form",
+    "kind": "route",
+    "title": "形体：一个视点够用吗？",
+    "deck": "从塞尚到毕加索，再看运动的身体",
+    "minutes": 4,
+    "periods": [
+      "modern"
+    ],
+    "people": [
+      "cezanne",
+      "picasso",
+      "duchamp"
+    ],
+    "steps": [
+      {
+        "title": "一个桌面，几种倾斜",
+        "prompt": "先比较桌沿、瓶子和篮子的方向。哪些地方像从稍微不同的位置看过去？",
+        "works": [
+          "cezanne-the-basket-of-apples"
+        ],
+        "context": "塞尚的静物为我们提供一个入口：绘画中的秩序，不一定等于把单一固定视点贯彻到底。注意可见的空间变化，再思考这些变化怎样服务于整幅画。"
+      },
+      {
+        "title": "身体被重新拼合",
+        "prompt": "看看面部与身体的方向：哪些地方让你无法用一个自然站位来解释？",
+        "works": [
+          "les-demoiselles-d-avignon"
+        ],
+        "context": "1907年的《亚维农少女》是毕加索走向立体主义的重要探索，包含多个艺术传统的刺激。它不是一张成熟立体主义的标准示范，也不只是塞尚方法的线性延续。这里比较的是空间与身体如何被重组。"
+      },
+      {
+        "title": "把时间放进形体",
+        "prompt": "沿着重复的斜线寻找下楼的方向。你看到的是一个身体，还是一段动作？",
+        "works": [
+          "duchamp-nude-descending-a-staircase-no-2"
+        ],
+        "context": "杜尚把分解形体与表现运动的问题结合起来。这里的连续感来自重复、叠加与方向，而非动画。现代艺术的分岔也发生在同一位艺术家身上：他后来还会从绘画走向现成品。"
+      }
+    ],
+    "next": [
+      {
+        "work": "fountain",
+        "label": "跟着杜尚，从画身体走到选择物件"
+      },
+      {
+        "work": "cezanne-the-card-players",
+        "label": "回到塞尚，比较另一种稳定感"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Smarthistory：《苹果篮》",
+        "url": "https://smarthistory.org/cezanne-the-basket-of-apples/"
+      },
+      {
+        "label": "MoMA：《亚维农少女》",
+        "url": "https://www.moma.org/collection/works/79766"
+      },
+      {
+        "label": "费城艺术博物馆：《下楼梯的裸女，第2号》",
+        "url": "https://philamuseum.org/collection/object/51449"
+      }
+    ]
+  },
+  {
+    "id": "modern-abstraction",
+    "kind": "route",
+    "title": "抽象：没有故事主角，眼睛看什么？",
+    "deck": "康定斯基与蒙德里安 · 两条不同的路",
+    "minutes": 4,
+    "periods": [
+      "modern"
+    ],
+    "people": [
+      "kandinsky",
+      "mondrian"
+    ],
+    "steps": [
+      {
+        "title": "先感受方向与重量",
+        "prompt": "不急着寻找隐藏的人或风景。哪块颜色显得最重？哪条线让视线移动得最快？",
+        "works": [
+          "kandinsky-yellow-red-blue"
+        ],
+        "choices": [
+          {
+            "label": "我先看到了圆和曲线",
+            "response": "顺着弧线走一走，再看看它们与直线相遇时，节奏怎样变化。"
+          },
+          {
+            "label": "我先被大色块吸引",
+            "response": "比较色块的大小、明暗与位置。它们是否让你感到不同的重量或距离？"
+          }
+        ],
+        "context": "抽象画并不是没有东西可看。颜色的关系、线条的方向、形状的密度，都能组织感受。康定斯基的探索也随着时期改变，不能用一幅画概括他的全部抽象语言。"
+      },
+      {
+        "title": "另一种秩序",
+        "prompt": "换到蒙德里安。仍然是颜色与线条，为什么气氛很不一样？比较曲直、留白与色块面积。",
+        "works": [
+          "mondrian-composition-1921"
+        ],
+        "context": "蒙德里安的1921年构成让水平、垂直线与色块形成不对称的平衡。与上一幅并置，是比较两种组织方式，不是在断言两人有直接师承，也不是把抽象艺术归结为一种风格。"
+      },
+      {
+        "title": "方格也会改变节奏",
+        "prompt": "同一位画家的两幅画，哪一幅让你感觉更像在移动？在画面里找出理由。",
+        "works": [
+          "mondrian-composition-1921",
+          "mondrian-broadway-boogie-woogie"
+        ],
+        "context": "1940年到纽约后，蒙德里安接触到城市网格与布吉伍吉音乐。《百老汇爵士乐》让彩色小块分布在线带中，形成密集的节奏。这样的联想有历史背景，但你仍可以先从画面本身辨认变化。"
+      }
+    ],
+    "next": [
+      {
+        "work": "kandinsky-composition-viii",
+        "label": "康定斯基也用几何形：再比较一次"
+      },
+      {
+        "work": "pollock-autumn-rhythm-number-30",
+        "label": "换一种节奏：线条留下身体的动作"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MoMA：1921年的《红、蓝、黑、黄与灰的构成》",
+        "url": "https://www.moma.org/collection/works/79002"
+      },
+      {
+        "label": "MoMA：《百老汇爵士乐》",
+        "url": "https://www.moma.org/collection/works/78682"
+      },
+      {
+        "label": "中文维基百科：康定斯基",
+        "url": "https://zh.wikipedia.org/wiki/瓦西里·康定斯基"
+      }
+    ]
+  },
+  {
+    "id": "modern-boundaries",
+    "kind": "route",
+    "title": "边界：一定要亲手做，才算艺术吗？",
+    "deck": "从杜尚的选择，到沃霍尔的重复",
+    "minutes": 4,
+    "periods": [
+      "modern"
+    ],
+    "people": [
+      "duchamp",
+      "warhol"
+    ],
+    "steps": [
+      {
+        "title": "一个物件，被重新命名",
+        "prompt": "先辨认这是怎样的物件。把它放进展览、改变方向并命名，是否改变了你观看它的方式？",
+        "works": [
+          "fountain"
+        ],
+        "choices": [
+          {
+            "label": "改变了，我开始问它为什么在这里",
+            "response": "这个问题把注意力从手艺转向选择、展示与艺术制度。接下来可以看看它与一幅手绘商品图像有什么不同。"
+          },
+          {
+            "label": "没有，我还是先看到普通物件",
+            "response": "这也是现成品引出的真实反应。你可以保留判断，同时看看它怎样迫使展览解释自己的边界。"
+          }
+        ],
+        "context": "杜尚的《泉》把选择、命名和展出变成艺术问题。1917年的原件已失，后来的照片与复制版本需要区分；本站图片下方保留所示版本说明。认识这段历史，并不要求观众必须喜欢它。"
+      },
+      {
+        "title": "看起来像复制，做法却不同",
+        "prompt": "这些汤罐像商店货架上的商品。它们是现成罐头，还是绘有罐头的画布？",
+        "works": [
+          "warhol-campbell-s-soup-cans"
+        ],
+        "context": "这组1962年的作品由32幅画组成。MoMA明确说明画面是手绘的，底部纹样以手工印章重复；不能因为沃霍尔常用丝网印刷，就把这组作品也一概说成丝网印刷。它模仿工业复制的外观，却保留制作中的差异。"
+      },
+      {
+        "title": "把判断说得更具体",
+        "prompt": "如果选一个标准，你现在更关心制作手艺、提出的问题，还是作品带来的观看经验？可以不只选一个。",
+        "works": [
+          "fountain",
+          "warhol-campbell-s-soup-cans"
+        ],
+        "context": "这两件作品给出了不同的问题：选择普通物件能否构成创作，商品图像进入绘画又发生了什么。我们不替你给出“都算”或“都不算”的结论；比较能帮助判断从一句好恶变成有依据的讨论。"
+      }
+    ],
+    "next": [
+      {
+        "work": "duchamp-bicycle-wheel",
+        "label": "再看杜尚：当普通物件被组合起来"
+      },
+      {
+        "work": "marilyn-diptych",
+        "label": "再看沃霍尔：重复怎样改变一张脸"
+      }
+    ],
+    "sources": [
+      {
+        "label": "泰特：杜尚《泉》及复制版本",
+        "url": "https://www.tate.org.uk/art/artworks/duchamp-fountain-t07573"
+      },
+      {
+        "label": "MoMA：《金宝汤罐头》的制作与初次展示",
+        "url": "https://www.moma.org/collection/works/79809"
+      }
+    ]
+  }
+]

@@ -4,6 +4,7 @@ import { whoHtml } from "../state";
 import { state, actions, worksOf, periodVar, imgSrc, hasImage } from "../state";
 import { diagramFor, diagramContext } from "../diagrams";
 import type { Work } from "../types";
+import { readingLinks, readingsForWork, renderHallReadings } from "./readings";
 
 /* II 展厅：展厅索引、主线与要点、展墙与说明牌、交互图解、承上启下。地址 #p-<时期id> 可直达。 */
 
@@ -13,9 +14,12 @@ const HASH = /^#p-([\w-]+)$/;
 /** 图片下方的署名：作者 · 协议 · 来源 */
 export const creditLine = (w: Work) => {
   const c = state.credits[w.id];
-  if (!c || w.copyright) return "";
-  return `<div class="credit-line">图片：${esc(c.author)} · ${c.licenseUrl ? `<a href="${c.licenseUrl}" target="_blank" rel="noopener">${esc(c.license)}</a>` : esc(c.license)} · <a href="${c.source}" target="_blank" rel="noopener">维基共享资源</a></div>`;
+  if (!c) return "";
+  return `<div class="credit-line">${w.imageNote ? `${esc(w.imageNote)}<br>` : ""}图片：${esc(c.author)} · ${c.licenseUrl ? `<a href="${c.licenseUrl}" target="_blank" rel="noopener">${esc(c.license)}</a>` : esc(c.license)} · <a href="${c.source}" target="_blank" rel="noopener">图片来源</a></div>`;
 };
+
+export const workSources = (w: Work) => w.sources?.length
+  ? `<div class="credit-line">作品研究：${w.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a>`).join(" · ")}</div>` : "";
 
 function renderNav() {
   const t = state.t;
@@ -28,7 +32,7 @@ function renderFeature() {
   const p = state.t.periods[state.cur], works = worksOf(p.id), w = works[state.feat];
   if (!w) { $("#feature").innerHTML = ""; return; }
   const img = hasImage(w);
-  const noImg = w.copyright ? `${w.copyright}，本站不放图片。` : "暂无可用的公有领域图片。";
+  const noImg = w.noImageReason ?? "暂无对应图片。";
   $("#feature").innerHTML = `
     ${img ? `<button class="zoom" data-w="${w.id}" aria-label="放大查看《${esc(w.title)}》"><figure class="big"><img src="${imgSrc(w, "full")}" alt="《${esc(w.title)}》" decoding="async"></figure></button>` : ""}
     <div class="placard">
@@ -36,7 +40,10 @@ function renderFeature() {
       <h3>《${esc(w.title)}》</h3>
       <div class="meta"><span>${esc(w.yearText)}</span><span>${esc(w.medium)}</span><span>${esc(w.location)}</span></div>
       <p class="why">${esc(w.summary)}</p>
-      ${img ? creditLine(w) : `<a class="look" href="${wikiSearch(w.title)}" target="_blank" rel="noopener">${noImg}到维基百科看图 ↗</a>`}
+      ${readingLinks(readingsForWork(w.id), "从这件作品出发")}
+      ${w.source ? `<a class="look" href="${esc(w.source)}" target="_blank" rel="noopener">作品资料 ↗</a>` : ""}
+      ${workSources(w)}
+      ${img ? creditLine(w) : `<a class="look" href="${wikiSearch(w.title)}" target="_blank" rel="noopener">${esc(noImg)} 中文维基百科 ↗</a>`}
     </div>
     <div class="strip" role="group" aria-label="本厅作品">${works.map((x, i) =>
       `<button data-k="${i}" aria-pressed="${i === state.feat}" title="${esc(x.title)}" aria-label="${esc(x.title)}">${hasImage(x) ? `<img src="${imgSrc(x, "thumb")}" alt="" loading="lazy">` : esc(x.title[0])}</button>`).join("")}</div>`;
@@ -51,16 +58,18 @@ function renderPeriod() {
   intro.innerHTML = `<div class="num"><em>${roman(state.cur + 1)}</em><span>第 ${state.cur + 1} / ${t.periods.length} 间 · ${esc(group?.name ?? "")}</span></div>
     <h2>${esc(p.name)}</h2><div class="en">${esc(p.en)}</div>
     <span class="span">${esc(p.span)}</span>
+    ${p.question ? `<p class="hall-question"><span class="label-sm">这一间，带着问题看</span>${esc(p.question)}</p>` : ""}
     <p class="thesis">${esc(p.thesis)}</p>
     <div class="tags">${p.keywords.map((k) => `<span>${esc(k)}</span>`).join("")}</div>
     <ul class="points">${p.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
     ${hist.length ? `<div class="hist"><span class="label-sm">历史背景</span><ol>${hist.map(({ v, i }) => `<li><button data-ev="${i}"><span class="y">${esc(v.yearText)}</span><span><b>${esc(v.name)}</b>：${esc(v.art)}</span></button></li>`).join("")}</ol></div>` : ""}`;
   renderFeature();
+  renderHallReadings(p.id);
   const box = $("#diagram"), d = p.diagram ? diagramFor(t.meta.id, p.diagram.id) : undefined;
   box.hidden = !d;
   if (d && p.diagram) {
     const ctx = diagramContext();
-    box.innerHTML = `<div class="dhead"><span class="label-sm">图解</span><h3>${esc(p.diagram.title)}</h3></div><div id="dg-body">${d.html(ctx)}</div><p class="dcap">${esc(p.diagram.caption)}</p>`;
+    box.innerHTML = `<div class="dhead"><span class="label-sm">图解</span><h3>${esc(p.diagram.title)}</h3></div><p class="diagram-observe">${esc(p.diagram.observe)}</p><div id="dg-body">${d.html(ctx)}</div><div class="diagram-conclusion"><span class="label-sm">从图中理解</span><p class="dcap">${esc(p.diagram.caption)}</p></div><div class="diagram-works"><span class="label-sm">回到作品</span>${p.diagram.works.map(w => `<button class="btn" data-diagram-work="${w.work}">${esc(w.label)} ↗</button>`).join("")}</div>${p.diagram.sources?.length ? `<details class="diagram-sources"><summary>资料出处</summary><ul>${p.diagram.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a></li>`).join("")}</ul></details>` : ""}`;
     d.init($("#dg-body"), ctx);
   } else box.innerHTML = "";
   const next = t.periods[state.cur + 1];
@@ -98,9 +107,10 @@ export function goPeriod(i: number, scroll?: boolean, opts: { silent?: boolean }
 export function showWork(id: string) {
   const w = state.t.works.find((x) => x.id === id);
   if (!w) return;
-  goPeriod(state.t.periods.findIndex((p) => p.id === w.period), true);
+  goPeriod(state.t.periods.findIndex((p) => p.id === w.period), false);
   state.feat = worksOf(w.period).findIndex((x) => x.id === id);
   renderFeature();
+  $("#feature").scrollIntoView({ block: "start" });
 }
 
 function fromHash(scroll: boolean) {
@@ -130,6 +140,10 @@ export function initHall() {
     if (b) { state.feat = +b.dataset.k!; renderFeature(); }
   };
   $("#prev").onclick = () => goPeriod(state.cur - 1);
+  $("#diagram").onclick = (e) => {
+    const b = (e.target as Element).closest<HTMLElement>("[data-diagram-work]");
+    if (b) actions.openWork(b.dataset.diagramWork!, true, state.t.periods[state.cur].diagram!.works.map(w => w.work));
+  };
   $("#next").onclick = () => goPeriod(state.cur + 1);
   if (!fromHash(true)) goPeriod(state.cur, false, { silent: true });
 }
@@ -140,7 +154,7 @@ document.addEventListener("keydown", (e) => {
   if (!$("#lightbox").hidden || e.altKey || e.metaKey || e.ctrlKey) return;
   const el = e.target as Element;
   const tag = (el.tagName || "").toLowerCase();
-  if (tag === "input" || tag === "select" || tag === "textarea" || el.closest?.("#hero")) return;
+  if (tag === "input" || tag === "select" || tag === "textarea" || el.closest?.("#hero,#reading,#diagram")) return;
   // 只在展厅区域可见时响应，避免在别处误触
   const r = $("#hall").getBoundingClientRect();
   if (r.bottom < 80 || r.top > innerHeight - 80) return;

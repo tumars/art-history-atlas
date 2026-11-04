@@ -28,7 +28,7 @@ export const store = {
   },
 };
 
-export const wikiSearch = (t: string) => "https://zh.wikipedia.org/w/index.php?search=" + encodeURIComponent(t);
+export const wikiSearch = (t: string) => "https://zh.wikipedia.org/w/index.php?search=" + encodeURIComponent(t) + "&variant=zh-cn";
 
 export function svgPt(svg: SVGSVGElement, ev: { clientX: number; clientY: number }) {
   const p = svg.createSVGPoint();

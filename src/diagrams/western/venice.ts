@@ -26,10 +26,10 @@ html(){return `<div class="dg-wrap"><svg class="dg" viewBox="0 0 560 240" role="
   </svg></div>
   <div class="ctl"><label for="d-ven">素描（disegno）</label><input type="range" id="d-ven" min="0" max="100" value="0"><label for="d-ven">色彩（colore）</label></div>
   <div class="lineage">
-   <div class="row"><b style="color:var(--accent)">素描派</b><span class="n">佛罗伦萨·罗马：米开朗基罗、拉斐尔</span><span class="a">→</span><span class="n">普桑</span><span class="a">→</span><span class="n">新古典：大卫、安格尔</span></div>
-   <div class="row"><b style="color:var(--g5)">色彩派</b><span class="n">威尼斯：提香</span><span class="a">→</span><span class="n">鲁本斯</span><span class="a">→</span><span class="n">浪漫主义：德拉克洛瓦</span><span class="a">→</span><span class="n">印象派</span></div>
+   <div class="row"><b style="color:var(--accent)">重视造型</b><span class="n">佛罗伦萨·罗马：米开朗基罗、拉斐尔</span><span class="a">·</span><span class="n">普桑</span><span class="a">·</span><span class="n">新古典：大卫、安格尔</span></div>
+   <div class="row"><b style="color:var(--g5)">重视色彩</b><span class="n">威尼斯：提香</span><span class="a">·</span><span class="n">鲁本斯</span><span class="a">·</span><span class="n">浪漫主义：德拉克洛瓦</span><span class="a">·</span><span class="n">印象派</span></div>
   </div>`},
 init(r){const s=q(r,"#d-ven"),c=q(r,"#colo"),d=q(r,"#dise");
-  const up=()=>{const v=s.value/100;c.style.opacity=v;d.style.opacity=1-v*.95;q(r,"#ven-t").textContent=v<.35?"佛罗伦萨：先画准轮廓":v<.65?"两种画法之间":"威尼斯：用色彩直接塑造"};s.oninput=up;up();}};
+  const up=()=>{const v=s.value/100;c.style.opacity=v;d.style.opacity=1-v*.95;q(r,"#ven-t").textContent=v<.35?"轮廓与排线提供体积线索":v<.65?"线与色共同组织形体":"色块的明暗提供体积线索"};s.oninput=up;up();}};
 
 export default diagram;

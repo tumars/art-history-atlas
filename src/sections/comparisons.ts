@@ -1,6 +1,7 @@
 import { $, esc, wikiSearch } from "../lib/dom";
 import { state, actions, workById, imgSrc, hasImage } from "../state";
 import type { Work } from "../types";
+import { readingLinks } from "./readings";
 
 /* 对照组：两件作品并排 + 差异表 */
 let cur = 0;
@@ -18,7 +19,7 @@ function render() {
   if (!A || !B) { $("#pair-body").innerHTML = ""; return; }
   $("#pair-body").innerHTML = `<div class="pair-imgs">${side(A)}<div class="vs">vs</div>${side(B)}</div>
     <div class="cmp-wrap"><table class="cmp"><tbody>${p.rows.map((r) => `<tr><th>${esc(r[0])}</th><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join("")}</tbody></table></div>
-    <p class="pair-sum">${esc(p.summary)}</p>`;
+    <p class="pair-sum">${esc(p.summary)}</p>${readingLinks(state.t.readings.filter(r => r.steps.some(s => s.works.includes(p.a) && s.works.includes(p.b))), "带着一个问题，再看这组作品")}`;
 }
 
 export function initComparisons() {
