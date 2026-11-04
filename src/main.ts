@@ -15,6 +15,7 @@ import { initPeople, showPerson } from "./sections/people";
 import { cnNum } from "./lib/format";
 import type { SectionId } from "./types";
 import { initReadings, openReading } from "./sections/readings";
+import { initSearch } from "./sections/search";
 
 const TRAD_KEY = "aha.tradition";
 
@@ -143,6 +144,7 @@ async function main() {
   const saved = store.get<string>(TRAD_KEY, SITE.defaultTradition);
   const id = SITE.traditions.includes(saved) ? saved : SITE.defaultTradition;
   boot(id);
+  initSearch();
   // 署名清单异步加载，到了再重绘一次带图的版本
   state.credits = await loadCredits();
   boot(id);
