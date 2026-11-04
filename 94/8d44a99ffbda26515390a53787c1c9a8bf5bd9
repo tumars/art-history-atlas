@@ -1,0 +1,32 @@
+index.html
+  s_7e4bb5fd284a0d::t_9a1e3a00392f6e 27
+src/lib/search.ts
+  s_7e4bb5fd284a0d::t_9a1e3a00392f6e 1-24
+src/sections/search.ts
+  s_7e4bb5fd284a0d::t_9a1e3a00392f6e 1-69
+src/main.ts
+  s_7e4bb5fd284a0d::t_9a1e3a00392f6e 18,147
+docs/design.md
+  s_7e4bb5fd284a0d::t_9a1e3a00392f6e 18,288
+scripts/search.test.mjs
+  s_7e4bb5fd284a0d::t_166bcce0bad204 10
+  s_7e4bb5fd284a0d::t_767777a751bc1a 1-9,11-38
+src/styles/search.css
+  s_7e4bb5fd284a0d::t_9a1e3a00392f6e 1-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "948d44a99ffbda26515390a53787c1c9a8bf5bd9",
+  "prompts": {},
+  "sessions": {
+    "s_7e4bb5fd284a0d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a588-d4a0-7d41-a7de-3f6ef751d4fa",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
