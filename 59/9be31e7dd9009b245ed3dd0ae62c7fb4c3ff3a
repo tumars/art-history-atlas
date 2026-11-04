@@ -1,0 +1,23 @@
+vite.config.ts
+  s_7e4bb5fd284a0d::t_8fe10fa5fc9ea5 3,5
+docs/deployment.md
+  s_7e4bb5fd284a0d::t_8fe10fa5fc9ea5 10
+docs/design.md
+  s_7e4bb5fd284a0d::t_8fe10fa5fc9ea5 289
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "599be31e7dd9009b245ed3dd0ae62c7fb4c3ff3a",
+  "prompts": {},
+  "sessions": {
+    "s_7e4bb5fd284a0d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a588-d4a0-7d41-a7de-3f6ef751d4fa",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
