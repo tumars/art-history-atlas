@@ -1,0 +1,98 @@
+src/main.ts
+  s_ef50abc14da0c4::t_3729d8fdcfdda9 157
+  s_ece18b1297bf28::t_1cdb345c3d9b7a 64-65
+  s_ef50abc14da0c4::t_c2291da735bed6 19-21,115,134,148
+src/lib/navigation.ts
+  s_ef50abc14da0c4::t_3c728840577540 1-4,6,8,10-39,41-47,49-51
+  s_ef50abc14da0c4::t_068588d0114136 5,7,9,40,48
+src/sections/readings.ts
+  s_ef50abc14da0c4::t_068588d0114136 7-8,79,82,84,92-93,95,112,116,163
+  s_ef50abc14da0c4::t_4202929bd0bd0d 94
+  s_ef50abc14da0c4::t_726ea1854ee138 83
+src/sections/mobile.ts
+  s_ef50abc14da0c4::t_4202929bd0bd0d 31,41-42
+  s_ef50abc14da0c4::t_eba3a1c8608b7b 66-69,80-81,109-110,112-114,116-119
+  s_ef50abc14da0c4::t_15c3b661c517a9 83
+  s_ef50abc14da0c4::t_c2291da735bed6 1-3,5-30,32-34,36-40,43-60,70-76,79,82,84-95,120-137
+  s_ef50abc14da0c4::t_daa77b8533f4a8 35
+  s_ef50abc14da0c4::t_2100f6787e2905 4,111,115
+  s_ef50abc14da0c4::t_726ea1854ee138 61-65
+  s_ef50abc14da0c4::t_68c48b47060249 77-78,96-108
+src/styles/mobile.css
+  s_ef50abc14da0c4::t_4860be5f300f34 6-8
+  s_ef50abc14da0c4::t_335ba956efe3d3 43,64,66
+  s_ef50abc14da0c4::t_68c48b47060249 65
+  s_ef50abc14da0c4::t_3729d8fdcfdda9 31-32
+  s_ef50abc14da0c4::t_3c728840577540 1-5,9-30,33-42,44-63,67-72
+src/sections/people.ts
+  s_ef50abc14da0c4::t_335ba956efe3d3 2,263,359
+  s_ef50abc14da0c4::t_3729d8fdcfdda9 400
+  s_ef50abc14da0c4::t_068588d0114136 3,395
+  s_ef50abc14da0c4::t_4edc2833a6af33 279-280,282,287-291,316-319
+  s_ef50abc14da0c4::t_726ea1854ee138 281,295-296,299
+scripts/navigation.test.mjs
+  s_ef50abc14da0c4::t_0d355c114b69fd 1-61
+src/sections/lightbox.ts
+  s_ef50abc14da0c4::t_4edc2833a6af33 7,20-21,40,45,57-58,64,70,72,74-75,81-89,91-97,102,106,108-109,117
+  s_ef50abc14da0c4::t_2df4590fc5ad7d 111-116
+src/state.ts
+  s_ef50abc14da0c4::t_726ea1854ee138 27-28
+src/sections/wall.ts
+  s_ef50abc14da0c4::t_eba3a1c8608b7b 105
+  s_ef50abc14da0c4::t_54f786dfa96d37 106
+  s_ef50abc14da0c4::t_335ba956efe3d3 10,38,81-84,104,107-108,110,112
+  s_ef50abc14da0c4::t_15c3b661c517a9 117
+docs/design.md
+  s_ece18b1297bf28::t_1cdb345c3d9b7a 83
+  s_ef50abc14da0c4::t_8a529fd09f041d 7,82,107-121,231,238-239,263
+  s_ef50abc14da0c4::t_a4b0c8d366c90f 8
+  s_ef50abc14da0c4::t_25be3f3133623a 264
+src/sections/timeline.ts
+  s_ef50abc14da0c4::t_92e7be301651b7 6,219,222-225,255-258
+index.html
+  s_ef50abc14da0c4::t_cac0975b33e052 28,65,176,190-191
+src/sections/hero.ts
+  s_ef50abc14da0c4::t_cac0975b33e052 28
+docs/research/mobile-redesign.md
+  s_ef50abc14da0c4::t_a4b0c8d366c90f 1-2,4-6,8-44,46,52-108,110-118,120-130
+  s_ef50abc14da0c4::t_8a529fd09f041d 3,134-147
+  s_ef50abc14da0c4::t_1b909a07ce6d85 131-133
+  s_ef50abc14da0c4::t_90766e5b4095c2 7,45,47-51,109,119
+src/sections/search.ts
+  s_ef50abc14da0c4::t_4edc2833a6af33 5,39,45-46,48-51,53-59,75-76
+  s_ef50abc14da0c4::t_0d355c114b69fd 47,52
+docs/prototypes/mobile-redesign.html
+  s_ef50abc14da0c4::t_2d0382f74980b5 8,10,12-21,27
+  s_ef50abc14da0c4::t_a4b0c8d366c90f 1-7,9,11,22-26,28-31
+docs/verification/mobile-experience.md
+  s_ef50abc14da0c4::t_8d1967b3e9837f 1-45
+src/sections/hall.ts
+  s_ef50abc14da0c4::t_15c3b661c517a9 194
+  s_ef50abc14da0c4::t_cac0975b33e052 9,32-36,51-52,57,74-75,79,86,105,120-125,130,149-154,156,159,168-176,182,187,191
+  s_ef50abc14da0c4::t_3729d8fdcfdda9 155
+  s_ef50abc14da0c4::t_726ea1854ee138 106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6c9b0a65369ad06a0afa3e4a4837a251586669b3",
+  "prompts": {},
+  "sessions": {
+    "s_ece18b1297bf28": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a76f-31d3-78a0-b7c8-8c3d144ceeea",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    },
+    "s_ef50abc14da0c4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1aa8e-2723-7c31-8623-9d5009f16b2e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
