@@ -3,6 +3,7 @@ import { $, esc, clamp, lerp, prefersReducedMotion } from "../lib/dom";
 import { state, actions, periodIndex, periodVar, imgSrc } from "../state";
 import type { ContextBand, Year } from "../types";
 import { initRelay } from "./relay";
+import { navigate, navigationActive, registerNavigation } from "../lib/navigation";
 
 /* 时间全景：背景行（欧洲分期、中国朝代、教会历史……）、历史大事、代表作品、艺术时期，共用一条时间轴 */
 
@@ -215,9 +216,13 @@ function pickBand(band: number, item: number) {
 }
 
 export function selectEvent(i: number, scroll?: boolean) {
+  if (scroll && !navigationActive()) return navigate(() => selectEvent(i, scroll));
   evSel = clamp(i, -1, state.t.events.length - 1);
   renderTimeline();
-  if (scroll) $("#chronology").scrollIntoView({ block: "start" });
+  if (scroll) {
+    if (matchMedia("(max-width:700px)").matches) $<HTMLButtonElement>("#chronology>.mobile-chart-open").click();
+    else $("#chronology").scrollIntoView({ block: "start" });
+  }
 }
 
 function animateTo(to: number) {
@@ -247,6 +252,10 @@ function handle(target: Element): boolean {
 }
 
 export function initTimeline() {
+  registerNavigation("timeline", () => {
+    const event = evSel, band = bandSel, proportion = tReal, selectedMode = mode;
+    return () => { evSel = event; bandSel = band; tReal = proportion; mode = selectedMode; renderTimeline(); $("#tl-exp").setAttribute("aria-pressed", String(mode === "exp")); $("#tl-real").setAttribute("aria-pressed", String(mode === "real")); };
+  });
   evSel = -1;
   bandSel = null;
   const exp = $("#tl-exp"), real = $("#tl-real");

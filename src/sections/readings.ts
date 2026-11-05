@@ -4,6 +4,8 @@ import { $, esc, prefersReducedMotion } from "../lib/dom";
 import { state, actions, workById, imgSrc, whoHtml } from "../state";
 import { creditLine } from "./hall";
 import type { Reading } from "../types";
+import { navigate, navigationActive, registerNavigation, restoringNavigation, returnToOrigin } from "../lib/navigation";
+import { dismissWork } from "./lightbox";
 
 let active: Reading | undefined;
 let step = 0;
@@ -74,9 +76,12 @@ function renderStep(focus = false) {
 }
 
 export function openReading(id: string) {
+  if (!navigationActive()) return navigate(() => openReading(id));
   const r = state.t.readings.find(r => r.id === id);
   if (!r) return;
-  if (!$("#lightbox").hidden) $("#lb-close").click();
+  dismissWork();
+  actions.dismissPanels();
+  document.body.style.overflow = "";
   if (!$("#reading").contains(document.activeElement)) origin = document.activeElement as HTMLElement;
   active = r; step = 0; notes = new Map();
   history.replaceState(null, "", `#story-${r.id}`);
@@ -84,6 +89,10 @@ export function openReading(id: string) {
 }
 
 export function initReadings() {
+  registerNavigation("readings", () => {
+    const reading = active, index = step, saved = new Map([...notes].map(([key, value]) => [key, { ...value }])), source = origin;
+    return () => { active = reading; step = index; notes = new Map([...saved].map(([key, value]) => [key, { ...value }])); origin = source; if (active) renderStep(); else $("#reading").hidden = true; };
+  });
   renderShelf();
   if (active) {
     active = state.t.readings.find(r => r.id === active!.id);
@@ -100,9 +109,11 @@ export function initReadings() {
     if (!b || !active) return;
     const s = active.steps[step];
     if (b.hasAttribute("data-close-reading")) {
+      returnToOrigin(() => {
       $("#reading").hidden = true; active = undefined;
       history.replaceState(null, "", "#readings");
       if (origin?.isConnected) origin.focus();
+      });
       return;
     }
     if (b.dataset.step !== undefined || b.hasAttribute("data-next-step") || b.hasAttribute("data-prev-step")) {
@@ -149,6 +160,7 @@ export function initReadings() {
     notes.set(step, n);
   };
   const fromHash = () => {
+    if (restoringNavigation()) return;
     const m = location.hash.match(/^#story-([\w-]+)$/);
     if (m) openReading(m[1]);
   };

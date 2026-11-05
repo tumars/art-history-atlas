@@ -1,4 +1,6 @@
 import { $, esc, wikiSearch, prefersReducedMotion, store } from "../lib/dom";
+import { navigate, navigationActive, registerNavigation, restoringNavigation, returnToOrigin } from "../lib/navigation";
+import { dismissWork } from "./lightbox";
 import { readingLinks, readingsForPerson } from "./readings";
 import { fmtYear } from "../lib/format";
 import { state, actions, personById, worksBy, portraitSrc, periodVar, periodOf, periodIndex, imgSrc, hasImage } from "../state";
@@ -258,6 +260,7 @@ function showCard() {
   const box = $("#who-card");
   const t = state.t;
   box.innerHTML = sel.kind === "person" ? personCard(personById(sel.id)!) : encCard(t.encounters[sel.i]);
+  box.insertAdjacentHTML("afterbegin", '<button class="btn mobile-only" data-person-back>← 返回上一处</button>');
   if (!prefersReducedMotion()) { box.classList.remove("enter"); void box.offsetWidth; box.classList.add("enter"); }
   paint();
   markLife();
@@ -273,16 +276,27 @@ function showCard() {
 }
 
 export function showPerson(id: string, scroll = true) {
+  if (!navigationActive()) return navigate(() => showPerson(id, scroll));
+  dismissWork();
+  actions.dismissPanels();
+  document.body.style.overflow = "";
   if (!personById(id)) return;
   sel = { kind: "person", id };
   showCard();
   history.replaceState(null, "", `#who-${id}`);
-  if (scroll) $("#people").scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+  if (scroll || matchMedia("(max-width:700px)").matches) {
+    const target = matchMedia("(max-width:700px)").matches ? $("#who-card") : $("#people");
+    target.tabIndex = -1; target.focus({ preventScroll: true });
+    target.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+  }
 }
 
 function showEncounter(i: number) {
+  if (!navigationActive()) return navigate(() => showEncounter(i));
+  actions.dismissPanels();
   sel = { kind: "enc", i };
   showCard();
+  if (matchMedia("(max-width:700px)").matches) $("#who-card").scrollIntoView({ block: "start" });
 }
 
 const VIEW_KEY = "aha.peopleView";
@@ -299,6 +313,10 @@ function setView(v: PeopleView) {
 
 let bound = false;
 export function initPeople() {
+  registerNavigation("people", () => {
+    const selection = { ...sel }, selectedTab = tab;
+    return () => { sel = selection; tab = selectedTab; showCard(); };
+  });
   const t = state.t;
   $("#people").hidden = !t.people.length;
   if (!t.people.length) return;
@@ -338,6 +356,7 @@ export function initPeople() {
   svg.onkeydown = (e) => { if ((e.key === "Enter" || e.key === " ") && pick(e.target as Element)) e.preventDefault(); };
   $("#who-card").onclick = (e) => {
     const el = e.target as Element;
+    if (el.closest("[data-person-back]")) { returnToOrigin(() => $("#people").scrollIntoView({ block: "start" })); return; }
     const school = el.closest<HTMLElement>("[data-school]");
     if (school) {
       setView("schools"); openSchool(school.dataset.school!);
@@ -370,16 +389,15 @@ export function initPeople() {
       const b = (e.target as Element).closest<HTMLElement>("[data-person]");
       if (!b) return;
       e.preventDefault();
-      const inLightbox = !!b.closest("#lightbox");
-      if (inLightbox) $("#lb-close").click();
       showPerson(b.dataset.person!, !b.closest("#people"));
     });
     const fromHash = () => {
+      if (restoringNavigation()) return;
       const m = location.hash.match(/^#who-(.+)$/);
       if (m && personById(m[1])) showPerson(m[1]);
     };
     addEventListener("hashchange", fromHash);
-    setTimeout(fromHash, 0);
+    fromHash();
   }
   showCard();
 }

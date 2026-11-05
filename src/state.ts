@@ -24,6 +24,8 @@ export const actions = {
   /** 打开人物卡片并滚到人物区 */
   showPerson: (_id: string, _scroll?: boolean) => {},
   openReading: (_id: string) => {},
+  /** 跨区进入正文时收起目录与图表，保留进入前的历史快照。 */
+  dismissPanels: () => {},
 };
 
 /** 作品顺序：按时期顺序，同一时期内按年份 */

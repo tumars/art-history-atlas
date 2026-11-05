@@ -16,6 +16,9 @@ import { cnNum } from "./lib/format";
 import type { SectionId } from "./types";
 import { initReadings, openReading } from "./sections/readings";
 import { initSearch } from "./sections/search";
+import { initMobile, renderMobile } from "./sections/mobile";
+import { initNavigation } from "./lib/navigation";
+import "./styles/mobile.css";
 
 const TRAD_KEY = "aha.tradition";
 
@@ -58,7 +61,8 @@ function renderChrome() {
   $("#footer").innerHTML = `<div class="foot-in">
     <div><div class="foot-brand">${esc(SITE.title)}<em>${esc(SITE.titleEn)}</em></div>
       <p style="margin-top:12px">${esc(t.meta.description)}</p>
-      <p>年代多为约数。图解含原理示意与原作分析标注。</p></div>
+      <p>年代多为约数。图解含原理示意与原作分析标注。</p>
+      <p>作者 · <a href="https://x.com/Tumars" target="_blank" rel="noopener">X @Tumars</a></p></div>
     <div><h4>关于图片</h4>
       <p>图片来自维基共享资源、维基百科与馆藏网站，作者、来源及权利说明写在作品下方。${missing ? `仍有 ${missing} 件暂无对应图像，具体原因见作品说明。` : ""}</p></div>
     <div><h4>开源</h4>
@@ -108,7 +112,7 @@ function initScrollChrome() {
   const io = new IntersectionObserver((ents) => {
     for (const e of ents) {
       if (!e.isIntersecting) continue;
-      document.querySelectorAll("#index a").forEach((a) => a.setAttribute("aria-current", String((a as HTMLElement).dataset.sec === e.target.id)));
+      document.querySelectorAll("#index a,.menu-links a").forEach((a) => a.setAttribute("aria-current", String((a as HTMLElement).dataset.sec === e.target.id)));
     }
   }, { rootMargin: "-45% 0px -50% 0px" });
   ["hero", ...SECTION_IDS].forEach((id) => { const el = document.getElementById(id); if (el) io.observe(el); });
@@ -127,6 +131,7 @@ function boot(traditionId: string) {
   initPeople();
   initReadings();
   initHero();
+  renderMobile();
 }
 
 async function main() {
@@ -140,6 +145,7 @@ async function main() {
   state.site = SITE;
   initLightbox();
   initTheme();
+  initMobile();
   initScrollChrome();
   const saved = store.get<string>(TRAD_KEY, SITE.defaultTradition);
   const id = SITE.traditions.includes(saved) ? saved : SITE.defaultTradition;
@@ -148,6 +154,7 @@ async function main() {
   // 署名清单异步加载，到了再重绘一次带图的版本
   state.credits = await loadCredits();
   boot(id);
+  initNavigation();
   $<HTMLSelectElement>("#trad-switch").onchange = (e) => {
     const v = (e.target as HTMLSelectElement).value;
     store.set(TRAD_KEY, v);

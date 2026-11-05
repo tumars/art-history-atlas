@@ -7,6 +7,7 @@ import { state, actions, allWorksOrdered, periodVar, periodOf, periodIndex, imgS
 import { creditLine, workSources } from "./hall";
 import { readingLinks, readingsForWork } from "./readings";
 import type { Work } from "../types";
+import { registerNavigation } from "../lib/navigation";
 
 /* VI 藏品 · 看片台：上方一件大图 + 说明牌，下方一条按时期分段的缩略图带 */
 let list: Work[] = [];
@@ -34,6 +35,7 @@ function renderReel() {
 function show(i: number, scrollReel = true) {
   cur = (i + list.length) % list.length;
   const w = list[cur], p = periodOf(w.period), ok = hasImage(w);
+  if ($("#collection-select")) $<HTMLSelectElement>("#collection-select").value = p.id;
   const view = $("#lt-view");
   view.style.setProperty("--g", periodVar(w.period));
   view.innerHTML = `<figure class="lt-fig">${ok
@@ -76,6 +78,10 @@ function show(i: number, scrollReel = true) {
 let keysBound = false;
 export function initWall() {
   list = allWorksOrdered();
+  if (!$("#collection-select")) $(".lt").insertAdjacentHTML("beforebegin", '<label class="collection-picker mobile-only">按时期浏览<select id="collection-select" aria-label="藏品时期"></select></label>');
+  $("#collection-select").innerHTML = state.t.periods.map(p => `<option value="${p.id}">${esc(p.name)}</option>`).join("");
+  $<HTMLSelectElement>("#collection-select").onchange = e => show(list.findIndex(w => w.period === (e.target as HTMLSelectElement).value));
+  registerNavigation("collection", () => { const index = cur, left = $("#lt-reel").scrollLeft; return () => { show(index, false); $("#lt-reel").scrollLeft = left; }; });
   renderReel();
   $("#lt-map").onclick = (e) => {
     const b = (e.target as Element).closest<HTMLButtonElement>("button");
@@ -95,16 +101,20 @@ export function initWall() {
     if (go) actions.goPeriod(periodIndex(go.dataset.p!), true);
   };
   // 手机上在大图上左右滑动换一件
-  let x0 = 0, y0 = 0;
-  view.ontouchstart = (e) => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; };
+  let x0 = 0, y0 = 0, swipe = false, swiped = false;
+  // 捕获在切换后的合成 click，避免一次横滑又打开大图。
+  view.onclick = ((original) => (e: PointerEvent) => { if (swiped) { e.preventDefault(); swiped = false; return; } original?.call(view, e); })(view.onclick);
+  view.ontouchstart = (e) => { swipe = e.touches.length === 1 && !!(e.target as Element).closest(".lt-fig"); swiped = false; x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; };
+  view.ontouchmove = e => { if (e.touches.length > 1) swipe = false; };
   view.ontouchend = (e) => {
+    if (!swipe) return;
     const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
-    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(cur + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; show(cur + (dx < 0 ? 1 : -1)); }
   };
   if (!keysBound) {
     keysBound = true;
     document.addEventListener("keydown", (e) => {
-      if (!$("#lightbox").hidden || e.altKey || e.metaKey || e.ctrlKey) return;
+      if (document.querySelector("dialog[open]") || e.altKey || e.metaKey || e.ctrlKey) return;
       if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
       const tag = ((e.target as Element).tagName || "").toLowerCase();
       if (tag === "input" || tag === "select" || tag === "textarea") return;

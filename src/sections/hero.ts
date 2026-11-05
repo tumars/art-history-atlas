@@ -25,7 +25,7 @@ export function initHero() {
   }));
   $("#hero-kicker").textContent = `${state.site.titleEn} · ${state.t.meta.name}`;
   $("#hero-title").textContent = state.site.title;
-  $("#hero-lead").innerHTML = `${esc(state.site.tagline)}<br>${esc(state.site.intro)}`;
+  $("#hero-lead").innerHTML = `${esc(state.site.tagline)}<span class="hero-extra"><br>${esc(state.site.intro)}</span>`;
   $("#sky-total").textContent = `${order.length} 件作品`;
   // 三层星尘复用镜头位移变量；漂移与明灭交给 CSS，不增加逐帧计算。
   $("#hero-stars").innerHTML = [ .4, 1, 1.8 ].map((depth, layer) =>

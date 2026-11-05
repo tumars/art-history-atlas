@@ -2,6 +2,7 @@ import { $, esc } from "../lib/dom";
 import { searchCatalog, type SearchKind } from "../lib/search";
 import { actions, imgSrc, portraitSrc, state } from "../state";
 import "../styles/search.css";
+import { navigate, navigationActive, registerNavigation, returnToOrigin } from "../lib/navigation";
 
 export function initSearch() {
   document.body.insertAdjacentHTML("beforeend", `<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title">
@@ -35,15 +36,27 @@ export function initSearch() {
     document.body.style.overflow = previousOverflow;
     $("#search-open").focus();
   };
-  $("#search-open").onclick = () => {
-    render();
+  const open = () => {
     previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     dialog.showModal();
     input.focus();
   };
-  $("#search-close").onclick = close;
-  dialog.oncancel = e => { e.preventDefault(); close(); };
+  registerNavigation("search", () => {
+    const visible = dialog.open, query = input.value, filter = kind, top = results.scrollTop;
+    const focused = (document.activeElement as HTMLElement)?.closest<HTMLElement>("[data-result]")?.dataset.result;
+    return () => {
+      input.value = query; kind = filter; render();
+      dialog.querySelectorAll<HTMLElement>("[data-kind]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.kind === kind)));
+      if (visible) open(); else dialog.close();
+      if (visible && focused) results.querySelector<HTMLElement>(`[data-result="${CSS.escape(focused)}"]`)?.focus({ preventScroll: true });
+      results.scrollTop = top;
+    };
+  });
+  render();
+  $("#search-open").onclick = () => navigate(open);
+  $("#search-close").onclick = () => returnToOrigin(close);
+  dialog.oncancel = e => { e.preventDefault(); returnToOrigin(close); };
   // 阻止输入框方向键触发底层藏品浏览；Tab / Esc 仍由原生 dialog 处理。
   dialog.onkeydown = e => e.stopPropagation();
   input.oninput = render;
@@ -57,9 +70,10 @@ export function initSearch() {
   results.onclick = e => {
     const button = (e.target as Element).closest<HTMLElement>("[data-result]");
     if (!button) return;
-    close();
     if (button.dataset.type === "work") actions.openWork(button.dataset.result!, true, workIds);
     else {
+      if (!navigationActive()) { navigate(() => button.click()); return; }
+      close();
       actions.showPerson(button.dataset.result!);
       const card = $("#who-card");
       card.tabIndex = -1;
