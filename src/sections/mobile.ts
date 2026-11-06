@@ -23,7 +23,7 @@ function showChart(node: HTMLElement, title: string) {
 }
 
 export function initMobile() {
-  document.body.insertAdjacentHTML("beforeend", `<dialog class="site-menu" id="site-menu" aria-labelledby="menu-title"><div class="dialog-head"><h2 id="menu-title">长廊目录</h2><button class="btn" data-close-panel>关闭 ×</button></div><nav class="menu-links" aria-label="长廊目录"></nav><div class="menu-settings"></div></dialog>
+  document.body.insertAdjacentHTML("beforeend", `<dialog class="site-menu" id="site-menu" aria-labelledby="menu-title"><div class="dialog-head"><h2 id="menu-title">画间目录</h2><button class="btn" data-close-panel>关闭 ×</button></div><nav class="menu-links" aria-label="画间目录"></nav><div class="menu-settings"></div></dialog>
     <dialog class="hero-options" id="hero-options" aria-labelledby="hero-options-title"><div class="dialog-head"><h2 id="hero-options-title">画海选项</h2><button class="btn" data-close-panel>关闭 ×</button></div><div id="hero-option-controls"></div></dialog>
     <dialog class="chart-dialog" id="chart-dialog" aria-labelledby="chart-title"><div class="dialog-head"><h2 id="chart-title"></h2><button class="btn" id="chart-close">返回 ×</button></div><p>横向滑动查看全貌，也可使用下方的文字入口。</p><div id="chart-content"></div></dialog>`);
   const placements = ["theme-btn", "repo-link", "sky-play"].map(id => { const node = $("#" + id); return { node, parent: node.parentNode!, next: node.nextSibling }; });

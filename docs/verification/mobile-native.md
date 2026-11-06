@@ -33,6 +33,15 @@ node scripts/mobile.e2e.mjs
 
 `PLAYWRIGHT_MODULE` 可省略，此时从标准 Node 模块路径查找 `playwright`。浏览器回归不混入无需浏览器的 `npm test`。
 
+## 完整人物网络（2026-11-06，本地验证）
+
+- 手机复用 PC 图实现，全部范围均为 67 位人物、96 条关系；佛罗伦萨画派为 10 位人物，跨派系开关可扩展范围。
+- Chrome 触控模拟验证双指缩放、拖动不误点、缩放按钮与总览；节点选择保留完整图，关系列表可定位人物。
+- 生平返回与刷新均恢复人物、派系及镜头；关系开关、320px 无横溢出、深色模式及 PC 筛选回归通过。
+- 可复跑：沿用上方环境变量，将命令替换为 `node scripts/mobile-network.e2e.mjs`。
+- 截图：[手机完整人物关系图](../screenshots/mobile-people-network.png)。本轮尚未部署，触控模拟不代表真机验收。
+- 后续交互优化：关系图占满导航之间的页面，默认以可读比例定位达·芬奇，人物定位和固定底部信息卡取代上下滚动查找。筛选收纳、点击居中、完整总览、镜头边界、390 / 320px 深浅主题已回归；完整节点数量和 PC 筛选保持一致。调研来源见[交互调研](../research/mobile-network-interaction.md)。
+
 ## 视觉检查
 
 生产构建截图：[画海](../screenshots/mobile-v2-sea.png)、[作品](../screenshots/mobile-v2-work.png)、[导览](../screenshots/mobile-v2-guide.png)、[关系图](../screenshots/mobile-v2-graph.png)、[地图](../screenshots/mobile-v2-map.png)、[深色](../screenshots/mobile-v2-dark.png)、[横屏](../screenshots/mobile-v2-landscape.png)。

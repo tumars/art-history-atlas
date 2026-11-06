@@ -101,6 +101,7 @@ try {
     "true",
   );
   await page.locator("[data-tab=guide]").click();
+  await page.locator('[data-guide-section=stories]').click();
   await page.locator("[data-story]").first().click();
   await page.locator("[data-read]").click();
   await page.locator("[data-choice]").first().click();
@@ -141,7 +142,14 @@ try {
   );
   for (const id of ["people-life", "people-graph"]) {
     await page.goto(base + "#m/explore/context/" + id);
-    if(id==='people-graph') await page.locator('[data-context-value]').first().selectOption('van-gogh');
+    if(id==='people-graph') {
+      await page.locator('[data-network-locate]').selectOption('van-gogh');
+      await page.locator('.network-person [data-person]').click();
+      await page.locator('.person-hero').waitFor();
+      await back('[data-network-locate]');
+      await noOverflow();
+      continue;
+    }
     await page.locator("svg [data-person]").first().waitFor();
     await page.locator("svg [data-person]").first().focus();
     await page.keyboard.press("Enter");

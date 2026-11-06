@@ -1,5 +1,5 @@
 import { observeImages } from "../lib/image-loading";
-import { $, esc, store } from "../lib/dom";
+import { esc, store } from "../lib/dom";
 import { state, actions, personById, periodVar, groupVar } from "../state";
 import { readingForRelation } from "./readings";
 import { VW } from "./people-axis";
@@ -35,8 +35,10 @@ let hoverId: string | null = null;
 let selectedId: string | null = null;
 let rankX = (_i: number) => 0;
 let ticks: { c: number; i: number }[] = [];
+let graphRoot: Document | HTMLElement = document;
+const $ = <T extends Element = HTMLElement>(selector: string) => graphRoot.querySelector<T>(selector)!;
 
-function buildEdges() {
+export function buildEdges() {
   const t = state.t;
   const out: Edge[] = [];
   const seen = new Set<string>();
@@ -193,7 +195,7 @@ function renderLegend() {
 }
 
 function applyOff() {
-  document.querySelectorAll<SVGPathElement>("#graph-svg .ed,#graph-svg .ed-story").forEach((el) => {
+  graphRoot.querySelectorAll<SVGPathElement>("#graph-svg .ed,#graph-svg .ed-story").forEach((el) => {
     const e = edges[+el.dataset.i!];
     el.style.display = off.has(e.kind) ? "none" : "";
   });
@@ -208,12 +210,12 @@ function paintGraph() {
     edges.forEach((e) => { if (!off.has(e.kind) && (e.a === id || e.b === id)) { set!.add(e.a); set!.add(e.b); } });
     pairOk = (e) => e.a === id || e.b === id;
   }
-  document.querySelectorAll<SVGGElement>("#graph-svg .nd").forEach((g) => {
+  graphRoot.querySelectorAll<SVGGElement>("#graph-svg .nd").forEach((g) => {
     const pid = g.dataset.p!;
     g.classList.toggle("dim", !!set && !set.has(pid));
     g.classList.toggle("on", (id ?? selectedId) === pid || (!id && !selectedId && !!focusPair && !!set?.has(pid)));
   });
-  document.querySelectorAll<SVGPathElement>("#graph-svg .ed,#graph-svg .ed-story").forEach((el) => {
+  graphRoot.querySelectorAll<SVGPathElement>("#graph-svg .ed,#graph-svg .ed-story").forEach((el) => {
     const e = edges[+el.dataset.i!];
     const hit = !!pairOk && pairOk(e);
     el.classList.toggle("hot", hit);
@@ -238,6 +240,11 @@ export function highlightGraph(sel: { kind: "person"; id: string } | { kind: "en
 }
 
 /** 派系筛选只改变图的范围，不改变共用人物资料卡。 */
+export function clearGraphHighlight() {
+  focus = null; focusPair = null; hoverId = null; selectedId = null;
+  paintGraph();
+}
+
 export function filterGraph(id: string) {
   schoolId = id;
   const school = state.t.schools.find(s => s.id === id);
@@ -261,17 +268,19 @@ function renderContext() {
   if (!edges.some(e => !off.has(e.kind))) context.innerHTML += `<p class="graph-empty" role="status">${edges.length ? "当前关系类型均已关闭，可点击下方图例开启。" : "当前范围暂无收录的关系，可勾选跨派系关系或切换派系。"}</p>`;
 }
 
-export function renderGraph(pick: (id: string) => void, onSchool: (id: string) => void) {
+export function renderGraph(pick: (id: string) => void, onSchool: (id: string) => void, options?: { root: HTMLElement; school?: string; outside?: boolean }) {
+  graphRoot = options?.root ?? document;
+  if (options) showOutside = options.outside ?? false;
   onPick = pick;
   off = new Set(store.get<RelKind[]>(OFF_KEY, []));
   allEdges = buildEdges();
   const select = $<HTMLSelectElement>("#graph-school");
   select.innerHTML = `<option value="">全部人物</option>` + state.t.meta.groups.map(g => `<optgroup label="${esc(g.name)}">${state.t.schools.filter(s => s.group === g.id).map(s => `<option value="${s.id}">${esc(s.name)}</option>`).join("")}</optgroup>`).join("");
-  filterGraph("");
+  filterGraph(options?.school ?? "");
   select.onchange = () => { filterGraph(select.value); onSchool(select.value); };
   const outside = $<HTMLInputElement>("#graph-outside");
   outside.checked = showOutside;
-  outside.onchange = () => { showOutside = outside.checked; filterGraph(schoolId); };
+  outside.onchange = () => { showOutside = outside.checked; filterGraph(schoolId); onSchool(schoolId); };
   const svg = $("#graph-svg");
   const nodeOf = (el: EventTarget | null) => (el as Element | null)?.closest?.<SVGGElement>(".nd") ?? null;
   svg.onpointerover = (e) => { const g = nodeOf(e.target); hoverId = g ? g.dataset.p! : null; paintGraph(); };

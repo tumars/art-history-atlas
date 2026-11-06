@@ -40,7 +40,7 @@ const SECTION_IDS: SectionId[] = ["chronology", "hall", "people", "pendulum", "p
 
 function renderChrome() {
   const t = state.t;
-  document.title = `${SITE.title} · ${SITE.titleEn}`;
+  document.title = `${SITE.title} · ${SITE.tagline}`;
   $("#mark-zh").textContent = SITE.title;
   $("#mark-en").textContent = SITE.titleEn;
   $<HTMLAnchorElement>("#repo-link").href = SITE.repo;
@@ -142,7 +142,7 @@ async function main() {
     state.site = SITE;
     state.t = loadTradition(SITE.defaultTradition);
     applyGroupColors();
-    document.body.innerHTML = '<div id="mobile-app" class="mobile-app"><p role="status">正在打开长廊…</p></div>';
+    document.body.innerHTML = '<div id="mobile-app" class="mobile-app"><p role="status">正在打开画间…</p></div>';
     document.body.classList.add('mobile-shell');
     state.credits = await loadCredits();
     const { initMobileApp } = await import('./mobile/app.js');

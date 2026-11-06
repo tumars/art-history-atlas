@@ -5,6 +5,7 @@ import { observeImages } from "../lib/image-loading";
 import { diagramFor, diagramContext } from "../diagrams";
 import { fmtYear } from "../lib/format";
 import land from "../assets/relay-land.svg?raw";
+import { peopleNetwork } from "./people-network";
 
 const entries = [
   ["chronology", "沿着年代看", "时代与历史对照"],
@@ -139,43 +140,7 @@ export function contextPage(id: string, value: string) {
       `<p class="lede">同一派系内按实际年份线性排列。点姓名认识人物；虚线表示约数。</p><svg viewBox="0 0 320 ${list.length * 70 + 40}" role="group" aria-label="${esc(school.name)}人物生命线"><text x="20" y="18" font-size="12" fill="currentColor">${fmtYear(start)}</text><text x="300" y="18" text-anchor="end" font-size="12" fill="currentColor">${fmtYear(end)}</text>${list.map((p, i) => `<g role="button" tabindex="0" data-person="${p.id}" aria-label="${esc(p.name)}，${fmtYear(p.born)}至${esc(p.diedText || fmtYear(p.died))}"><rect x="0" y="${i * 70 + 25}" width="320" height="65" fill="transparent"/><text x="20" y="${i * 70 + 45}" font-size="14" fill="currentColor">${esc(p.name)}</text><line x1="${x(p.born)}" y1="${i * 70 + 62}" x2="${x(p.died)}" y2="${i * 70 + 62}" stroke="#a9864f" stroke-width="4" ${p.approx ? 'stroke-dasharray="5 3"' : ""}/></g>`).join("")}</svg>` +
       list.map((p) => personButton(p.id)).join("");
   } else if (id === "people-graph") {
-    title = "以人物为中心看关系";
-    const [personId, filter = "all"] = value.split("|");
-    const person = t.people.find((p) => p.id === personId) || t.people[0];
-    const links: { id: string; kind: string; label: string }[] = [];
-    const kinds = [
-      ["teachers", "师承", "老师", "学生"],
-      ["influences", "影响", "影响来源", "受其影响"],
-      ["rivals", "对手", "对手", "对手"],
-      ["patrons", "赞助", "赞助人", "受其赞助"],
-    ] as const;
-    for (const [kind, , outLabel, inLabel] of kinds) {
-      for (const other of t.people) {
-        if (person.rel[kind]?.includes(other.id))
-          links.push({ id: other.id, kind, label: outLabel });
-        else if (other.rel[kind]?.includes(person.id))
-          links.push({ id: other.id, kind, label: inLabel });
-      }
-    }
-    for (const e of t.encounters.filter((e) => e.people.includes(person.id)))
-      for (const id of e.people.filter((id) => id !== person.id))
-        if (!links.some((x) => x.id === id && x.kind === "met"))
-          links.push({ id, kind: "met", label: "相遇" });
-    const shown = links.filter((x) => filter === "all" || x.kind === filter);
-    body =
-      choose(
-        t.people.map((p) => [p.id, p.name]),
-        person.id,
-      ) +
-      choose(
-        [
-          ["all", "全部关系"],
-          ...kinds.map(([key, label]) => [key, label]),
-          ["met", "相遇"],
-        ].map(([key, label]) => [person.id + "|" + key, label]),
-        person.id + "|" + filter,
-      ) +
-      `<p class="lede">只显示资料已收录的直接关系。相遇不代表影响，赞助不代表创作。</p><svg viewBox="0 0 320 ${Math.max(120, shown.length * 70 + 70)}" role="group" aria-label="${esc(person.name)}的直接关系"><text x="20" y="25" fill="currentColor" font-size="18">${esc(person.name)}</text>${shown.map((link, i) => `<path d="M28 36 V${i * 70 + 75} H125" fill="none" stroke="#9e957c"/><g role="button" tabindex="0" data-person="${link.id}" aria-label="${esc(link.label + "：" + t.people.find((p) => p.id === link.id)!.name)}"><rect x="120" y="${i * 70 + 50}" width="195" height="54" rx="5" fill="#9e957c22"/><text x="130" y="${i * 70 + 70}" font-size="12" fill="currentColor">${esc(link.label)}</text><text x="130" y="${i * 70 + 91}" font-size="15" fill="currentColor">${esc(t.people.find((p) => p.id === link.id)!.name)}</text></g>`).join("")}</svg>${shown.length ? "" : "<p>此类型暂无已收录关系。</p>"}`;
+    return peopleNetwork();
   } else if (id === "pendulum") {
     body =
       `<p>${esc(t.meta.pendulum?.note || "示意艺术倾向，不是对艺术价值的评分。")}</p><p>← 理性 / 秩序　　情感 / 激情 →</p>` +

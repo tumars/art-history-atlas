@@ -2,7 +2,7 @@
   "name": "art-history-atlas",
   "version": "0.4.0",
   "private": true,
-  "description": "三万年长廊：从史前洞窟到现代艺术的交互式西方美术史，以浮空画海、时代年表、艺术中心地图、人物派系关系与看画故事，串起作品、艺术家和时代。",
+  "description": "画间：在画作之间，读懂西方艺术。以浮空画海、时代年表、艺术中心地图、人物关系与看画故事，串起作品、艺术家和时代。",
   "license": "MIT",
   "type": "module",
   "scripts": {

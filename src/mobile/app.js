@@ -6,6 +6,7 @@ import { observeImages, clearProgressiveImage } from "../lib/image-loading";
 import { searchCatalog } from "../lib/search";
 import { mountSea } from "./sea";
 import { contextLinks, contextPage, mountContext } from "./context";
+import { peopleNetwork, mountNetwork } from "./people-network";
 
 export function initMobileApp() {
   const app = document.querySelector("#mobile-app");
@@ -220,14 +221,20 @@ export function initMobileApp() {
   }
   function rootSea() {
     const w = work(selected) || works[0];
-    return `<section class="sea-page"><div class="sea-heading"><h2>在画里，遇见世界。</h2><p>${works.filter((w) => credits[w.id]).length} 件作品 · 三万年的回声</p></div><div class="sea-tools"><button data-pause aria-label="${paused ? "继续漂浮" : "暂停漂浮"}" aria-pressed="${paused}">${paused ? "▷" : "Ⅱ"}</button><button data-sea-prev aria-label="发现上一件作品">←</button><button data-sea-next aria-label="发现下一件作品">→</button></div><div class="sea-canvas" aria-label="拖动画海选择作品"></div><div class="sea-depth" role="group" aria-label="画海视野"><button data-sea-zoom="1" aria-label="拉远画海">−</button><button data-sea-locate aria-label="回到选中作品">◎</button><button data-sea-zoom="-1" aria-label="拉近画海">＋</button><button class="sea-period" data-period aria-haspopup="dialog" aria-label="选择艺术时期，当前${esc(period(w.period).name)}">时期 · ${esc(period(w.period).short)} ▾</button></div><div class="sea-note"><button class="sea-caption" data-work="${w.id}" data-scope="画海"><span aria-live="polite"><strong>${esc(w.title)}</strong><p>${esc(w.artist)} · ${esc(w.yearText)}</p></span></button><button data-save="${w.id}" aria-label="${favoriteIds.includes(w.id) ? "取消收藏" : "收藏作品"}" aria-pressed="${favoriteIds.includes(w.id)}">${icon("saved")}</button><button class="go" data-work="${w.id}" data-scope="画海" aria-label="查看《${esc(w.title)}》">${icon("next")}</button></div></section>`;
+    return `<section class="sea-page"><div class="sea-tools"><button data-pause aria-label="${paused ? "继续漂浮" : "暂停漂浮"}" aria-pressed="${paused}">${paused ? "▷" : "Ⅱ"}</button><button data-sea-prev aria-label="发现上一件作品">←</button><button data-sea-next aria-label="发现下一件作品">→</button></div><div class="sea-canvas" aria-label="拖动画海选择作品"></div><div class="sea-depth" role="group" aria-label="画海视野"><button data-sea-zoom="1" aria-label="拉远画海">−</button><button data-sea-locate aria-label="回到选中作品">◎</button><button data-sea-zoom="-1" aria-label="拉近画海">＋</button><button class="sea-period" data-period aria-haspopup="dialog" aria-label="选择艺术时期，当前${esc(period(w.period).name)}">时期 · ${esc(period(w.period).short)} ▾</button></div><div class="sea-note"><button class="sea-caption" data-work="${w.id}" data-scope="画海"><span aria-live="polite"><strong>${esc(w.title)}</strong><p>${esc(w.artist)} · ${esc(w.yearText)}</p></span></button><button data-save="${w.id}" aria-label="${favoriteIds.includes(w.id) ? "取消收藏" : "收藏作品"}" aria-pressed="${favoriteIds.includes(w.id)}">${icon("saved")}</button><button class="go" data-work="${w.id}" data-scope="画海" aria-label="查看《${esc(w.title)}》">${icon("next")}</button></div></section>`;
   }
 
   function rootGuide() {
-    return `<div class="pad"><div class="eyebrow">跟着一个问题，走近作品</div><h2>今天，慢慢看。</h2><p class="lede">从三分钟开始，也可以走进一整个时代。</p>${readings.map((r) => `<button class="guide" data-story="${r.id}">${image(work(r.steps[0].works[0]), true)}<div style="padding-top:13px"><span class="pill">${r.minutes} 分钟 · ${r.steps.length} 步</span><h3>${esc(r.title)}</h3><p>${esc(r.deck)}</p></div></button>`).join("")}<div class="section-label"><h3>十八间展厅</h3><small>从史前走到现代</small></div>${periods.map((p, i) => `<button class="list-row" data-hall="${p.id}"><b class="num">${String(i + 1).padStart(2, "0")}</b><span><strong>${esc(p.short)}</strong><small>${esc(p.span)}</small></span>${icon("next")}</button>`).join("")}</div>`;
+    const section = route().guideSection || 'halls';
+    const switcher = `<div class="guide-switch segments" role="group" aria-label="导览内容">${[['halls','展厅'],['stories','故事与路线']].map(([id,label])=>`<button data-guide-section="${id}" aria-pressed="${section===id}">${label}</button>`).join('')}</div>`;
+    const halls = () => `<div class="eyebrow">沿着时代，走近作品</div><h2>十八间展厅</h2><p class="lede">从史前走到现代，选一个时代进入。</p>${periods.map((p,i)=>`<button class="list-row" data-hall="${p.id}"><b class="num">${String(i+1).padStart(2,'0')}</b><span><strong>${esc(p.short)}</strong><small>${esc(p.span)}</small></span>${icon('next')}</button>`).join('')}`;
+    const stories = () => `<div class="eyebrow">跟着一个问题，走近作品</div><h2>故事与路线</h2><p class="lede">从三分钟开始，换一个角度看画。</p>${readings.map(r=>`<button class="guide" data-story="${r.id}">${image(work(r.steps[0].works[0]),true)}<div style="padding-top:13px"><span class="pill">${r.minutes} 分钟 · ${r.steps.length} 步</span><h3>${esc(r.title)}</h3><p>${esc(r.deck)}</p></div></button>`).join('')}`;
+    return `<div class="guide-page">${switcher}<div class="pad">${section==='halls'?halls():stories()}</div></div>`;
   }
   function rootExplore() {
     const r = route();
+    if (r.category === "people" && r.peopleView === "network") return peopleNetwork();
+    const peopleView = `<div class="people-switch" aria-label="人物浏览方式"><button data-people-view="list" aria-pressed="${r.peopleView !== "network"}">人物列表</button><button data-people-view="network" aria-pressed="${r.peopleView === "network"}">关系网络</button></div>${r.peopleView === "network" ? peopleNetwork() : people.map(p => `<button class="list-row" data-person="${p.id}">${portrait(p)}<span><strong>${esc(p.name)}</strong><small>${esc(p.en)}</small></span>${icon("next")}</button>`).join("")}`;
     return `<div class="pad"><h2>找到你的好奇。</h2><p class="lede">作品、人物，和它们之间的联系。</p><button data-about>关于与设置 →</button><button class="search-field" data-search style="text-align:left;color:#75806e">搜索作品或艺术家</button><div class="segments">${[
       ["works", "作品"],
       ["people", "人物"],
@@ -239,7 +246,7 @@ export function initMobileApp() {
       )
       .join(
         "",
-      )}</div>${r.category === "people" ? people.map((p) => `<button class="list-row" data-person="${p.id}">${portrait(p)}<span><strong>${esc(p.name)}</strong><small>${esc(p.en)}</small></span>${icon("next")}</button>`).join("") : r.category === "context" ? `<div class="eyebrow">沿着时代看</div>${contextLinks()}` : `<button data-filter class="lede" style="margin-bottom:14px;padding:0">${esc(r.period ? period(r.period)?.short : "全部时期")} ▾</button>${r.period ? "<button data-clear-filter>清除筛选 ×</button>" : ""}${tiles(filteredWorks().slice(0, r.limit || 24), "探索")}${(r.limit || 24) < filteredWorks().length ? '<button class="primary" data-more>继续浏览作品</button>' : '<p class="lede">已看到全部作品</p>'}`}</div>`;
+      )}</div>${r.category === "people" ? peopleView : r.category === "context" ? `<div class="eyebrow">沿着时代看</div>${contextLinks()}` : `<button data-filter class="lede" style="margin-bottom:14px;padding:0">${esc(r.period ? period(r.period)?.short : "全部时期")} ▾</button>${r.period ? "<button data-clear-filter>清除筛选 ×</button>" : ""}${tiles(filteredWorks().slice(0, r.limit || 24), "探索")}${(r.limit || 24) < filteredWorks().length ? '<button class="primary" data-more>继续浏览作品</button>' : '<p class="lede">已看到全部作品</p>'}`}</div>`;
   }
   function filteredWorks() {
     const r = route();
@@ -292,7 +299,7 @@ export function initMobileApp() {
   function hallPage(r) {
     const p = period(r.id),
       list = works.filter((w) => w.period === p.id);
-    return `<div class="pad"><div class="eyebrow">${String(periods.indexOf(p) + 1).padStart(2, "0")} / 18 · ${esc(p.span)}</div><h2>${esc(p.name)}</h2><p class="lede">${esc(p.question || p.thesis)}</p><button class="primary" data-work="${list[0].id}" data-scope="本厅">从第一件看 →</button><div class="section-label"><h3>本厅作品</h3><small>${list.length} 件</small></div>${tiles(list, "本厅")}<details class="source"><summary>认识这个时代</summary><p>${esc(p.thesis)}</p>${p.diagram ? `<button class="primary" data-context="diagram:${p.id}">${esc(p.diagram.title)} →</button>` : ""}${p.points.map((x) => `<p>${esc(x)}</p>`).join("")}</details></div>`;
+    return `<div class="pad"><div class="eyebrow">${String(periods.indexOf(p) + 1).padStart(2, "0")} / 18 · ${esc(p.span)}</div><h2>${esc(p.name)}</h2><p class="lede">${esc(p.question || p.thesis)}</p><button class="primary" data-work="${list[0].id}" data-scope="本厅">从第一件看 →</button><div class="section-label"><h3>本厅作品</h3><small>${list.length} 件</small></div>${tiles(list, "本厅")}<details class="source hall-background"><summary><span>认识这个时代</span>${icon("next")}</summary><div class="hall-background-body"><p class="hall-thesis">${esc(p.thesis)}</p><ul class="hall-points">${p.points.map((x)=>`<li>${esc(x)}</li>`).join("")}</ul>${p.diagram ? `<button class="hall-diagram" data-context="diagram:${p.id}"><span><small>互动图解</small><strong>${esc(p.diagram.title)}</strong></span>${icon("next")}</button>` : ""}</div></details></div>`;
   }
   function storyPage(r) {
     const story = readings.find((x) => x.id === r.id);
@@ -350,7 +357,7 @@ export function initMobileApp() {
             about: "关于与设置",
             missing: "未找到",
           }[r.kind];
-    const header = `<header class="bar">${r.kind === "root" ? '<span class="title root-title">三万年长廊</span>' : `<button data-back aria-label="${immersive ? "退出全屏" : "返回上一页"}">${immersive ? "完成" : icon("back")}</button><span class="title">${title}</span>`}${r.kind === "viewer" ? `<button data-original>原图</button><button data-zoom>${r.zoom ? "复位" : "放大"}</button>` : r.kind === "root" && model.tab === "sea" ? `<button data-search aria-label="搜索">${icon("explore")}</button>` : r.kind === "search" ? "<button data-back>取消</button>" : r.kind === "reader" ? '<span style="width:44px"></span>' : `<button data-search aria-label="搜索">${icon("explore")}</button>`}</header>`;
+    const header = `<header class="bar">${r.kind === "root" ? (model.tab === "sea" ? `<div class="sea-brand"><h1>${esc(state.site.title)}</h1><p>${esc(state.site.tagline)}</p></div>` : `<span class="title root-title">${esc(state.site.title)}</span>`) : `<button data-back aria-label="${immersive ? "退出全屏" : "返回上一页"}">${immersive ? "完成" : icon("back")}</button><span class="title">${title}</span>`}${r.kind === "viewer" ? `<button data-original>原图</button><button data-zoom>${r.zoom ? "复位" : "放大"}</button>` : r.kind === "root" && model.tab === "sea" ? `<button data-search aria-label="搜索">${icon("explore")}</button>` : r.kind === "search" ? "<button data-back>取消</button>" : r.kind === "reader" ? '<span style="width:44px"></span>' : `<button data-search aria-label="搜索">${icon("explore")}</button>`}</header>`;
     let content = "";
     if (r.kind === "root")
       content = {
@@ -398,6 +405,15 @@ export function initMobileApp() {
       app.querySelector(previousFocus)?.focus({ preventScroll: true });
     observeImages(app);
     if (r.kind === "context") mountContext(app, r.id, r.value || "");
+    if (app.querySelector(".mobile-network")) {
+      app.querySelector(".screen").classList.add("network-screen");
+      app.querySelector(".screen").scrollTop = 0;
+      app.querySelector(".bar").innerHTML = `<button ${r.kind === "root" ? 'data-people-view="list"' : "data-back"} aria-label="返回人物浏览">${icon("back")}</button><span class="title">人物关系</span><span class="network-heading-note">完整网络</span>`;
+      disposePage = mountNetwork(app, r.graphView || {}, view => {
+        r.graphView = view;
+        checkpoint();
+      });
+    }
     if (r.kind === "root" && model.tab === "sea") bindSea();
     if (r.kind === "viewer") {
       const full = app.querySelector(".full");
@@ -650,9 +666,22 @@ export function initMobileApp() {
       r.searchKind = d.searchKind;
       return replace();
     }
+    if (d.guideSection) {
+      const current = r.guideSection || 'halls';
+      if (current === d.guideSection) return;
+      saveView();
+      r.guideScroll = { ...r.guideScroll, [current]: r.scroll };
+      r.guideSection = d.guideSection;
+      r.scroll = r.guideScroll[d.guideSection] || 0;
+      return replace();
+    }
     if (d.category) {
       r.category = d.category;
       r.scroll = 0;
+      return replace();
+    }
+    if (d.peopleView) {
+      r.peopleView = d.peopleView;
       return replace();
     }
     if ("clearFilter" in d) {
@@ -828,7 +857,7 @@ export function initMobileApp() {
     if (r.kind !== "root") model.stacks[tab].push(r);
   }
   function aboutPage() {
-    return `<div class="pad"><h2>三万年长廊</h2><p class="lede">${esc(state.t.meta.description)}</p><label>阅读主题 <select data-theme-select><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label><h3>图片与来源</h3><p>图片来自维基共享资源、维基百科与馆藏网站。每件作品的资料区保留作者、来源与权利说明。</p><h3>延伸阅读</h3>${state.site.recommendedReading.map((x) => `<p>${esc(x.title)} · ${esc(x.author)}</p>`).join("")}<p><a href="${esc(state.site.repo)}" target="_blank" rel="noopener">开源代码 ↗</a> · MIT / 文字 CC BY-SA 4.0</p><p>作者 · <a href="https://x.com/Tumars" target="_blank" rel="noopener">X @Tumars</a></p><p>收藏保存在此浏览器；清除浏览器数据会删除收藏。</p></div>`;
+    return `<div class="pad"><h2>${esc(state.site.title)}</h2><p>${esc(state.site.tagline)}</p><p class="lede">${esc(state.t.meta.description)}</p><label>阅读主题 <select data-theme-select><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label><h3>图片与来源</h3><p>图片来自维基共享资源、维基百科与馆藏网站。每件作品的资料区保留作者、来源与权利说明。</p><h3>延伸阅读</h3>${state.site.recommendedReading.map((x) => `<p>${esc(x.title)} · ${esc(x.author)}</p>`).join("")}<p><a href="${esc(state.site.repo)}" target="_blank" rel="noopener">开源代码 ↗</a> · MIT / 文字 CC BY-SA 4.0</p><p>作者 · <a href="https://x.com/Tumars" target="_blank" rel="noopener">X @Tumars</a></p><p>收藏保存在此浏览器；清除浏览器数据会删除收藏。</p></div>`;
   }
   app.addEventListener("change", (e) => {
     if (e.target.matches("[data-theme-select]")) {
