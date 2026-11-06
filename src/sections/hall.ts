@@ -191,12 +191,15 @@ export function initHall() {
 window.addEventListener("hashchange", () => { if (!navigationActive()) fromHash(true); });
 
 document.addEventListener("keydown", (e) => {
+  if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+  const hall = document.getElementById("hall");
+  if (!hall) return; // 独立手机页层没有桌面展厅节点。
   if (document.querySelector("dialog[open]") || e.altKey || e.metaKey || e.ctrlKey) return;
   const el = e.target as Element;
   const tag = (el.tagName || "").toLowerCase();
   if (tag === "input" || tag === "select" || tag === "textarea" || el.closest?.("#hero,#reading,#diagram")) return;
   // 只在展厅区域可见时响应，避免在别处误触
-  const r = $("#hall").getBoundingClientRect();
+  const r = hall.getBoundingClientRect();
   if (r.bottom < 80 || r.top > innerHeight - 80) return;
   if (e.key === "ArrowRight") goPeriod(state.cur + 1);
   if (e.key === "ArrowLeft") goPeriod(state.cur - 1);

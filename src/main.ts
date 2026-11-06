@@ -135,6 +135,20 @@ function boot(traditionId: string) {
 }
 
 async function main() {
+  // 启动时确定页面组织；手机旋转不切回长卷。窄桌面窗口也可使用手机布局。
+  const mobile = matchMedia('(max-width: 700px)').matches ||
+    (matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) <= 700);
+  if (mobile) {
+    state.site = SITE;
+    state.t = loadTradition(SITE.defaultTradition);
+    applyGroupColors();
+    document.body.innerHTML = '<div id="mobile-app" class="mobile-app"><p role="status">正在打开长廊…</p></div>';
+    document.body.classList.add('mobile-shell');
+    state.credits = await loadCredits();
+    const { initMobileApp } = await import('./mobile/app.js');
+    initMobileApp();
+    return;
+  }
   actions.goPeriod = goPeriod;
   actions.showWork = showWork;
   actions.selectEvent = selectEvent;
@@ -155,6 +169,27 @@ async function main() {
   state.credits = await loadCredits();
   boot(id);
   initNavigation();
+  // 手机分享链接在桌面也能进入对应内容。
+  const openMobileLink = () => {
+    const match = location.hash.match(/^#m\/[^/]+\/([^/]+)(?:\/(.+))?$/);
+    const workLink = location.hash.match(/^#work-(.+)$/);
+    if (!match && !workLink) return;
+    let contentId: string;
+    try { contentId = decodeURIComponent(match?.[2] || workLink?.[1] || ''); } catch { return; }
+    const kind = match?.[1] || 'work';
+    if (['work', 'viewer'].includes(kind) && state.t.works.some(w => w.id === contentId)) openWork(contentId, true, [contentId]);
+    else if (kind === 'person') showPerson(contentId);
+    else if (kind === 'story' || kind === 'reader') openReading(contentId);
+    else if (kind === 'hall') {
+      const index = state.t.periods.findIndex(p => p.id === contentId);
+      if (index >= 0) goPeriod(index);
+    } else if (kind === 'context') {
+      const section = ({ relay: 'chronology', schools: 'people' } as Record<string,string>)[contentId] || contentId;
+      if (SECTION_IDS.includes(section as SectionId)) document.getElementById(section)?.scrollIntoView();
+    }
+  };
+  openMobileLink();
+  addEventListener('hashchange', openMobileLink);
   $<HTMLSelectElement>("#trad-switch").onchange = (e) => {
     const v = (e.target as HTMLSelectElement).value;
     store.set(TRAD_KEY, v);
