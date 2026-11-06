@@ -1,0 +1,116 @@
+docs/prototypes/mobile-native.html
+  s_ef50abc14da0c4::t_831a6516b51885 1-3
+src/sections/hall.ts
+  s_ef50abc14da0c4::t_bebfcb2e33bb88 194-196,202
+docs/design.md
+  s_ef50abc14da0c4::t_b5e582afada3b7 119-120
+  s_ef50abc14da0c4::t_56939d071c071a 115-116
+  s_ef50abc14da0c4::t_524fe3686f7a69 107,121-131,323-324
+  s_ef50abc14da0c4::t_306e16215238f2 113
+  s_ef50abc14da0c4::t_87feb170b1c96e 114
+  s_ef50abc14da0c4::t_b9f4f7ec894c02 7
+  s_ef50abc14da0c4::t_4565898131ae60 109
+  s_ef50abc14da0c4::t_d969234c9160c7 111-112
+  s_ef50abc14da0c4::t_3f8996a5346203 117-118
+docs/verification/mobile-native.md
+  s_ef50abc14da0c4::t_b9f4f7ec894c02 5,48
+  s_ef50abc14da0c4::t_49b47b98afa79a 1-2,6-47
+  s_ef50abc14da0c4::t_4565898131ae60 3-4
+src/mobile/mobile.css
+  s_ef50abc14da0c4::t_bdc4defa5f1c9f 323-325,329
+  s_ef50abc14da0c4::t_b5e582afada3b7 60-61
+  s_ef50abc14da0c4::t_251da76a0245ad 304,330,348-351,358-359,363-364
+  s_ef50abc14da0c4::t_112b93dafbddae 1-7,59,62-84,113,117-249,251-253,255-275,277-300,302-303,305-309,312,332-338,340-342,353-357,361,365,369-374,377,381,383-386,388,391,394-398,400-401,403-430,432-444,446-457,459-466,468-487,489-504,506-522,524-533,535-557,559-560,563-568,570-584,586-595,597-634,636-653,655-714,716-749,751-770,772-873,875-878,880-972,974-1030,1034-1039,1043-1044
+  s_ef50abc14da0c4::t_c2079ca5cd8a96 32-43
+  s_ef50abc14da0c4::t_2e8becb2d3d685 874
+  s_ef50abc14da0c4::t_59f1e97b8c7871 19,52,276,301,375-376,378-380,382,387,389-390,392-393,399,402,973
+  s_ef50abc14da0c4::t_536cacd5f7e8be 8-18,20-31,44-51,53-58,114-116,1031-1033,1040-1042,1046-1051
+  s_ef50abc14da0c4::t_c4fcf310c3b135 310-311,313-322,326-328,331,339,343-347,352,360,362,366-368
+  s_ef50abc14da0c4::t_302dea3fc106a4 250,254,431,445,458,467,488,505,523,534,558,561-562,569,585,596,635,654,715,750,771,879,1045
+  s_ef50abc14da0c4::t_1875df1b16898a 85-112
+src/main.ts
+  s_ef50abc14da0c4::t_d2639785f9eff7 172-192
+  s_ef50abc14da0c4::t_30bab966b3440a 138-151
+src/mobile/app.d.ts
+  s_ef50abc14da0c4::t_30bab966b3440a 1
+scripts/mobile.e2e.mjs
+  s_ef50abc14da0c4::t_d877c97c3aa0b3 1-2,16,31
+  s_ef50abc14da0c4::t_97d25ff98b95d1 144
+  s_ef50abc14da0c4::t_bebfcb2e33bb88 169-170,176
+  s_ef50abc14da0c4::t_a68591f273b52e 21
+  s_ef50abc14da0c4::t_1875df1b16898a 3-15,17-20,22-30,32-143,145-168,171-175,177-245
+docs/prototypes/mobile-native.css
+  s_ef50abc14da0c4::t_a75ec9ba7b8e4b 1
+docs/prototypes/mobile-native.js
+  s_ef50abc14da0c4::t_7dcc1b0a55f3ad 12,23,29,37,44-45
+  s_ef50abc14da0c4::t_d851b27cb28ebd 1-11,13-22,24-28,30-36,38-43
+  s_ef50abc14da0c4::t_db6bfd5196a479 46
+package.json
+  s_ef50abc14da0c4::t_935486a85ef30f 25-27
+scripts/mobile-sea.e2e.mjs
+  s_ef50abc14da0c4::t_d355c62de673a9 15
+  s_ef50abc14da0c4::t_536cacd5f7e8be 1-14,16-123
+docs/research/mobile-sea-motion.md
+  s_ef50abc14da0c4::t_a3f00b660e4a63 40,42
+  s_ef50abc14da0c4::t_306e16215238f2 49
+  s_ef50abc14da0c4::t_d76dd69a45297b 59
+  s_ef50abc14da0c4::t_b9f4f7ec894c02 60
+  s_ef50abc14da0c4::t_87feb170b1c96e 38-39,41,43,52
+  s_ef50abc14da0c4::t_4565898131ae60 1-37,53-58
+  s_ef50abc14da0c4::t_d969234c9160c7 44-48,50-51
+src/mobile/sea.ts
+  s_ef50abc14da0c4::t_c4fcf310c3b135 58-59,69,73,80
+  s_ef50abc14da0c4::t_bdc4defa5f1c9f 56-57,106-108,110-112,165
+  s_ef50abc14da0c4::t_c22f4a4c535b24 273,285
+  s_ef50abc14da0c4::t_251da76a0245ad 47-52,55
+  s_ef50abc14da0c4::t_306e16215238f2 109
+  s_ef50abc14da0c4::t_536cacd5f7e8be 1-14,25-30,32-33,35,38,41-45,53-54,60-68,70-72,74-79,81-95,97-105,113-115,117-164,166-199,201-205,207-263,265-268,270-272,274-284,287-292,294,296-329,331-354
+  s_ef50abc14da0c4::t_8baaf812185a7b 16,18-24,36,40,46,96,200,264,269,286,330
+  s_ef50abc14da0c4::t_e0cfa78ada2a25 206
+  s_ef50abc14da0c4::t_30bab966b3440a 15,17,31,34,356
+  s_ef50abc14da0c4::t_1875df1b16898a 37,39,116,293,295,355
+docs/research/mobile-app-redesign.md
+  s_ef50abc14da0c4::t_1ceca6dc040664 1-2,4-179
+  s_ef50abc14da0c4::t_49b47b98afa79a 186-195
+  s_ef50abc14da0c4::t_b9f4f7ec894c02 3
+  s_ef50abc14da0c4::t_ad6a30c7abe539 180-185
+src/mobile/context.ts
+  s_ef50abc14da0c4::t_1875df1b16898a 1-7,9-38,40-224,226-235
+  s_ef50abc14da0c4::t_3aab4bdd4f9e52 8,39,225,236
+src/mobile/app.js
+  s_ef50abc14da0c4::t_2e8becb2d3d685 9,53,225,748,903
+  s_ef50abc14da0c4::t_6e4a8b0e990f0c 450-453,459,490,494,720-726,732-734,742-745
+  s_ef50abc14da0c4::t_c2079ca5cd8a96 528-530
+  s_ef50abc14da0c4::t_b2597a4428ee09 321
+  s_ef50abc14da0c4::t_f56ba77721dbea 862
+  s_ef50abc14da0c4::t_112b93dafbddae 1,4-8,10-49,51-52,54-108,115-203,206-222,224,226-241,243-278,280-317,319-320,330-336,338-352,354-396,399-449,460-461,463-489,495-496,498-509,511-513,518,539,541,543-544,553-654,661-697,703,706-712,715-719,735-741,746-747,749-845,863-902
+  s_ef50abc14da0c4::t_1d7ce114a1b4f3 318
+  s_ef50abc14da0c4::t_1875df1b16898a 110-113,242,279,322-329,337,397-398,454-458,491-493,542,655-660,727-729,846-861
+  s_ef50abc14da0c4::t_228be0dce2a8ee 223
+  s_ef50abc14da0c4::t_71fa57fb78e7db 50,497,510,519-521,532,538,698,702,714,731
+  s_ef50abc14da0c4::t_ac15440bf9d0a1 540
+  s_ef50abc14da0c4::t_6287f99ffdaa21 3
+  s_ef50abc14da0c4::t_59f1e97b8c7871 526-527
+  s_ef50abc14da0c4::t_bebfcb2e33bb88 545,552
+  s_ef50abc14da0c4::t_536cacd5f7e8be 204-205,514-517,522-525,531,533-537,546-551,699-701,704-705,713,730
+  s_ef50abc14da0c4::t_65bad9222ef1f3 2,109,114
+  s_ef50abc14da0c4::t_7fccd8caf8513d 353,462
+package-lock.json
+  s_ef50abc14da0c4::t_286725a3a17581 11-13,1437-1463,1479-1519,1699
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2d0e5028bc8e250b1dab156ad8e82db80788a027",
+  "prompts": {},
+  "sessions": {
+    "s_ef50abc14da0c4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1aa8e-2723-7c31-8623-9d5009f16b2e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
