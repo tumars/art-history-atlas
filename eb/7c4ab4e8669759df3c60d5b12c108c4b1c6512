@@ -1,0 +1,70 @@
+scripts/validate-content.mjs
+  s_e1d50679ec4029::t_c6d3eef63d1566 237-239
+  s_e1d50679ec4029::t_cf985f270467ee 45-69
+  s_e1d50679ec4029::t_517a1db95ade00 127-129
+docs/verification/mobile-ios.md
+  s_e1d50679ec4029::t_e7fe549e1aec47 84-91
+scripts/places.test.mjs
+  s_e1d50679ec4029::t_871ef96167c689 1-32
+docs/research/museum-browsing.md
+  s_e1d50679ec4029::t_667e7ca42849eb 108,110-112
+  s_e1d50679ec4029::t_3fcb18b22562ee 1-2,4-91,95-107,109
+  s_e1d50679ec4029::t_8ef5f215e994af 3
+  s_e1d50679ec4029::t_d061d88bb7e379 92-94
+src/mobile/app.js
+  s_e1d50679ec4029::t_871fc87cef55c1 8-9
+  s_e1d50679ec4029::t_7928bbcb60fd74 892
+  s_e1d50679ec4029::t_43ffe390dc71ed 323
+  s_e1d50679ec4029::t_29c44ba75acd78 321-322,324-327
+  s_e1d50679ec4029::t_40c3607a0aa29c 907
+  s_e1d50679ec4029::t_cc9465689cca66 1590-1592
+  s_e1d50679ec4029::t_87eb64a153cf2e 875-887
+  s_e1d50679ec4029::t_9ca8363415c008 902-905
+  s_e1d50679ec4029::t_a2d2998ef59078 430-483
+  s_e1d50679ec4029::t_443307b372efee 908-909
+  s_e1d50679ec4029::t_e865a2ca005741 371
+  s_e1d50679ec4029::t_54bf94957ac876 1662
+  s_e1d50679ec4029::t_7971644ed7dac3 1494
+  s_e1d50679ec4029::t_36505d58e86bf2 1844-1845
+  s_e1d50679ec4029::t_32f66044414526 1933
+  s_e1d50679ec4029::t_23999cbd29b317 558-559
+  s_e1d50679ec4029::t_cc3518b8e8e524 1530-1532
+  s_e1d50679ec4029::t_07dacad2769e49 103-127
+  s_e1d50679ec4029::t_85ddc77cd1754d 164
+  s_e1d50679ec4029::t_6e35560aee9db6 45-46
+  s_e1d50679ec4029::t_1ba2f825829dad 360-361
+  s_e1d50679ec4029::t_1ec3ca10dce1fc 548,552
+  s_e1d50679ec4029::t_33715571a72db3 567
+docs/design.md
+  s_e1d50679ec4029::t_7d7080edac2e92 128
+  s_e1d50679ec4029::t_2603d6de7cee29 160
+  s_e1d50679ec4029::t_2f1f3d441ab7cd 115
+  s_e1d50679ec4029::t_12e49c7643692b 319
+  s_e1d50679ec4029::t_68d0790a6ae787 119
+content/places.json
+  s_e1d50679ec4029::t_6e02468d9d40ef 1-257
+src/content.ts
+  s_e1d50679ec4029::t_e6d83636c1fb83 3-4
+  s_e1d50679ec4029::t_d2e2672abf4bb6 14-15
+src/lib/places.ts
+  s_e1d50679ec4029::t_f2c697f9d16723 1-69
+src/mobile/mobile.css
+  s_e1d50679ec4029::t_e8731afc0b66f0 753
+  s_e1d50679ec4029::t_705d11892e7bae 751-752,754-789
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "eb7c4ab4e8669759df3c60d5b12c108c4b1c6512",
+  "prompts": {},
+  "sessions": {
+    "s_e1d50679ec4029": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "90ed3daa-7a23-4895-8f65-17007f2659db",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
