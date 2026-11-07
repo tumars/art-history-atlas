@@ -322,7 +322,7 @@ const thumbOr = (w, label) => w ? `<img class="thumb" src="${thumb(w.id)}" alt="
 const placeRow = (p, small) => { const ws = worksAt(p.id); return `<button class="lrow" style="--sep-left:74px" data-act="place" data-v="${p.id}">${thumbOr(coverOf(ws), p.name)}<div class="main"><b>${esc(p.name)}</b><small>${esc(small ?? `${ws.length} 件${p.area ? ' · ' + p.area : ''}`)}</small></div>${chev}</button>`; };
 const cityRow = c => { const ws = cityWorks(c.id); return `<button class="lrow" style="--sep-left:74px" data-act="city" data-v="${c.id}">${thumbOr(coverOf(ws), c.name)}<div class="main"><b>${esc(c.name)}</b><small class="one">${esc(placeNames(placesIn(c.id)))}</small></div><span class="val">${ws.length} 件</span>${chev}</button>`; };
 const placeCard = p => { const ws = worksAt(p.id), w = coverOf(ws); return `<button class="card scard2 placecard press" data-act="place" data-v="${p.id}"><div class="im">${w ? `<img src="${thumb(w.id)}" alt="" loading="lazy">` : ''}</div><div class="tx"><b>${esc(p.name)}</b><small>${esc(placeWhere(p))} · ${ws.length} 件</small></div></button>`; };
-// 按展厅分组的作品格，用在城市页和地点页
+// 按时期分组的作品格，用在城市页和地点页
 const byPeriodTiles = (ws, list) => D.periods.map(p => { const xs = ws.filter(w => w.period === p.id && hasImg(w)); return xs.length ? `<div class="ph-h gc" style="${gc(groupOf(p))}"><span><i class="dot" style="background:var(--c)"></i>${esc(p.name)}</span><small>${xs.length} 件</small></div><div class="tiles">${xs.map(w => tile(w.id, list)).join('')}</div>` : ''; }).join('');
 const placeFoot = `<p class="foot">只列出画间收录的作品，不是这里的全部收藏。开放时间、展出与借展情况以官网为准。</p>`;
 
@@ -368,7 +368,7 @@ const VIEWS = {
         + sec('看画故事', `<small>${stories.length} 篇</small>`) + `<div class="rail">${stories.filter(x => x !== feat).map(x => `<button class="card scard2 press" data-act="story" data-v="${x.id}"><div class="im"><img src="${display(x.steps[0].works[0])}" alt="" loading="lazy"></div><div class="tx"><b>${cl(x.title)}</b><small>${x.minutes} 分钟 · ${esc(x.deck)}</small></div></button>`).join('')}</div>`
         + sec('现代艺术专题') + `<div class="block card rows">${routes.map(x => `<button class="lrow" style="--sep-left:72px" data-act="story" data-v="${x.id}"><img class="thumb" src="${thumb(x.steps[0].works[0])}" alt=""><div class="main"><b>${esc(x.title)}</b><small>${esc(x.deck)}</small></div>${chev}</button>`).join('')}</div>`;
     }
-    return { cls: 'root', html: bare + `<div class="scroll">${seg('seg', [['chrono', '年表'], ['hall', '展厅'], ['story', '故事'], ['place', '去哪看']], r.seg)}${body}</div>`, mount };
+    return { cls: 'root', html: bare + `<div class="scroll">${seg('seg', [['chrono', '年表'], ['hall', '时期'], ['story', '故事'], ['place', '去哪看']], r.seg)}${body}</div>`, mount };
   },
 
   // 人物：时光（时间带 + 此时在世的人）、关系链、名录
@@ -419,10 +419,10 @@ const VIEWS = {
   hall(r) {
     const p = period(r.id), ws = worksOf(p.id).filter(hasImg), i = D.periods.indexOf(p), next = D.periods[i + 1], g = groupOf(p);
     return {
-      html: nav({ title: p.name }) + `<div class="scroll"><div class="card hall-top pastel gc" style="${gc(g)}"><span class="k">第 ${i + 1} 间 · ${esc(p.span)}</span><h1>${esc(p.name)}</h1><q>${cl(p.question || p.thesis)}</q><div class="chips">${(p.keywords || []).map(k => `<span class="pchip">${esc(k)}</span>`).join('')}</div></div>
+      html: nav({ title: p.name }) + `<div class="scroll"><div class="card hall-top pastel gc" style="${gc(g)}"><span class="k">第 ${i + 1} 个时期 · ${esc(p.span)}</span><h1>${esc(p.name)}</h1><q>${cl(p.question || p.thesis)}</q><div class="chips">${(p.keywords || []).map(k => `<span class="pchip">${esc(k)}</span>`).join('')}</div></div>
         <div style="padding:16px 16px 0">${ws[0] ? `<button class="pbtn" data-act="work" data-v="${ws[0].id}" data-list="period:${p.id}">${icon('play', 'fill')}从第一件看 · ${ws.length} 件</button>` : ''}</div>
-        ${sec('本厅作品')}<div class="tiles">${ws.map(w => tile(w.id, 'period:' + p.id)).join('')}</div>
-        ${sec('更多')}<div class="block card rows"><button class="lrow" data-act="era" data-v="${p.id}"><div class="main"><b>认识这个时代</b><small>${esc(p.thesis.slice(0, 34))}…</small></div>${chev}</button>${p.diagram ? `<button class="lrow" data-act="ctx" data-v="diagram:${p.id}"><div class="main"><b>互动图解</b><small>${esc(p.diagram.title)}</small></div>${chev}</button>` : ''}${next ? `<button class="lrow" data-act="hall" data-v="${next.id}"><div class="main"><b>下一间 · ${esc(next.name)}</b><small>${esc(p.bridge || next.span)}</small></div>${chev}</button>` : ''}</div></div>`,
+        ${sec('这个时期的作品')}<div class="tiles">${ws.map(w => tile(w.id, 'period:' + p.id)).join('')}</div>
+        ${sec('更多')}<div class="block card rows"><button class="lrow" data-act="era" data-v="${p.id}"><div class="main"><b>认识这个时代</b><small>${esc(p.thesis.slice(0, 34))}…</small></div>${chev}</button>${p.diagram ? `<button class="lrow" data-act="ctx" data-v="diagram:${p.id}"><div class="main"><b>互动图解</b><small>${esc(p.diagram.title)}</small></div>${chev}</button>` : ''}${next ? `<button class="lrow" data-act="hall" data-v="${next.id}"><div class="main"><b>下一个时期 · ${esc(next.name)}</b><small>${esc(p.bridge || next.span)}</small></div>${chev}</button>` : ''}</div></div>`,
       mount: el => ws[0] && applyTint(el, ws[0].id, thumb(ws[0].id)),
     };
   },
@@ -443,7 +443,7 @@ const VIEWS = {
     };
   },
 
-  // 地点：必看、时代分布、按展厅看、这里的艺术家、同城还有
+  // 地点：必看、时代分布、按时期看、这里的艺术家、同城还有
   place(r) {
     const p = placeById(r.id), c = cityById(p.city), ws = worksAt(p.id), imgs = ws.filter(hasImg), must = mustSee(ws), cover = must[0] || imgs[0];
     const parent = p.parent && placeById(p.parent), list = 'place:' + p.id;
@@ -463,7 +463,7 @@ const VIEWS = {
         ${imgs[0] ? `<div style="padding:16px 16px 0"><button class="pbtn" data-act="work" data-v="${imgs[0].id}" data-list="${list}">${icon('play', 'fill')}${imgs.length > 1 ? `按年代看 · ${imgs.length} 件` : '看这件作品'}</button></div>` : ''}
         ${must.length > 1 && imgs.length > 4 ? sec('必看', `<small>出现在故事与年表里</small>`) + `<div class="rail">${must.map(w => wcard(w.id, list)).join('')}</div>` : ''}
         ${groups.length > 1 ? sec('时代分布') + `<div class="block card pad"><div class="dist">${groups.map(([g, n]) => `<i class="gc" style="${gc(g)};flex:${n}"></i>`).join('')}</div><div class="dist-l">${groups.map(([g, n]) => `<span class="gc" style="${gc(g)}"><i class="dot" style="background:var(--c)"></i>${esc(g.name)} ${n}</span>`).join('')}</div></div>` : ''}
-        ${sec(new Set(ws.map(w => w.period)).size > 1 ? '按展厅看' : '收录作品')}${byPeriodTiles(ws, list)}
+        ${sec(new Set(ws.map(w => w.period)).size > 1 ? '按时期看' : '收录作品')}${byPeriodTiles(ws, list)}
         ${artists.size ? sec('这里的艺术家', `<small>${artists.size} 位</small>`) + `<div class="block card rows">${[...artists].sort((a, b) => b[1] - a[1] || person(a[0]).born - person(b[0]).born).slice(0, 12).map(([id, n]) => personRow(person(id), `${n} 件 · ${lifespan(person(id))}`)).join('')}</div>` : ''}
         ${nearby.length ? sec(`${c.name}还有`, nearby.length > 5 ? `<button class="more" data-act="city" data-v="${c.id}">全部 ${nearby.length + 1} 处</button>` : '') + `<div class="block card rows">${nearby.slice(0, 5).map(x => placeRow(x)).join('')}</div>` : ''}
         ${placeFoot}</div>`,
@@ -514,7 +514,7 @@ const VIEWS = {
     };
   },
 
-  // 脉络：艺术中心地图、派系、理性与激情、并置、尺度、展厅图解；内容和图解实现与上一版共用
+  // 脉络：艺术中心地图、派系、理性与激情、并置、尺度、时期图解；内容和图解实现与上一版共用
   context(r) {
     const titles = { relay: '艺术中心地图', schools: '派系与关系', 'people-life': '派系生命线', pendulum: '理性与激情', pairs: '并置看画', sizes: '画有多大', chronology: '沿着年代看' };
     const title = r.id.startsWith('diagram:') ? period(r.id.slice(8))?.diagram?.title || '图解' : titles[r.id] || '脉络';
@@ -550,14 +550,14 @@ function workInfo(r) {
     + (storiesOf(w.id).length ? sec('在故事里') + `<div class="stackv">${storiesOf(w.id).map(storyCard).join('')}</div>` : '')
     + (by && worksByPerson(by.id).length > 1 ? sec(`${by.name}的作品`, `<button class="more" data-act="person" data-v="${by.id}">全部</button>`) + `<div class="rail">${worksByPerson(by.id).filter(x => x.id !== w.id).slice(0, 12).map(x => wcard(x.id, 'by:' + by.id)).join('')}</div>` : '')
     + (hereWorks.length ? sec(`同在${here.name}`, `<button class="more" data-act="place" data-v="${here.id}">${worksAt(here.id).length} 件</button>`) + `<div class="rail">${hereWorks.slice(0, 12).map(x => wcard(x.id, 'place:' + here.id)).join('')}</div>` : '')
-    + sec('同一展厅', `<button class="more" data-act="hall" data-v="${p.id}">${esc(p.short)}</button>`) + `<div class="rail">${worksOf(p.id).filter(x => hasImg(x) && x.id !== w.id).slice(0, 14).map(x => wcard(x.id, 'period:' + p.id)).join('')}</div>`;
+    + sec('同一时期',`<button class="more" data-act="hall" data-v="${p.id}">${esc(p.short)}</button>`) + `<div class="rail">${worksOf(p.id).filter(x => hasImg(x) && x.id !== w.id).slice(0, 14).map(x => wcard(x.id, 'period:' + p.id)).join('')}</div>`;
   const c = D.credits[w.id] || {};
   const info = sec('作品') + `<div class="block card rows">
       <div class="lrow static"><div class="main"><b>年代</b></div><span class="val">${esc(w.yearText)}</span></div>
       <div class="lrow static"><div class="main"><b>材质</b></div><span class="val">${esc(w.medium)}</span></div>
       ${where.length === 1 ? `<button class="lrow" data-act="place" data-v="${here.id}"><div class="main"><b>现藏</b></div><span class="val">${esc(w.location)}</span>${chev}</button>`
         : `<div class="lrow static"><div class="main"><b>现藏</b></div><span class="val">${esc(w.location)}</span></div>${where.map(x => `<button class="lrow" data-act="place" data-v="${x.id}"><div class="main"><b>${esc(x.name)}</b></div><span class="val">${esc(placeWhere(x))}</span>${chev}</button>`).join('')}`}
-      <button class="lrow" data-act="hall" data-v="${p.id}"><div class="main"><b>展厅</b></div><span class="val">${esc(p.name)}</span>${chev}</button></div>
+      <button class="lrow" data-act="hall" data-v="${p.id}"><div class="main"><b>时期</b></div><span class="val">${esc(p.name)}</span>${chev}</button></div>
     ${w.imageNote ? `<p class="foot">${esc(w.imageNote)}</p>` : ''}
     ${sec('图片')}<div class="block card rows">
       <div class="lrow static"><div class="main"><b>作者</b></div><span class="val">${esc(c.author || '—')}</span></div>
@@ -1681,7 +1681,7 @@ const ACT = {
   bandSet: v => { const el = stackEl('guide').firstElementChild; el.route.band = v; closeSheet(); draw(el); },
   event: v => {
     const e = D.events[+v], ps = (e.periods || []).map(period).filter(Boolean);
-    openSheet({ title: e.name, detents: ['fit', 'large'], html: `<div class="prose"><p class="mt">${esc(e.yearText || yr(e.year))}</p><p class="lead">${esc(e.what)}</p><h3>对艺术的影响</h3><p>${esc(e.art)}</p></div>${ps.length ? `<div class="gl">相关展厅</div><div class="card rows">${ps.map(p => `<button class="lrow" style="--sep-left:74px" data-act="sheetGo" data-v="hall:${p.id}"><img class="thumb" src="${thumb(firstImg(p.id))}" alt=""><div class="main"><b>${esc(p.name)}</b><small>${esc(p.span)}</small></div>${chev}</button>`).join('')}</div>` : ''}` });
+    openSheet({ title: e.name, detents: ['fit', 'large'], html: `<div class="prose"><p class="mt">${esc(e.yearText || yr(e.year))}</p><p class="lead">${esc(e.what)}</p><h3>对艺术的影响</h3><p>${esc(e.art)}</p></div>${ps.length ? `<div class="gl">相关时期</div><div class="card rows">${ps.map(p => `<button class="lrow" style="--sep-left:74px" data-act="sheetGo" data-v="hall:${p.id}"><img class="thumb" src="${thumb(firstImg(p.id))}" alt=""><div class="main"><b>${esc(p.name)}</b><small>${esc(p.span)}</small></div>${chev}</button>`).join('')}</div>` : ''}` });
   },
   encounter: v => {
     const e = D.encounters[+v], ps = e.people.map(person).filter(Boolean);

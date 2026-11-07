@@ -48,7 +48,7 @@ export function contextPage(id: string, value: string) {
         t.periods.map((p) => [p.id, `${p.short} · ${p.span}`]),
         p.id,
       ) +
-      `<h3>${esc(p.name)}</h3><p>${esc(p.thesis)}</p><button data-hall="${p.id}" class="primary">进入这一展厅</button>`;
+      `<h3>${esc(p.name)}</h3><p>${esc(p.thesis)}</p><button data-hall="${p.id}" class="primary">进入这个时期</button>`;
     body += t.bands
       .map(
         (b) =>
@@ -88,7 +88,7 @@ export function contextPage(id: string, value: string) {
         t.meta.relay.map((x) => [x.period, `${x.place} · ${x.era}`]),
         relay.period,
       ) +
-      `<svg class="context-map" viewBox="${bounds}" role="img" aria-label="艺术中心位置示意，经纬度定位，不表示国界">${land}<path d="${points.map((p, i) => `${i ? "L" : "M"}${x(p.lon)},${y(p.lat)}`).join(" ")}" fill="none" stroke="#9d9472" stroke-width="1"/>${points.map((p) => `<circle cx="${x(p.lon)}" cy="${y(p.lat)}" r="${p.period === relay.period ? 6 : 2}" fill="${p.period === relay.period ? "#a75237" : "#7b806e"}"/>`).join("")}${relay.points.map((p) => `<text x="${x(p.lon) + 8}" y="${y(p.lat) - 8}">${esc(p.name)}</text>`).join("")}</svg><p class="lede">海岸线：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a>。连线仅为主线概览，不代表唯一中心或直接传播路径。</p><h3>${esc(relay.place)}</h3><p>${esc(relay.note)}</p><button class="primary" data-hall="${relay.period}">进入相关展厅</button>`;
+      `<svg class="context-map" viewBox="${bounds}" role="img" aria-label="艺术中心位置示意，经纬度定位，不表示国界">${land}<path d="${points.map((p, i) => `${i ? "L" : "M"}${x(p.lon)},${y(p.lat)}`).join(" ")}" fill="none" stroke="#9d9472" stroke-width="1"/>${points.map((p) => `<circle cx="${x(p.lon)}" cy="${y(p.lat)}" r="${p.period === relay.period ? 6 : 2}" fill="${p.period === relay.period ? "#a75237" : "#7b806e"}"/>`).join("")}${relay.points.map((p) => `<text x="${x(p.lon) + 8}" y="${y(p.lat) - 8}">${esc(p.name)}</text>`).join("")}</svg><p class="lede">海岸线：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a>。连线仅为主线概览，不代表唯一中心或直接传播路径。</p><h3>${esc(relay.place)}</h3><p>${esc(relay.note)}</p><button class="primary" data-hall="${relay.period}">进入相关时期</button>`;
   } else if (id === "schools") {
     const school = t.schools.find((x) => x.id === value) || t.schools[0];
     body =
