@@ -748,5 +748,44 @@ body.mobile-shell { margin: 0; background: var(--bg); color: var(--ink); font: 1
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .page.sea { --sea-pad: 3px; --sea-art: #1e1b17; --sea-edge: rgba(224, 195, 140, .4); --f1: brightness(.82); --f2: brightness(.62) saturate(.85) blur(.2px); } }
 :root[data-theme="dark"] .page.sea { --sea-pad: 3px; --sea-art: #1e1b17; --sea-edge: rgba(224, 195, 140, .4); --f1: brightness(.82); --f2: brightness(.62) saturate(.85) blur(.2px); }
 .sea-art img { border-radius: 1px; }
+/* ───── 去哪看：城市与地点 ───── */
+.placecard { width: 196px; }
+.lrow small.one { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.placecard .im { height: 128px; background: var(--fill); }
+.placecard b { font-family: inherit; font-size: 15px; }
+.place-top { display: grid; gap: 4px; padding: 18px 22px 6px; }
+.place-top .k { font-size: 12px; font-weight: 600; letter-spacing: .06em; color: var(--ink2); }
+.place-top h1 { font-size: 30px; font-weight: 700; letter-spacing: -.02em; line-height: 1.2; }
+.place-top p { font-size: 15px; color: var(--ink2); line-height: 1.5; }
+/* 城市页顶部三张作品：一大两小 */
+.place-mosaic { display: grid; gap: 4px; margin: 0 12px; height: min(40vh, 300px); border-radius: 26px; overflow: hidden; grid-template-columns: 1.6fr 1fr; grid-template-rows: 1fr 1fr; }
+.place-mosaic button { overflow: hidden; background: var(--fill); }
+.place-mosaic img { width: 100%; height: 100%; object-fit: cover; }
+.place-mosaic button:first-child { grid-row: span 2; }
+.place-mosaic.n1 { grid-template-columns: 1fr; }
+.place-mosaic.n2 { grid-template-rows: 1fr; }
+.place-mosaic.n2 button:first-child { grid-row: auto; }
+.place-mosaic.n0 { display: none; }
+.story-top .orig { font-size: 13px; opacity: .78; }
+.place-facts { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 20px 0; }
+.place-facts a.pchip { display: inline-flex; align-items: center; gap: 4px; color: var(--tint); text-decoration: none; font-weight: 500; }
+.place-facts .ico { width: 13px; height: 13px; stroke-width: 2.2; }
+.place-note { padding-top: 14px; gap: 6px; }
+.place-note p { font-size: 14.5px; line-height: 1.6; color: var(--ink2); }
+.place-note .inl { color: var(--tint); font-weight: 600; padding: 0 2px; }
+.ph-h { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 20px 8px; }
+.ph-h span { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; }
+.ph-h .dot { width: 8px; height: 8px; }
+.ph-h small { font-size: 13px; color: var(--ink2); }
+.tiles + .ph-h { padding-top: 18px; }
+/* 时代分布：按大阶段着色的分段条 */
+.dist { display: flex; gap: 2px; height: 12px; border-radius: 6px; overflow: hidden; }
+.dist i { background: var(--c); min-width: 4px; }
+.dist-l { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 12px; font-size: 13px; color: var(--ink2); }
+.dist-l span { display: inline-flex; align-items: center; gap: 6px; }
+.dist-l .dot { width: 8px; height: 8px; }
+.work-head .where { justify-self: start; display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 14px; color: var(--ink); text-align: left; }
+.work-head .where .ico { width: 15px; height: 15px; color: var(--tint); flex: none; }
+
 /* 段落按可用宽度正常折行。text-wrap: pretty 在 iOS 26 Safari 里会为了行长均衡提前断行，右侧留下大片空白；桌面样式也给 p 设了它 */
 .mobile-shell :is(p, li, q, blockquote, small, b, span, h1, h2, h3, h4) { text-wrap-style: auto !important; }

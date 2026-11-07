@@ -1,5 +1,7 @@
 import type { ContextBand, Credit, Encounter, Person, Site, Tradition, TraditionMeta } from "./types";
 import siteJson from "../content/site.json";
+import placesJson from "../content/places.json";
+import type { PlacesData } from "./lib/places";
 
 /**
  * 内容加载。content/traditions/<体系>/ 下的 JSON 在构建时打包；
@@ -9,6 +11,8 @@ const traditionFiles = import.meta.glob("../content/traditions/*/*.json", { eage
 const contextFiles = import.meta.glob("../content/context/*.json", { eager: true, import: "default" });
 
 export const SITE = siteJson as Site;
+/** 作品所在的城市与地点，各体系共用 */
+export const PLACES = placesJson as PlacesData;
 
 function file<T>(tradition: string, name: string, optional = false): T {
   const v = traditionFiles[`../content/traditions/${tradition}/${name}.json`];

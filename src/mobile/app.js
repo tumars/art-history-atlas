@@ -5,6 +5,8 @@ import { state } from "../state";
 import { searchCatalog } from "../lib/search";
 import { arrangeWorks, skyLoop } from "../sections/hero-space";
 import { contextPage, mountContext } from "./context";
+import { PLACES } from "../content";
+import { indexPlaces, PLACE_KIND } from "../lib/places";
 
 const app = document.querySelector('#mobile-app');
 // ?still 关闭动效，便于截图检查静态布局
@@ -40,6 +42,8 @@ const P = {
   chain: 'M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1 M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1',
   clock: 'M12 3.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17z M12 7.5V12l3 2',
   spark: 'M12 4v4 M12 16v4 M4 12h4 M16 12h4 M6.5 6.5l2.5 2.5 M15 15l2.5 2.5 M17.5 6.5L15 9 M9 15l-2.5 2.5',
+  pin: 'M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z M12 7.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z',
+  map: 'M9 4.5L3.5 6.5v13L9 17.5l6 2 5.5-2v-13L15 6.5z M9 4.5v13 M15 6.5v13',
 };
 const icon = (n, cls = '') => `<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true"><path d="${P[n]}"/></svg>`;
 
@@ -96,6 +100,31 @@ function relationsOf(id) {
 let hubList;
 const hubs = () => hubList ??= [...D.people].sort((a, b) => relationsOf(b.id).length - relationsOf(a.id).length).slice(0, 14);
 
+// 地点：作品按 content/places.json 归到城市里的博物馆、教堂与原址
+let PX, storyIds;
+const placeById = id => PX.place.get(id);
+const cityById = id => PX.city.get(id);
+const worksAt = id => PX.worksAt.get(id) || [];
+const placesOf = id => PX.placesOf.get(id) || [];
+const placesIn = id => PX.placesIn.get(id) || [];
+const cityWorks = id => [...new Set(placesIn(id).flatMap(p => worksAt(p.id)))].sort((a, b) => a.year - b.year);
+const placeWhere = p => [cityById(p.city).name, p.area].filter(Boolean).join(' · ');
+// 必看：出现在看画故事里的优先，其次是年表上的代表作，同分按年份
+function mustSee(ws, n = 6) {
+  storyIds ??= new Set(D.readings.flatMap(r => r.steps.flatMap(s => s.works)));
+  const score = w => (storyIds.has(w.id) ? 2 : 0) + (w.timeline ? 1 : 0);
+  return ws.filter(w => hasImg(w) && score(w)).sort((a, b) => score(b) - score(a) || a.year - b.year).slice(0, n);
+}
+const coverOf = ws => mustSee(ws, 1)[0] || ws.find(hasImg);
+const placeNames = ps => ps.length < 3 ? ps.map(p => p.name).join('、') : `${ps[0].name}、${ps[1].name}等 ${ps.length} 处`;
+// 按国家分组的城市，国家和城市都按作品数从多到少
+function citiesByCountry() {
+  const out = new Map();
+  [...PX.placesIn.keys()].map(cityById).forEach(c => out.set(c.country, [...(out.get(c.country) || []), c]));
+  const n = c => cityWorks(c.id).length, total = cs => cs.reduce((s, c) => s + n(c), 0);
+  return [...out].map(([k, cs]) => [k, cs.sort((a, b) => n(b) - n(a))]).sort((a, b) => total(b[1]) - total(a[1]));
+}
+
 // ───── 状态 ─────
 const TABS = [['sea', '画海', 'sea'], ['guide', '导览', 'guide'], ['people', '人物', 'people'], ['saved', '收藏', 'saved']];
 const S = { tab: 'sea', prevTab: 'sea', query: '', recent: [], viewed: [], results: [] };
@@ -132,7 +161,7 @@ let tabbar, qInput, safeTop = 0;
 function shell() {
   app.innerHTML = `<i class="probe"></i><div class="app-body">${['sea', 'guide', 'people', 'saved', 'search'].map(t => `<div class="stack" data-stack="${t}" hidden></div>`).join('')}</div>
   <nav class="tabbar" aria-label="主要区域"><div class="cap glass"><span class="pill"></span>${TABS.map(([id, label, ic]) => `<button data-act="tab" data-v="${id}">${icon(ic)}<span>${label}</span></button>`).join('')}</div>
-  <label class="srch glass" data-act="openSearch">${icon('search')}<input id="q" type="search" enterkeyhint="search" autocomplete="off" placeholder="作品、艺术家、时期" aria-label="搜索全部内容"><button class="clear" data-act="clearQ" aria-label="清除">${icon('close')}</button></label></nav>
+  <label class="srch glass" data-act="openSearch">${icon('search')}<input id="q" type="search" enterkeyhint="search" autocomplete="off" placeholder="作品、艺术家、博物馆" aria-label="搜索全部内容"><button class="clear" data-act="clearQ" aria-label="清除">${icon('close')}</button></label></nav>
   <div class="hud glass" role="status" aria-live="polite"></div>`;
   tabbar = app.querySelector('.tabbar');
   qInput = app.querySelector('#q');
@@ -289,6 +318,13 @@ const CONTEXTS = [['relay', '艺术中心地图', '艺术为什么在这里发�
 const saveIcon = id => icon('saved', isSaved(id) ? 'fill saved-on' : '');
 const storyCard = r => `<button class="card scard press" data-act="story" data-v="${r.id}"><img src="${thumb(r.steps[0].works[0])}" alt=""><div><b>${esc(r.title)}</b><small>${r.minutes} 分钟 · ${r.steps.length} 步</small></div>${icon('chev')}</button>`;
 const personRow = (o, small, act = 'person') => `<button class="lrow" style="--sep-left:68px" data-act="${act}" data-v="${o.id}">${avatar(o)}<div class="main"><b>${esc(o.name)}</b><small>${esc(small)}</small></div>${chev}</button>`;
+const thumbOr = (w, label) => w ? `<img class="thumb" src="${thumb(w.id)}" alt="" loading="lazy">` : `<span class="thumb noimg">${esc(label[0])}</span>`;
+const placeRow = (p, small) => { const ws = worksAt(p.id); return `<button class="lrow" style="--sep-left:74px" data-act="place" data-v="${p.id}">${thumbOr(coverOf(ws), p.name)}<div class="main"><b>${esc(p.name)}</b><small>${esc(small ?? `${ws.length} 件${p.area ? ' · ' + p.area : ''}`)}</small></div>${chev}</button>`; };
+const cityRow = c => { const ws = cityWorks(c.id); return `<button class="lrow" style="--sep-left:74px" data-act="city" data-v="${c.id}">${thumbOr(coverOf(ws), c.name)}<div class="main"><b>${esc(c.name)}</b><small class="one">${esc(placeNames(placesIn(c.id)))}</small></div><span class="val">${ws.length} 件</span>${chev}</button>`; };
+const placeCard = p => { const ws = worksAt(p.id), w = coverOf(ws); return `<button class="card scard2 placecard press" data-act="place" data-v="${p.id}"><div class="im">${w ? `<img src="${thumb(w.id)}" alt="" loading="lazy">` : ''}</div><div class="tx"><b>${esc(p.name)}</b><small>${esc(placeWhere(p))} · ${ws.length} 件</small></div></button>`; };
+// 按展厅分组的作品格，用在城市页和地点页
+const byPeriodTiles = (ws, list) => D.periods.map(p => { const xs = ws.filter(w => w.period === p.id && hasImg(w)); return xs.length ? `<div class="ph-h gc" style="${gc(groupOf(p))}"><span><i class="dot" style="background:var(--c)"></i>${esc(p.name)}</span><small>${xs.length} 件</small></div><div class="tiles">${xs.map(w => tile(w.id, list)).join('')}</div>` : ''; }).join('');
+const placeFoot = `<p class="foot">只列出画间收录的作品，不是这里的全部收藏。开放时间、展出与借展情况以官网为准。</p>`;
 
 const VIEWS = {
   // 画海：漂浮画作（浅色是晨光，深色是夜色）或按时期分组的网格
@@ -321,7 +357,8 @@ const VIEWS = {
         const ps = D.periods.filter(p => p.group === g.id);
         return `<div class="gl">${esc(g.name)}</div><div class="grid2">${ps.map(p => `<button class="card hcard pastel gc press" style="${gc(g)}" data-act="hall" data-v="${p.id}"><span class="n">${String(D.periods.indexOf(p) + 1).padStart(2, '0')}</span><div class="im">${imgsOf(p.id, 2).map(id => `<img src="${thumb(id)}" alt="" loading="lazy">`).join('')}</div><div><b>${esc(p.short)}</b><small>${esc(p.span)}</small></div></button>`).join('')}</div>`;
       }).join('');
-    } else {
+    } else if (r.seg === 'place') body = placesHtml();
+    else {
       const stories = D.readings.filter(x => x.kind === 'story'), routes = D.readings.filter(x => x.kind === 'route');
       const last = Object.entries(progress).sort((a, b) => b[1].t - a[1].t)[0];
       const lr = last && D.readings.find(x => x.id === last[0]);
@@ -331,7 +368,7 @@ const VIEWS = {
         + sec('看画故事', `<small>${stories.length} 篇</small>`) + `<div class="rail">${stories.filter(x => x !== feat).map(x => `<button class="card scard2 press" data-act="story" data-v="${x.id}"><div class="im"><img src="${display(x.steps[0].works[0])}" alt="" loading="lazy"></div><div class="tx"><b>${cl(x.title)}</b><small>${x.minutes} 分钟 · ${esc(x.deck)}</small></div></button>`).join('')}</div>`
         + sec('现代艺术专题') + `<div class="block card rows">${routes.map(x => `<button class="lrow" style="--sep-left:72px" data-act="story" data-v="${x.id}"><img class="thumb" src="${thumb(x.steps[0].works[0])}" alt=""><div class="main"><b>${esc(x.title)}</b><small>${esc(x.deck)}</small></div>${chev}</button>`).join('')}</div>`;
     }
-    return { cls: 'root', html: bare + `<div class="scroll">${seg('seg', [['chrono', '年表'], ['hall', '展厅'], ['story', '故事']], r.seg)}${body}</div>`, mount };
+    return { cls: 'root', html: bare + `<div class="scroll">${seg('seg', [['chrono', '年表'], ['hall', '展厅'], ['story', '故事'], ['place', '去哪看']], r.seg)}${body}</div>`, mount };
   },
 
   // 人物：时光（时间带 + 此时在世的人）、关系链、名录
@@ -387,6 +424,60 @@ const VIEWS = {
         ${sec('本厅作品')}<div class="tiles">${ws.map(w => tile(w.id, 'period:' + p.id)).join('')}</div>
         ${sec('更多')}<div class="block card rows"><button class="lrow" data-act="era" data-v="${p.id}"><div class="main"><b>认识这个时代</b><small>${esc(p.thesis.slice(0, 34))}…</small></div>${chev}</button>${p.diagram ? `<button class="lrow" data-act="ctx" data-v="diagram:${p.id}"><div class="main"><b>互动图解</b><small>${esc(p.diagram.title)}</small></div>${chev}</button>` : ''}${next ? `<button class="lrow" data-act="hall" data-v="${next.id}"><div class="main"><b>下一间 · ${esc(next.name)}</b><small>${esc(p.bridge || next.span)}</small></div>${chev}</button>` : ''}</div></div>`,
       mount: el => ws[0] && applyTint(el, ws[0].id, thumb(ws[0].id)),
+    };
+  },
+
+  // 城市：博物馆与教堂、原址分两组，下面是这座城市收录的作品
+  city(r) {
+    const c = cityById(r.id), ps = placesIn(c.id), ws = cityWorks(c.id), imgs = ws.filter(hasImg);
+    const top = [...mustSee(ws, 3), ...imgs].filter((w, i, a) => a.indexOf(w) === i).slice(0, 3);
+    const museums = ps.filter(p => p.kind === 'museum'), others = ps.filter(p => p.kind !== 'museum');
+    return {
+      html: nav({ title: c.name }) + `<div class="scroll"><div class="place-mosaic n${top.length}">${top.map(w => `<button data-act="work" data-v="${w.id}" data-list="city:${c.id}" data-zoom="${w.id}" data-ctx="${w.id}"><img src="${(top.length > 1 && w !== top[0] ? thumb : display)(w.id)}" alt="" loading="lazy"></button>`).join('')}</div>
+        <div class="place-top"><span class="k">${esc(c.country)}</span><h1>${esc(c.name)}</h1><p>画间收录 ${ws.length} 件 · ${ps.length} 处地点</p></div>
+        ${imgs[0] ? `<div style="padding:4px 16px 0"><button class="pbtn" data-act="work" data-v="${imgs[0].id}" data-list="city:${c.id}">${icon('play', 'fill')}从第一件看 · ${imgs.length} 件</button></div>` : ''}
+        ${museums.length ? sec('博物馆', `<small>${museums.length} 处</small>`) + `<div class="block card rows">${museums.map(p => placeRow(p)).join('')}</div>` : ''}
+        ${others.length ? sec('教堂、宫殿与原址', `<small>${others.length} 处</small>`) + `<div class="block card rows">${others.map(p => placeRow(p, `${worksAt(p.id).length} 件 · ${PLACE_KIND[p.kind]}${p.area ? ' · ' + p.area : ''}`)).join('')}</div>` : ''}
+        ${sec('这座城市的作品')}${byPeriodTiles(ws, 'city:' + c.id)}${placeFoot}</div>`,
+      mount: el => top[0] && applyTint(el, top[0].id, thumb(top[0].id)),
+    };
+  },
+
+  // 地点：必看、时代分布、按展厅看、这里的艺术家、同城还有
+  place(r) {
+    const p = placeById(r.id), c = cityById(p.city), ws = worksAt(p.id), imgs = ws.filter(hasImg), must = mustSee(ws), cover = must[0] || imgs[0];
+    const parent = p.parent && placeById(p.parent), list = 'place:' + p.id;
+    const span = ws.length > 1 && ws[0].year !== ws.at(-1).year ? `${yr(ws[0].year)} – ${yr(ws.at(-1).year)}` : ws[0]?.yearText;
+    const groups = D.groups.map(g => [g, ws.filter(w => groupOf(period(w.period)) === g).length]).filter(x => x[1]);
+    const artists = new Map();
+    ws.forEach(w => (w.by || []).forEach(id => person(id) && artists.set(id, (artists.get(id) || 0) + 1)));
+    const nearby = placesIn(c.id).filter(x => x !== p);
+    const mapUrl = `https://maps.apple.com/?q=${encodeURIComponent(`${p.original || p.name}, ${c.name}`)}`;
+    const head = cover
+      ? `<div class="story-top"><img src="${display(cover.id)}" alt="" style="translate:0 var(--py,0);scale:1.08"><div class="cap"><span class="k">${esc(placeWhere(p))} · ${PLACE_KIND[p.kind]}</span><h1>${esc(p.name)}</h1>${p.original ? `<small class="orig">${esc(p.original)}</small>` : ''}</div></div>`
+      : `<div class="place-top"><span class="k">${esc(placeWhere(p))} · ${PLACE_KIND[p.kind]}</span><h1>${esc(p.name)}</h1>${p.original ? `<p>${esc(p.original)}</p>` : ''}</div>`;
+    return {
+      html: nav({ title: p.name }) + `<div class="scroll">${head}
+        <div class="place-facts"><span class="pchip tint">画间收录 ${ws.length} 件</span>${span ? `<span class="pchip">${esc(span)}</span>` : ''}${p.url ? `<a class="pchip" href="${esc(p.url)}" target="_blank" rel="noopener">官网${icon('link')}</a>` : ''}<a class="pchip" href="${esc(mapUrl)}" target="_blank" rel="noopener">地图${icon('map')}</a></div>
+        ${parent || p.note ? `<div class="prose place-note">${parent ? `<p>通常随<button class="inl" data-act="place" data-v="${parent.id}">${esc(parent.name)}</button>一起参观。</p>` : ''}${p.note ? `<p>${esc(p.note)}</p>` : ''}</div>` : ''}
+        ${imgs[0] ? `<div style="padding:16px 16px 0"><button class="pbtn" data-act="work" data-v="${imgs[0].id}" data-list="${list}">${icon('play', 'fill')}${imgs.length > 1 ? `按年代看 · ${imgs.length} 件` : '看这件作品'}</button></div>` : ''}
+        ${must.length > 1 && imgs.length > 4 ? sec('必看', `<small>出现在故事与年表里</small>`) + `<div class="rail">${must.map(w => wcard(w.id, list)).join('')}</div>` : ''}
+        ${groups.length > 1 ? sec('时代分布') + `<div class="block card pad"><div class="dist">${groups.map(([g, n]) => `<i class="gc" style="${gc(g)};flex:${n}"></i>`).join('')}</div><div class="dist-l">${groups.map(([g, n]) => `<span class="gc" style="${gc(g)}"><i class="dot" style="background:var(--c)"></i>${esc(g.name)} ${n}</span>`).join('')}</div></div>` : ''}
+        ${sec(new Set(ws.map(w => w.period)).size > 1 ? '按展厅看' : '收录作品')}${byPeriodTiles(ws, list)}
+        ${artists.size ? sec('这里的艺术家', `<small>${artists.size} 位</small>`) + `<div class="block card rows">${[...artists].sort((a, b) => b[1] - a[1] || person(a[0]).born - person(b[0]).born).slice(0, 12).map(([id, n]) => personRow(person(id), `${n} 件 · ${lifespan(person(id))}`)).join('')}</div>` : ''}
+        ${nearby.length ? sec(`${c.name}还有`, nearby.length > 5 ? `<button class="more" data-act="city" data-v="${c.id}">全部 ${nearby.length + 1} 处</button>` : '') + `<div class="block card rows">${nearby.slice(0, 5).map(x => placeRow(x)).join('')}</div>` : ''}
+        ${placeFoot}</div>`,
+      mount: el => cover && applyTint(el, cover.id, thumb(cover.id)),
+    };
+  },
+
+  // 不在某一处的作品：已失传、多处收藏或印本、私人收藏
+  unplaced() {
+    const groups = Object.entries(PLACES.unplaced).map(([k, u]) => [k, u.label, PX.unplaced.get(k) || []]).filter(x => x[2].length);
+    return {
+      html: nav({ title: '不在某一处' }) + `<div class="scroll"><div class="place-top"><h1>不在某一处的作品</h1><p>原作失传、有多个版本或印本、或在不对外的收藏里。</p></div>`
+        + groups.map(([k, label, ws]) => sec(label, `<small>${ws.length} 件</small>`) + `<div class="block card rows">${ws.map(w => `<button class="lrow" style="--sep-left:74px" data-act="work" data-v="${w.id}" data-list="unplaced:${k}"${hasImg(w) ? ` data-zoom="${w.id}" data-ctx="${w.id}"` : ''}>${thumbOr(hasImg(w) && w, w.title)}<div class="main"><b>${esc(w.title)}</b><small>${esc(w.artist)} · ${esc(w.location)}</small></div>${chev}</button>`).join('')}</div>`).join('')
+        + `</div>`,
     };
   },
 
@@ -454,15 +545,18 @@ const VIEWS = {
 
 function workInfo(r) {
   const w = work(r.id), p = period(w.period), by = w.by?.[0] && person(w.by[0]);
+  const where = placesOf(w.id), here = where[0], hereWorks = here ? worksAt(here.id).filter(x => hasImg(x) && x.id !== w.id) : [];
   const look = `<div class="prose" style="padding-top:20px"><p class="lead">${esc(w.summary)}</p></div>`
     + (storiesOf(w.id).length ? sec('在故事里') + `<div class="stackv">${storiesOf(w.id).map(storyCard).join('')}</div>` : '')
     + (by && worksByPerson(by.id).length > 1 ? sec(`${by.name}的作品`, `<button class="more" data-act="person" data-v="${by.id}">全部</button>`) + `<div class="rail">${worksByPerson(by.id).filter(x => x.id !== w.id).slice(0, 12).map(x => wcard(x.id, 'by:' + by.id)).join('')}</div>` : '')
+    + (hereWorks.length ? sec(`同在${here.name}`, `<button class="more" data-act="place" data-v="${here.id}">${worksAt(here.id).length} 件</button>`) + `<div class="rail">${hereWorks.slice(0, 12).map(x => wcard(x.id, 'place:' + here.id)).join('')}</div>` : '')
     + sec('同一展厅', `<button class="more" data-act="hall" data-v="${p.id}">${esc(p.short)}</button>`) + `<div class="rail">${worksOf(p.id).filter(x => hasImg(x) && x.id !== w.id).slice(0, 14).map(x => wcard(x.id, 'period:' + p.id)).join('')}</div>`;
   const c = D.credits[w.id] || {};
   const info = sec('作品') + `<div class="block card rows">
       <div class="lrow static"><div class="main"><b>年代</b></div><span class="val">${esc(w.yearText)}</span></div>
       <div class="lrow static"><div class="main"><b>材质</b></div><span class="val">${esc(w.medium)}</span></div>
-      <div class="lrow static"><div class="main"><b>收藏</b></div><span class="val">${esc(w.location)}</span></div>
+      ${where.length === 1 ? `<button class="lrow" data-act="place" data-v="${here.id}"><div class="main"><b>现藏</b></div><span class="val">${esc(w.location)}</span>${chev}</button>`
+        : `<div class="lrow static"><div class="main"><b>现藏</b></div><span class="val">${esc(w.location)}</span></div>${where.map(x => `<button class="lrow" data-act="place" data-v="${x.id}"><div class="main"><b>${esc(x.name)}</b></div><span class="val">${esc(placeWhere(x))}</span>${chev}</button>`).join('')}`}
       <button class="lrow" data-act="hall" data-v="${p.id}"><div class="main"><b>展厅</b></div><span class="val">${esc(p.name)}</span>${chev}</button></div>
     ${w.imageNote ? `<p class="foot">${esc(w.imageNote)}</p>` : ''}
     ${sec('图片')}<div class="block card rows">
@@ -470,7 +564,7 @@ function workInfo(r) {
       <div class="lrow static"><div class="main"><b>许可</b></div><span class="val">${esc(c.license || '—')}</span></div>
       ${c.source ? `<a class="lrow" href="${esc(c.source)}" target="_blank" rel="noopener"><div class="main"><b class="link">图片原始来源</b></div>${icon('link', 'chev')}</a>` : ''}
       ${w.source ? `<a class="lrow" href="${esc(w.source)}" target="_blank" rel="noopener"><div class="main"><b class="link">作品资料</b></div>${icon('link', 'chev')}</a>` : ''}</div>`;
-  return `<div class="work-head"><h1>${esc(w.title)}</h1>${by ? `<button class="artist" data-act="person" data-v="${by.id}">${esc(w.artist)}${icon('chev')}</button>` : `<span class="mt" style="color:var(--ink);font-size:16px">${esc(w.artist)}</span>`}<span class="mt">${esc(w.yearText)} · ${esc(p.name)}</span></div>
+  return `<div class="work-head"><h1>${esc(w.title)}</h1>${by ? `<button class="artist" data-act="person" data-v="${by.id}">${esc(w.artist)}${icon('chev')}</button>` : `<span class="mt" style="color:var(--ink);font-size:16px">${esc(w.artist)}</span>`}<span class="mt">${esc(w.yearText)} · ${esc(p.name)}</span>${here ? `<button class="where" data-act="place" data-v="${here.id}">${icon('pin')}${esc(here.name)} · ${esc(placeWhere(here))}${where.length > 1 ? ` 等 ${where.length} 处` : ''}</button>` : ''}</div>
     <div class="acts"><button class="card press" data-act="full" data-v="${w.id}">${icon('expand')}看全图</button><button class="card press" data-act="save" data-v="${w.id}">${icon('saved', isSaved(w.id) ? 'fill' : '')}${isSaved(w.id) ? '已收藏' : '收藏'}</button><button class="card press" data-act="hall" data-v="${p.id}">${icon('hall')}${esc(p.short)}</button><button class="card press" data-act="share">${icon('share')}分享</button></div>
     ${seg('tab', [['look', '看点'], ['info', '资料']], r.tab || 'look')}${r.tab === 'info' ? info : look}`;
 }
@@ -778,11 +872,24 @@ function rosterHtml() {
     + lists.filter(([, ps]) => ps.length).map(([name, ps]) => `<div class="gl">${esc(name)} · ${ps.length}</div><div class="pgrid">${[...ps].sort((a, b) => a.born - b.born).map(o => `<button class="card pg-card gc press" style="${gcPerson(o)}" data-act="person" data-v="${o.id}">${avatar(o)}<b>${esc(o.name)}</b><small>${esc(yr(o.born, o.approx))}–${esc(o.diedText || yr(o.died))}</small></button>`).join('')}</div>`).join('');
 }
 
+// ───── 导览 · 去哪看 ─────
+// 先按城市（教堂和原址里的作品不会漏掉），再到馆；搜索框也能直接找到馆名
+function placesHtml() {
+  const top = [...PX.worksAt.keys()].map(placeById).sort((a, b) => worksAt(b.id).length - worksAt(a.id).length).slice(0, 8);
+  const countries = citiesByCountry(), nCities = countries.reduce((s, x) => s + x[1].length, 0);
+  const lost = [...PX.unplaced].map(([k, ws]) => `${PLACES.unplaced[k].label} ${ws.length}`).join(' · ');
+  return sec('作品最多的地方') + `<div class="rail">${top.map(placeCard).join('')}</div>`
+    + sec('按城市', `<small>${nCities} 座城市 · ${PX.worksAt.size} 处地点</small>`)
+    + countries.map(([country, cs]) => `<div class="gl">${esc(country)}</div><div class="block card rows">${cs.map(cityRow).join('')}</div>`).join('')
+    + (lost ? `<div class="block card rows" style="margin-top:20px"><button class="lrow" data-act="unplaced"><div class="main"><b>不在某一处的作品</b><small>${esc(lost)}</small></div>${chev}</button></div>` : '')
+    + placeFoot;
+}
+
 // ───── 搜索 ─────
 function searchBody() {
   const q = S.query.trim().toLocaleLowerCase();
   if (!q) {
-    const sugg = S.recent.length ? S.recent : ['达·芬奇', '星空', '印象', '伦勃朗', '雕塑'];
+    const sugg = S.recent.length ? S.recent : ['达·芬奇', '星空', '印象', '卢浮宫', '佛罗伦萨'];
     return sec(S.recent.length ? '最近搜索' : '试试') + `<div class="recent">${sugg.map(x => `<button class="card press" data-act="q" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div>`
       + (S.viewed.length ? sec('最近看过') + `<div class="rail">${S.viewed.map(id => wcard(id, 'viewed')).join('')}</div>` : '')
       + sec('按时期浏览') + `<div class="browse">${D.periods.map(p => `<button class="pastel gc press" style="${gc(groupOf(p))}" data-act="hall" data-v="${p.id}"><span>${esc(p.short)}</span><img src="${thumb(firstImg(p.id))}" alt="" loading="lazy"></button>`).join('')}</div>`;
@@ -792,9 +899,14 @@ function searchBody() {
   const ppl = found.filter(x => x.kind === 'person').map(x => person(x.id)).filter(Boolean);
   const ps = D.periods.filter(p => has(p.name, p.short, p.en, ...(p.keywords || [])));
   const ws = found.filter(x => x.kind === 'work').map(x => work(x.id)).filter(Boolean);
+  // 地点：城市（含国家名）与馆名、原文名、所在区域，作品多的在前
+  const many = (a, b) => b.length - a.length;
+  const cs = [...PX.placesIn.keys()].map(cityById).filter(c => has(c.name, c.country)).sort((a, b) => many(cityWorks(a.id), cityWorks(b.id)));
+  const pl = [...PX.worksAt.keys()].map(placeById).filter(p => has(p.name, p.original, p.area) && !cs.some(c => c.id === p.city && has(c.name))).sort((a, b) => many(worksAt(a.id), worksAt(b.id)));
   S.results = ws.map(w => w.id);
-  if (!ppl.length && !ps.length && !ws.length) return `<div class="block card empty-state" style="margin-top:12px"><span class="orb">${icon('search')}</span><h2>没有“${esc(S.query)}”的结果</h2><p>换个更短的名称，或试试艺术家的英文名。</p></div>`;
-  return (ppl.length ? sec('人物') + `<div class="block card rows">${ppl.slice(0, 8).map(o => personRow(o, o.en)).join('')}</div>` : '')
+  if (!ppl.length && !ps.length && !ws.length && !cs.length && !pl.length) return `<div class="block card empty-state" style="margin-top:12px"><span class="orb">${icon('search')}</span><h2>没有“${esc(S.query)}”的结果</h2><p>换个更短的名称，或试试艺术家的英文名。</p></div>`;
+  return (cs.length || pl.length ? sec('地点') + `<div class="block card rows">${cs.slice(0, 6).map(cityRow).join('')}${pl.slice(0, 8).map(p => placeRow(p, `${placeWhere(p)} · ${worksAt(p.id).length} 件`)).join('')}</div>` : '')
+    + (ppl.length ? sec('人物') + `<div class="block card rows">${ppl.slice(0, 8).map(o => personRow(o, o.en)).join('')}</div>` : '')
     + (ps.length ? sec('时期') + `<div class="block card rows">${ps.map(p => `<button class="lrow gc" style="${gc(groupOf(p))}" data-act="hall" data-v="${p.id}"><span class="dot" style="background:var(--c)"></span><div class="main"><b>${esc(p.name)}</b><small>${esc(p.span)}</small></div>${chev}</button>`).join('')}</div>` : '')
     + (ws.length ? sec('作品', `<small>${ws.length} 件</small>`) + `<div class="block card rows">${ws.slice(0, 40).map(w => `<button class="lrow" style="--sep-left:74px" data-act="work" data-v="${w.id}" data-list="search" data-zoom="${w.id}" data-ctx="${w.id}">${hasImg(w) ? `<img class="thumb" src="${thumb(w.id)}" alt="" loading="lazy">` : `<span class="thumb noimg">${esc(w.title[0])}</span>`}<div class="main"><b>${esc(w.title)}</b><small>${esc(w.artist)} · ${esc(w.yearText)}</small></div>${chev}</button>`).join('')}</div>${ws.length > 40 ? `<p class="foot">还有 ${ws.length - 40} 件，输入更具体的名称可以缩小范围。</p>` : ''}` : '');
 }
@@ -1379,7 +1491,7 @@ function openCtx(node) {
   const src = rel(node.querySelector('img') || node), W = app.clientWidth, H = app.clientHeight, rr = ratio(id);
   let pw = Math.min(W - 90, 240), ph = pw * rr;
   if (ph > H * .4) { ph = H * .4; pw = ph / rr; }
-  const items = [[isSaved(id) ? '取消收藏' : '收藏', 'saved', 'ctxSave'], ['打开作品', 'eye', 'ctxOpen'], by && [`作者 · ${by.name}`, 'person', 'ctxPerson'], [`走进${p.short}`, 'hall', 'ctxHall'], ['分享', 'share', 'share']].filter(Boolean);
+  const items = [[isSaved(id) ? '取消收藏' : '收藏', 'saved', 'ctxSave'], ['打开作品', 'eye', 'ctxOpen'], by && [`作者 · ${by.name}`, 'person', 'ctxPerson'], [`走进${p.short}`, 'hall', 'ctxHall'], placesOf(id)[0] && [`现藏 · ${placesOf(id)[0].name}`, 'pin', 'ctxPlace'], ['分享', 'share', 'share']].filter(Boolean);
   const menuH = items.length * 50, top = Math.max(safeTop + 16, Math.min(src.y, H - ph - menuH - 48)), left = (W - pw) / 2;
   const c = document.createElement('div');
   c.className = 'ctx';
@@ -1415,6 +1527,9 @@ function listIds(key = '') {
   if (k === 'search') return S.results;
   if (k === 'viewed') return [...S.viewed];
   if (k === 'chrono') return cbWorks().map(w => w.id);
+  if (k === 'place') return worksAt(v).filter(hasImg).map(w => w.id);
+  if (k === 'city') return cityWorks(v).filter(hasImg).map(w => w.id);
+  if (k === 'unplaced') return (PX.unplaced.get(v) || []).filter(hasImg).map(w => w.id);
   if (k === 'sea') return stackEl('sea').firstElementChild?.route.list;
   return null;
 }
@@ -1472,6 +1587,9 @@ const ACT = {
   work: (v, b) => { if (S.query && S.tab === 'search') remember(S.query); openWork(v, b.dataset.list, b.hasAttribute('data-zoom') ? b : null); },
   person: v => push({ kind: 'person', id: v }),
   hall: v => push({ kind: 'hall', id: v }),
+  city: v => push({ kind: 'city', id: v }),
+  place: v => push({ kind: 'place', id: v }),
+  unplaced: () => push({ kind: 'unplaced' }),
   story: v => push({ kind: 'story', id: v }),
   read: v => { const p = progress[v]; push({ kind: 'reader', id: v, step: p?.step || 0, choice: p?.choice || {}, open: p?.open || {}, hot: {} }, { anim: 'cover' }); },
   full: (v, b) => !hasImg(work(v)) ? hud('这件作品暂无配图', 'eye') : openViewer(v, b.tagName === 'IMG' ? b : b.querySelector('img') || heroImg(pageOf(b))),
@@ -1541,6 +1659,7 @@ const ACT = {
   ctxSave: () => { const { id } = ctx; closeCtx(); toggleSave(id); },
   ctxPerson: () => { const w = work(ctx.id); closeCtx(); push({ kind: 'person', id: w.by[0] }); },
   ctxHall: () => { const w = work(ctx.id); closeCtx(); push({ kind: 'hall', id: w.period }); },
+  ctxPlace: () => { const p = placesOf(ctx.id)[0]; closeCtx(); push({ kind: 'place', id: p.id }); },
   cbGo: (v, b) => {
     const el = pageOf(b), real = !!el.route.real, [k, a, c] = v.split(':');
     if (k === 'ev') return el.cbTo(CX(D.events[+a].year, real), () => ACT.event(a), D.events[+a].year);
@@ -1722,8 +1841,8 @@ function historyAfterPop() {
 const validRoute = r => {
   const id = r.id || '';
   return ({
-    sea: 1, guide: 1, people: 1, saved: 1, search: 1, about: 1, missing: 1,
-    work: work(id), person: person(id), hall: period(id), story: D.readings.find(x => x.id === id), reader: D.readings.find(x => x.id === id),
+    sea: 1, guide: 1, people: 1, saved: 1, search: 1, about: 1, missing: 1, unplaced: 1,
+    work: work(id), person: person(id), hall: period(id), city: PX.placesIn.has(id), place: PX.worksAt.has(id), story: D.readings.find(x => x.id === id), reader: D.readings.find(x => x.id === id),
     context: CONTEXT_IDS.includes(id) || (id.startsWith('diagram:') && period(id.slice(8))?.diagram),
   })[r.kind];
 };
@@ -1811,6 +1930,7 @@ export function initMobileApp() {
   D.works.forEach(w => byId.set(w.id, w));
   D.periods.forEach(p => periodById.set(p.id, p));
   D.people.forEach(p => personById.set(p.id, p));
+  PX = indexPlaces(PLACES, D.works);
   const theme = readLS('aha.theme', 'system');
   if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
   shell();

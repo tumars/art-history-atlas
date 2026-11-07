@@ -42,6 +42,31 @@ for (const id of contextIds) {
   });
 }
 
+// 地点：城市与地点 id 唯一、引用成立；每件作品都要归到地点，或写明不在某处的原因
+const places = read("content/places.json");
+const cityIds = new Set(), placeIds = new Set(), placeText = new Set(), placeWorks = new Set();
+places.cities.forEach((c, i) => {
+  need(c, ["id", "name", "country", "lat", "lon"], `places.json cities[${i}]`);
+  if (cityIds.has(c.id)) err(`places.json: 城市 id 重复 ${c.id}`);
+  cityIds.add(c.id);
+  if (Math.abs(c.lat) > 90 || Math.abs(c.lon) > 180) err(`places.json 城市 ${c.id}: 经纬度无效`);
+});
+places.places.forEach((p, i) => {
+  const where = `places.json ${p.id || `places[${i}]`}`;
+  need(p, ["id", "name", "city", "kind"], where);
+  if (!/^[a-z0-9-]+$/.test(p.id) || placeIds.has(p.id)) err(`${where}: id 无效或重复`);
+  placeIds.add(p.id);
+  if (!cityIds.has(p.city)) err(`${where}: 城市 ${p.city} 不存在`);
+  if (!["museum", "church", "palace", "site"].includes(p.kind)) err(`${where}: kind 只能是 museum / church / palace / site`);
+  if (p.url && !/^https:\/\//.test(p.url)) err(`${where}: 官网应为 HTTPS 链接`);
+  if (!p.match?.length && !p.works?.length) err(`${where}: 没有对应的作品`);
+  (p.match ?? []).forEach(t => placeText.add(t));
+  (p.works ?? []).forEach(id => placeWorks.add(id));
+});
+places.places.forEach(p => p.parent && !placeIds.has(p.parent) && err(`places.json ${p.id}: 所属地点 ${p.parent} 不存在`));
+const unplacedText = new Set(Object.values(places.unplaced).flatMap(u => u.match));
+const usedText = new Set(), allWorkIds = new Set();
+
 for (const t of site.traditions) {
   const dir = `content/traditions/${t}`;
   if (!existsSync(join(root, dir))) { err(`缺少目录 ${dir}`); continue; }
@@ -99,6 +124,9 @@ for (const t of site.traditions) {
     if (w.source && !/^https:\/\//.test(w.source)) err(`${dir}/works.json ${w.id}: source 应为 HTTPS 资料链接`);
     if (w.source && /^https:\/\/[^/]*wikipedia\.org\//.test(w.source) && !w.source.startsWith("https://zh.wikipedia.org/")) err(`${dir}/works.json ${w.id}: 百科资料应链接中文维基百科`);
     sources(w.sources, `作品 ${w.id}`);
+    allWorkIds.add(w.id);
+    usedText.add(w.location);
+    if (!placeWorks.has(w.id) && !placeText.has(w.location) && !unplacedText.has(w.location)) err(`${dir}/works.json ${w.id}: 收藏地“${w.location}”没有对应地点，请在 content/places.json 补上`);
   });
 
   events.forEach((e, i) => {
@@ -205,6 +233,9 @@ for (const t of site.traditions) {
     });
   });
 }
+
+placeWorks.forEach(id => !allWorkIds.has(id) && err(`places.json: 作品 ${id} 不存在`));
+[...placeText, ...unplacedText].forEach(t => !usedText.has(t) && err(`places.json: 收藏文字“${t}”没有作品使用，可能已改名`));
 
 if (errors.length) {
   console.error(`内容校验失败（${errors.length} 处）：\n- ` + errors.join("\n- "));
