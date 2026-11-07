@@ -1,0 +1,30 @@
+docs/verification/mobile-ios.md
+  s_e1d50679ec4029::t_70533fa2255535 79-83
+src/main.ts
+  s_e1d50679ec4029::t_d0fecb9febfa21 141-142,147-151,153-163,166
+src/mobile/mobile.css
+  s_e1d50679ec4029::t_0775660724654a 344
+  s_e1d50679ec4029::t_46761e70a22b16 459-460
+  s_e1d50679ec4029::t_0c6250165cdf5c 509
+  s_e1d50679ec4029::t_1986f2d73a7441 208
+src/mobile/app.js
+  s_e1d50679ec4029::t_37ac68c4d9f5c5 1828-1839
+index.html
+  s_e1d50679ec4029::t_e64eae174e6dd5 16-21,23-53,56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "259c39cc74785d896038653a3cd35668d84dba98",
+  "prompts": {},
+  "sessions": {
+    "s_e1d50679ec4029": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "90ed3daa-7a23-4895-8f65-17007f2659db",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
