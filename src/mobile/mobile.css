@@ -446,7 +446,8 @@ body.mobile-shell { margin: 0; background: var(--bg); color: var(--ink); font: 1
 .tb-handle::before, .tb-handle::after { content: ""; position: absolute; left: 50%; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--card-solid); box-shadow: 0 0 0 2px var(--tint); }
 .tb-handle::before { top: -5px; }
 .tb-handle::after { bottom: -5px; }
-.tband .tb-hint { text-align: center; font-size: 12px; color: var(--ink3); padding-top: 10px; }
+.cb-scale { display: inline-flex; align-items: center; gap: 2px; }
+.cb-scale .tip-pop { top: auto; bottom: calc(100% + 6px); }
 .enc-chip { display: flex; align-items: center; gap: 10px; margin: 12px 16px 0; padding: 10px 14px; border-radius: 18px; text-align: left; width: calc(100% - 32px); }
 .enc-chip .dia { width: 30px; height: 30px; border-radius: 10px; background: color-mix(in srgb, var(--k-met) 14%, var(--card-solid)); display: grid; place-items: center; color: var(--k-met); flex: none; }
 .enc-chip .dia .ico { width: 16px; height: 16px; }
@@ -784,6 +785,35 @@ body.mobile-shell { margin: 0; background: var(--bg); color: var(--ink); font: 1
 .dist-l { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 12px; font-size: 13px; color: var(--ink2); }
 .dist-l span { display: inline-flex; align-items: center; gap: 6px; }
 .dist-l .dot { width: 8px; height: 8px; }
+/* 提示气泡：ⓘ 按钮点开，默认不显示 */
+.tipw { position: relative; display: inline-flex; vertical-align: middle; margin-left: 4px; }
+.tip { width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; color: var(--ink3); }
+.tip .ico { width: 17px; height: 17px; stroke-width: 1.8; }
+.tip[aria-expanded="true"] { color: var(--tint); }
+.tip-pop { position: absolute; z-index: 40; top: calc(100% + 6px); left: 50%; transform: translateX(calc(-50% + var(--dx, 0px))); width: max-content; max-width: min(270px, calc(100vw - 40px)); padding: 10px 13px; border-radius: 14px; background: var(--card-solid); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .35), inset 0 0 0 .5px var(--card-edge); font-size: 13.5px; font-weight: 400; line-height: 1.55; letter-spacing: 0; color: var(--ink); text-align: left; white-space: normal; }
+.tip-pop[hidden] { display: none; }
+.place-acts { display: grid; justify-items: center; gap: 12px; padding: 4px 16px 0; }
+/* 城市地图：海岸线淡墨填色，圆点金色半透明，作品多的城市写名字 */
+.citymap { padding: 8px 8px 12px; overflow: hidden; }
+.citymap svg { display: block; width: 100%; height: auto; }
+.citymap .relay-land path { fill: color-mix(in srgb, var(--ink) 9%, transparent); stroke: none; }
+.citymap .cm-dot { cursor: pointer; }
+.citymap .cm-dot circle { fill: color-mix(in srgb, var(--tint) 42%, transparent); stroke: var(--tint); stroke-width: .8; }
+.citymap .cm-dot .hit { fill: transparent; stroke: none; }
+.citymap .cm-dot:active circle:not(.hit) { fill: var(--tint); }
+.citymap text { font-size: 10px; font-weight: 600; fill: var(--ink); paint-order: stroke; stroke: var(--card-solid); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+.cm-out { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 10px 8px 0; border-top: .5px solid var(--line); margin-top: 6px; }
+.cm-out small { font-size: 12px; color: var(--ink2); margin-right: 4px; }
+/* 画海选择 sheet 的时期 / 地点分段 */
+.sheet .pick-seg { margin: 0 12px 6px; }
+/* 收藏按地点：地点一行，下面横排收藏的作品 */
+.savedp + .savedp { margin-top: 10px; }
+.savedp-im { display: flex; gap: 6px; overflow-x: auto; padding: 0 14px 14px; scrollbar-width: none; }
+.savedp-im::-webkit-scrollbar { display: none; }
+.savedp-im:first-child { padding-top: 14px; }
+.savedp-im button { flex: none; width: 76px; height: 76px; border-radius: 12px; overflow: hidden; background: var(--fill); transition: transform .45s var(--spring); }
+.savedp-im button:active { transform: scale(.94); transition-duration: .12s; }
+.savedp-im img { width: 100%; height: 100%; object-fit: cover; }
 .work-head .where { justify-self: start; display: inline-flex; align-items: center; gap: 5px; margin-top: 2px; font-size: 14px; color: var(--ink); text-align: left; }
 .work-head .where .ico { width: 15px; height: 15px; color: var(--tint); flex: none; }
 

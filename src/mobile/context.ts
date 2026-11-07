@@ -22,6 +22,9 @@ export function contextLinks() {
     )
     .join("");
 }
+// 必要的解释放进提示气泡，与 app.js 的 tip() 同一结构，由手机页层的 data-act="tip" 打开
+const tip = (text: string) =>
+  `<span class="tipw"><button class="tip" data-act="tip" aria-label="说明" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17z M12 11v5.2 M12 7.6v.2"/></svg></button><span class="tip-pop" role="tooltip" hidden>${esc(text)}</span></span>`;
 const choose = (options: [string, string][], value: string) =>
   `<select class="context-select" data-context-value aria-label="选择内容">${options.map(([id, name]) => `<option value="${esc(id)}" ${id === value ? "selected" : ""}>${esc(name)}</option>`).join("")}</select>`;
 const workButton = (id: string) => {
@@ -88,7 +91,7 @@ export function contextPage(id: string, value: string) {
         t.meta.relay.map((x) => [x.period, `${x.place} · ${x.era}`]),
         relay.period,
       ) +
-      `<svg class="context-map" viewBox="${bounds}" role="img" aria-label="艺术中心位置示意，经纬度定位，不表示国界">${land}<path d="${points.map((p, i) => `${i ? "L" : "M"}${x(p.lon)},${y(p.lat)}`).join(" ")}" fill="none" stroke="#9d9472" stroke-width="1"/>${points.map((p) => `<circle cx="${x(p.lon)}" cy="${y(p.lat)}" r="${p.period === relay.period ? 6 : 2}" fill="${p.period === relay.period ? "#a75237" : "#7b806e"}"/>`).join("")}${relay.points.map((p) => `<text x="${x(p.lon) + 8}" y="${y(p.lat) - 8}">${esc(p.name)}</text>`).join("")}</svg><p class="lede">海岸线：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a>。连线仅为主线概览，不代表唯一中心或直接传播路径。</p><h3>${esc(relay.place)}</h3><p>${esc(relay.note)}</p><button class="primary" data-hall="${relay.period}">进入相关时期</button>`;
+      `<svg class="context-map" viewBox="${bounds}" role="img" aria-label="艺术中心位置示意，经纬度定位，不表示国界">${land}<path d="${points.map((p, i) => `${i ? "L" : "M"}${x(p.lon)},${y(p.lat)}`).join(" ")}" fill="none" stroke="#9d9472" stroke-width="1"/>${points.map((p) => `<circle cx="${x(p.lon)}" cy="${y(p.lat)}" r="${p.period === relay.period ? 6 : 2}" fill="${p.period === relay.period ? "#a75237" : "#7b806e"}"/>`).join("")}${relay.points.map((p) => `<text x="${x(p.lon) + 8}" y="${y(p.lat) - 8}">${esc(p.name)}</text>`).join("")}</svg><h3>${esc(relay.place)}${tip("海岸线来自 Natural Earth，按经纬度示意，不表示国界。连线只是主线概览，不代表唯一中心或直接传播路径。")}</h3><p>${esc(relay.note)}</p><button class="primary" data-hall="${relay.period}">进入相关时期</button>`;
   } else if (id === "schools") {
     const school = t.schools.find((x) => x.id === value) || t.schools[0];
     body =
@@ -137,11 +140,11 @@ export function contextPage(id: string, value: string) {
         t.schools.map((x) => [x.id, x.name]),
         school.id,
       ) +
-      `<p class="lede">同一派系内按实际年份线性排列。点姓名认识人物；虚线表示约数。</p><svg viewBox="0 0 320 ${list.length * 70 + 40}" role="group" aria-label="${esc(school.name)}人物生命线"><text x="20" y="18" font-size="12" fill="currentColor">${fmtYear(start)}</text><text x="300" y="18" text-anchor="end" font-size="12" fill="currentColor">${fmtYear(end)}</text>${list.map((p, i) => `<g role="button" tabindex="0" data-person="${p.id}" aria-label="${esc(p.name)}，${fmtYear(p.born)}至${esc(p.diedText || fmtYear(p.died))}"><rect x="0" y="${i * 70 + 25}" width="320" height="65" fill="transparent"/><text x="20" y="${i * 70 + 45}" font-size="14" fill="currentColor">${esc(p.name)}</text><line x1="${x(p.born)}" y1="${i * 70 + 62}" x2="${x(p.died)}" y2="${i * 70 + 62}" stroke="var(--tint, #a9864f)" stroke-width="4" stroke-linecap="round" ${p.approx ? 'stroke-dasharray="5 3"' : ""}/></g>`).join("")}</svg>` +
+      `<p class="lede">${list.length} 人 · ${fmtYear(start)} — ${fmtYear(end)}${tip("按实际年份线性排列，虚线表示生卒年是约数。")}</p><svg viewBox="0 0 320 ${list.length * 70 + 40}" role="group" aria-label="${esc(school.name)}人物生命线"><text x="20" y="18" font-size="12" fill="currentColor">${fmtYear(start)}</text><text x="300" y="18" text-anchor="end" font-size="12" fill="currentColor">${fmtYear(end)}</text>${list.map((p, i) => `<g role="button" tabindex="0" data-person="${p.id}" aria-label="${esc(p.name)}，${fmtYear(p.born)}至${esc(p.diedText || fmtYear(p.died))}"><rect x="0" y="${i * 70 + 25}" width="320" height="65" fill="transparent"/><text x="20" y="${i * 70 + 45}" font-size="14" fill="currentColor">${esc(p.name)}</text><line x1="${x(p.born)}" y1="${i * 70 + 62}" x2="${x(p.died)}" y2="${i * 70 + 62}" stroke="var(--tint, #a9864f)" stroke-width="4" stroke-linecap="round" ${p.approx ? 'stroke-dasharray="5 3"' : ""}/></g>`).join("")}</svg>` +
       list.map((p) => personButton(p.id)).join("");
   } else if (id === "pendulum") {
     body =
-      `<p>${esc(t.meta.pendulum?.note || "示意艺术倾向，不是对艺术价值的评分。")}</p><p>← 理性 / 秩序　　情感 / 激情 →</p>` +
+      `<p>← 理性 / 秩序　　情感 / 激情 →${tip(t.meta.pendulum?.note || "示意艺术倾向，不是对艺术价值的评分。")}</p>` +
       t.periods
         .map(
           (p) =>
@@ -175,7 +178,7 @@ export function contextPage(id: string, value: string) {
         t.sizes.map((x) => [x.work, workById(x.work)!.title]),
         size.work,
       ) +
-      `<div class="scale-row"><figure><div style="height:${170 * factor}px;width:${40 * factor}px;background:#818777;clip-path:polygon(35% 0,65% 0,70% 12%,60% 18%,90% 22%,100% 60%,75% 60%,65% 100%,52% 100%,50% 65%,48% 100%,35% 100%,25% 60%,0 60%,10% 22%,40% 18%,30% 12%)"></div><figcaption>1.7 m</figcaption></figure><figure><div style="width:${size.widthCm * factor}px;height:${size.heightCm * factor}px;background:#a5905d44;border:1px solid #8a7748"></div></figure></div><p>${esc(w.title)}：高 ${size.heightCm} × 宽 ${size.widthCm} cm</p><p class="lede">矩形代表作品实体尺寸；人与作品使用相同尺度。</p>${workButton(w.id)}`;
+      `<div class="scale-row"><figure><div style="height:${170 * factor}px;width:${40 * factor}px;background:#818777;clip-path:polygon(35% 0,65% 0,70% 12%,60% 18%,90% 22%,100% 60%,75% 60%,65% 100%,52% 100%,50% 65%,48% 100%,35% 100%,25% 60%,0 60%,10% 22%,40% 18%,30% 12%)"></div><figcaption>1.7 m</figcaption></figure><figure><div style="width:${size.widthCm * factor}px;height:${size.heightCm * factor}px;background:#a5905d44;border:1px solid #8a7748"></div></figure></div><p>${esc(w.title)}：高 ${size.heightCm} × 宽 ${size.widthCm} cm${tip("矩形是作品的实际尺寸，人和作品按同一比例画。")}</p>${workButton(w.id)}`;
   } else if (id.startsWith("diagram:")) {
     const p = t.periods.find((p) => p.id === id.slice(8)),
       d = p?.diagram;
@@ -183,7 +186,7 @@ export function contextPage(id: string, value: string) {
       title = d.title;
       body = `<p>${esc(d.observe)}</p><div class="diagram-host">${diagramFor(t.meta.id, d.id)?.html(diagramContext()) || ""}</div><p>${esc(d.caption)}</p><div class="grid">${d.works.map((x) => workButton(x.work)).join("")}</div>${(d.sources || []).map((x) => `<p><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)} ↗</a></p>`).join("")}`;
     }
-  } else body = "<p>未找到该内容，请返回探索。</p>";
+  } else body = "<p>这项内容找不到了。</p>";
   return `<div class="pad"><h2>${esc(title)}</h2>${body}</div>`;
 }
 export function mountContext(root: HTMLElement, id: string, _value: string) {

@@ -7,6 +7,7 @@ import { arrangeWorks, skyLoop } from "../sections/hero-space";
 import { contextPage, mountContext } from "./context";
 import { PLACES } from "../content";
 import { indexPlaces, PLACE_KIND } from "../lib/places";
+import land from "../assets/relay-land.svg?raw";
 
 const app = document.querySelector('#mobile-app');
 // ?still 关闭动效，便于截图检查静态布局
@@ -44,6 +45,7 @@ const P = {
   spark: 'M12 4v4 M12 16v4 M4 12h4 M16 12h4 M6.5 6.5l2.5 2.5 M15 15l2.5 2.5 M17.5 6.5L15 9 M9 15l-2.5 2.5',
   pin: 'M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z M12 7.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z',
   map: 'M9 4.5L3.5 6.5v13L9 17.5l6 2 5.5-2v-13L15 6.5z M9 4.5v13 M15 6.5v13',
+  info: 'M12 3.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17z M12 11v5.2 M12 7.6v.2',
 };
 const icon = (n, cls = '') => `<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true"><path d="${P[n]}"/></svg>`;
 
@@ -116,6 +118,13 @@ function mustSee(ws, n = 6) {
   return ws.filter(w => hasImg(w) && score(w)).sort((a, b) => score(b) - score(a) || a.year - b.year).slice(0, n);
 }
 const coverOf = ws => mustSee(ws, 1)[0] || ws.find(hasImg);
+// 画海与列表按地点筛选：'place:<id>' 或 'city:<id>'
+function whereOf(key = '') {
+  const [k, v] = key.split(':');
+  if (k === 'place' && PX.worksAt.has(v)) return { name: placeById(v).name, works: worksAt(v) };
+  if (k === 'city' && PX.placesIn.has(v)) return { name: cityById(v).name, works: cityWorks(v) };
+  return null;
+}
 const placeNames = ps => ps.length < 3 ? ps.map(p => p.name).join('、') : `${ps[0].name}、${ps[1].name}等 ${ps.length} 处`;
 // 按国家分组的城市，国家和城市都按作品数从多到少
 function citiesByCountry() {
@@ -152,7 +161,7 @@ const rootRoute = t => ({
   sea: { kind: 'sea', mode: 'sea', period: '', sel: 'mona-lisa' },
   guide: { kind: 'guide', seg: 'chrono', band: 'china-dynasties', year: 1504, real: false, list: false },
   people: { kind: 'people', seg: 'time', year: 1504, focus: 'michelangelo', cf: '', trail: [] },
-  saved: { kind: 'saved' },
+  saved: { kind: 'saved', seg: 'all' },
   search: { kind: 'search' },
 })[t];
 
@@ -306,6 +315,9 @@ const bare = `<header class="nav bare"></header>`;
 const seg = (key, opts, cur) =>
   `<div class="segc" role="group"><span class="thumb-s"></span>${opts.map(([v, l]) => `<button data-act="seg" data-key="${key}" data-v="${v}" aria-pressed="${v === cur}">${l}</button>`).join('')}</div>`;
 const sec = (title, right = '') => `<div class="sec"><h2>${esc(title)}</h2>${right}</div>`;
+// 必要的解释放进提示气泡：一个 ⓘ 按钮，点开显示，点别处收起
+const tip = text => `<span class="tipw"><button class="tip" data-act="tip" aria-label="说明" aria-expanded="false">${icon('info')}</button><span class="tip-pop" role="tooltip" hidden>${esc(text)}</span></span>`;
+const secTip = (title, text, right = '') => `<div class="sec"><h2>${esc(title)}${tip(text)}</h2>${right}</div>`;
 const tile = (id, list) =>
   `<button class="tile" data-act="work" data-v="${id}" data-list="${list}" data-zoom="${id}" data-ctx="${id}" aria-label="${esc(work(id).title)}"><img src="${thumb(id)}" alt="" loading="lazy" decoding="async"></button>`;
 const wcard = (id, list) => {
@@ -313,8 +325,8 @@ const wcard = (id, list) => {
   return `<button class="wcard" data-act="work" data-v="${id}" data-list="${list}" data-zoom="${id}" data-ctx="${id}"><div class="im"><img src="${thumb(id)}" alt="" loading="lazy"></div><b>${esc(w.title)}</b><small>${esc(w.artist)}</small></button>`;
 };
 const chev = icon('chev', 'chev');
-const aboutRow = `<div class="block card rows" style="margin-top:20px"><button class="lrow" data-act="about"><div class="main"><b>关于画间与设置</b><small>外观、图片来源、延伸阅读</small></div>${icon('chev', 'chev')}</button></div>`;
-const CONTEXTS = [['relay', '艺术中心地图', '艺术为什么在这里发生'], ['pendulum', '理性与激情', '审美的来回摆动'], ['pairs', '并置看画', '同一个问题，两种回答'], ['sizes', '画有多大', '与 1.7 米的人比较']];
+const aboutRow = `<div class="block card rows" style="margin-top:20px"><button class="lrow" data-act="about"><div class="main"><b>关于画间与设置</b></div>${icon('chev', 'chev')}</button></div>`;
+const CONTEXTS = [['relay', '艺术中心地图'], ['pendulum', '理性与激情'], ['pairs', '并置看画'], ['sizes', '画有多大']];
 const saveIcon = id => icon('saved', isSaved(id) ? 'fill saved-on' : '');
 const storyCard = r => `<button class="card scard press" data-act="story" data-v="${r.id}"><img src="${thumb(r.steps[0].works[0])}" alt=""><div><b>${esc(r.title)}</b><small>${r.minutes} 分钟 · ${r.steps.length} 步</small></div>${icon('chev')}</button>`;
 const personRow = (o, small, act = 'person') => `<button class="lrow" style="--sep-left:68px" data-act="${act}" data-v="${o.id}">${avatar(o)}<div class="main"><b>${esc(o.name)}</b><small>${esc(small)}</small></div>${chev}</button>`;
@@ -324,16 +336,18 @@ const cityRow = c => { const ws = cityWorks(c.id); return `<button class="lrow" 
 const placeCard = p => { const ws = worksAt(p.id), w = coverOf(ws); return `<button class="card scard2 placecard press" data-act="place" data-v="${p.id}"><div class="im">${w ? `<img src="${thumb(w.id)}" alt="" loading="lazy">` : ''}</div><div class="tx"><b>${esc(p.name)}</b><small>${esc(placeWhere(p))} · ${ws.length} 件</small></div></button>`; };
 // 按时期分组的作品格，用在城市页和地点页
 const byPeriodTiles = (ws, list) => D.periods.map(p => { const xs = ws.filter(w => w.period === p.id && hasImg(w)); return xs.length ? `<div class="ph-h gc" style="${gc(groupOf(p))}"><span><i class="dot" style="background:var(--c)"></i>${esc(p.name)}</span><small>${xs.length} 件</small></div><div class="tiles">${xs.map(w => tile(w.id, list)).join('')}</div>` : ''; }).join('');
-const placeFoot = `<p class="foot">只列出画间收录的作品，不是这里的全部收藏。开放时间、展出与借展情况以官网为准。</p>`;
+const placeTip = tip('只列出画间收录的作品，不是这里的全部收藏。开放时间、展出与借展情况以官网为准。');
 
 const VIEWS = {
   // 画海：漂浮画作（浅色是晨光，深色是夜色）或按时期分组的网格
   sea(r) {
-    const p = period(r.period);
-    // 顶栏：左边站名与副标题，右边随机和网格；时期选择在画海里放到底部展签上方，网格里留在顶栏
-    const periodBtn = cls => `<button class="capsule glass ${cls}" data-act="seaPeriod" aria-label="选择时期">${esc(p ? p.name : '全部时期')}${icon('down')}</button>`;
-    const top = `<div class="sea-head"><div class="sea-brand"><h1>${esc(state.site.title)}</h1>${r.mode === 'sea' ? `<p>${p ? `${esc(p.name)} · ${esc(p.span)}` : esc(state.site.tagline.replace(/。$/, ''))}</p>` : ''}</div>
+    const p = period(r.period), wh = whereOf(r.where);
+    // 顶栏：左边站名与副标题，右边随机和网格；时期或地点选择在画海里放到底部展签上方，网格里留在顶栏
+    const periodBtn = cls => `<button class="capsule glass ${cls}" data-act="seaPeriod" aria-label="选择时期或地点">${wh ? icon('pin') : ''}${esc(wh ? wh.name : p ? p.name : '全部时期')}${icon('down')}</button>`;
+    const sub = wh ? `${esc(wh.name)} · ${wh.works.filter(hasImg).length} 件` : p ? `${esc(p.name)} · ${esc(p.span)}` : esc(state.site.tagline.replace(/。$/, ''));
+    const top = `<div class="sea-head"><div class="sea-brand"><h1>${esc(state.site.title)}</h1>${r.mode === 'sea' ? `<p>${sub}</p>` : ''}</div>
       <div style="display:flex;gap:8px">${r.mode === 'sea' ? `<button class="circle glass" data-act="seaShuffle" aria-label="随机一件">${icon('shuffle')}</button>` : periodBtn('')}<button class="circle glass" data-act="seaMode" aria-label="${r.mode === 'sea' ? '以网格浏览' : '回到画海'}">${icon(r.mode === 'sea' ? 'grid' : 'sparkle')}</button></div></div>`;
+    if (r.mode === 'grid' && wh) return { cls: 'sea sea-grid', html: top + `<div class="scroll">${byPeriodTiles(wh.works, r.where)}</div>` };
     if (r.mode === 'grid') {
       const ps = p ? [p] : D.periods;
       return { cls: 'sea sea-grid', html: top + `<div class="scroll">${ps.map(pp => { const ws = worksOf(pp.id).filter(hasImg); return ws.length ? `<div class="grid-h"><span>${esc(pp.name)}</span><small>${esc(pp.span)}</small></div><div class="tiles">${ws.map(w => tile(w.id, 'period:' + pp.id)).join('')}</div>` : ''; }).join('')}</div>` };
@@ -380,10 +394,11 @@ const VIEWS = {
     return { cls: 'root', html: bare + `<div class="scroll">${seg('seg', [['time', '时光'], ['chain', '关系'], ['all', '名录']], r.seg)}<div class="pbody">${body}</div></div>`, mount };
   },
 
-  saved() {
+  saved(r) {
     const list = saved.filter(id => hasImg(work(id)));
-    if (!list.length) return { cls: 'root', html: bare + `<div class="scroll"><div class="block card empty-state"><span class="orb">${icon('saved')}</span><h2>还没有收藏</h2><p>在画海或作品页点书签，<br>下次就能从这里继续看。</p><button class="btn-soft" data-act="tab" data-v="sea">去画海看看</button></div>${aboutRow}</div>` };
-    return { cls: 'root', html: bare + `<div class="scroll"><div class="masonry">${list.map(id => { const w = work(id); return `<button class="card mcard press" data-act="work" data-v="${id}" data-list="saved" data-zoom="${id}" data-ctx="${id}"><img src="${thumb(id)}" alt="" loading="lazy" style="aspect-ratio:${(1 / ratio(id)).toFixed(3)}"><b>${esc(w.title)}</b><small>${esc(w.artist)}</small></button>`; }).join('')}</div><p class="foot" style="text-align:center">${list.length} 件作品，保存在这台设备 · 长按可以取消收藏</p>${aboutRow}</div>` };
+    if (!list.length) return { cls: 'root', html: bare + `<div class="scroll"><div class="block card empty-state"><span class="orb">${icon('saved')}</span><h2>还没有收藏的作品</h2><button class="btn-soft" data-act="tab" data-v="sea">去画海看看</button></div>${aboutRow}</div>` };
+    const body = r.seg === 'place' ? savedByPlace(list) : `<div class="masonry">${list.map(id => { const w = work(id); return `<button class="card mcard press" data-act="work" data-v="${id}" data-list="saved" data-zoom="${id}" data-ctx="${id}"><img src="${thumb(id)}" alt="" loading="lazy" style="aspect-ratio:${(1 / ratio(id)).toFixed(3)}"><b>${esc(w.title)}</b><small>${esc(w.artist)}</small></button>`; }).join('')}</div>`;
+    return { cls: 'root', html: bare + `<div class="scroll">${seg('seg', [['all', '全部'], ['place', '按地点']], r.seg || 'all')}${body}${aboutRow}</div>` };
   },
 
   search() {
@@ -434,11 +449,11 @@ const VIEWS = {
     const museums = ps.filter(p => p.kind === 'museum'), others = ps.filter(p => p.kind !== 'museum');
     return {
       html: nav({ title: c.name }) + `<div class="scroll"><div class="place-mosaic n${top.length}">${top.map(w => `<button data-act="work" data-v="${w.id}" data-list="city:${c.id}" data-zoom="${w.id}" data-ctx="${w.id}"><img src="${(top.length > 1 && w !== top[0] ? thumb : display)(w.id)}" alt="" loading="lazy"></button>`).join('')}</div>
-        <div class="place-top"><span class="k">${esc(c.country)}</span><h1>${esc(c.name)}</h1><p>画间收录 ${ws.length} 件 · ${ps.length} 处地点</p></div>
-        ${imgs[0] ? `<div style="padding:4px 16px 0"><button class="pbtn" data-act="work" data-v="${imgs[0].id}" data-list="city:${c.id}">${icon('play', 'fill')}从第一件看 · ${imgs.length} 件</button></div>` : ''}
+        <div class="place-top"><span class="k">${esc(c.country)}</span><h1>${esc(c.name)}</h1><p>画间收录 ${ws.length} 件 · ${ps.length} 处地点${placeTip}</p></div>
+        ${imgs[0] ? `<div class="place-acts"><button class="pbtn" data-act="work" data-v="${imgs[0].id}" data-list="city:${c.id}">${icon('play', 'fill')}从第一件看 · ${imgs.length} 件</button>${imgs.length >= 3 ? `<button class="btn-soft" data-act="seaWhere" data-v="city:${c.id}">${icon('sea')}在画海里看</button>` : ''}</div>` : ''}
         ${museums.length ? sec('博物馆', `<small>${museums.length} 处</small>`) + `<div class="block card rows">${museums.map(p => placeRow(p)).join('')}</div>` : ''}
         ${others.length ? sec('教堂、宫殿与原址', `<small>${others.length} 处</small>`) + `<div class="block card rows">${others.map(p => placeRow(p, `${worksAt(p.id).length} 件 · ${PLACE_KIND[p.kind]}${p.area ? ' · ' + p.area : ''}`)).join('')}</div>` : ''}
-        ${sec('这座城市的作品')}${byPeriodTiles(ws, 'city:' + c.id)}${placeFoot}</div>`,
+        ${sec('这座城市的作品')}${byPeriodTiles(ws, 'city:' + c.id)}</div>`,
       mount: el => top[0] && applyTint(el, top[0].id, thumb(top[0].id)),
     };
   },
@@ -458,15 +473,14 @@ const VIEWS = {
       : `<div class="place-top"><span class="k">${esc(placeWhere(p))} · ${PLACE_KIND[p.kind]}</span><h1>${esc(p.name)}</h1>${p.original ? `<p>${esc(p.original)}</p>` : ''}</div>`;
     return {
       html: nav({ title: p.name }) + `<div class="scroll">${head}
-        <div class="place-facts"><span class="pchip tint">画间收录 ${ws.length} 件</span>${span ? `<span class="pchip">${esc(span)}</span>` : ''}${p.url ? `<a class="pchip" href="${esc(p.url)}" target="_blank" rel="noopener">官网${icon('link')}</a>` : ''}<a class="pchip" href="${esc(mapUrl)}" target="_blank" rel="noopener">地图${icon('map')}</a></div>
+        <div class="place-facts"><span class="pchip tint">画间收录 ${ws.length} 件</span>${placeTip}${span ? `<span class="pchip">${esc(span)}</span>` : ''}${p.url ? `<a class="pchip" href="${esc(p.url)}" target="_blank" rel="noopener">官网${icon('link')}</a>` : ''}<a class="pchip" href="${esc(mapUrl)}" target="_blank" rel="noopener">地图${icon('map')}</a></div>
         ${parent || p.note ? `<div class="prose place-note">${parent ? `<p>通常随<button class="inl" data-act="place" data-v="${parent.id}">${esc(parent.name)}</button>一起参观。</p>` : ''}${p.note ? `<p>${esc(p.note)}</p>` : ''}</div>` : ''}
-        ${imgs[0] ? `<div style="padding:16px 16px 0"><button class="pbtn" data-act="work" data-v="${imgs[0].id}" data-list="${list}">${icon('play', 'fill')}${imgs.length > 1 ? `按年代看 · ${imgs.length} 件` : '看这件作品'}</button></div>` : ''}
-        ${must.length > 1 && imgs.length > 4 ? sec('必看', `<small>出现在故事与年表里</small>`) + `<div class="rail">${must.map(w => wcard(w.id, list)).join('')}</div>` : ''}
+        ${imgs[0] ? `<div class="place-acts" style="padding-top:16px"><button class="pbtn" data-act="work" data-v="${imgs[0].id}" data-list="${list}">${icon('play', 'fill')}${imgs.length > 1 ? `按年代看 · ${imgs.length} 件` : '看这件作品'}</button>${imgs.length >= 3 ? `<button class="btn-soft" data-act="seaWhere" data-v="${list}">${icon('sea')}在画海里看</button>` : ''}</div>` : ''}
+        ${must.length > 1 && imgs.length > 4 ? secTip('必看', '优先选看画故事里讲到的作品，其次是年表上的代表作。') + `<div class="rail">${must.map(w => wcard(w.id, list)).join('')}</div>` : ''}
         ${groups.length > 1 ? sec('时代分布') + `<div class="block card pad"><div class="dist">${groups.map(([g, n]) => `<i class="gc" style="${gc(g)};flex:${n}"></i>`).join('')}</div><div class="dist-l">${groups.map(([g, n]) => `<span class="gc" style="${gc(g)}"><i class="dot" style="background:var(--c)"></i>${esc(g.name)} ${n}</span>`).join('')}</div></div>` : ''}
         ${sec(new Set(ws.map(w => w.period)).size > 1 ? '按时期看' : '收录作品')}${byPeriodTiles(ws, list)}
         ${artists.size ? sec('这里的艺术家', `<small>${artists.size} 位</small>`) + `<div class="block card rows">${[...artists].sort((a, b) => b[1] - a[1] || person(a[0]).born - person(b[0]).born).slice(0, 12).map(([id, n]) => personRow(person(id), `${n} 件 · ${lifespan(person(id))}`)).join('')}</div>` : ''}
-        ${nearby.length ? sec(`${c.name}还有`, nearby.length > 5 ? `<button class="more" data-act="city" data-v="${c.id}">全部 ${nearby.length + 1} 处</button>` : '') + `<div class="block card rows">${nearby.slice(0, 5).map(x => placeRow(x)).join('')}</div>` : ''}
-        ${placeFoot}</div>`,
+        ${nearby.length ? sec(`${c.name}还有`, nearby.length > 5 ? `<button class="more" data-act="city" data-v="${c.id}">全部 ${nearby.length + 1} 处</button>` : '') + `<div class="block card rows">${nearby.slice(0, 5).map(x => placeRow(x)).join('')}</div>` : ''}</div>`,
       mount: el => cover && applyTint(el, cover.id, thumb(cover.id)),
     };
   },
@@ -475,7 +489,7 @@ const VIEWS = {
   unplaced() {
     const groups = Object.entries(PLACES.unplaced).map(([k, u]) => [k, u.label, PX.unplaced.get(k) || []]).filter(x => x[2].length);
     return {
-      html: nav({ title: '不在某一处' }) + `<div class="scroll"><div class="place-top"><h1>不在某一处的作品</h1><p>原作失传、有多个版本或印本、或在不对外的收藏里。</p></div>`
+      html: nav({ title: '不在某一处' }) + `<div class="scroll"><div class="place-top"><h1>不在某一处的作品</h1></div>`
         + groups.map(([k, label, ws]) => sec(label, `<small>${ws.length} 件</small>`) + `<div class="block card rows">${ws.map(w => `<button class="lrow" style="--sep-left:74px" data-act="work" data-v="${w.id}" data-list="unplaced:${k}"${hasImg(w) ? ` data-zoom="${w.id}" data-ctx="${w.id}"` : ''}>${thumbOr(hasImg(w) && w, w.title)}<div class="main"><b>${esc(w.title)}</b><small>${esc(w.artist)} · ${esc(w.location)}</small></div>${chev}</button>`).join('')}</div>`).join('')
         + `</div>`,
     };
@@ -531,15 +545,15 @@ const VIEWS = {
       html: nav({ title: '关于画间' }) + `<div class="scroll"><div class="about-top"><h1>${esc(state.site.title)}</h1><p>${esc(state.site.tagline)}</p></div>
         <div class="prose" style="padding-top:4px"><p>${esc(state.t.meta.description)}</p></div>
         ${sec('外观')}<div style="padding:0 0 4px">${seg('theme', [['system', '跟随系统'], ['light', '浅色'], ['dark', '深色']], theme)}</div>
+        ${secTip('本机数据', '清除浏览器数据会一并删除收藏和阅读进度。')}<div class="block card rows"><div class="lrow static"><div class="main"><b>收藏与阅读进度</b></div><span class="val">只存在这台设备</span></div></div>
         ${sec('图片与来源')}<div class="block card pad prose"><p>图片来自维基共享资源、维基百科与馆藏网站。每件作品的“资料”里保留作者、来源与权利说明。</p></div>
         ${sec('延伸阅读')}<div class="block card rows">${state.site.recommendedReading.map(x => `<div class="lrow static"><div class="main"><b>${esc(x.title)}</b><small>${esc(x.author)}</small></div></div>`).join('')}</div>
-        ${sec('开源')}<div class="block card rows"><a class="lrow" href="${esc(state.site.repo)}" target="_blank" rel="noopener"><div class="main"><b class="link">源代码</b><small>代码 MIT · 文字 CC BY-SA 4.0</small></div>${icon('link', 'chev')}</a><a class="lrow" href="https://x.com/Tumars" target="_blank" rel="noopener"><div class="main"><b class="link">作者 · X @Tumars</b></div>${icon('link', 'chev')}</a></div>
-        <p class="foot">收藏和阅读进度保存在这个浏览器里，清除浏览器数据会一并删除。</p></div>`,
+        ${sec('开源')}<div class="block card rows"><a class="lrow" href="${esc(state.site.repo)}" target="_blank" rel="noopener"><div class="main"><b class="link">源代码</b><small>代码 MIT · 文字 CC BY-SA 4.0</small></div>${icon('link', 'chev')}</a><a class="lrow" href="https://x.com/Tumars" target="_blank" rel="noopener"><div class="main"><b class="link">作者 · X @Tumars</b></div>${icon('link', 'chev')}</a></div></div>`,
     };
   },
 
   missing() {
-    return { html: nav({ title: '未找到' }) + `<div class="scroll"><div class="block card empty-state" style="margin-top:12px"><span class="orb">${icon('search')}</span><h2>没有找到这项内容</h2><p>链接可能已经过期，可以从画海重新开始。</p><button class="btn-soft" data-act="tab" data-v="sea">回到画海</button></div></div>` };
+    return { html: nav({ title: '未找到' }) + `<div class="scroll"><div class="block card empty-state" style="margin-top:12px"><span class="orb">${icon('search')}</span><h2>这个链接里的内容找不到了</h2><button class="btn-soft" data-act="tab" data-v="sea">回到画海</button></div></div>` };
   },
 };
 
@@ -641,11 +655,11 @@ function cbHtml(r) {
       <div class="now"><b class="tb-year">${yr(r.year)}</b><span class="tb-era"></span></div>
       <div class="cb-wrap"><div class="tb-scroll" aria-label="年表时光带，左右拖动选择年份"><div class="tb-in" style="width:calc(${CB.W}px + 100%);height:${L.tickTop + 18}px">${rows}${evs}${wks}${pers}${ticks}</div></div><div class="cb-labs">${labs}</div></div>
       <div class="tb-handle" style="top:62px;bottom:auto;height:${L.tickTop - 4}px"></div>
-      <div class="cb-foot"><span>${real ? `按真实比例，史前约占整条时间线的 ${pre}%` : '左右拖动 · 点任何一项跳过去'}</span><button class="pchip${real ? ' tint' : ''}" data-act="cbReal" aria-pressed="${real}">真实比例</button></div>
+      <div class="cb-foot"><span></span><span class="cb-scale">${tip(`默认比例放大了近代，越往后越宽。真实比例下，史前约占整条时间线的 ${pre}%。`)}<button class="pchip${real ? ' tint' : ''}" data-act="cbReal" aria-pressed="${real}">真实比例</button></span></div>
     </div>
     <div class="cb-now"></div>
-    ${sec('更多脉络')}<div class="block card rows">${CONTEXTS.map(([id, t, sub]) => `<button class="lrow" data-act="ctx" data-v="${id}"><div class="main"><b>${t}</b><small>${sub}</small></div>${chev}</button>`).join('')}</div>
-    <div class="block card rows" style="margin-top:12px"><button class="lrow" data-act="cbList"><div class="main"><b>按时期列表浏览</b><small>${D.periods.length} 个时期，每个时期的大事和同时期的历史</small></div>${chev}</button></div>`;
+    ${sec('更多脉络')}<div class="block card rows">${CONTEXTS.map(([id, t]) => `<button class="lrow" data-act="ctx" data-v="${id}"><div class="main"><b>${t}</b></div>${chev}</button>`).join('')}</div>
+    <div class="block card rows" style="margin-top:12px"><button class="lrow" data-act="cbList"><div class="main"><b>按时期列表浏览</b></div><span class="val">${D.periods.length} 个时期</span>${chev}</button></div>`;
 }
 function cbNowHtml(year, ei) {
   const arts = D.periods.filter(p => p.start <= year && year <= p.end).sort((a, b) => b.start - a.start);
@@ -748,10 +762,9 @@ function timeHtml(r) {
         ${Array.from({ length: 14 }, (_, i) => 1250 + i * 50).filter(y => y % 100).map(y => `<span class="tb-tick minor" style="left:calc(var(--h) + ${TX(y).toFixed(1)}px)">${y}</span>`).join('')}
       </div></div>
       <div class="tb-handle"></div>
-      <p class="tb-hint">左右拖动时光带 · 点名字跳到那个人 · ◆ 是相遇</p>
     </div>
     <div class="enc-slot"></div>
-    <div class="sec"><h2>此时在世</h2><small class="tb-count"></small></div>
+    <div class="sec"><h2>此时在世${tip('时光带上每条线是一个人的一生，◆ 是有记录的相遇。')}</h2><small class="tb-count"></small></div>
     <div class="pc-rail"></div>`;
 }
 function pcard(p, year) {
@@ -767,7 +780,9 @@ function mountTime(el) {
   let lastKey = '', timer = 0, railTimer = 0;
   const renderCards = (alive, year) => {
     if (!alive.some(p => p.id === r.focus)) r.focus = (alive.find(p => relationsOf(p.id).length >= 4) || alive[0])?.id || '';
-    rail.innerHTML = alive.length ? alive.map(p => pcard(p, year)).join('') : `<div class="card empty-state" style="width:100%;margin:0 16px"><p>这一年没有收录在世的人物，<br>继续拖动时光带看看。</p></div>`;
+    // 没有人在世时，给一个跳到最近那个人的按钮
+    const near = alive.length ? null : [...D.people].sort((a, b) => Math.min(Math.abs(a.born - year), Math.abs(a.died - year)) - Math.min(Math.abs(b.born - year), Math.abs(b.died - year)))[0];
+    rail.innerHTML = alive.length ? alive.map(p => pcard(p, year)).join('') : `<div class="card empty-state" style="width:100%;margin:0 16px"><p>这一年没有收录在世的人物。</p>${near ? `<button class="btn-soft" data-act="tbPick" data-v="${near.id}">跳到${esc(shortName(near.name))}</button>` : ''}</div>`;
     const cur = rail.querySelector(`[data-v="${CSS.escape(r.focus)}"]`);
     if (cur) rail.scrollLeft = cur.offsetLeft - (rail.clientWidth - cur.offsetWidth) / 2;
     if (!reduced) rail.querySelectorAll('.pcard').forEach((c, i) => c.animate([{ opacity: 0, translate: '0 16px' }, { opacity: 1, translate: '0 0' }], { duration: 520, delay: Math.min(i, 6) * 40, easing: SPRING, fill: 'backwards' }));
@@ -845,7 +860,7 @@ function chainHtml(r) {
     <div class="card ego">${egoHtml(r.cf)}</div>
     <div class="legend">${groups.map(([k]) => `<span style="--k:${KIND[k][1]}"><i></i>${KIND[k][0]}</span>`).join('')}</div>
     ${groups.map(([k, xs]) => `<div class="block card kgroup" style="--k:${KIND[k][1]};margin-top:12px"><div class="kh"><i></i>${KIND[k][0]} · ${xs.length}</div>${xs.map(x => personRow(person(x.id), x.note || x.label, 'chainGo')).join('')}</div>`).join('')}
-    ${!rels.length ? `<div class="block card empty-state"><p>暂无记录的关系。</p></div>` : ''}
+    ${!rels.length ? `<div class="block card empty-state"><p>还没有记录${esc(person(r.cf).name)}的关系。</p><button class="btn-soft" data-act="chainGo" data-v="${hubs()[0].id}">从${esc(hubs()[0].name)}开始</button></div>` : ''}
     ${sec('从这些人出发')}<div class="rail">${hubs().map(o => `<button class="card pg-card gc press" style="${gcPerson(o)};width:96px" data-act="chainGo" data-v="${o.id}">${avatar(o)}<b>${esc(o.name)}</b><small>${relationsOf(o.id).length} 位</small></button>`).join('')}</div>`;
 }
 function mountChain(el, from) {
@@ -867,22 +882,55 @@ function mountChain(el, from) {
 function rosterHtml() {
   const groupId = o => period(o.period)?.group;
   const lists = D.groups.map(g => [g.name, D.people.filter(o => groupId(o) === g.id)]).concat([['其他', D.people.filter(o => !D.groups.some(g => g.id === groupId(o)))]]);
-  return sec('派系') + `<div class="block card rows"><button class="lrow" data-act="ctx" data-v="schools"><div class="main"><b>派系与关系</b><small>${state.t.schools.length} 个画派、运动与传统</small></div>${chev}</button><button class="lrow" data-act="ctx" data-v="people-life"><div class="main"><b>派系生命线</b><small>同一派系的人按真实年份排开</small></div>${chev}</button></div>`
+  return sec('派系') + `<div class="block card rows"><button class="lrow" data-act="ctx" data-v="schools"><div class="main"><b>派系与关系</b></div><span class="val">${state.t.schools.length} 个</span>${chev}</button><button class="lrow" data-act="ctx" data-v="people-life"><div class="main"><b>派系生命线</b></div>${chev}</button></div>`
     + sec(`${D.encounters.length} 次相遇`, `<small>按年份</small>`) + `<div class="rail">${[...D.encounters].sort((a, b) => a.year - b.year).map(e => `<button class="card mcard-e press" data-act="encounter" data-v="${D.encounters.indexOf(e)}"><span class="k">${esc(e.yearText || yr(e.year))} · ${esc(e.place)}</span><h3>${esc(e.title)}</h3><p>${esc(e.text)}</p><div class="faces">${e.people.map(person).filter(Boolean).map(avatar).join('')}</div></button>`).join('')}</div>`
     + lists.filter(([, ps]) => ps.length).map(([name, ps]) => `<div class="gl">${esc(name)} · ${ps.length}</div><div class="pgrid">${[...ps].sort((a, b) => a.born - b.born).map(o => `<button class="card pg-card gc press" style="${gcPerson(o)}" data-act="person" data-v="${o.id}">${avatar(o)}<b>${esc(o.name)}</b><small>${esc(yr(o.born, o.approx))}–${esc(o.diedText || yr(o.died))}</small></button>`).join('')}</div>`).join('');
 }
 
 // ───── 导览 · 去哪看 ─────
+// 城市地图：与艺术中心地图同一张海岸线底图和投影（经纬度示意，不表示国界），只画欧洲一带；
+// 圆点面积按作品数，作品多的城市标名字；范围外的城市列在下面
+const MAP = { x: lon => (lon + 100) * 6, y: lat => (70 - lat) * 8, box: [536, 70, 300, 214] };
+function cityMapHtml() {
+  const [bx, by, bw, bh] = MAP.box, n = c => cityWorks(c.id).length;
+  const cities = [...PX.placesIn.keys()].map(cityById).sort((a, b) => n(b) - n(a));
+  const inBox = c => { const x = MAP.x(c.lon), y = MAP.y(c.lat); return x > bx && x < bx + bw && y > by && y < by + bh; };
+  const inside = cities.filter(inBox), outside = cities.filter(c => !inBox(c));
+  const r = c => 2 + Math.sqrt(n(c));
+  // 小城市先画，大城市压在上面；名字最后画，不被圆点盖住
+  const dots = [...inside].reverse().map(c => `<g class="cm-dot" data-act="city" data-v="${c.id}" role="link" aria-label="${esc(c.name)} ${n(c)} 件"><circle class="hit" cx="${MAP.x(c.lon).toFixed(1)}" cy="${MAP.y(c.lat).toFixed(1)}" r="${Math.max(r(c), 8).toFixed(1)}"/><circle cx="${MAP.x(c.lon).toFixed(1)}" cy="${MAP.y(c.lat).toFixed(1)}" r="${r(c).toFixed(1)}"/></g>`).join('');
+  const labels = inside.filter(c => n(c) >= 10).map(c => `<text x="${(MAP.x(c.lon) + r(c) + 3).toFixed(1)}" y="${(MAP.y(c.lat) + 3.5).toFixed(1)}">${esc(c.name)}</text>`).join('');
+  return `<div class="block card citymap"><svg viewBox="${MAP.box.join(' ')}" role="img" aria-label="收录作品所在城市的位置示意">${land}${dots}${labels}</svg>
+    ${outside.length ? `<div class="cm-out"><small>欧洲以外</small>${outside.map(c => `<button class="pchip" data-act="city" data-v="${c.id}">${esc(c.name)} ${n(c)}</button>`).join('')}</div>` : ''}</div>`;
+}
+// 收藏按地点：城市按收藏数排序，城市里每个地点一张卡，方便出行前看一座城要去哪几处
+function savedByPlace(list) {
+  const ws = list.map(work), byCity = new Map(), loose = [];
+  ws.forEach(w => {
+    const p = placesOf(w.id)[0];
+    if (!p) return loose.push(w);
+    const c = byCity.get(p.city) || new Map();
+    c.set(p.id, [...(c.get(p.id) || []), w]);
+    byCity.set(p.city, c);
+  });
+  const count = m => [...m.values()].reduce((s, x) => s + x.length, 0);
+  const card = (head, xs) => `<div class="block card savedp">${head}<div class="savedp-im">${xs.map(w => `<button data-act="work" data-v="${w.id}" data-list="saved" data-zoom="${w.id}" data-ctx="${w.id}" aria-label="${esc(w.title)}"><img src="${thumb(w.id)}" alt="" loading="lazy"></button>`).join('')}</div></div>`;
+  return [...byCity].sort((a, b) => count(b[1]) - count(a[1])).map(([cid, m]) => {
+    const c = cityById(cid);
+    return sec(c.name, `<button class="more" data-act="city" data-v="${cid}">${count(m)} 件 · ${m.size} 处</button>`)
+      + [...m].sort((a, b) => b[1].length - a[1].length).map(([pid, xs]) => { const p = placeById(pid); return card(`<button class="lrow" data-act="place" data-v="${pid}"><div class="main"><b>${esc(p.name)}</b><small>收藏了 ${xs.length} 件 · 画间收录 ${worksAt(pid).length} 件${p.area ? ' · ' + esc(p.area) : ''}</small></div>${chev}</button>`, xs); }).join('');
+  }).join('') + (loose.length ? sec('不在某一处', `<small>${loose.length} 件</small>`) + card('', loose) : '');
+}
 // 先按城市（教堂和原址里的作品不会漏掉），再到馆；搜索框也能直接找到馆名
 function placesHtml() {
   const top = [...PX.worksAt.keys()].map(placeById).sort((a, b) => worksAt(b.id).length - worksAt(a.id).length).slice(0, 8);
   const countries = citiesByCountry(), nCities = countries.reduce((s, x) => s + x[1].length, 0);
   const lost = [...PX.unplaced].map(([k, ws]) => `${PLACES.unplaced[k].label} ${ws.length}`).join(' · ');
   return sec('作品最多的地方') + `<div class="rail">${top.map(placeCard).join('')}</div>`
+    + secTip('地图', '海岸线来自 Natural Earth，按经纬度示意，不表示国界。圆点越大，画间收录的作品越多。') + cityMapHtml()
     + sec('按城市', `<small>${nCities} 座城市 · ${PX.worksAt.size} 处地点</small>`)
     + countries.map(([country, cs]) => `<div class="gl">${esc(country)}</div><div class="block card rows">${cs.map(cityRow).join('')}</div>`).join('')
-    + (lost ? `<div class="block card rows" style="margin-top:20px"><button class="lrow" data-act="unplaced"><div class="main"><b>不在某一处的作品</b><small>${esc(lost)}</small></div>${chev}</button></div>` : '')
-    + placeFoot;
+    + (lost ? `<div class="block card rows" style="margin-top:20px"><button class="lrow" data-act="unplaced"><div class="main"><b>不在某一处的作品</b><small>${esc(lost)}</small></div>${chev}</button></div>` : '');
 }
 
 // ───── 搜索 ─────
@@ -904,11 +952,11 @@ function searchBody() {
   const cs = [...PX.placesIn.keys()].map(cityById).filter(c => has(c.name, c.country)).sort((a, b) => many(cityWorks(a.id), cityWorks(b.id)));
   const pl = [...PX.worksAt.keys()].map(placeById).filter(p => has(p.name, p.original, p.area) && !cs.some(c => c.id === p.city && has(c.name))).sort((a, b) => many(worksAt(a.id), worksAt(b.id)));
   S.results = ws.map(w => w.id);
-  if (!ppl.length && !ps.length && !ws.length && !cs.length && !pl.length) return `<div class="block card empty-state" style="margin-top:12px"><span class="orb">${icon('search')}</span><h2>没有“${esc(S.query)}”的结果</h2><p>换个更短的名称，或试试艺术家的英文名。</p></div>`;
+  if (!ppl.length && !ps.length && !ws.length && !cs.length && !pl.length) return `<div class="block card empty-state" style="margin-top:12px"><span class="orb">${icon('search')}</span><h2>没有找到“${esc(S.query)}”</h2><button class="btn-soft" data-act="clearQ">换个词搜索</button></div>`;
   return (cs.length || pl.length ? sec('地点') + `<div class="block card rows">${cs.slice(0, 6).map(cityRow).join('')}${pl.slice(0, 8).map(p => placeRow(p, `${placeWhere(p)} · ${worksAt(p.id).length} 件`)).join('')}</div>` : '')
     + (ppl.length ? sec('人物') + `<div class="block card rows">${ppl.slice(0, 8).map(o => personRow(o, o.en)).join('')}</div>` : '')
     + (ps.length ? sec('时期') + `<div class="block card rows">${ps.map(p => `<button class="lrow gc" style="${gc(groupOf(p))}" data-act="hall" data-v="${p.id}"><span class="dot" style="background:var(--c)"></span><div class="main"><b>${esc(p.name)}</b><small>${esc(p.span)}</small></div>${chev}</button>`).join('')}</div>` : '')
-    + (ws.length ? sec('作品', `<small>${ws.length} 件</small>`) + `<div class="block card rows">${ws.slice(0, 40).map(w => `<button class="lrow" style="--sep-left:74px" data-act="work" data-v="${w.id}" data-list="search" data-zoom="${w.id}" data-ctx="${w.id}">${hasImg(w) ? `<img class="thumb" src="${thumb(w.id)}" alt="" loading="lazy">` : `<span class="thumb noimg">${esc(w.title[0])}</span>`}<div class="main"><b>${esc(w.title)}</b><small>${esc(w.artist)} · ${esc(w.yearText)}</small></div>${chev}</button>`).join('')}</div>${ws.length > 40 ? `<p class="foot">还有 ${ws.length - 40} 件，输入更具体的名称可以缩小范围。</p>` : ''}` : '');
+    + (ws.length ? sec('作品', `<small>${ws.length > 40 ? `前 40 件 / 共 ${ws.length} 件` : `${ws.length} 件`}</small>`) + `<div class="block card rows">${ws.slice(0, 40).map(w => `<button class="lrow" style="--sep-left:74px" data-act="work" data-v="${w.id}" data-list="search" data-zoom="${w.id}" data-ctx="${w.id}">${hasImg(w) ? `<img class="thumb" src="${thumb(w.id)}" alt="" loading="lazy">` : `<span class="thumb noimg">${esc(w.title[0])}</span>`}<div class="main"><b>${esc(w.title)}</b><small>${esc(w.artist)} · ${esc(w.yearText)}</small></div>${chev}</button>`).join('')}</div>` : '');
 }
 function onQuery() {
   S.query = qInput.value;
@@ -1049,11 +1097,13 @@ function zoomOut(el, prev) {
 // ───── 画海 ─────
 function seaList(r) {
   let list;
-  if (r.period) list = worksOf(r.period).filter(hasImg);
+  const wh = whereOf(r.where);
+  if (wh) list = wh.works.filter(hasImg);
+  else if (r.period) list = worksOf(r.period).filter(hasImg);
   // 全部有图作品（含人物补充作品），按时期、年份排列
   else list = D.periods.flatMap(p => worksOf(p.id).filter(hasImg));
   if (!list.some(w => w.id === r.sel)) {
-    if (!r.period && hasImg(work(r.sel))) list.unshift(work(r.sel));
+    if (!r.period && !wh && hasImg(work(r.sel))) list.unshift(work(r.sel));
     else r.sel = list[0]?.id;
   }
   return list;
@@ -1065,6 +1115,7 @@ function seaCard(r) {
 // 画海像 PC 版的孔明灯：作品散在远、中、近三层，越近越大、越亮、移动越多（视差）；每件有一点固定倾斜，
 // 以底部为轴轻轻摇晃；拖动时整片画随速度微微侧倾。背景的色块取自当前选中作品的颜色，换作品时慢慢换色。
 const SEA_DEPTH = [1, .74, .52];
+const SEA_FILL = 160;
 const seaNoise = (i, salt) => { const n = Math.sin(i * 127.1 + salt * 311.7) * 43758.5453; return n - Math.floor(n); };
 const paletteCache = new Map();
 function paletteOf(id, done) {
@@ -1092,23 +1143,27 @@ function mountSea(el) {
   const list = seaList(r);
   r.list = list.map(w => w.id);
   // 与 PC 版同一套布局：按年代沿折返的行排开，横纵首尾相接，可以一直拖下去
-  const loop = skyLoop(list.length), LW = Math.max(loop.width * .62, 1600), LH = Math.max(loop.height * .62, 2400);
-  const pos = {};
+  // 选了地点或时期、作品不多时，把这一组重复几遍铺满循环（循环有最小尺寸，否则一屏只剩两三件）；
+  // 同一件的几份沿折返的行相隔整整一组，选中时去离镜头最近的那一份
+  const slots = Array.from({ length: Math.max(1, Math.ceil(SEA_FILL / list.length)) }, () => list).flat();
+  const loop = skyLoop(slots.length), LW = Math.max(loop.width * .62, 1600), LH = Math.max(loop.height * .62, 2400);
+  const pos = [], copies = {};
   const layers = SEA_DEPTH.map((f, k) => `<div class="sea-layer d${k}" data-f="${f}"></div>`);
   world.innerHTML = layers.join('');
   const layerEls = [...world.children];
   const html = [[], [], []];
-  arrangeWorks(list).forEach((s, i) => {
+  arrangeWorks(slots).forEach((s, i) => {
     const w = s.work, x = s.x * LW / loop.width, y = s.y * LH / loop.height;
     const k = s.depth < 600 ? 0 : s.depth < 950 ? 1 : 2, f = SEA_DEPTH[k];
     const size = (84 + seaNoise(i, 4) * 46) * (k ? f + .12 : 1), rr = Math.min(1.5, Math.max(.6, ratio(w.id)));
     const ww = size / Math.sqrt(rr), hh = ww * rr, tilt = s.angle.toFixed(1);
-    pos[w.id] = { x, y, wx: x, wy: y, w: ww, h: hh, k, f };
-    html[k].push(`<button class="sea-art${w.id === r.sel ? ' on' : ''}" data-act="seaPick" data-v="${w.id}" data-list="sea" data-zoom="${w.id}" data-ctx="${w.id}" aria-label="${esc(w.title)}" style="--x:${(x * f).toFixed(0)};--y:${(y * f).toFixed(0)};--a:${tilt}deg;--dr:${i % 2 ? 7 : -7}px;left:${(x * f).toFixed(1)}px;top:${(y * f).toFixed(1)}px;width:${ww.toFixed(0)}px;height:${hh.toFixed(0)}px;animation-duration:${(13 + (i % 7) * 2)}s;animation-delay:-${(i * 2.7) % 19}s"><img src="${thumb(w.id)}" alt="" loading="${i < 16 ? 'eager' : 'lazy'}" decoding="async"></button>`);
+    pos[i] = { id: w.id, x, y, wx: x, wy: y, w: ww, h: hh, k, f };
+    (copies[w.id] ||= []).push(pos[i]);
+    html[k].push(`<button class="sea-art${w.id === r.sel && i < list.length ? ' on' : ''}" data-act="seaPick" data-v="${w.id}" data-s="${i}" data-list="sea" data-zoom="${w.id}" data-ctx="${w.id}" aria-label="${esc(w.title)}" style="--x:${(x * f).toFixed(0)};--y:${(y * f).toFixed(0)};--a:${tilt}deg;--dr:${i % 2 ? 7 : -7}px;left:${(x * f).toFixed(1)}px;top:${(y * f).toFixed(1)}px;width:${ww.toFixed(0)}px;height:${hh.toFixed(0)}px;animation-duration:${(13 + (i % 7) * 2)}s;animation-delay:-${(i * 2.7) % 19}s"><img src="${thumb(w.id)}" alt="" loading="${i < 16 ? 'eager' : 'lazy'}" decoding="async"></button>`);
   });
   layerEls.forEach((l, k) => { l.innerHTML = html[k].join(''); });
   // 每件作品只画一份，放在离镜头最近的那一圈；换圈发生在屏幕外。离屏的先不渲染（也不加载图片），每隔几帧重新挑一次
-  const artEls = [...world.querySelectorAll('.sea-art')].map(a => ({ a, p: pos[a.dataset.v] }));
+  const artEls = [...world.querySelectorAll('.sea-art')].map(a => ({ a, p: pos[a.dataset.s] }));
   const cull = (ax, ay) => {
     const W = view.clientWidth, H = view.clientHeight;
     if (!W) return;
@@ -1154,15 +1209,17 @@ function mountSea(el) {
   // 射灯在选中作品所在的那一层里
   const spot = document.createElement('i');
   spot.className = 'sea-spot';
+  // 同一件有几份时，取画面上离镜头最近的那份
+  const closest = id => (copies[id] || []).reduce((b, p) => !b || Math.hypot(p.wx + r.ax, p.wy + r.ay) < Math.hypot(b.wx + r.ax, b.wy + r.ay) ? p : b, null);
   const light = id => {
-    const p = pos[id]; if (!p) return;
+    const p = closest(id); if (!p) return;
     const layer = layerEls[p.k];
     if (spot.parentElement !== layer) layer.prepend(spot);
     Object.assign(spot.style, { left: p.wx * p.f + 'px', top: p.wy * p.f + 'px', width: p.w * 2.4 + 60 + 'px', height: p.h * 2 + 60 + 'px' });
   };
   el.querySelector('.sea-card').innerHTML = seaCard(r);
   // 第一次进入（或换了时期）时，让选中的作品停在画面中央
-  if (r.ax == null || r.ay == null) { r.ax = -pos[r.sel].x; r.ay = -pos[r.sel].y; }
+  if (r.ax == null || r.ay == null) { r.ax = -copies[r.sel][0].x; r.ay = -copies[r.sel][0].y; }
   let raf = 0, drag = null, vx = 0, vy = 0, tween = null, lx = 0, ly = 0, llx = 0, lly = 0, frame = 0;
   cull(r.ax, r.ay);
   light(r.sel);
@@ -1225,8 +1282,9 @@ function mountSea(el) {
     r.sel = id;
     light(id);
     recolor(id);
-    world.querySelectorAll('.sea-art').forEach(a => a.classList.toggle('on', a.dataset.v === id));
-    tween = { t: performance.now(), d: 700, fx: r.ax, fy: r.ay, tx: nearest(pos[id], r.ax, LW, 'x'), ty: nearest(pos[id], r.ay, LH, 'y') };
+    const to = copies[id].map(p => [nearest(p, r.ax, LW, 'x'), nearest(p, r.ay, LH, 'y'), p]).reduce((b, t) => Math.hypot(t[0] - r.ax, t[1] - r.ay) < Math.hypot(b[0] - r.ax, b[1] - r.ay) ? t : b);
+    world.querySelectorAll('.sea-art').forEach(a => a.classList.toggle('on', pos[a.dataset.s] === to[2]));
+    tween = { t: performance.now(), d: 700, fx: r.ax, fy: r.ay, tx: to[0], ty: to[1] };
     const card = el.querySelector('.sea-card');
     card.classList.add('swap');
     setTimeout(() => { card.innerHTML = seaCard(r); card.classList.remove('swap'); }, 160);
@@ -1560,6 +1618,20 @@ function saveProgress(r) {
   writeLS('aha.reading.v2', progress);
   app.querySelectorAll('.page').forEach(p => { if (p !== topPage()) p.stale = true; });
 }
+// 回到画海并只放某个地点或城市的作品
+function goSea(where) {
+  const st = stackEl('sea');
+  if (!st.children.length) st.append(makePage(rootRoute('sea')));
+  const root = st.firstElementChild, wh = whereOf(where);
+  Object.assign(root.route, { mode: 'sea', where, period: '', ax: undefined, ay: undefined, sel: coverOf(wh.works)?.id });
+  root.stale = true;
+  if (S.tab === 'sea') { if (topPage() === root) { draw(root, false); chrome(); } else popToRoot(); }
+  else {
+    [...st.children].slice(1).forEach(p => { p.cleanup?.(); p.remove(); });
+    Object.assign(root.style, { visibility: '', transform: '' });
+    switchTab('sea');
+  }
+}
 // 回到人物 tab 的根页，切到某个视图并改它的状态
 function goPeople(patch, after) {
   const st = stackEl('people');
@@ -1575,10 +1647,23 @@ function goPeople(patch, after) {
   }
   after?.(root);
 }
-const periodSheetHtml = cur => `<div class="card rows" style="margin-top:4px"><button class="lrow" data-act="seaSetPeriod" data-v=""><div class="main"><b>全部时期</b><small>每个时期选几件代表作</small></div>${cur ? '' : icon('check', 'check')}</button></div>`
+// 画海选择：时期或地点两页，分段切换；地点页只列有 3 件以上配图的城市和地点
+function seaPickHtml(r) {
+  const onPlace = !!whereOf(r.where), n = ws => ws.filter(hasImg).length, check = v => r.where === v ? icon('check', 'check') : '';
+  const cities = citiesByCountry().flatMap(x => x[1]).filter(c => n(cityWorks(c.id)) >= 3).sort((a, b) => n(cityWorks(b.id)) - n(cityWorks(a.id)));
+  const places = cities.map(c => {
+    const ps = placesIn(c.id).filter(p => n(worksAt(p.id)) >= 3);
+    const row = (v, title, ws, small) => `<button class="lrow" style="--sep-left:74px" data-act="seaSetWhere" data-v="${v}">${thumbOr(coverOf(ws), title)}<div class="main"><b>${esc(title)}</b><small>${small}</small></div>${check(v)}</button>`;
+    return `<div class="gl">${esc(c.name)} · ${esc(c.country)}</div><div class="card rows">${row('city:' + c.id, `整个${c.name}`, cityWorks(c.id), `${n(cityWorks(c.id))} 件 · ${placesIn(c.id).length} 处地点`)}${ps.map(p => row('place:' + p.id, p.name, worksAt(p.id), `${n(worksAt(p.id))} 件`)).join('')}</div>`;
+  }).join('');
+  return `<div class="segc pick-seg" role="group"><span class="thumb-s"></span><button data-act="seaPickTab" data-v="period" aria-pressed="${!onPlace}">时期</button><button data-act="seaPickTab" data-v="place" aria-pressed="${onPlace}">地点</button></div>
+    <div data-pane="period"${onPlace ? ' hidden' : ''}>${periodSheetHtml(onPlace ? '-' : r.period)}</div><div data-pane="place"${onPlace ? '' : ' hidden'}>${places}</div>`;
+}
+const periodSheetHtml = cur => `<div class="card rows" style="margin-top:4px"><button class="lrow" data-act="seaSetPeriod" data-v=""><div class="main"><b>全部时期</b></div>${cur ? '' : icon('check', 'check')}</button></div>`
   + D.groups.map(g => `<div class="gl">${esc(g.name)}</div><div class="card rows">${D.periods.filter(p => p.group === g.id).map(p => `<button class="lrow gc" style="${gc(g)}" data-act="seaSetPeriod" data-v="${p.id}"><span class="dot" style="background:var(--c)"></span><div class="main"><b>${esc(p.name)}</b><small>${esc(p.span)}</small></div>${cur === p.id ? icon('check', 'check') : ''}</button>`).join('')}</div>`).join('');
 
 const ACT = {
+  tip: (v, b) => openTip(b),
   tab: v => switchTab(v),
   openSearch: (v, b, e) => { if (S.tab !== 'search' && !e.target.closest('[data-act="clearQ"]')) switchTab('search'); },
   clearQ: (v, b, e) => { e.preventDefault(); qInput.value = ''; onQuery(); qInput.focus(); },
@@ -1621,15 +1706,23 @@ const ACT = {
     mountSeg(el, from);
   },
   seaPick: v => { const el = topPage(); if (el.route.sel === v) ACT.seaOpen(); else el.seaSelect?.(v); },
-  seaOpen: () => { const el = topPage(); openWork(el.route.sel, 'sea', el.querySelector(`.sea-art[data-v="${CSS.escape(el.route.sel)}"]`)); },
+  seaOpen: () => { const el = topPage(); openWork(el.route.sel, 'sea', el.querySelector(`.sea-art:not([hidden])[data-v="${CSS.escape(el.route.sel)}"]`)); },
   seaShuffle: () => { const el = topPage(), l = el.route.list.filter(x => x !== el.route.sel); el.seaSelect?.(l[Math.floor(Math.random() * l.length)]); },
   seaMode: () => { const el = topPage(); el.route.mode = el.route.mode === 'sea' ? 'grid' : 'sea'; draw(el, false, true); chrome(); },
-  seaPeriod: () => openSheet({ title: '选择时期', html: periodSheetHtml(topPage().route.period) }),
-  seaSetPeriod: v => { const el = stackEl('sea').firstElementChild; el.route.period = v; el.route.ax = el.route.ay = undefined; el.route.sel = v ? worksOf(v).find(hasImg)?.id : 'mona-lisa'; closeSheet(); draw(el, false); chrome(); },
+  seaPeriod: () => openSheet({ title: '画海里放什么', html: seaPickHtml(topPage().route), mount: sh => mountSeg(sh) }),
+  seaPickTab: (v, b) => {
+    const sh = b.closest('.sheet'), th = b.closest('.segc').querySelector('.thumb-s');
+    b.closest('.segc').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    sh.querySelectorAll('[data-pane]').forEach(x => { x.hidden = x.dataset.pane !== v; });
+    Object.assign(th.style, { left: b.offsetLeft + 'px', width: b.offsetWidth + 'px' });
+  },
+  seaSetPeriod: v => { const el = stackEl('sea').firstElementChild; el.route.period = v; el.route.where = ''; el.route.ax = el.route.ay = undefined; el.route.sel = v ? worksOf(v).find(hasImg)?.id : 'mona-lisa'; closeSheet(); draw(el, false); chrome(); },
+  seaSetWhere: v => { closeSheet(); goSea(v); },
+  seaWhere: v => goSea(v),
   era: v => { const p = period(v); openSheet({ title: p.name, html: `<div class="prose"><p class="mt">${esc(p.span)}</p><p class="lead">${esc(p.thesis)}</p>${p.points.map(x => `<p>${esc(x)}</p>`).join('')}${p.bridge ? `<p class="next"><b>下一站</b>${esc(p.bridge)}</p>` : ''}</div>` }); },
   aa: () => openSheet({
     title: '外观', detents: ['fit'],
-    html: `<div class="aa"><div class="card sizes"><span style="font-size:14px">A</span><input id="fs" type="range" min="15" max="24" step="1" value="${prefs.fs}" aria-label="字号"><span style="font-size:24px">A</span></div><div class="themes">${[['paper', '#f8f4ec', '#2b251c', '纸色'], ['white', '#ffffff', '#111', '白色'], ['night', '#121214', '#e8e3d8', '夜间']].map(([k, bg, fg, l]) => `<button data-act="theme" data-v="${k}" aria-pressed="${prefs.theme === k}" aria-label="${l}" style="background:${bg};color:${fg}">文</button>`).join('')}</div><p class="foot" style="text-align:center;padding:0">纸色和宋体只用在阅读页</p></div>`,
+    html: `<div class="aa"><div class="card sizes"><span style="font-size:14px">A</span><input id="fs" type="range" min="15" max="24" step="1" value="${prefs.fs}" aria-label="字号"><span style="font-size:24px">A</span></div><div class="themes">${[['paper', '#f8f4ec', '#2b251c', '纸色'], ['white', '#ffffff', '#111', '白色'], ['night', '#121214', '#e8e3d8', '夜间']].map(([k, bg, fg, l]) => `<button data-act="theme" data-v="${k}" aria-pressed="${prefs.theme === k}" aria-label="${l}" style="background:${bg};color:${fg}">文</button>`).join('')}</div></div>`,
     mount: sh => sh.querySelector('#fs').addEventListener('input', e => { prefs.fs = +e.target.value; writeLS('aha.reader.v1', prefs); topPage().querySelector('.read')?.style.setProperty('--fs', prefs.fs + 'px'); }),
   }),
   theme: (v, b) => { prefs.theme = v; writeLS('aha.reader.v1', prefs); b.parentElement.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); const el = topPage(); el.classList.toggle('t-white', v === 'white'); el.classList.toggle('t-night', v === 'night'); chrome(); },
@@ -1676,7 +1769,7 @@ const ACT = {
   },
   bandPick: () => {
     const cur = stackEl('guide').firstElementChild.route.band;
-    openSheet({ title: '对照历史', detents: ['fit'], html: `<div class="card rows">${D.bands.map(b => `<button class="lrow" data-act="bandSet" data-v="${b.id}"><div class="main"><b>${esc(b.label)}</b><small>${esc((b.fields || []).join(' · '))}</small></div>${b.id === cur ? icon('check', 'check') : ''}</button>`).join('')}</div><p class="foot">每个时期下方显示同一时间段的对照内容</p>` });
+    openSheet({ title: '对照历史', detents: ['fit'], html: `<div class="card rows">${D.bands.map(b => `<button class="lrow" data-act="bandSet" data-v="${b.id}"><div class="main"><b>${esc(b.label)}</b><small>${esc((b.fields || []).join(' · '))}</small></div>${b.id === cur ? icon('check', 'check') : ''}</button>`).join('')}</div>` });
   },
   bandSet: v => { const el = stackEl('guide').firstElementChild; el.route.band = v; closeSheet(); draw(el); },
   event: v => {
@@ -1707,9 +1800,27 @@ const ACT = {
   },
 };
 
+function closeTips() {
+  app.querySelectorAll('.tip-pop:not([hidden])').forEach(p => { p.hidden = true; p.previousElementSibling?.setAttribute('aria-expanded', 'false'); });
+}
+// 气泡默认在按钮下方居中，靠近屏幕边缘时往里收
+function openTip(b) {
+  const pop = b.nextElementSibling, was = !pop.hidden;
+  closeTips();
+  if (was) return;
+  pop.hidden = false;
+  b.setAttribute('aria-expanded', 'true');
+  pop.style.setProperty('--dx', '0px');
+  const r = pop.getBoundingClientRect(), a = app.getBoundingClientRect();
+  // 留出与卡片相同的 16px 边距：时光带卡片会裁掉超出自身的部分
+  const dx = Math.max(0, a.left + 18 - r.left) - Math.max(0, r.right - (a.right - 18));
+  pop.style.setProperty('--dx', dx + 'px');
+}
+
 // ───── 全局手势与事件 ─────
 app.addEventListener('click', e => { if (suppressClick) { e.stopPropagation(); e.preventDefault(); suppressClick = false; } }, true);
 app.addEventListener('click', e => {
+  if (!e.target.closest('.tipw')) closeTips();
   const b = e.target.closest('[data-act]');
   if (!b || b.disabled || !app.contains(b)) return;
   if (e.target.closest('a')) return;
