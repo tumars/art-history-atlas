@@ -293,8 +293,10 @@ const VIEWS = {
   // 画海：漂浮画作（浅色是晨光，深色是夜色）或按时期分组的网格
   sea(r) {
     const p = period(r.period);
-    const top = `<div class="sea-head"><button class="capsule glass" data-act="seaPeriod" aria-label="选择时期">${esc(p ? p.name : '全部时期')}${icon('down')}</button>
-      <div style="display:flex;gap:8px">${r.mode === 'sea' ? `<button class="circle glass" data-act="seaShuffle" aria-label="随机一件">${icon('shuffle')}</button>` : ''}<button class="circle glass" data-act="seaMode" aria-label="${r.mode === 'sea' ? '以网格浏览' : '回到画海'}">${icon(r.mode === 'sea' ? 'grid' : 'sparkle')}</button></div></div>`;
+    // 顶栏：左边站名与副标题，右边随机和网格；时期选择在画海里放到底部展签上方，网格里留在顶栏
+    const periodBtn = cls => `<button class="capsule glass ${cls}" data-act="seaPeriod" aria-label="选择时期">${esc(p ? p.name : '全部时期')}${icon('down')}</button>`;
+    const top = `<div class="sea-head"><div class="sea-brand"><h1>${esc(state.site.title)}</h1>${r.mode === 'sea' ? `<p>${p ? `${esc(p.name)} · ${esc(p.span)}` : esc(state.site.tagline.replace(/。$/, ''))}</p>` : ''}</div>
+      <div style="display:flex;gap:8px">${r.mode === 'sea' ? `<button class="circle glass" data-act="seaShuffle" aria-label="随机一件">${icon('shuffle')}</button>` : periodBtn('')}<button class="circle glass" data-act="seaMode" aria-label="${r.mode === 'sea' ? '以网格浏览' : '回到画海'}">${icon(r.mode === 'sea' ? 'grid' : 'sparkle')}</button></div></div>`;
     if (r.mode === 'grid') {
       const ps = p ? [p] : D.periods;
       return { cls: 'sea sea-grid', html: top + `<div class="scroll">${ps.map(pp => { const ws = worksOf(pp.id).filter(hasImg); return ws.length ? `<div class="grid-h"><span>${esc(pp.name)}</span><small>${esc(pp.span)}</small></div><div class="tiles">${ws.map(w => tile(w.id, 'period:' + pp.id)).join('')}</div>` : ''; }).join('')}</div>` };
@@ -302,7 +304,7 @@ const VIEWS = {
     return {
       cls: 'sea',
       html: `<div class="sea-view" aria-label="画海，拖动浏览"><div class="sea-world"></div></div>${top}
-        <div class="sea-title"><h1>${p ? esc(p.short) : '画间'}</h1><p>${p ? esc(p.span) : '在画作之间，读懂西方艺术'}</p></div>
+        ${periodBtn('sea-period')}
         <div class="sea-card glass"></div>`,
       mount: mountSea,
     };
@@ -935,7 +937,8 @@ function zoomOut(el, prev) {
 function seaList(r) {
   let list;
   if (r.period) list = worksOf(r.period).filter(hasImg);
-  else list = D.periods.flatMap(p => { const ws = worksOf(p.id).filter(hasImg), n = Math.min(5, ws.length); return Array.from({ length: n }, (_, i) => ws[Math.floor(i * ws.length / n)]); });
+  // 全部有图作品（含人物补充作品），按时期、年份排列，从中心向外螺旋展开
+  else list = D.periods.flatMap(p => worksOf(p.id).filter(hasImg));
   if (!list.some(w => w.id === r.sel)) {
     if (!r.period && hasImg(work(r.sel))) list.unshift(work(r.sel));
     else r.sel = list[0]?.id;
@@ -991,9 +994,20 @@ function mountSea(el) {
     const ww = size / Math.sqrt(rr), hh = ww * rr, tilt = ((seaNoise(i, 5) - .5) * 12).toFixed(1);
     pos[w.id] = { x, y, w: ww, h: hh, k, f };
     R = Math.max(R, rad);
-    html[k].push(`<button class="sea-art${w.id === r.sel ? ' on' : ''}" data-act="seaPick" data-v="${w.id}" data-list="sea" data-zoom="${w.id}" data-ctx="${w.id}" aria-label="${esc(w.title)}" style="--x:${(x * f).toFixed(0)};--y:${(y * f).toFixed(0)};--a:${tilt}deg;--dr:${i % 2 ? 7 : -7}px;left:${(x * f).toFixed(1)}px;top:${(y * f).toFixed(1)}px;width:${ww.toFixed(0)}px;height:${hh.toFixed(0)}px;animation-duration:${(13 + (i % 7) * 2)}s;animation-delay:-${(i * 2.7) % 19}s"><img src="${thumb(w.id)}" alt="" loading="${i < 30 ? 'eager' : 'lazy'}" decoding="async"></button>`);
+    html[k].push(`<button class="sea-art${w.id === r.sel ? ' on' : ''}" data-act="seaPick" data-v="${w.id}" data-list="sea" data-zoom="${w.id}" data-ctx="${w.id}" aria-label="${esc(w.title)}" style="--x:${(x * f).toFixed(0)};--y:${(y * f).toFixed(0)};--a:${tilt}deg;--dr:${i % 2 ? 7 : -7}px;left:${(x * f).toFixed(1)}px;top:${(y * f).toFixed(1)}px;width:${ww.toFixed(0)}px;height:${hh.toFixed(0)}px;animation-duration:${(13 + (i % 7) * 2)}s;animation-delay:-${(i * 2.7) % 19}s"><img src="${thumb(w.id)}" alt="" loading="${i < 16 ? 'eager' : 'lazy'}" decoding="async"></button>`);
   });
   layerEls.forEach((l, k) => { l.innerHTML = html[k].join(''); });
+  // 全部 400 多件作品：离屏的先不渲染（也不加载图片），每隔几帧按镜头位置重新挑一次
+  const artEls = [...world.querySelectorAll('.sea-art')].map(a => ({ a, p: pos[a.dataset.v] }));
+  const cull = (ax, ay) => {
+    const W = view.clientWidth, H = view.clientHeight;
+    if (!W) return;
+    for (const { a, p } of artEls) {
+      const dx = p.f * (p.x + ax), dy = p.f * (p.y + ay) + H * .46 - H / 2;
+      const off = Math.abs(dx) > W / 2 + p.w + 160 || Math.abs(dy) > H / 2 + p.h + 200;
+      if (a.hidden !== off) a.hidden = off;
+    }
+  };
   // 夜空：两层星点，随拖动以不同速度平移（与正式版画海一致）
   let seed = 7319;
   const rnd = () => (seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) / 4294967296;
@@ -1032,8 +1046,9 @@ function mountSea(el) {
   light(r.sel);
   el.querySelector('.sea-card').innerHTML = seaCard(r);
   r.ax ??= 0; r.ay ??= 0;
-  let raf = 0, drag = null, vx = 0, vy = 0, tween = null, lx = 0, ly = 0;
+  let raf = 0, drag = null, vx = 0, vy = 0, tween = null, lx = 0, ly = 0, llx = 0, lly = 0, frame = 0;
   const lim = R + 40;
+  cull(r.ax, r.ay);
   const tick = now => {
     raf = requestAnimationFrame(tick);
     if (el.style.visibility === 'hidden' || el.parentElement?.hidden) return;
@@ -1052,14 +1067,19 @@ function mountSea(el) {
     for (const l of layerEls) {
       const f = +l.dataset.f;
       l.style.transform = `translate(${(ax * f).toFixed(1)}px,${(ay * f).toFixed(1)}px)`;
-      l.style.setProperty('--ax', (ax * f).toFixed(0));
-      l.style.setProperty('--ay', (ay * f).toFixed(0));
+      // 投影方向只在移动超过几像素时更新，避免每帧重算全部作品的样式
+      if (Math.abs(ax * f - (l.sx ?? 1e9)) >= 4 || Math.abs(ay * f - (l.sy ?? 1e9)) >= 4) {
+        l.sx = ax * f; l.sy = ay * f;
+        l.style.setProperty('--ax', l.sx.toFixed(0));
+        l.style.setProperty('--ay', l.sy.toFixed(0));
+      }
     }
+    if (++frame % 8 === 0) cull(ax, ay);
     // 侧倾跟着拖动速度，松手后慢慢回正
     const tvx = drag?.on ? drag.vx : vx, tvy = drag?.on ? drag.vy : vy;
     lx += (Math.max(-9, Math.min(9, tvx * .9)) - lx) * .12;
     ly += (Math.max(-9, Math.min(9, -tvy * .9)) - ly) * .12;
-    if (!reduced) { world.style.setProperty('--lx', lx.toFixed(2) + 'deg'); world.style.setProperty('--ly', ly.toFixed(2) + 'deg'); }
+    if (!reduced && (Math.abs(lx - llx) > .05 || Math.abs(ly - lly) > .05)) { llx = lx; lly = ly; world.style.setProperty('--lx', lx.toFixed(2) + 'deg'); world.style.setProperty('--ly', ly.toFixed(2) + 'deg'); }
     for (const sky of skies) sky.style.transform = `translate(${(r.ax * sky.dataset.d).toFixed(1)}px,${(r.ay * sky.dataset.d).toFixed(1)}px)`;
   };
   raf = requestAnimationFrame(tick);
