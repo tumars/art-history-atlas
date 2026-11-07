@@ -5,7 +5,6 @@ import { observeImages } from "../lib/image-loading";
 import { diagramFor, diagramContext } from "../diagrams";
 import { fmtYear } from "../lib/format";
 import land from "../assets/relay-land.svg?raw";
-import { peopleNetwork } from "./people-network";
 
 const entries = [
   ["chronology", "沿着年代看", "时代与历史对照"],
@@ -49,7 +48,7 @@ export function contextPage(id: string, value: string) {
         t.periods.map((p) => [p.id, `${p.short} · ${p.span}`]),
         p.id,
       ) +
-      `<h3>${esc(p.name)}</h3><p>${esc(p.thesis)}</p><button data-hall="${p.id}" class="primary">进入这一展厅 →</button>`;
+      `<h3>${esc(p.name)}</h3><p>${esc(p.thesis)}</p><button data-hall="${p.id}" class="primary">进入这一展厅</button>`;
     body += t.bands
       .map(
         (b) =>
@@ -89,7 +88,7 @@ export function contextPage(id: string, value: string) {
         t.meta.relay.map((x) => [x.period, `${x.place} · ${x.era}`]),
         relay.period,
       ) +
-      `<svg class="context-map" viewBox="${bounds}" role="img" aria-label="艺术中心位置示意，经纬度定位，不表示国界">${land}<path d="${points.map((p, i) => `${i ? "L" : "M"}${x(p.lon)},${y(p.lat)}`).join(" ")}" fill="none" stroke="#9d9472" stroke-width="1"/>${points.map((p) => `<circle cx="${x(p.lon)}" cy="${y(p.lat)}" r="${p.period === relay.period ? 6 : 2}" fill="${p.period === relay.period ? "#a75237" : "#7b806e"}"/>`).join("")}${relay.points.map((p) => `<text x="${x(p.lon) + 8}" y="${y(p.lat) - 8}">${esc(p.name)}</text>`).join("")}</svg><p class="lede">海岸线：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a>。连线仅为主线概览，不代表唯一中心或直接传播路径。</p><h3>${esc(relay.place)}</h3><p>${esc(relay.note)}</p><button class="primary" data-hall="${relay.period}">进入相关展厅 →</button>`;
+      `<svg class="context-map" viewBox="${bounds}" role="img" aria-label="艺术中心位置示意，经纬度定位，不表示国界">${land}<path d="${points.map((p, i) => `${i ? "L" : "M"}${x(p.lon)},${y(p.lat)}`).join(" ")}" fill="none" stroke="#9d9472" stroke-width="1"/>${points.map((p) => `<circle cx="${x(p.lon)}" cy="${y(p.lat)}" r="${p.period === relay.period ? 6 : 2}" fill="${p.period === relay.period ? "#a75237" : "#7b806e"}"/>`).join("")}${relay.points.map((p) => `<text x="${x(p.lon) + 8}" y="${y(p.lat) - 8}">${esc(p.name)}</text>`).join("")}</svg><p class="lede">海岸线：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a>。连线仅为主线概览，不代表唯一中心或直接传播路径。</p><h3>${esc(relay.place)}</h3><p>${esc(relay.note)}</p><button class="primary" data-hall="${relay.period}">进入相关展厅</button>`;
   } else if (id === "schools") {
     const school = t.schools.find((x) => x.id === value) || t.schools[0];
     body =
@@ -103,16 +102,17 @@ export function contextPage(id: string, value: string) {
         .map((x) => `<p>${esc(x.role)}</p>${personButton(x.person)}`)
         .join("");
     body +=
-      '<div class="links"><button data-context="people-life">查看人物生命线 →</button><button data-context="people-graph">查看人物关系图 →</button></div>';
-    body +=
-      "<h3>相遇与交汇</h3>" +
-      t.encounters
-        .filter((x) => x.people.some((id) => school.members.includes(id)))
-        .map(
-          (x) =>
-            `<details class="source"><summary>${esc(x.yearText || fmtYear(x.year))} · ${esc(x.title)}</summary><p>${esc(x.text)}</p>${x.people.map(personButton).join("")}</details>`,
-        )
-        .join("");
+      `<div class="links"><button data-context="people-life">查看派系生命线</button>${school.members[0] ? `<button data-chain="${school.members[0]}">在关系链里看</button>` : ""}</div>`;
+    const met = t.encounters.filter((x) => x.people.some((id) => school.members.includes(id)));
+    if (met.length)
+      body +=
+        "<h3>相遇与交汇</h3>" +
+        met
+          .map(
+            (x) =>
+              `<details class="source"><summary>${esc(x.yearText || fmtYear(x.year))} · ${esc(x.title)}</summary><p>${esc(x.text)}</p>${x.people.map(personButton).join("")}</details>`,
+          )
+          .join("");
     if (t.movements)
       body +=
         "<h3>流派延续</h3>" +
@@ -137,17 +137,15 @@ export function contextPage(id: string, value: string) {
         t.schools.map((x) => [x.id, x.name]),
         school.id,
       ) +
-      `<p class="lede">同一派系内按实际年份线性排列。点姓名认识人物；虚线表示约数。</p><svg viewBox="0 0 320 ${list.length * 70 + 40}" role="group" aria-label="${esc(school.name)}人物生命线"><text x="20" y="18" font-size="12" fill="currentColor">${fmtYear(start)}</text><text x="300" y="18" text-anchor="end" font-size="12" fill="currentColor">${fmtYear(end)}</text>${list.map((p, i) => `<g role="button" tabindex="0" data-person="${p.id}" aria-label="${esc(p.name)}，${fmtYear(p.born)}至${esc(p.diedText || fmtYear(p.died))}"><rect x="0" y="${i * 70 + 25}" width="320" height="65" fill="transparent"/><text x="20" y="${i * 70 + 45}" font-size="14" fill="currentColor">${esc(p.name)}</text><line x1="${x(p.born)}" y1="${i * 70 + 62}" x2="${x(p.died)}" y2="${i * 70 + 62}" stroke="#a9864f" stroke-width="4" ${p.approx ? 'stroke-dasharray="5 3"' : ""}/></g>`).join("")}</svg>` +
+      `<p class="lede">同一派系内按实际年份线性排列。点姓名认识人物；虚线表示约数。</p><svg viewBox="0 0 320 ${list.length * 70 + 40}" role="group" aria-label="${esc(school.name)}人物生命线"><text x="20" y="18" font-size="12" fill="currentColor">${fmtYear(start)}</text><text x="300" y="18" text-anchor="end" font-size="12" fill="currentColor">${fmtYear(end)}</text>${list.map((p, i) => `<g role="button" tabindex="0" data-person="${p.id}" aria-label="${esc(p.name)}，${fmtYear(p.born)}至${esc(p.diedText || fmtYear(p.died))}"><rect x="0" y="${i * 70 + 25}" width="320" height="65" fill="transparent"/><text x="20" y="${i * 70 + 45}" font-size="14" fill="currentColor">${esc(p.name)}</text><line x1="${x(p.born)}" y1="${i * 70 + 62}" x2="${x(p.died)}" y2="${i * 70 + 62}" stroke="var(--tint, #a9864f)" stroke-width="4" stroke-linecap="round" ${p.approx ? 'stroke-dasharray="5 3"' : ""}/></g>`).join("")}</svg>` +
       list.map((p) => personButton(p.id)).join("");
-  } else if (id === "people-graph") {
-    return peopleNetwork();
   } else if (id === "pendulum") {
     body =
       `<p>${esc(t.meta.pendulum?.note || "示意艺术倾向，不是对艺术价值的评分。")}</p><p>← 理性 / 秩序　　情感 / 激情 →</p>` +
       t.periods
         .map(
           (p) =>
-            `<button class="list-row" data-hall="${p.id}"><span><strong>${esc(p.short)}</strong><small>${esc(p.thesis)}</small><span style="display:block;position:relative;width:100%;height:16px;border-bottom:1px solid #999"><i style="position:absolute;left:${((p.mood + 2) / 4) * 94}%;color:#aa663c">●</i></span></span></button>`,
+            `<button class="list-row" data-hall="${p.id}"><span><strong>${esc(p.short)}</strong><small>${esc(p.thesis)}</small><span class="mood"><i style="left:${((p.mood + 2) / 4) * 100}%"></i></span></span></button>`,
         )
         .join("");
   } else if (id === "pairs") {

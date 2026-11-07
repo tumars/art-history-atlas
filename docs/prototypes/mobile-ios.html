@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>画间 · iOS 原型</title>
+<link rel="stylesheet" href="./mobile-ios.css">
+</head>
+<body>
+<div class="stage">
+  <aside class="study">
+    <span class="k">画间 · iOS 原型 · 第五轮</span>
+    <h1>安静的底色，让画自己说话。</h1>
+    <p>中性底色、实色卡片、细描边，只用一种强调色；颜色来自作品本身。画海深色是夜空，浅色是白天的展厅墙：射灯跟着选中的作品，影子随拖动变化。长文字按阅读排版：分句断行、两端对齐、宋体导语。</p>
+    <ol>
+      <li><b>画海</b>：作品像孔明灯一样散在远近三层，拖动时有视差；点一件作品，背景色块换成它的颜色；再点下方卡片，看缩放转场</li>
+      <li><b>人物 · 时光</b>：时光带上每条生命线都有头像和名字；左右拖动，下方卡片换成那一年在世的人；点名字跳到那个人，底部的菱形是相遇</li>
+      <li><b>人物 · 关系</b>：点周围的人，这个人会移到中心，新的关系从中心长出来；上方足迹可原路返回</li>
+      <li><b>导览 · 年表</b>（导览默认打开）：左右拖时光带，下方“此刻”面板换成那一年的时期、欧洲、中国、教会、大事和作品；点“真实比例”看史前有多长；年份与人物时光共用</li>
+      <li><b>导览 · 故事</b>：打开故事试试阅读页和“Aa”</li>
+      <li><b>手势</b>：任意位置右滑返回；长按作品打开菜单；看全图可双指缩放、下拉关闭</li>
+    </ol>
+    <div class="theme" role="group" aria-label="外观">
+      <button data-theme-set="" aria-pressed="true">跟随系统</button>
+      <button data-theme-set="light" aria-pressed="false">浅色</button>
+      <button data-theme-set="dark" aria-pressed="false">深色</button>
+    </div>
+    <small>设计原型，不替换线上页面。收藏和阅读进度只保存在这个浏览器里。手机上打开会全屏显示。</small>
+  </aside>
+  <div class="device">
+    <div class="island"></div>
+    <div class="fake-status"><span>9:41</span><span class="bat"></span></div>
+    <div id="app"><p class="loading" role="status">正在打开画间…</p></div>
+    <div class="home-ind"></div>
+  </div>
+</div>
+<script type="module" src="./mobile-ios.js"></script>
+</body>
+</html>
