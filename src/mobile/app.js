@@ -3,6 +3,7 @@
 import "./mobile.css";
 import { state } from "../state";
 import { searchCatalog } from "../lib/search";
+import { arrangeWorks, skyLoop } from "../sections/hero-space";
 import { contextPage, mountContext } from "./context";
 
 const app = document.querySelector('#mobile-app');
@@ -937,7 +938,7 @@ function zoomOut(el, prev) {
 function seaList(r) {
   let list;
   if (r.period) list = worksOf(r.period).filter(hasImg);
-  // 全部有图作品（含人物补充作品），按时期、年份排列，从中心向外螺旋展开
+  // 全部有图作品（含人物补充作品），按时期、年份排列
   else list = D.periods.flatMap(p => worksOf(p.id).filter(hasImg));
   if (!list.some(w => w.id === r.sel)) {
     if (!r.period && hasImg(work(r.sel))) list.unshift(work(r.sel));
@@ -978,57 +979,61 @@ function mountSea(el) {
   const r = el.route, view = el.querySelector('.sea-view'), world = el.querySelector('.sea-world');
   const list = seaList(r);
   r.list = list.map(w => w.id);
-  const order = [work(r.sel), ...list.filter(w => w.id !== r.sel)];
+  // 与 PC 版同一套布局：按年代沿折返的行排开，横纵首尾相接，可以一直拖下去
+  const loop = skyLoop(list.length), LW = Math.max(loop.width * .62, 1600), LH = Math.max(loop.height * .62, 2400);
   const pos = {};
-  let R = 0;
   const layers = SEA_DEPTH.map((f, k) => `<div class="sea-layer d${k}" data-f="${f}"></div>`);
   world.innerHTML = layers.join('');
   const layerEls = [...world.children];
   const html = [[], [], []];
-  order.forEach((w, i) => {
-    const a = i * 2.39996, rad = i ? 92 + 112 * Math.sqrt(i - .4) : 0;
-    const x = Math.cos(a) * rad, y = Math.sin(a) * rad * .92;
-    // 选中的那件在最近一层；其余按序号轮流分到三层，带一点随机
-    const k = i === 0 ? 0 : (i + Math.floor(seaNoise(i, 3) * 3)) % 3, f = SEA_DEPTH[k];
-    const size = (i ? 84 + seaNoise(i, 4) * 46 : 140) * (k ? f + .12 : 1), rr = Math.min(1.5, Math.max(.6, ratio(w.id)));
-    const ww = size / Math.sqrt(rr), hh = ww * rr, tilt = ((seaNoise(i, 5) - .5) * 12).toFixed(1);
-    pos[w.id] = { x, y, w: ww, h: hh, k, f };
-    R = Math.max(R, rad);
+  arrangeWorks(list).forEach((s, i) => {
+    const w = s.work, x = s.x * LW / loop.width, y = s.y * LH / loop.height;
+    const k = s.depth < 600 ? 0 : s.depth < 950 ? 1 : 2, f = SEA_DEPTH[k];
+    const size = (84 + seaNoise(i, 4) * 46) * (k ? f + .12 : 1), rr = Math.min(1.5, Math.max(.6, ratio(w.id)));
+    const ww = size / Math.sqrt(rr), hh = ww * rr, tilt = s.angle.toFixed(1);
+    pos[w.id] = { x, y, wx: x, wy: y, w: ww, h: hh, k, f };
     html[k].push(`<button class="sea-art${w.id === r.sel ? ' on' : ''}" data-act="seaPick" data-v="${w.id}" data-list="sea" data-zoom="${w.id}" data-ctx="${w.id}" aria-label="${esc(w.title)}" style="--x:${(x * f).toFixed(0)};--y:${(y * f).toFixed(0)};--a:${tilt}deg;--dr:${i % 2 ? 7 : -7}px;left:${(x * f).toFixed(1)}px;top:${(y * f).toFixed(1)}px;width:${ww.toFixed(0)}px;height:${hh.toFixed(0)}px;animation-duration:${(13 + (i % 7) * 2)}s;animation-delay:-${(i * 2.7) % 19}s"><img src="${thumb(w.id)}" alt="" loading="${i < 16 ? 'eager' : 'lazy'}" decoding="async"></button>`);
   });
   layerEls.forEach((l, k) => { l.innerHTML = html[k].join(''); });
-  // 全部 400 多件作品：离屏的先不渲染（也不加载图片），每隔几帧按镜头位置重新挑一次
+  // 每件作品只画一份，放在离镜头最近的那一圈；换圈发生在屏幕外。离屏的先不渲染（也不加载图片），每隔几帧重新挑一次
   const artEls = [...world.querySelectorAll('.sea-art')].map(a => ({ a, p: pos[a.dataset.v] }));
   const cull = (ax, ay) => {
     const W = view.clientWidth, H = view.clientHeight;
     if (!W) return;
     for (const { a, p } of artEls) {
-      const dx = p.f * (p.x + ax), dy = p.f * (p.y + ay) + H * .46 - H / 2;
+      const wx = p.x + Math.round((-ax - p.x) / LW) * LW, wy = p.y + Math.round((-ay - p.y) / LH) * LH;
+      if (wx !== p.wx || wy !== p.wy) {
+        p.wx = wx; p.wy = wy;
+        Object.assign(a.style, { left: (wx * p.f).toFixed(1) + 'px', top: (wy * p.f).toFixed(1) + 'px' });
+        a.style.setProperty('--x', (wx * p.f).toFixed(0));
+        a.style.setProperty('--y', (wy * p.f).toFixed(0));
+        if (a.dataset.v === r.sel) light(r.sel);
+      }
+      const dx = p.f * (wx + ax), dy = p.f * (wy + ay) + H * .46 - H / 2;
       const off = Math.abs(dx) > W / 2 + p.w + 160 || Math.abs(dy) > H / 2 + p.h + 200;
       if (a.hidden !== off) a.hidden = off;
     }
   };
-  // 夜空：两层星点，随拖动以不同速度平移（与正式版画海一致）
+  // 夜空：两层星点做成可平铺的背景，按图块大小取余平移，拖多远都接得上
   let seed = 7319;
   const rnd = () => (seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) / 4294967296;
+  const TILE = 400;
   const skies = [.12, .3].map(d => {
     const sky = document.createElement('div');
     sky.className = 'sea-sky'; sky.dataset.d = d;
-    sky.innerHTML = Array.from({ length: 90 }, () => `<i style="left:${(rnd() * 100).toFixed(2)}%;top:${(rnd() * 100).toFixed(2)}%;--s:${(1 + rnd() * (d > .2 ? 1 : .6)).toFixed(2)}px;--d:${(6 + rnd() * 9).toFixed(1)}s;--dl:-${(rnd() * 20).toFixed(1)}s;--pk:${(.45 + rnd() * .3).toFixed(2)}"></i>`).join('');
+    sky.style.backgroundImage = Array.from({ length: 24 }, () => { const s = (.6 + rnd() * (d > .2 ? .5 : .3)).toFixed(2); return `radial-gradient(${s}px ${s}px at ${(rnd() * TILE).toFixed(0)}px ${(rnd() * TILE).toFixed(0)}px, rgba(213, 223, 230, ${(.35 + rnd() * .45).toFixed(2)}), transparent)`; }).join(',');
     view.insertBefore(sky, world);
     return sky;
   });
-  // 浅色的展厅墙：天光层随拖动轻微平移
+  // 浅色的展厅墙不随拖动移动；色块在固定范围内缓慢跟随，不会被拖出画面
   const wall = document.createElement('div');
-  wall.className = 'sea-wall'; wall.dataset.d = .05;
+  wall.className = 'sea-wall';
   view.insertBefore(wall, world);
-  skies.push(wall);
   // 色块：三块柔边的颜色，取自选中作品，比最远的画还远；浅色时像水彩一样“染”在墙上（multiply）
   const blobs = document.createElement('div');
-  blobs.className = 'sea-blobs'; blobs.dataset.d = .2;
+  blobs.className = 'sea-blobs';
   blobs.innerHTML = '<i></i><i></i><i></i>';
   view.insertBefore(blobs, world);
-  skies.push(blobs);
   const recolor = id => paletteOf(id, pal => pal.forEach(([h, sat], i) => {
     const b = blobs.children[i];
     b.style.setProperty('--h', h); b.style.setProperty('--sat', Math.round(sat * 100) + '%');
@@ -1041,14 +1046,16 @@ function mountSea(el) {
     const p = pos[id]; if (!p) return;
     const layer = layerEls[p.k];
     if (spot.parentElement !== layer) layer.prepend(spot);
-    Object.assign(spot.style, { left: p.x * p.f + 'px', top: p.y * p.f + 'px', width: p.w * 2.4 + 60 + 'px', height: p.h * 2 + 60 + 'px' });
+    Object.assign(spot.style, { left: p.wx * p.f + 'px', top: p.wy * p.f + 'px', width: p.w * 2.4 + 60 + 'px', height: p.h * 2 + 60 + 'px' });
   };
-  light(r.sel);
   el.querySelector('.sea-card').innerHTML = seaCard(r);
-  r.ax ??= 0; r.ay ??= 0;
+  // 第一次进入（或换了时期）时，让选中的作品停在画面中央
+  if (r.ax == null || r.ay == null) { r.ax = -pos[r.sel].x; r.ay = -pos[r.sel].y; }
   let raf = 0, drag = null, vx = 0, vy = 0, tween = null, lx = 0, ly = 0, llx = 0, lly = 0, frame = 0;
-  const lim = R + 40;
   cull(r.ax, r.ay);
+  light(r.sel);
+  // 镜头走到某件作品时，去离当前位置最近的那一圈
+  const nearest = (p, a, span, key) => -(p[key] + Math.round((-a - p[key]) / span) * span);
   const tick = now => {
     raf = requestAnimationFrame(tick);
     if (el.style.visibility === 'hidden' || el.parentElement?.hidden) return;
@@ -1060,8 +1067,6 @@ function mountSea(el) {
     } else if (!drag && (Math.abs(vx) > .05 || Math.abs(vy) > .05)) {
       r.ax += vx; r.ay += vy; vx *= .93; vy *= .93;
     }
-    r.ax = Math.max(-lim, Math.min(lim, r.ax));
-    r.ay = Math.max(-lim, Math.min(lim, r.ay));
     const ox = reduced ? 0 : Math.sin(now / 5200) * 16, oy = reduced ? 0 : Math.cos(now / 6100) * 12;
     const ax = r.ax + ox, ay = r.ay + oy;
     for (const l of layerEls) {
@@ -1080,7 +1085,9 @@ function mountSea(el) {
     lx += (Math.max(-9, Math.min(9, tvx * .9)) - lx) * .12;
     ly += (Math.max(-9, Math.min(9, -tvy * .9)) - ly) * .12;
     if (!reduced && (Math.abs(lx - llx) > .05 || Math.abs(ly - lly) > .05)) { llx = lx; lly = ly; world.style.setProperty('--lx', lx.toFixed(2) + 'deg'); world.style.setProperty('--ly', ly.toFixed(2) + 'deg'); }
-    for (const sky of skies) sky.style.transform = `translate(${(r.ax * sky.dataset.d).toFixed(1)}px,${(r.ay * sky.dataset.d).toFixed(1)}px)`;
+    const mod = v => ((v % TILE) + TILE) % TILE - TILE;
+    for (const sky of skies) sky.style.transform = `translate(${mod(r.ax * sky.dataset.d).toFixed(1)}px,${mod(r.ay * sky.dataset.d).toFixed(1)}px)`;
+    blobs.style.transform = `translate(${(90 * Math.sin(r.ax / 900)).toFixed(1)}px,${(90 * Math.sin(r.ay / 900)).toFixed(1)}px)`;
   };
   raf = requestAnimationFrame(tick);
   view.addEventListener('pointerdown', e => {
@@ -1107,7 +1114,7 @@ function mountSea(el) {
     light(id);
     recolor(id);
     world.querySelectorAll('.sea-art').forEach(a => a.classList.toggle('on', a.dataset.v === id));
-    tween = { t: performance.now(), d: 700, fx: r.ax, fy: r.ay, tx: -pos[id].x, ty: -pos[id].y };
+    tween = { t: performance.now(), d: 700, fx: r.ax, fy: r.ay, tx: nearest(pos[id], r.ax, LW, 'x'), ty: nearest(pos[id], r.ay, LH, 'y') };
     const card = el.querySelector('.sea-card');
     card.classList.add('swap');
     setTimeout(() => { card.innerHTML = seaCard(r); card.classList.remove('swap'); }, 160);
@@ -1500,7 +1507,7 @@ const ACT = {
   seaShuffle: () => { const el = topPage(), l = el.route.list.filter(x => x !== el.route.sel); el.seaSelect?.(l[Math.floor(Math.random() * l.length)]); },
   seaMode: () => { const el = topPage(); el.route.mode = el.route.mode === 'sea' ? 'grid' : 'sea'; draw(el, false, true); chrome(); },
   seaPeriod: () => openSheet({ title: '选择时期', html: periodSheetHtml(topPage().route.period) }),
-  seaSetPeriod: v => { const el = stackEl('sea').firstElementChild; el.route.period = v; el.route.ax = el.route.ay = 0; el.route.sel = v ? worksOf(v).find(hasImg)?.id : 'mona-lisa'; closeSheet(); draw(el, false); chrome(); },
+  seaSetPeriod: v => { const el = stackEl('sea').firstElementChild; el.route.period = v; el.route.ax = el.route.ay = undefined; el.route.sel = v ? worksOf(v).find(hasImg)?.id : 'mona-lisa'; closeSheet(); draw(el, false); chrome(); },
   era: v => { const p = period(v); openSheet({ title: p.name, html: `<div class="prose"><p class="mt">${esc(p.span)}</p><p class="lead">${esc(p.thesis)}</p>${p.points.map(x => `<p>${esc(x)}</p>`).join('')}${p.bridge ? `<p class="next"><b>下一站</b>${esc(p.bridge)}</p>` : ''}</div>` }); },
   aa: () => openSheet({
     title: '外观', detents: ['fit'],
