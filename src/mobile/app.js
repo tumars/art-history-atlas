@@ -1825,5 +1825,17 @@ export function initMobileApp() {
     const top = topPage();
     if (pendingViewer && top.route.kind === 'work') openViewer(pendingViewer, heroImg(top));
     pendingViewer = '';
+    hideSplash(top);
+  });
+}
+// 启动画面（写在 index.html 里）：等首屏图片解码完再淡出，避免先看到空画框；最多等 1.2 秒
+function hideSplash(top) {
+  const splash = document.querySelector('.boot-splash');
+  if (!splash) return;
+  const imgs = [...top.querySelectorAll('img')].filter(im => !im.closest('[hidden]')).slice(0, 12);
+  const ready = Promise.all(imgs.map(im => im.decode ? im.decode().catch(() => {}) : null));
+  Promise.race([ready, new Promise(r => setTimeout(r, 1200))]).then(() => {
+    splash.classList.add('done');
+    setTimeout(() => splash.remove(), 700);
   });
 }

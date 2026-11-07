@@ -138,17 +138,32 @@ async function main() {
   // 启动时确定页面组织；手机旋转不切回长卷。窄桌面窗口也可使用手机布局。
   const mobile = matchMedia('(max-width: 700px)').matches ||
     (matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) <= 700);
+  // 启动画面写在 index.html 里，手机版就绪后由页层淡出；桌面版直接移除
+  const splash = document.querySelector<HTMLElement>(".boot-splash");
   if (mobile) {
     state.site = SITE;
     state.t = loadTradition(SITE.defaultTradition);
     applyGroupColors();
-    document.body.innerHTML = '<div id="mobile-app" class="mobile-app"><p role="status">正在打开画间…</p></div>';
+    const app = document.createElement("div");
+    app.id = "mobile-app";
+    app.className = "mobile-app";
+    document.documentElement.classList.add("m-boot");
+    document.body.replaceChildren(app, ...(splash ? [splash] : []));
     document.body.classList.add('mobile-shell');
-    state.credits = await loadCredits();
-    const { initMobileApp } = await import('./mobile/app.js');
-    initMobileApp();
+    try {
+      state.credits = await loadCredits();
+      const { initMobileApp } = await import('./mobile/app.js');
+      initMobileApp();
+    } catch (err) {
+      console.error(err);
+      if (splash) {
+        splash.classList.add("failed");
+        splash.querySelector("span")!.textContent = "没能打开画间，请检查网络后刷新";
+      }
+    }
     return;
   }
+  splash?.remove();
   actions.goPeriod = goPeriod;
   actions.showWork = showWork;
   actions.selectEvent = selectEvent;

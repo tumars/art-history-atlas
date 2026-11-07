@@ -13,9 +13,47 @@
   <script>
     // 尽早应用用户选过的主题，避免闪烁
     try { var t = localStorage.getItem("aha.theme"); if (t === '"light"' || t === '"dark"') document.documentElement.dataset.theme = JSON.parse(t); } catch (e) {}
+    // 手机进入独立页层（判断与 main.ts 一致）：先隐藏桌面骨架，只显示启动画面
+    if (matchMedia("(max-width: 700px)").matches || (matchMedia("(pointer: coarse)").matches && Math.min(screen.width, screen.height) <= 700)) {
+      var root = document.documentElement, dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.classList.add("m-boot");
+      document.querySelector('meta[name="theme-color"]').content = dark ? "#0b1520" : "#dcd7cd";
+    }
   </script>
+  <style>
+    /* 手机启动画面：与画海的底色一致（浅色是展厅墙，深色是夜空），一件金框小画、站名与一条金色进度线 */
+    .boot-splash { display: none; }
+    html.m-boot body { margin: 0; background: #dcd7cd; }
+    html.m-boot body > :not(.boot-splash):not(#mobile-app) { display: none !important; }
+    html.m-boot .boot-splash { position: fixed; inset: 0; z-index: 1000; display: grid; place-content: center; justify-items: center; gap: 12px; background: #dcd7cd; color: #23211d; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; transition: opacity .5s ease, visibility 0s .5s; }
+    .boot-splash .bs-frame { width: 54px; height: 70px; padding: 3px; margin-bottom: 10px; border-radius: 2px; background: #e8d7ad; box-shadow: inset 0 0 0 1px rgba(170, 132, 62, .6), 0 14px 26px -16px rgba(60, 48, 30, .55); animation: bs-float 3.2s ease-in-out infinite alternate; }
+    .boot-splash .bs-frame i { display: block; height: 100%; border-radius: 1px; background: linear-gradient(115deg, #cfc6b4 30%, #e3dccd 50%, #cfc6b4 70%) 0 0 / 300% 100%; animation: bs-light 2.4s ease-in-out infinite; }
+    .boot-splash b { font-family: "Songti SC", "Noto Serif SC", "STSong", serif; font-size: 30px; font-weight: 600; letter-spacing: .16em; text-indent: .16em; }
+    .boot-splash span { font-size: 12.5px; letter-spacing: .08em; opacity: .58; }
+    .boot-splash em { position: relative; width: 64px; height: 1.5px; margin-top: 14px; border-radius: 1px; overflow: hidden; background: rgba(170, 132, 62, .22); }
+    .boot-splash em::after { content: ""; position: absolute; top: 0; bottom: 0; left: -40%; width: 40%; border-radius: 1px; background: #a8873f; animation: bs-bar 1.3s ease-in-out infinite; }
+    .boot-splash.done { opacity: 0; visibility: hidden; }
+    .boot-splash.failed em { display: none; }
+    @keyframes bs-float { to { transform: translateY(-5px) rotate(-1.5deg); } }
+    @keyframes bs-light { from { background-position: 100% 0; } to { background-position: 0 0; } }
+    @keyframes bs-bar { to { left: 100%; } }
+    @media (prefers-color-scheme: dark) {
+      html.m-boot:not([data-theme="light"]) body, html.m-boot:not([data-theme="light"]) .boot-splash { background: #0b1520; color: #eef1f4; }
+      html:not([data-theme="light"]) .boot-splash .bs-frame { background: #1e1b17; box-shadow: inset 0 0 0 1px rgba(224, 195, 140, .5), 0 16px 22px -12px rgba(236, 166, 72, .35); }
+      html:not([data-theme="light"]) .boot-splash .bs-frame i { background-image: linear-gradient(115deg, #1d2833 30%, #2c3a47 50%, #1d2833 70%); }
+      html:not([data-theme="light"]) .boot-splash em { background: rgba(217, 182, 106, .2); }
+      html:not([data-theme="light"]) .boot-splash em::after { background: #d9b66a; }
+    }
+    html.m-boot[data-theme="dark"] body, html.m-boot[data-theme="dark"] .boot-splash { background: #0b1520; color: #eef1f4; }
+    html[data-theme="dark"] .boot-splash .bs-frame { background: #1e1b17; box-shadow: inset 0 0 0 1px rgba(224, 195, 140, .5), 0 16px 22px -12px rgba(236, 166, 72, .35); }
+    html[data-theme="dark"] .boot-splash .bs-frame i { background-image: linear-gradient(115deg, #1d2833 30%, #2c3a47 50%, #1d2833 70%); }
+    html[data-theme="dark"] .boot-splash em { background: rgba(217, 182, 106, .2); }
+    html[data-theme="dark"] .boot-splash em::after { background: #d9b66a; }
+    @media (prefers-reduced-motion: reduce) { .boot-splash *, .boot-splash *::after { animation: none !important; } }
+  </style>
 </head>
 <body>
+<div class="boot-splash" role="status" aria-label="正在打开画间"><div class="bs-frame"><i></i></div><b>画间</b><span>在画作之间，读懂西方艺术</span><em></em></div>
 <a class="skip" href="#chronology">跳到正文</a>
 
 <header class="topbar" id="topbar">
