@@ -2024,8 +2024,10 @@ addEventListener('popstate', e => {
   if (sheet) return closeSheet(false, 'pop');
   if (e.state?.mobile) restore(e.state.mobile);
 });
+// 只处理手动输入或外部链接改的地址。浏览器前进、返回到站内的历史项时 popstate 已经在恢复页面栈；
+// 返回动画进行中顶层还是旧页面，这里若按地址重建，上一页会重画并回到顶部
 addEventListener('hashchange', () => {
-  if (location.hash === routeUrl()) return;
+  if (history.state?.mobile || location.hash === routeUrl()) return;
   const snap = fromHash();
   restoring = true;
   if (snap.tab !== S.tab) switchTab(snap.tab);
