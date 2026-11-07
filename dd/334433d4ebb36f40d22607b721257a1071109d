@@ -1,0 +1,37 @@
+docs/design.md
+  s_e1d50679ec4029::t_3b8bfd27615cb3 118
+  s_e1d50679ec4029::t_2c20d6f5042869 330
+src/mobile/app.js
+  s_e1d50679ec4029::t_a710e4de836b43 986-988
+  s_e1d50679ec4029::t_4da2dceef0aa92 412
+docs/prototypes/work-lighting.html
+  s_e1d50679ec4029::t_afef5dd3752d40 1-11,13-14,16-43,45-52,56,58-181
+  s_e1d50679ec4029::t_df9d5a98ded13c 44
+  s_e1d50679ec4029::t_78937f3b78d4de 53-55
+  s_e1d50679ec4029::t_9c7465731ff5b1 57
+  s_e1d50679ec4029::t_e8c0cd345acfe3 15
+  s_e1d50679ec4029::t_d9d8dda93f83db 12
+docs/research/work-lighting.md
+  s_e1d50679ec4029::t_1d572c7b0c1dda 3
+  s_e1d50679ec4029::t_aadb91f063af00 1-2,4-53
+docs/verification/mobile-ios.md
+  s_e1d50679ec4029::t_f0e55def846fde 116-123
+src/mobile/mobile.css
+  s_e1d50679ec4029::t_318dca264c1d11 316-339
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dd334433d4ebb36f40d22607b721257a1071109d",
+  "prompts": {},
+  "sessions": {
+    "s_e1d50679ec4029": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "90ed3daa-7a23-4895-8f65-17007f2659db",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
