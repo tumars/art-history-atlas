@@ -1,0 +1,48 @@
+src/mobile/app.js
+  s_e1d50679ec4029::t_88526b95bc177d 941
+  s_e1d50679ec4029::t_66eabf30814913 983
+  s_e1d50679ec4029::t_2da3f2a945e26e 1049,1052-1053,1056-1058
+  s_e1d50679ec4029::t_a83f048c9844e0 1117
+  s_e1d50679ec4029::t_6e96d03213123c 1510
+  s_e1d50679ec4029::t_33d7f84bcf8cbe 6
+  s_e1d50679ec4029::t_aba28765f3e134 982,989-994
+  s_e1d50679ec4029::t_0e3e22a3eafd75 1088-1090
+  s_e1d50679ec4029::t_3e6b60df31eb38 998,1004-1012,1017,1020,1024,1028,1030,1034
+src/mobile/mobile.css
+  s_e1d50679ec4029::t_794b30d5f3b5d8 687
+  s_e1d50679ec4029::t_50f79bca4c695d 746
+  s_e1d50679ec4029::t_36015236a87979 176
+  s_e1d50679ec4029::t_4f1f51971a5d69 736,738
+  s_e1d50679ec4029::t_7dc13b4bd321c2 576
+  s_e1d50679ec4029::t_1048744d365824 253-256
+  s_e1d50679ec4029::t_b05b14c4487ece 432-433
+  s_e1d50679ec4029::t_ce9e445fe4b5dc 656
+  s_e1d50679ec4029::t_74dc686c27b1ab 43,51
+  s_e1d50679ec4029::t_819d1ad947bb37 16-22
+  s_e1d50679ec4029::t_eafb375fd5d984 65,72
+  s_e1d50679ec4029::t_74551d9036b6d5 569
+  s_e1d50679ec4029::t_2d2e83611b2709 745,747-748,750
+  s_e1d50679ec4029::t_1d6f1c332a4105 751
+docs/design.md
+  s_e1d50679ec4029::t_0cf195e650361a 113
+  s_e1d50679ec4029::t_b29b03994f141b 116
+docs/verification/mobile-ios.md
+  s_e1d50679ec4029::t_a9c6e1a660bb9c 68-73
+  s_e1d50679ec4029::t_6e9e0ba3385302 74-78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "254344e47275782ab981539e0c8335c109f95a60",
+  "prompts": {},
+  "sessions": {
+    "s_e1d50679ec4029": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "90ed3daa-7a23-4895-8f65-17007f2659db",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
