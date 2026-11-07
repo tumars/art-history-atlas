@@ -1,0 +1,34 @@
+docs/verification/mobile-ios.md
+  s_e1d50679ec4029::t_634e62ab421ff9 59-67
+src/mobile/app.js
+  s_e1d50679ec4029::t_7384d24b7540a8 940-941
+  s_e1d50679ec4029::t_b7d5fb2ee7c2fc 296-299
+  s_e1d50679ec4029::t_f80563c6792285 1049,1051
+  s_e1d50679ec4029::t_a5b972ccbd4794 1070-1075,1077,1082
+  s_e1d50679ec4029::t_980adfe244074b 307
+  s_e1d50679ec4029::t_6936dbe006d300 997,1000-1010
+docs/design.md
+  s_e1d50679ec4029::t_195ccaa68d180e 113
+  s_e1d50679ec4029::t_4199a94bc92ce7 116
+src/mobile/mobile.css
+  s_e1d50679ec4029::t_97e9a00a04d48b 294-297
+  s_e1d50679ec4029::t_be9fe055f227ef 645-647
+  s_e1d50679ec4029::t_b277c0fd4c29cc 188,408,552,571,664
+  s_e1d50679ec4029::t_d9caf9646249ea 736-743
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "2ceb9baf644a1af1214c0408f96461af29196ac5",
+  "prompts": {},
+  "sessions": {
+    "s_e1d50679ec4029": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "90ed3daa-7a23-4895-8f65-17007f2659db",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
