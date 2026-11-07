@@ -1,0 +1,21 @@
+docs/verification/mobile-ios.md
+  s_e1d50679ec4029::t_0a02662501f4db 108-115
+src/mobile/app.js
+  s_e1d50679ec4029::t_237badf2131ca0 2027-2028,2030
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9cd0e70f13f6ec0d6b11c5864bca9a924232f4a7",
+  "prompts": {},
+  "sessions": {
+    "s_e1d50679ec4029": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "90ed3daa-7a23-4895-8f65-17007f2659db",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "tumars <9925509+tumars@users.noreply.github.com>"
+    }
+  }
+}
