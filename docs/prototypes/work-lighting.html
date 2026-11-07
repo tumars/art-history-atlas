@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>作品页灯光原型</title>
+<!-- 作品详情页灯光方案原型：A 现状、B 射灯（墙面、画框、投影、开灯）、C 射灯 + 倾斜（光斑与投影随手机倾斜或手指移动）。
+     图片取自开发服务器的 public/images，用 npm run dev 后打开 /art-history-atlas/docs/prototypes/work-lighting.html。
+     方案说明见 docs/research/work-lighting.md。 -->
+<style>
+  :root { --ink: #1c1b1a; --ink2: #6f6b64; --bg: #f4f2ee; --card: #fff; --line: rgba(0,0,0,.08); --tint: #8a6a26;
+    --wall: #d6cfc2; --wall-edge: rgba(58, 44, 28, .42); --spot: rgba(255, 249, 234, 1); --spot-mid: rgba(255, 243, 218, .5);
+    --frame-a: #e3cf9f; --frame-b: #b08f52; --shadow: rgba(48, 34, 16, .5); --glaze-top: rgba(255, 246, 225, .12); --glaze-bottom: rgba(30, 20, 8, .14); }
+  [data-theme="dark"] { --ink: #ece6d6; --ink2: #9b958a; --bg: #141416; --card: #1d1d20; --line: rgba(255,255,255,.08); --tint: #d9b66a;
+    --wall: #1b1a19; --wall-edge: rgba(0, 0, 0, .55); --spot: rgba(255, 236, 200, .36); --spot-mid: rgba(255, 228, 184, .13);
+    --frame-a: #8a7444; --frame-b: #4d3f22; --shadow: rgba(0, 0, 0, .75); --glaze-top: rgba(255, 236, 200, .10); --glaze-bottom: rgba(0, 0, 0, .22); }
+  * { box-sizing: border-box; margin: 0; }
+  body { font: 15px/1.5 -apple-system, "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif; background: #d9d6d0; color: var(--ink); min-height: 100vh; display: flex; gap: 28px; justify-content: center; align-items: flex-start; padding: 24px 16px; flex-wrap: wrap; }
+  [data-theme="dark"] body, body[data-theme="dark"] { background: #0b0b0c; }
+  .phone { width: 375px; max-width: 100%; height: 760px; border-radius: 44px; overflow: hidden; background: var(--bg); position: relative; box-shadow: 0 30px 80px -30px rgba(0,0,0,.5), 0 0 0 10px #111; }
+  .panel { width: 300px; max-width: 100%; display: grid; gap: 14px; font-size: 14px; color: #222; }
+  body[data-theme="dark"] .panel { color: #ddd; }
+  .panel h1 { font-size: 20px; }
+  .panel p { color: #666; line-height: 1.6; }
+  body[data-theme="dark"] .panel p { color: #999; }
+  .group { display: grid; gap: 6px; }
+  .group b { font-size: 12px; letter-spacing: .06em; color: #888; }
+  .seg { display: flex; flex-wrap: wrap; gap: 6px; }
+  .seg button { border: 0; padding: 7px 12px; border-radius: 16px; background: rgba(0,0,0,.07); font: inherit; color: inherit; cursor: pointer; }
+  body[data-theme="dark"] .seg button { background: rgba(255,255,255,.1); }
+  .seg button[aria-pressed="true"] { background: #1c1b1a; color: #f6f2e8; }
+  body[data-theme="dark"] .seg button[aria-pressed="true"] { background: #ece6d6; color: #141416; }
+  label { display: flex; gap: 8px; align-items: center; cursor: pointer; }
+
+  /* ───── 作品页主图区 ───── */
+  .hero { position: relative; height: 470px; overflow: hidden; display: grid; place-items: center; padding: 70px 30px 52px; isolation: isolate; }
+  .hero .bgtint { position: absolute; inset: 0; z-index: -3; background: linear-gradient(var(--art, #e8ddd0), var(--bg)); }
+  /* 墙：灰泥颗粒（与画海浅色展厅墙同一张噪点）+ 底色 */
+  .hero .wall { position: absolute; inset: 0; z-index: -3; background-color: var(--wall);
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .32 0 0 0 0 .28 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  [data-theme="dark"] .hero .wall { background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .8 0 0 0 0 .78 0 0 0 0 .72 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  /* 射灯：光从上方约 30° 打下来，落在画面中心略偏上；光斑是竖向椭圆，边缘柔和，四周压暗 */
+  .hero .spot { position: absolute; z-index: -2; left: 50%; top: calc(46% + var(--sy, 0px)); width: 128%; height: 112%; transform: translate(calc(-50% + var(--sx, 0px)), -50%); pointer-events: none;
+    background: radial-gradient(ellipse 50% 54% at 50% 46%, var(--spot), var(--spot) 30%, var(--spot-mid) 58%, transparent 80%); transition: opacity 1.1s ease; }
+  [data-theme="dark"] .hero .spot { mix-blend-mode: screen; }
+  .hero .beam { position: absolute; z-index: -2; left: 50%; top: -6%; width: 70%; height: 70%; transform: translateX(calc(-50% + var(--sx, 0px) * .5)); pointer-events: none; opacity: .5;
+    background: linear-gradient(rgba(255, 246, 225, .55), transparent 80%); clip-path: polygon(42% 0, 58% 0, 100% 100%, 0 100%); filter: blur(14px); transition: opacity 1.1s ease; }
+  [data-theme="dark"] .hero .beam { opacity: .22; mix-blend-mode: screen; }
+  .hero .vig { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(90% 75% at 50% 44%, transparent 45%, var(--wall-edge)); transition: opacity 1.1s ease; }
+  /* 画框：细金边 + 窄衬（与画海一致）；投影在下方，随倾斜偏移 */
+  .art { position: relative; max-width: 100%; max-height: 100%; display: grid; transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .25s ease-out; }
+  .art img { display: block; max-width: 100%; max-height: 330px; object-fit: contain; }
+  /* 灯光要落在墙上才看得出，作品四周至少留出一圈墙：左右各约 44px，高度上限 300px */
+  .hero.lit { padding: 76px 44px 60px; }
+  .lit .art img { max-height: 300px; }
+  .lit .art { padding: 3px; background: linear-gradient(160deg, var(--frame-a), var(--frame-b)); border-radius: 2px;
+    box-shadow: calc(var(--shx, 0px)) calc(24px + var(--shy, 0px)) 34px -12px var(--shadow), 0 3px 6px -2px var(--shadow); }
+  .plain .art img { border-radius: 3px; box-shadow: 0 16px 34px -20px rgba(0,0,0,.45); }
+  /* 画面上的光：上亮下暗的薄釉 + 随倾斜移动的光泽，都用 soft-light 混合、透明度很低；可关掉对比原色 */
+  .art .glaze, .art .sheen { position: absolute; inset: 3px; pointer-events: none; mix-blend-mode: soft-light; transition: opacity .6s ease; }
+  .art .glaze { background: linear-gradient(var(--glaze-top), transparent 48%, var(--glaze-bottom)); }
+  .art .sheen { opacity: 0; background: radial-gradient(circle at var(--lx, 50%) var(--ly, 30%), rgba(255, 255, 255, .35), transparent 38%); }
+  .tilt .art .sheen { opacity: 1; }
+  .no-glaze .art .glaze, .no-glaze .art .sheen, .plain .art .glaze, .plain .art .sheen { opacity: 0; }
+  /* 开灯：进入页面时灯光在 1.1 秒里亮起，画先暗后亮 */
+  .hero.off .spot, .hero.off .beam { opacity: 0; }
+  .hero.off .vig { opacity: 1.6; }
+  .hero.off .art img { filter: brightness(.55); }
+  .art img { transition: filter 1.1s ease; }
+  .plain .wall, .plain .spot, .plain .beam, .plain .vig { display: none; }
+  .lit .bgtint { display: none; }
+  .nav { position: absolute; top: 54px; left: 16px; right: 16px; display: flex; justify-content: space-between; z-index: 3; }
+  .nav i { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.55); backdrop-filter: blur(12px); display: block; }
+  [data-theme="dark"] .nav i { background: rgba(40,40,44,.55); }
+  .sheet { position: relative; z-index: 2; margin-top: -28px; background: var(--bg); border-radius: 30px 30px 0 0; padding: 22px 22px 0; box-shadow: 0 -.5px 0 var(--line); }
+  .sheet h2 { font-size: 27px; font-weight: 700; letter-spacing: -.02em; }
+  .sheet .a { color: var(--tint); font-weight: 600; margin-top: 4px; }
+  .sheet .m { color: var(--ink2); font-size: 14px; margin-top: 4px; }
+  .tiltbtn { position: absolute; right: 16px; bottom: 44px; z-index: 3; border: 0; font: 600 12px/1 inherit; padding: 7px 11px; border-radius: 14px; background: rgba(255,255,255,.6); backdrop-filter: blur(12px); color: #333; display: none; }
+  .tilt .tiltbtn { display: block; }
+  @media (prefers-reduced-motion: reduce) { .spot, .beam, .vig, .art, .art img { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="phone" id="phone">
+  <div class="hero lit" id="hero">
+    <div class="bgtint"></div><div class="wall"></div><div class="beam"></div><div class="spot"></div><div class="vig"></div>
+    <div class="nav"><i></i><i></i></div>
+    <div class="art" id="art"><img id="img" alt=""><span class="glaze"></span><span class="sheen"></span></div>
+    <button class="tiltbtn" id="tiltbtn">开启倾斜</button>
+  </div>
+  <div class="sheet"><h2 id="title"></h2><div class="a" id="artist"></div><div class="m" id="meta"></div></div>
+</div>
+
+<div class="panel">
+  <h1>作品页灯光</h1>
+  <p>在手机上打开时，方案 C 可以点“开启倾斜”，转动手机看光泽和投影；电脑上用鼠标在画面上移动。</p>
+  <div class="group"><b>方案</b><div class="seg" data-k="mode">
+    <button data-v="plain">A 现状</button><button data-v="lit">B 射灯</button><button data-v="tilt">C 射灯 + 倾斜</button></div></div>
+  <div class="group"><b>作品</b><div class="seg" data-k="work"></div></div>
+  <div class="group"><b>外观</b><div class="seg" data-k="theme"><button data-v="light">浅色</button><button data-v="dark">深色</button></div></div>
+  <div class="group"><b>画面</b>
+    <label><input type="checkbox" id="glaze" checked> 画面上也加一层光（关掉看原色）</label>
+    <div class="seg"><button id="replay">重新开灯</button></div></div>
+</div>
+
+<script>
+  const base = '/art-history-atlas/images/optimized/';
+  const WORKS = [
+    ['mona-lisa', '蒙娜丽莎', '列奥纳多·达·芬奇', '约 1503 – 1519 年 · 卢浮宫', 'mona-lisa-6c679a814af5.display.webp', '#d8cfb6'],
+    ['girl', '戴珍珠耳环的少女', '约翰内斯·维米尔', '约 1665 年 · 莫瑞泰斯皇家美术馆', 'girl-with-a-pearl-earring-2a6d95ce27b3.display.webp', '#cfd2d6'],
+    ['starry', '星月夜', '文森特·梵高', '1889 年 · 现代艺术博物馆', 'starry-night-ec445224f034.display.webp', '#cdd4e2'],
+    ['venus', '乌尔比诺的维纳斯', '提香', '1538 年 · 乌菲兹美术馆', 'venus-of-urbino-78001a909e6e.display.webp', '#e0d0bf'],
+    ['sunrise', '印象·日出', '克劳德·莫奈', '1872 年 · 马摩丹美术馆', 'impression-sunrise-060fd102c61d.display.webp', '#d6dbe0'],
+  ];
+  const S = { mode: 'lit', work: 'mona-lisa', theme: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light' };
+  const hero = document.getElementById('hero'), art = document.getElementById('art'), img = document.getElementById('img');
+  document.querySelector('[data-k="work"]').innerHTML = WORKS.map(w => `<button data-v="${w[0]}">${w[1]}</button>`).join('');
+  function lightsOn() {
+    if (S.mode === 'plain' || matchMedia('(prefers-reduced-motion: reduce)').matches) return hero.classList.remove('off');
+    hero.classList.add('off');
+    requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(() => hero.classList.remove('off'), 120)));
+  }
+  function render(relight) {
+    const w = WORKS.find(x => x[0] === S.work);
+    img.src = base + w[4];
+    document.getElementById('title').textContent = w[1];
+    document.getElementById('artist').textContent = w[2] + ' ›';
+    document.getElementById('meta').textContent = w[3];
+    hero.style.setProperty('--art', w[5]);
+    document.documentElement.dataset.theme = S.theme;
+    document.body.dataset.theme = S.theme;
+    hero.className = 'hero ' + (S.mode === 'plain' ? 'plain' : S.mode === 'tilt' ? 'lit tilt' : 'lit') + (document.getElementById('glaze').checked ? '' : ' no-glaze');
+    document.querySelectorAll('.seg[data-k] button').forEach(b => b.setAttribute('aria-pressed', String(S[b.parentElement.dataset.k] === b.dataset.v)));
+    if (S.mode !== 'tilt') setTilt(0, 0);
+    if (relight) lightsOn();
+  }
+  document.querySelectorAll('.seg[data-k]').forEach(g => g.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    S[g.dataset.k] = b.dataset.v; render(g.dataset.k !== 'theme');
+  }));
+  document.getElementById('glaze').addEventListener('change', () => render(false));
+  document.getElementById('replay').addEventListener('click', () => lightsOn());
+
+  // 倾斜：-1…1。光斑反向轻移，投影朝相反方向拉长，画面光泽跟着走，画本身只转 2°
+  function setTilt(x, y) {
+    hero.style.setProperty('--sx', (-x * 18).toFixed(1) + 'px');
+    hero.style.setProperty('--sy', (-y * 12).toFixed(1) + 'px');
+    hero.style.setProperty('--shx', (x * 10).toFixed(1) + 'px');
+    hero.style.setProperty('--shy', (y * 6).toFixed(1) + 'px');
+    hero.style.setProperty('--lx', (50 - x * 40).toFixed(0) + '%');
+    hero.style.setProperty('--ly', (30 - y * 30).toFixed(0) + '%');
+    art.style.setProperty('--ry', (x * 2).toFixed(2) + 'deg');
+    art.style.setProperty('--rx', (-y * 2).toFixed(2) + 'deg');
+  }
+  hero.addEventListener('pointermove', e => {
+    if (S.mode !== 'tilt') return;
+    const r = hero.getBoundingClientRect();
+    setTilt((e.clientX - r.left) / r.width * 2 - 1, (e.clientY - r.top) / r.height * 2 - 1);
+  });
+  hero.addEventListener('pointerleave', () => S.mode === 'tilt' && setTilt(0, 0));
+  // iOS 需要在点按里请求方向传感器权限；拒绝或不支持时保留手指 / 鼠标驱动
+  document.getElementById('tiltbtn').addEventListener('click', async e => {
+    const btn = e.currentTarget;
+    try {
+      if (typeof DeviceOrientationEvent !== 'undefined' && DeviceOrientationEvent.requestPermission) {
+        if (await DeviceOrientationEvent.requestPermission() !== 'granted') { btn.textContent = '未获授权'; return; }
+      }
+      let b0 = null;
+      addEventListener('deviceorientation', ev => {
+        if (S.mode !== 'tilt' || ev.gamma == null) return;
+        b0 ??= ev.beta;
+        setTilt(Math.max(-1, Math.min(1, ev.gamma / 25)), Math.max(-1, Math.min(1, (ev.beta - b0) / 25)));
+      });
+      btn.textContent = '倾斜已开启';
+    } catch { btn.textContent = '不支持倾斜'; }
+  });
+  render(true);
+</script>
+</body>
+</html>

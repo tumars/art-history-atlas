@@ -409,7 +409,7 @@ const VIEWS = {
     const w = work(r.id), idx = r.ids.indexOf(r.id);
     return {
       html: nav({ title: w.title, right: `<button class="circle glass" data-act="save" data-v="${w.id}" aria-label="收藏">${saveIcon(w.id)}</button><button class="circle glass" data-act="share" aria-label="分享">${icon('share')}</button>` })
-        + `<div class="scroll"><div class="whero"><div class="track" style="transform:translateX(${-idx * 100}%)">${r.ids.map((id, i) => `<div class="slide${i === idx ? ' cur' : ''}" data-act="full" data-v="${id}" data-i="${i}">${Math.abs(i - idx) <= 1 ? slideImg(id) : ''}</div>`).join('')}</div>${r.ids.length > 1 ? `<span class="count glass">${idx + 1} / ${r.ids.length}</span>` : ''}</div><div class="sheetcard"><div class="work-info">${workInfo(r)}</div></div></div>`,
+        + `<div class="scroll"><div class="whero"><div class="lights" aria-hidden="true"><i class="beam"></i><i class="spot"></i><i class="vig"></i></div><div class="track" style="transform:translateX(${-idx * 100}%)">${r.ids.map((id, i) => `<div class="slide${i === idx ? ' cur' : ''}" data-act="full" data-v="${id}" data-i="${i}">${Math.abs(i - idx) <= 1 ? slideImg(id) : ''}</div>`).join('')}</div>${r.ids.length > 1 ? `<span class="count glass">${idx + 1} / ${r.ids.length}</span>` : ''}</div><div class="sheetcard"><div class="work-info">${workInfo(r)}</div></div></div>`,
       mount: el => { mountHero(el); applyTint(el, r.id, thumb(r.id)); },
     };
   },
@@ -983,6 +983,9 @@ function push(route, opt = {}) {
   stackEl(S.tab).append(el);
   draw(el, false, route.anim !== 'zoom');
   if (route.kind === 'work') S.viewed = [route.id, ...S.viewed.filter(x => x !== route.id)].slice(0, 12);
+  // 进入作品页时开灯：先暗，转场开始后不久亮起；左右滑动换作品不重播
+  const lamp = route.kind === 'work' && !reduced && el.querySelector('.whero');
+  if (lamp) { lamp.classList.add('off'); setTimeout(() => lamp.classList.remove('off'), 160); }
   chrome();
   pushHistory();
   busy = true;
